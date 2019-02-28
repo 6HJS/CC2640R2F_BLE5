@@ -1,0 +1,4 @@
+ATTENTION:
+
+
+This project need to rebuild TI-RTOS core,and enable the relative function

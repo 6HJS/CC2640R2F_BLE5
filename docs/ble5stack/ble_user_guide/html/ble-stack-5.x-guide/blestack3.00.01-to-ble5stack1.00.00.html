@@ -1,0 +1,959 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BLE-Stack 3.00.01 to BLE5-Stack 1.00.00 &mdash; BLE5-Stack User&#39;s Guide 1.00.01.04 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="BLE5-Stack User&#39;s Guide 1.00.01.04 documentation" href="../index.html"/>
+        <link rel="up" title="Migration Guides" href="migration.html"/>
+        <link rel="next" title="BLE-Stack 3.00.00 to BLE-Stack 3.00.01" href="blestack3.00.00-to-blestack3.00.01.html"/>
+        <link rel="prev" title="BLE5-Stack 1.00.00 to BLE5-Stack 1.00.01" href="ble5stack1.00.00-to-ble5stack1.00.01.html"/> 
+    <script language="JavaScript">
+        var tiPageName;
+        tiPageName = "sug ble-stack-5.x-guide blestack3.00.01-to-ble5stack1.00.00";
+
+        if (location.protocol == "file:"){
+            var ci_analytics_poc_load = true;
+        }
+    </script> 
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8">     
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> BLE5-Stack User's Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.00.01.04
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cc2640/disclaimer.html">Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cc2640/platform.html">The CC2640R2F SDK Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ble-stack-5.x/index.html">Developing a Bluetooth Low Energy Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../u-stack/index.html">Micro BLE Stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oad/oad.html">Over the Air Download (OAD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../voice/voice.html">Creating a Voice Enabled Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sensor-controller/sensor-controller.html">Sensor Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../debugging/ble-index.html">Debugging</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="migration.html">Migration Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ble5stack1.00.00-to-ble5stack1.00.01.html">BLE5-Stack 1.00.00 to BLE5-Stack 1.00.01</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="migration.html#previous-migration-guides">Previous Migration Guides</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BLE-Stack 3.00.01 to BLE5-Stack 1.00.00</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project-configuration-changes">Project Configuration Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#application-modifications">Application Modifications</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="blestack3.00.00-to-blestack3.00.01.html">BLE-Stack 3.00.00 to BLE-Stack 3.00.01</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cc2640-to-cc2640r2.html">CC2640 to CC2640R2F</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cc254x-to-cc2640.html">CC254x to CC2640</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-reference.html">API References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Terms and Definitions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BLE5-Stack User's Guide</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="migration.html">Migration Guides</a> &raquo;</li>
+        
+      <li>BLE-Stack 3.00.01 to BLE5-Stack 1.00.00</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ble-stack-3-00-01-to-ble5-stack-1-00-00">
+<h1>BLE-Stack 3.00.01 to BLE5-Stack 1.00.00<a class="headerlink" href="#ble-stack-3-00-01-to-ble5-stack-1-00-00" title="Permalink to this headline">¶</a></h1>
+<p>This section will describe a way to migrate a BLE-Stack 3.00.01 project to
+BLE5-Stack 1.00.00. This will allow use of BLE5 features that are contained
+in the BLE5-Stack 1.00.00.</p>
+<p>The easiest way of migrating to BLE5 is by starting with a project in
+BLE5-Stack 1.00.00. For example, if your base project is simple_peripheral
+in BLE-Stack 3.00.01, use simple_peripheral in BLE5-Stack 1.00.00 and do
+application-level modifications
+If you follow this way, jump directly to
+<a class="reference internal" href="#sec-application-changes-porting-guide"><span class="std std-ref">Application Modifications</span></a>, no project configuration changes
+are required.</p>
+<p>If you want to start from a BLE-Stack 3.00.01 project, the migration has two steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><a class="reference internal" href="#sec-project-configuration-changes-porting-guide"><span class="std std-ref">Project Configuration Changes</span></a></li>
+<li><a class="reference internal" href="#sec-application-changes-porting-guide"><span class="std std-ref">Application Modifications</span></a>.</li>
+</ol>
+</div></blockquote>
+<p>The majority of the effort is in the configuration modifications.
+The application-level changes are minor.</p>
+<p>If an in-place migration is required, both steps must be done. This is the case
+if your project contains files that can not be moved into BLE5-Stack 1.00.00.</p>
+<p>In this section, the multi_role project will be used as an example. The
+BLE-Stack 3.00.01 multi_role project will be converted to use
+BLE5-Stack 1.00.00.</p>
+<p>It is assumed that the default installation directory was used for both
+installations of the SimpleLink CC2640R2 SDK (both the SDK containing the BLE-Stack 3.00.01 project
+and the BLE5-Stack).</p>
+<div class="section" id="project-configuration-changes">
+<span id="sec-project-configuration-changes-porting-guide"></span><h2>Project Configuration Changes<a class="headerlink" href="#project-configuration-changes" title="Permalink to this headline">¶</a></h2>
+<p>The project configuration structures are different in BLE5-Stack 1.00.00
+than in BLE-Stack 3.00.01. Depending on the IDE being utilized, the steps
+for changing them are different. The steps for CCS users follow after the
+steps for IAR users.</p>
+<div class="section" id="iar">
+<h3>IAR<a class="headerlink" href="#iar" title="Permalink to this headline">¶</a></h3>
+<p>For IAR, two files types are important to understand. <code class="docutils literal"><span class="pre">*.ewp</span></code> files
+and <code class="docutils literal"><span class="pre">*.custom_argvars</span></code>. In the <code class="docutils literal"><span class="pre">*.custom_argvars</span></code>-file, file location
+paths are defined. These defines are used by the <code class="docutils literal"><span class="pre">*.ewp</span></code> files.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">After you have changed the <code class="docutils literal"><span class="pre">*.custom_argvars</span></code> and <code class="docutils literal"><span class="pre">*.ewp</span></code> files, you
+must close and re-open the workspace. You can do this from the <strong>File</strong> menu.</p>
+</div>
+<p>In the project being ported, the <code class="docutils literal"><span class="pre">*.custom_argvars</span></code> file needs to be modified
+to use the updated path names. In other words, the <code class="docutils literal"><span class="pre">*.custom_argvars</span></code> needs to
+be replaced with the template shown in <a class="reference internal" href="#argvars-general"><span class="std std-numref">Listing 101.</span></a>.</p>
+<p>Emphasized lines in <a class="reference internal" href="#argvars-general"><span class="std std-numref">Listing 101.</span></a> must be changed to paths of
+the BLE5-Stack 1.00.00. An overview of the paths
+that must be changed is given in <a class="reference internal" href="#argvars-table"><span class="std std-numref">Table 20.</span></a>
+See <a class="reference internal" href="#argvars-multirole"><span class="std std-numref">Listing 102.</span></a> to see the new values.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<span id="argvars-general"></span><div class="code-block-caption"><span class="caption-number">Listing 101. </span><span class="caption-text">New <code class="docutils literal"><span class="pre">*.custom_argvars</span></code> structure - highlighted lines indicate required values.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
+
+<span class="nt">&lt;iarUserArgVars&gt;</span>
+  <span class="nt">&lt;group</span> <span class="na">active=</span><span class="s">&quot;true&quot;</span> <span class="na">name=</span><span class="s">&quot;SIMPLELINK_CC2640R2_SDK&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>SIMPLELINK_CORE_SDK_INSTALL_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>XDCROOT<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>EXAMPLE_ROOT<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>XDCPATH<span class="nt">&lt;/name&gt;</span>
+      <span class="nt">&lt;value&gt;</span>$SIMPLELINK_CORE_SDK_INSTALL_DIR$/kernel/tirtos/packages;$SIMPLELINK_CORE_SDK_INSTALL_DIR$/source;$SRC_BLE_DIR$<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>SRC_BLE_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>SRC_COMMON_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>TOOLS_BLE_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>ROM_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+  <span class="nt">&lt;/group&gt;</span>
+<span class="nt">&lt;/iarUserArgVars&gt;</span>
+</pre></div>
+</div>
+</div>
+<table border="1" class="docutils" id="id2">
+<span id="argvars-table"></span><caption><span class="caption-number">Table 20. </span><span class="caption-text">File location path names found in <code class="docutils literal"><span class="pre">*.custom_argvars</span></code>.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variable Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>SIMPLELINK_CORE_SDK_INSTALL_DIR</td>
+<td>Directory of SDK containing the ble-stack being used.</td>
+</tr>
+<tr class="row-odd"><td>XDCROOT</td>
+<td>Installation of XDCTools to be used with the stack.</td>
+</tr>
+<tr class="row-even"><td>EXAMPLE_ROOT</td>
+<td>Directory of the project being ported.</td>
+</tr>
+<tr class="row-odd"><td>XDCPATH</td>
+<td>Refers to paths used by XDCTools during prebuild steps.</td>
+</tr>
+<tr class="row-even"><td>SRC_BLE_DIR</td>
+<td>Directory of the stack being used.</td>
+</tr>
+<tr class="row-odd"><td>SRC_COMMON_DIR</td>
+<td>Directory of the stack being used.</td>
+</tr>
+<tr class="row-even"><td>TOOLS_BLE_DIR</td>
+<td>Tools directory of the stack being used.</td>
+</tr>
+<tr class="row-odd"><td>ROM_DIR</td>
+<td>ROM directory of the stack being used.</td>
+</tr>
+</tbody>
+</table>
+<p>In this example, open <code class="docutils literal"><span class="pre">multi_role.custom_argvars</span></code> with a text editor.
+<code class="docutils literal"><span class="pre">multi_role.custom_argvars</span></code> is located in
+<code class="docutils literal"><span class="pre">&lt;SDK_INSTALL_DIR&gt;\examples\rtos\CC2640R2_LAUNCHXL\blestack\multi_role\tirtos\iar</span></code>.</p>
+<p>Change the contents of <code class="docutils literal"><span class="pre">multi_role.custom_argvars</span></code> to be:</p>
+<div class="literal-block-wrapper docutils container" id="argvars-multirole">
+<div class="code-block-caption"><span class="caption-number">Listing 102. </span><span class="caption-text"><code class="docutils literal"><span class="pre">multi_role.custom_argvars</span></code> with updated file location paths.</span><a class="headerlink" href="#argvars-multirole" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
+
+<span class="nt">&lt;iarUserArgVars&gt;</span>
+  <span class="nt">&lt;group</span> <span class="na">active=</span><span class="s">&quot;true&quot;</span> <span class="na">name=</span><span class="s">&quot;SIMPLELINK_CC2640R2_SDK&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>SIMPLELINK_CORE_SDK_INSTALL_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;</span>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb<span class="nt">&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>XDCROOT<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;</span>c:/ti/xdctools_M_mm_pp_bb_core<span class="nt">&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>EXAMPLE_ROOT<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;</span>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/examples/rtos/CC2640R2_LAUNCHXL/blestack/multi_role<span class="nt">&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>XDCPATH<span class="nt">&lt;/name&gt;</span>
+      <span class="nt">&lt;value&gt;</span>$SIMPLELINK_CORE_SDK_INSTALL_DIR$/kernel/tirtos/packages;$SIMPLELINK_CORE_SDK_INSTALL_DIR$/source;$SRC_BLE_DIR$<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>SRC_BLE_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;</span>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/source/ti/ble5stack<span class="nt">&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>SRC_COMMON_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;</span>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/source/ti/ble5stack<span class="nt">&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>TOOLS_BLE_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;</span>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/tools/ble5stack<span class="nt">&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+    <span class="nt">&lt;variable&gt;</span>
+      <span class="nt">&lt;name&gt;</span>ROM_DIR<span class="nt">&lt;/name&gt;</span>
+<span class="hll">      <span class="nt">&lt;value&gt;</span>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/source/ti/ble5stack/rom<span class="nt">&lt;/value&gt;</span>
+</span>    <span class="nt">&lt;/variable&gt;</span>
+  <span class="nt">&lt;/group&gt;</span>
+<span class="nt">&lt;/iarUserArgVars&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Now these variables need to be used in the projects. This is done by modifying
+the <code class="docutils literal"><span class="pre">*.ewp</span></code> files associated with both the application and stack projects.</p>
+<p>In this example, the <code class="docutils literal"><span class="pre">*.ewp</span></code> files by default are located at
+<code class="docutils literal"><span class="pre">C:\ti\simplelink_cc2640r2_sdk_M_mm_pp_bb\examples\rtos\CC2640R2_LAUNCHXL\blestack\multi_role\tirtos\iar\app</span></code>
+and <code class="docutils literal"><span class="pre">C:\ti\simplelink_cc2640r2_sdk_M_mm_pp_bb\examples\rtos\CC2640R2_LAUNCHXL\blestack\multi_role\tirtos\iar\stack</span></code>
+for the application and stack respectively.</p>
+<p>A substitution table can be made to replace the references in <code class="docutils literal"><span class="pre">cc2640r2lp_app.ewp</span></code>
+and <code class="docutils literal"><span class="pre">cc2640r2lp_stack.ewp</span></code>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Original Reference</th>
+<th class="head">Updated Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>$SRC_BLE$</td>
+<td>$SRC_BLE_DIR$</td>
+</tr>
+<tr class="row-odd"><td>$SRC_COMMON$</td>
+<td>$SRC_COMMON_DIR$</td>
+</tr>
+<tr class="row-even"><td>$CC26XXWARE$</td>
+<td>$SIMPLELINK_CORE_SDK_INSTALL_DIR$/source/ti/devices/cc26x0r2</td>
+</tr>
+<tr class="row-odd"><td>$TI_RTOS_DRIVERS_BASE$</td>
+<td>$SIMPLELINK_CORE_SDK_INSTALL_DIR$/source</td>
+</tr>
+<tr class="row-even"><td>$TI_RTOS_KERNEL$</td>
+<td>$SIMPLELINK_CORE_SDK_INSTALL_DIR$/kernel/tirtos</td>
+</tr>
+<tr class="row-odd"><td>$TOOLS_BLE$</td>
+<td>$TOOLS_BLE_DIR$</td>
+</tr>
+</tbody>
+</table>
+<p>This result in the following files if the substitutions are made:</p>
+<blockquote>
+<div><p>Partial diff of modified <a class="reference download internal" href="../_downloads/cc2640r2lp_app.ewp" download=""><code class="xref download docutils literal"><span class="pre">resources/cc2640r2lp_app.ewp</span></code></a> and
+original <a class="reference download internal" href="../_downloads/cc2640r2lp_app.orig.ewp" download=""><code class="xref download docutils literal"><span class="pre">resources/cc2640r2lp_app.orig.ewp</span></code></a></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span>       <span class="nt">&lt;name&gt;</span>$PROJ_DIR$\..\config\iar_boundary.bdef<span class="nt">&lt;/name&gt;</span>
+--- resources/cc2640r2lp_app.orig.ewp
++++ resources/cc2640r2lp_app.ewp
+@@ -285,9 +285,9 @@
+         <span class="nt">&lt;/option&gt;</span>
+         <span class="nt">&lt;option&gt;</span>
+           <span class="nt">&lt;name&gt;</span>IExtraOptions<span class="nt">&lt;/name&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>-f $SRC_BLE$/config/build_components.opt<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>-f $SRC_BLE_DIR$/config/build_components.opt<span class="nt">&lt;/state&gt;</span>
+           <span class="nt">&lt;state&gt;</span>-f $PROJ_DIR$\..\stack\build_config.opt<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>-f $SRC_BLE$/config/factory_config.opt<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>-f $SRC_BLE_DIR$/config/factory_config.opt<span class="nt">&lt;/state&gt;</span>
+           <span class="nt">&lt;state&gt;</span>-f $PROJ_DIR$\..\config\configPkg\compiler.opt.defs<span class="nt">&lt;/state&gt;</span>
+         <span class="nt">&lt;/option&gt;</span>
+         <span class="nt">&lt;option&gt;</span>
+@@ -336,30 +336,30 @@
+         <span class="nt">&lt;/option&gt;</span>
+         <span class="nt">&lt;option&gt;</span>
+           <span class="nt">&lt;name&gt;</span>CCIncludePath2<span class="nt">&lt;/name&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/controller/cc26xx_r2/inc<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/inc<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/common/cc26xx<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/common/cc26xx/menu<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/controller/cc26xx_r2/inc<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/inc<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/common/cc26xx<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/common/cc26xx/menu<span class="nt">&lt;/state&gt;</span>
+           <span class="nt">&lt;state&gt;</span>$PROJ_DIR$\..\..\..\src/app<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/icall/inc<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/inc<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/profiles/dev_info<span class="nt">&lt;/state&gt;</span>
+</pre></div>
+</div>
+<p>Partial diff of modified <a class="reference download internal" href="../_downloads/cc2640r2lp_stack.ewp" download=""><code class="xref download docutils literal"><span class="pre">resources/cc2640r2lp_stack.ewp</span></code></a> and
+original <a class="reference download internal" href="../_downloads/cc2640r2lp_stack.orig.ewp" download=""><code class="xref download docutils literal"><span class="pre">resources/cc2640r2lp_stack.orig.ewp</span></code></a></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span> <span class="nt">&lt;/project&gt;</span>
+--- resources/cc2640r2lp_stack.orig.ewp
++++ resources/cc2640r2lp_stack.ewp
+@@ -277,8 +277,8 @@
+         <span class="nt">&lt;option&gt;</span>
+           <span class="nt">&lt;name&gt;</span>IExtraOptions<span class="nt">&lt;/name&gt;</span>
+           <span class="nt">&lt;state&gt;</span>--aeabi<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>-f $SRC_BLE$/config/build_components.opt<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>-f $SRC_BLE$/config/factory_config.opt<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>-f $SRC_BLE_DIR$/config/build_components.opt<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>-f $SRC_BLE_DIR$/config/factory_config.opt<span class="nt">&lt;/state&gt;</span>
+           <span class="nt">&lt;state&gt;</span>-f $PROJ_DIR$/build_config.opt<span class="nt">&lt;/state&gt;</span>
+           <span class="nt">&lt;state&gt;</span>--diag_suppress=Pa050<span class="nt">&lt;/state&gt;</span>
+           <span class="nt">&lt;state&gt;</span>-Dxdc_target_types__=iar/targets/arm/std.h<span class="nt">&lt;/state&gt;</span>
+@@ -330,31 +330,31 @@
+         <span class="nt">&lt;/option&gt;</span>
+         <span class="nt">&lt;option&gt;</span>
+           <span class="nt">&lt;name&gt;</span>CCIncludePath2<span class="nt">&lt;/name&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/controller/cc26xx_r2/inc<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/inc<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/rom<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/common/cc26xx<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_BLE$/common/cc26xx/npi/stack<span class="nt">&lt;/state&gt;</span>
+-          <span class="nt">&lt;state&gt;</span>$SRC_COMMON$/hal/src/target/_common<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/controller/cc26xx_r2/inc<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/inc<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/rom<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/common/cc26xx<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_BLE_DIR$/common/cc26xx/npi/stack<span class="nt">&lt;/state&gt;</span>
++          <span class="nt">&lt;state&gt;</span>$SRC_COMMON_DIR$/hal/src/target/_common<span class="nt">&lt;/state&gt;</span>
+           <span class="nt">&lt;state&gt;</span>$PROJ_DIR$\..\..\..\src/stack<span class="nt">&lt;/state&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>After you have changed the <code class="docutils literal"><span class="pre">*.custom_argvars</span></code> and <code class="docutils literal"><span class="pre">*.ewp</span></code> files, close the
+workspace. Select <strong>File</strong> and <strong>Close Workspace</strong>. Then re-open your workspace.
+At this point <a class="reference internal" href="#sec-application-changes-porting-guide"><span class="std std-ref">Application Modifications</span></a> are required to
+finish porting.</p>
+</div>
+<div class="section" id="ccs">
+<h3>CCS<a class="headerlink" href="#ccs" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>There are two main ways to convert a CCS project:</dt>
+<dd><ul class="first last simple">
+<li>Adjustment of project settings, paths, etc through CCS&#8217;s GUI or</li>
+<li>Modification of the project files directly.</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Modify files directly at your own risk. Have a back up ready. If a
+wrong modification is made your project will not function.</p>
+</div>
+<p>First, modify the project configuration to support BLE5-Stack 1.00.00 paths.
+This operation can be done while the application and stack projects are
+opened/imported into the current CCS workspace.</p>
+<p>For <strong>both</strong> the application project and the stack project:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>In <strong>Project Explorer</strong>, right click on the application/stack project</li>
+<li>Select the <strong>Properties</strong> Item</li>
+<li>Select <strong>General</strong> in the navigation pane</li>
+<li>Select <strong>RTSC</strong> tab in the window</li>
+<li>Select <strong>1.35.00.26</strong> under <strong>SimpleLink CC2640R2 SDK</strong> in the Products and Repositories</li>
+</ol>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/3-5-ccs-selecting-ble-sdk-in-rtsc.png"><img alt="../_images/3-5-ccs-selecting-ble-sdk-in-rtsc.png" src="../_images/3-5-ccs-selecting-ble-sdk-in-rtsc.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Figure 122. </span><span class="caption-text">Selecting SDK in CCS</span></p>
+</div>
+</div></blockquote>
+<p>This will change a number of build paths to use the selected SDK.</p>
+<p>Change the <code class="docutils literal"><span class="pre">TI_BLE_SDK_BASE</span></code> path variable to point to the
+BLE5-Stack 1.00.00 as well for both application and stack projects.
+For <strong>both</strong> the application project and the stack project:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>In <strong>Project Explorer</strong>, right click on the application/stack project</li>
+<li>Select the <strong>Properties</strong> item</li>
+<li>Expand <strong>Resource</strong> in the navigation pane, and select <strong>Linked Resources</strong></li>
+<li>Select <code class="docutils literal"><span class="pre">TI_BLE_SDK_BASE</span></code> in the Path Variables listing</li>
+<li>Click <strong>Edit</strong>, and change the location to <code class="docutils literal"><span class="pre">${COM_TI_SIMPLELINK_CC2640R2_SDK_INSTALL_DIR}</span></code></li>
+</ol>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/3-5-ccs-modifying-the-path-variable.png"><img alt="../_images/3-5-ccs-modifying-the-path-variable.png" src="../_images/3-5-ccs-modifying-the-path-variable.png" style="width: 95%;" /></a>
+<p class="caption"><span class="caption-number">Figure 123. </span><span class="caption-text">Changing Path Variable in CCS</span></p>
+</div>
+</div></blockquote>
+<p>All linked resources need to be coming from BLE5-Stack 1.00.00. These are
+all the files that are referenced in the project, but are located within the SDK. All the files
+contained in a project is located in the <code class="docutils literal"><span class="pre">.project</span></code> file associated with the project.
+The <code class="docutils literal"><span class="pre">.project</span></code> file can be modified from within CCS with the following instructions:</p>
+<p>For <strong>both</strong> the application project and the stack project:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>In <strong>Project Explorer</strong>, right click on the application/stack project</li>
+<li>Select the <strong>Properties</strong> item</li>
+<li>Expand <strong>Resource</strong> in the navigation pane, and select <strong>Linked Resources</strong></li>
+<li>Select the <strong>Linked Resources</strong> tab in the window</li>
+<li>Edit <strong>every</strong> entry to use <code class="docutils literal"><span class="pre">ble5stack</span></code> instead of <code class="docutils literal"><span class="pre">blestack</span></code></li>
+<li>In the spp project, remove the <code class="docutils literal"><span class="pre">icall_apimsg.h</span></code> entry. (It is not needed in BLE5-Stack.)</li>
+</ol>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/3-5-ccs-modifying-linked-resources.png"><img alt="../_images/3-5-ccs-modifying-linked-resources.png" src="../_images/3-5-ccs-modifying-linked-resources.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Figure 124. </span><span class="caption-text">Changing Linked Resources in CCS</span></p>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See <a class="reference internal" href="#sec-application-changes-porting-guide"><span class="std std-ref">Application Modifications</span></a> for how to deal
+with the <code class="docutils literal"><span class="pre">#include</span></code> changes regarding <code class="docutils literal"><span class="pre">icall_apimsg.h</span></code> in the application code.</p>
+</div>
+<p>The <code class="docutils literal"><span class="pre">.project</span></code> files for the application and stack projects can be modified
+directly to produce the same effect. Change all <code class="docutils literal"><span class="pre">&lt;locationURI&gt;</span></code> tags to use
+<code class="docutils literal"><span class="pre">ble5stack</span></code> instead of <code class="docutils literal"><span class="pre">blestack</span></code>, and remove the <code class="docutils literal"><span class="pre">icall_apimsg.h</span></code> entry.</p>
+<p>In this example, applying the changes to the multi_role project
+results in the following:</p>
+<dl class="docutils">
+<dt>Partial diff of modified <a class="reference download internal" href="../_downloads/app.project" download=""><code class="xref download docutils literal"><span class="pre">resources/app.project</span></code></a> and</dt>
+<dd><p class="first">original <a class="reference download internal" href="../_downloads/app.orig.project" download=""><code class="xref download docutils literal"><span class="pre">resources/app.orig.project</span></code></a></p>
+<div class="last highlight-xml"><div class="highlight"><pre><span></span> 			<span class="nt">&lt;name&gt;</span>TI_RTOS_DRIVERS_BASE<span class="nt">&lt;/name&gt;</span>
+--- resources/app.orig.project
++++ resources/app.project
+@@ -59,112 +59,107 @@
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>ICall/heapmgr.h<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+-			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/blestack/heapmgr/heapmgr.h<span class="nt">&lt;/locationURI&gt;</span>
++			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/ble5stack/heapmgr/heapmgr.h<span class="nt">&lt;/locationURI&gt;</span>
+ 		<span class="nt">&lt;/link&gt;</span>
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>ICall/icall.c<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+-			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/blestack/icall/src/icall.c<span class="nt">&lt;/locationURI&gt;</span>
++			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/ble5stack/icall/src/icall.c<span class="nt">&lt;/locationURI&gt;</span>
+ 		<span class="nt">&lt;/link&gt;</span>
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>ICall/icall.h<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+-			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/blestack/icall/src/inc/icall.h<span class="nt">&lt;/locationURI&gt;</span>
++			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/ble5stack/icall/src/inc/icall.h<span class="nt">&lt;/locationURI&gt;</span>
+ 		<span class="nt">&lt;/link&gt;</span>
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>ICall/icall_addrs.h<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+-			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/blestack/icall/inc/icall_addrs.h<span class="nt">&lt;/locationURI&gt;</span>
++			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/ble5stack/icall/inc/icall_addrs.h<span class="nt">&lt;/locationURI&gt;</span>
+ 		<span class="nt">&lt;/link&gt;</span>
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>ICall/icall_cc2650.c<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Partial diff of modified <a class="reference download internal" href="../_downloads/stack.project" download=""><code class="xref download docutils literal"><span class="pre">resources/stack.project</span></code></a> and</dt>
+<dd><p class="first">original <a class="reference download internal" href="../_downloads/stack.orig.project" download=""><code class="xref download docutils literal"><span class="pre">resources/stack.orig.project</span></code></a></p>
+<div class="last highlight-xml"><div class="highlight"><pre><span></span> 			<span class="nt">&lt;name&gt;</span>TI_RTOS_DRIVERS_BASE<span class="nt">&lt;/name&gt;</span>
+--- resources/stack.orig.project
++++ resources/stack.project
+@@ -88,302 +88,282 @@
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>Host/gatt_uuid.c<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+-			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/blestack/host/gatt_uuid.c<span class="nt">&lt;/locationURI&gt;</span>
++			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/ble5stack/host/gatt_uuid.c<span class="nt">&lt;/locationURI&gt;</span>
+ 		<span class="nt">&lt;/link&gt;</span>
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>Host/gatt_uuid.h<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+-			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/blestack/inc/gatt_uuid.h<span class="nt">&lt;/locationURI&gt;</span>
++			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/ble5stack/inc/gatt_uuid.h<span class="nt">&lt;/locationURI&gt;</span>
+ 		<span class="nt">&lt;/link&gt;</span>
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>ICallBLE/ble_dispatch.h<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+-			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/blestack/icall/inc/ble_dispatch.h<span class="nt">&lt;/locationURI&gt;</span>
++			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/ble5stack/icall/inc/ble_dispatch.h<span class="nt">&lt;/locationURI&gt;</span>
+ 		<span class="nt">&lt;/link&gt;</span>
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>ICallBLE/ble_dispatch_JT.c<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+-			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/blestack/icall/stack/ble_dispatch_JT.c<span class="nt">&lt;/locationURI&gt;</span>
++			<span class="nt">&lt;locationURI&gt;</span>TI_BLE_SDK_BASE/source/ti/ble5stack/icall/stack/ble_dispatch_JT.c<span class="nt">&lt;/locationURI&gt;</span>
+ 		<span class="nt">&lt;/link&gt;</span>
+ 		<span class="nt">&lt;link&gt;</span>
+ 			<span class="nt">&lt;name&gt;</span>ICallBLE/ble_dispatch_lite.c<span class="nt">&lt;/name&gt;</span>
+ 			<span class="nt">&lt;type&gt;</span>1<span class="nt">&lt;/type&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The next step is to modify the tools used for pre-build and post-build steps,
+to be the tools from BLE5-Stack 1.00.00.</p>
+<p>For <strong>both</strong> the application project and the stack project:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>In <strong>Project Explorer</strong>, right click on the application/stack project</li>
+<li>Select the <strong>Properties</strong> item</li>
+<li>Select <strong>CCS Build</strong> in the navigation pane</li>
+<li>Select the <strong>Steps</strong> tab in the window</li>
+<li>Edit <strong>Pre-Build</strong> and <strong>Post-build</strong> steps to use <code class="docutils literal"><span class="pre">ble5stack</span></code> instead of <code class="docutils literal"><span class="pre">blestack</span></code>.</li>
+</ol>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/3-5-ccs-changing-pre-and-post-build.png"><img alt="../_images/3-5-ccs-changing-pre-and-post-build.png" src="../_images/3-5-ccs-changing-pre-and-post-build.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Figure 125. </span><span class="caption-text">Changing Build Steps in CCS.</span></p>
+</div>
+</div></blockquote>
+<p>Modify of the include paths to utilize BLE5-Stack 1.00.00 headers. The correct
+header files allow use of the correct stack API.</p>
+<p>For <strong>both</strong> the application project and the stack project:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>In <strong>Project Explorer</strong>, right click on the application/stack project</li>
+<li>Select the <strong>Properties</strong> item</li>
+<li>Select <strong>CCS Build</strong> in the navigation pane, and expand <strong>ARM Compiler</strong></li>
+<li>Select <strong>Include Options</strong></li>
+<li>Edit items to use <code class="docutils literal"><span class="pre">ble5stack</span></code> instead of <code class="docutils literal"><span class="pre">blestack</span></code>.</li>
+</ol>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/3-5-ccs-modifying-include-paths.png"><img alt="../_images/3-5-ccs-modifying-include-paths.png" src="../_images/3-5-ccs-modifying-include-paths.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Figure 126. </span><span class="caption-text">Changing Include Paths in CCS.</span></p>
+</div>
+</div></blockquote>
+<p>Modification of the included linker command files is required is to
+pull in default configurations and correct libraries for BLE5-Stack 1.00.00.
+This is done by correctly selecting the <code class="docutils literal"><span class="pre">build_components.opt</span></code> and
+<code class="docutils literal"><span class="pre">factory_config.opt</span></code> files for the stack being used. Both these files feed
+into the linker, and enable linking of BLE5-Stack 1.00.00 features.</p>
+<p>For only the application project:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>In <strong>Project Explorer</strong>, right click on the application project</li>
+<li>Select the <strong>Properties</strong> item</li>
+<li>Expand <strong>CCS Build</strong> in the navigation pane, then expand <strong>ARM Compiler</strong></li>
+<li>Expand <strong>Advanced Options</strong> and select <strong>Command Files</strong></li>
+<li>Edit items to use <code class="docutils literal"><span class="pre">ble5stack</span></code> instead of <code class="docutils literal"><span class="pre">blestack</span></code>.</li>
+</ol>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../_images/3-5-ccs-changing-cmd-files.png"><img alt="../_images/3-5-ccs-changing-cmd-files.png" src="../_images/3-5-ccs-changing-cmd-files.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Figure 127. </span><span class="caption-text">Changing Linker Command Files Passed to Linker in CCS.</span></p>
+</div>
+</div></blockquote>
+<p>Lastly, modification to the XDC Tools packet repositories is needed to make
+them point to BLE5-Stack 1.00.00.</p>
+<p>For the application project:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>In <strong>Project Explorer</strong>, right click on the application project</li>
+<li>Select the <strong>Properties</strong> item</li>
+<li>Expand <strong>CCS Build</strong> in the navigation pane, then expand <strong>XDCtools</strong></li>
+<li>Select <strong>Package Repositories</strong></li>
+<li>Edit items to use <code class="docutils literal"><span class="pre">ble5stack</span></code> instead of <code class="docutils literal"><span class="pre">blestack</span></code>.</li>
+</ol>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../_images/3-5-ccs-xdctools-modification.png"><img alt="../_images/3-5-ccs-xdctools-modification.png" src="../_images/3-5-ccs-xdctools-modification.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Figure 128. </span><span class="caption-text">Changing XDC Tools repositories in CCS.</span></p>
+</div>
+</div></blockquote>
+<p>The <code class="docutils literal"><span class="pre">.cproject</span></code> for the application and stack project can be modified directly
+to produce the same effect as modifications via CCS GUI. This must be done on
+pre-build and post-build steps, include paths, linker, and XDC tools. In this
+example, applying the above changes to the <code class="docutils literal"><span class="pre">.cproject</span></code> file for multi_role
+results in the following:</p>
+<dl class="docutils">
+<dt>Partial diff of modified <a class="reference download internal" href="../_downloads/app.cproject" download=""><code class="xref download docutils literal"><span class="pre">resources/app.cproject</span></code></a> and</dt>
+<dd><p class="first">original <a class="reference download internal" href="../_downloads/app.orig.cproject" download=""><code class="xref download docutils literal"><span class="pre">resources/app.orig.cproject</span></code></a></p>
+<div class="last highlight-xml"><div class="highlight"><pre><span></span> 		<span class="nt">&lt;project-mappings&gt;</span>
+--- resources/app.orig.cproject
++++ resources/app.cproject
+@@ -1,8 +1,8 @@
+ <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span>
+ <span class="cp">&lt;?fileVersion 4.0.0?&gt;</span><span class="nt">&lt;cproject</span> <span class="na">storage_type_id=</span><span class="s">&quot;org.eclipse.cdt.core.XmlProjectDescriptionStorage&quot;</span><span class="nt">&gt;</span>
+ 	<span class="nt">&lt;storageModule</span> <span class="na">configRelations=</span><span class="s">&quot;2&quot;</span> <span class="na">moduleId=</span><span class="s">&quot;org.eclipse.cdt.core.settings&quot;</span><span class="nt">&gt;</span>
+-		<span class="nt">&lt;cconfiguration</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.109243204&quot;</span><span class="nt">&gt;</span>
+-			<span class="nt">&lt;storageModule</span> <span class="na">buildSystemId=</span><span class="s">&quot;org.eclipse.cdt.managedbuilder.core.configurationDataProvider&quot;</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.109243204&quot;</span> <span class="na">moduleId=</span><span class="s">&quot;org.eclipse.cdt.core.settings&quot;</span> <span class="na">name=</span><span class="s">&quot;FlashROM_StackLibrary&quot;</span><span class="nt">&gt;</span>
++		<span class="nt">&lt;cconfiguration</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.1936106048&quot;</span><span class="nt">&gt;</span>
++			<span class="nt">&lt;storageModule</span> <span class="na">buildSystemId=</span><span class="s">&quot;org.eclipse.cdt.managedbuilder.core.configurationDataProvider&quot;</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.1936106048&quot;</span> <span class="na">moduleId=</span><span class="s">&quot;org.eclipse.cdt.core.settings&quot;</span> <span class="na">name=</span><span class="s">&quot;FlashROM_StackLibrary&quot;</span><span class="nt">&gt;</span>
+ 				<span class="nt">&lt;externalSettings/&gt;</span>
+ 				<span class="nt">&lt;extensions&gt;</span>
+ 					<span class="nt">&lt;extension</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.binaryparser.CoffParser&quot;</span> <span class="na">point=</span><span class="s">&quot;org.eclipse.cdt.core.BinaryParser&quot;</span><span class="nt">/&gt;</span>
+@@ -14,10 +14,10 @@
+ 				<span class="nt">&lt;/extensions&gt;</span>
+ 			<span class="nt">&lt;/storageModule&gt;</span>
+ 			<span class="nt">&lt;storageModule</span> <span class="na">moduleId=</span><span class="s">&quot;cdtBuildSystem&quot;</span> <span class="na">version=</span><span class="s">&quot;4.0.0&quot;</span><span class="nt">&gt;</span>
+-				<span class="nt">&lt;configuration</span> <span class="na">artifactExtension=</span><span class="s">&quot;out&quot;</span> <span class="na">artifactName=</span><span class="s">&quot;${ProjName}&quot;</span> <span class="na">buildProperties=</span><span class="s">&quot;&quot;</span> <span class="na">cleanCommand=</span><span class="s">&quot;${CG_CLEAN_CMD}&quot;</span> <span class="na">description=</span><span class="s">&quot;&quot;</span> <span class="na">errorParsers=</span><span class="s">&quot;org.eclipse.rtsc.xdctools.parsers.ErrorParser;org.eclipse.cdt.core.GmakeErrorParser;com.ti.ccstudio.errorparser.CoffErrorParser;com.ti.ccstudio.errorparser.AsmErrorParser;com.ti.ccstudio.errorparser.LinkErrorParser&quot;</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.109243204&quot;</span> <span class="na">name=</span><span class="s">&quot;FlashROM_StackLibrary&quot;</span> <span class="na">parent=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default&quot;</span> <span class="na">postbuildStep=</span><span class="s">&quot;${CG_TOOL_HEX} -order MS --memwidth=8 --romwidth=8 --intel -o ${ProjName}.hex ${ProjName}.out&quot;</span> <span class="na">prebuildStep=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+-					<span class="nt">&lt;folderInfo</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.109243204.&quot;</span> <span class="na">name=</span><span class="s">&quot;/&quot;</span> <span class="na">resourcePath=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+-						<span class="nt">&lt;toolChain</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.DebugToolchain.896519329&quot;</span> <span class="na">name=</span><span class="s">&quot;TI Build Tools&quot;</span> <span class="na">superClass=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.DebugToolchain&quot;</span> <span class="na">targetTool=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.linkerDebug.733143634&quot;</span><span class="nt">&gt;</span>
+-							<span class="nt">&lt;option</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.500455323&quot;</span> <span class="na">superClass=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.core.OPT_TAGS&quot;</span> <span class="na">valueType=</span><span class="s">&quot;stringList&quot;</span><span class="nt">&gt;</span>
++				<span class="nt">&lt;configuration</span> <span class="na">artifactExtension=</span><span class="s">&quot;out&quot;</span> <span class="na">artifactName=</span><span class="s">&quot;${ProjName}&quot;</span> <span class="na">buildProperties=</span><span class="s">&quot;&quot;</span> <span class="na">cleanCommand=</span><span class="s">&quot;${CG_CLEAN_CMD}&quot;</span> <span class="na">description=</span><span class="s">&quot;&quot;</span> <span class="na">errorParsers=</span><span class="s">&quot;org.eclipse.rtsc.xdctools.parsers.ErrorParser;org.eclipse.cdt.core.GmakeErrorParser;com.ti.ccstudio.errorparser.CoffErrorParser;com.ti.ccstudio.errorparser.AsmErrorParser;com.ti.ccstudio.errorparser.LinkErrorParser&quot;</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.1936106048&quot;</span> <span class="na">name=</span><span class="s">&quot;FlashROM_StackLibrary&quot;</span> <span class="na">parent=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default&quot;</span> <span class="na">postbuildStep=</span><span class="s">&quot;${CG_TOOL_HEX} -order MS --memwidth=8 --romwidth=8 --intel -o ${ProjName}.hex ${ProjName}.out&quot;</span> <span class="na">prebuildStep=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
++					<span class="nt">&lt;folderInfo</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.1936106048.&quot;</span> <span class="na">name=</span><span class="s">&quot;/&quot;</span> <span class="na">resourcePath=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
++						<span class="nt">&lt;toolChain</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.DebugToolchain.331723491&quot;</span> <span class="na">name=</span><span class="s">&quot;TI Build Tools&quot;</span> <span class="na">superClass=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.DebugToolchain&quot;</span> <span class="na">targetTool=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.linkerDebug.970699676&quot;</span><span class="nt">&gt;</span>
++							<span class="nt">&lt;option</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.141539949&quot;</span> <span class="na">superClass=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.core.OPT_TAGS&quot;</span> <span class="na">valueType=</span><span class="s">&quot;stringList&quot;</span><span class="nt">&gt;</span>
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;DEVICE_CONFIGURATION_ID=Cortex M.CC2640R2F&quot;</span><span class="nt">/&gt;</span>
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;DEVICE_ENDIANNESS=little&quot;</span><span class="nt">/&gt;</span>
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;OUTPUT_FORMAT=ELF&quot;</span><span class="nt">/&gt;</span>
+@@ -26,48 +26,48 @@
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;RTSC_MBS_VERSION=7.0.0&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Partial diff of modified <a class="reference download internal" href="../_downloads/stack.cproject" download=""><code class="xref download docutils literal"><span class="pre">resources/stack.cproject</span></code></a> and</dt>
+<dd><p class="first">original <a class="reference download internal" href="../_downloads/stack.orig.cproject" download=""><code class="xref download docutils literal"><span class="pre">resources/stack.orig.cproject</span></code></a></p>
+<div class="last highlight-xml"><div class="highlight"><pre><span></span> 		<span class="nt">&lt;project-mappings&gt;</span>
+--- resources/stack.orig.cproject
++++ resources/stack.cproject
+@@ -1,8 +1,8 @@
+ <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span>
+ <span class="cp">&lt;?fileVersion 4.0.0?&gt;</span><span class="nt">&lt;cproject</span> <span class="na">storage_type_id=</span><span class="s">&quot;org.eclipse.cdt.core.XmlProjectDescriptionStorage&quot;</span><span class="nt">&gt;</span>
+ 	<span class="nt">&lt;storageModule</span> <span class="na">configRelations=</span><span class="s">&quot;2&quot;</span> <span class="na">moduleId=</span><span class="s">&quot;org.eclipse.cdt.core.settings&quot;</span><span class="nt">&gt;</span>
+-		<span class="nt">&lt;cconfiguration</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.471795021&quot;</span><span class="nt">&gt;</span>
+-			<span class="nt">&lt;storageModule</span> <span class="na">buildSystemId=</span><span class="s">&quot;org.eclipse.cdt.managedbuilder.core.configurationDataProvider&quot;</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.471795021&quot;</span> <span class="na">moduleId=</span><span class="s">&quot;org.eclipse.cdt.core.settings&quot;</span> <span class="na">name=</span><span class="s">&quot;FlashROM_Library&quot;</span><span class="nt">&gt;</span>
++		<span class="nt">&lt;cconfiguration</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.858636628&quot;</span><span class="nt">&gt;</span>
++			<span class="nt">&lt;storageModule</span> <span class="na">buildSystemId=</span><span class="s">&quot;org.eclipse.cdt.managedbuilder.core.configurationDataProvider&quot;</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.858636628&quot;</span> <span class="na">moduleId=</span><span class="s">&quot;org.eclipse.cdt.core.settings&quot;</span> <span class="na">name=</span><span class="s">&quot;FlashROM_Library&quot;</span><span class="nt">&gt;</span>
+ 				<span class="nt">&lt;externalSettings/&gt;</span>
+ 				<span class="nt">&lt;extensions&gt;</span>
+ 					<span class="nt">&lt;extension</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.binaryparser.CoffParser&quot;</span> <span class="na">point=</span><span class="s">&quot;org.eclipse.cdt.core.BinaryParser&quot;</span><span class="nt">/&gt;</span>
+@@ -13,53 +13,53 @@
+ 				<span class="nt">&lt;/extensions&gt;</span>
+ 			<span class="nt">&lt;/storageModule&gt;</span>
+ 			<span class="nt">&lt;storageModule</span> <span class="na">moduleId=</span><span class="s">&quot;cdtBuildSystem&quot;</span> <span class="na">version=</span><span class="s">&quot;4.0.0&quot;</span><span class="nt">&gt;</span>
+-				<span class="nt">&lt;configuration</span> <span class="na">artifactExtension=</span><span class="s">&quot;lib&quot;</span> <span class="na">artifactName=</span><span class="s">&quot;${ProjName}&quot;</span> <span class="na">buildProperties=</span><span class="s">&quot;&quot;</span> <span class="na">cleanCommand=</span><span class="s">&quot;${CG_CLEAN_CMD}&quot;</span> <span class="na">description=</span><span class="s">&quot;&quot;</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.471795021&quot;</span> <span class="na">name=</span><span class="s">&quot;FlashROM_Library&quot;</span> <span class="na">parent=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default&quot;</span> <span class="na">postbuildStep=</span><span class="s">&quot;&quot;</span> <span class="na">prebuildStep=</span><span class="s">&quot;         ${TI_BLE_SDK_BASE}/tools/blestack/lib_search/lib_search         ${PROJECT_LOC}/TOOLS/build_config.opt         ${TI_BLE_SDK_BASE}/source/ti/blestack/blelib         ${PROJECT_LOC}/FlashROM_Library/lib_linker.cmd         cc2640         ${TI_BLE_SDK_BASE}/tools/blestack/lib_search/lib_search.xml         ${TI_BLE_SDK_BASE}/source/ti/blestack/symbols&quot;</span><span class="nt">&gt;</span>
+-					<span class="nt">&lt;folderInfo</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.471795021.&quot;</span> <span class="na">name=</span><span class="s">&quot;/&quot;</span> <span class="na">resourcePath=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+-						<span class="nt">&lt;toolChain</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.libraryDebugToolchain.615242071&quot;</span> <span class="na">name=</span><span class="s">&quot;TI Build Tools&quot;</span> <span class="na">superClass=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.libraryDebugToolchain&quot;</span> <span class="na">targetTool=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.library.librarianDebug.1288210148&quot;</span><span class="nt">&gt;</span>
+-							<span class="nt">&lt;option</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.200602814&quot;</span> <span class="na">superClass=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.core.OPT_TAGS&quot;</span> <span class="na">valueType=</span><span class="s">&quot;stringList&quot;</span><span class="nt">&gt;</span>
++				<span class="nt">&lt;configuration</span> <span class="na">artifactExtension=</span><span class="s">&quot;lib&quot;</span> <span class="na">artifactName=</span><span class="s">&quot;${ProjName}&quot;</span> <span class="na">buildProperties=</span><span class="s">&quot;&quot;</span> <span class="na">cleanCommand=</span><span class="s">&quot;${CG_CLEAN_CMD}&quot;</span> <span class="na">description=</span><span class="s">&quot;&quot;</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.858636628&quot;</span> <span class="na">name=</span><span class="s">&quot;FlashROM_Library&quot;</span> <span class="na">parent=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default&quot;</span> <span class="na">postbuildStep=</span><span class="s">&quot;&quot;</span> <span class="na">prebuildStep=</span><span class="s">&quot;${TI_BLE_SDK_BASE}/tools/ble5stack/lib_search/lib_search         ${PROJECT_LOC}/TOOLS/build_config.opt         ${TI_BLE_SDK_BASE}/source/ti/ble5stack/blelib         ${PROJECT_LOC}/FlashROM_Library/lib_linker.cmd         cc2640         ${TI_BLE_SDK_BASE}/tools/ble5stack/lib_search/lib_search.xml         ${TI_BLE_SDK_BASE}/source/ti/ble5stack/symbols;&quot;</span><span class="nt">&gt;</span>
++					<span class="nt">&lt;folderInfo</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470.Default.858636628.&quot;</span> <span class="na">name=</span><span class="s">&quot;/&quot;</span> <span class="na">resourcePath=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
++						<span class="nt">&lt;toolChain</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.libraryDebugToolchain.368179225&quot;</span> <span class="na">name=</span><span class="s">&quot;TI Build Tools&quot;</span> <span class="na">superClass=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.libraryDebugToolchain&quot;</span> <span class="na">targetTool=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.TMS470_16.9.library.librarianDebug.441791699&quot;</span><span class="nt">&gt;</span>
++							<span class="nt">&lt;option</span> <span class="na">id=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.1221286404&quot;</span> <span class="na">superClass=</span><span class="s">&quot;com.ti.ccstudio.buildDefinitions.core.OPT_TAGS&quot;</span> <span class="na">valueType=</span><span class="s">&quot;stringList&quot;</span><span class="nt">&gt;</span>
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;DEVICE_CONFIGURATION_ID=Cortex M.CC2640R2F&quot;</span><span class="nt">/&gt;</span>
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;DEVICE_ENDIANNESS=little&quot;</span><span class="nt">/&gt;</span>
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;OUTPUT_FORMAT=ELF&quot;</span><span class="nt">/&gt;</span>
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;CCS_MBS_VERSION=6.1.3&quot;</span><span class="nt">/&gt;</span>
+ 								<span class="nt">&lt;listOptionValue</span> <span class="na">builtIn=</span><span class="s">&quot;false&quot;</span> <span class="na">value=</span><span class="s">&quot;OUTPUT_TYPE=staticLibrary&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="application-modifications">
+<span id="sec-application-changes-porting-guide"></span><h2>Application Modifications<a class="headerlink" href="#application-modifications" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="header-file-modification">
+<h3>Header File Modification<a class="headerlink" href="#header-file-modification" title="Permalink to this headline">¶</a></h3>
+<p>Changes have been made to how the BLE5-Stack 1.00.00 API is included into
+application code. This simplifies the code and reduces build issues.</p>
+<p>For any application using the BLE5-Stack 1.00.00, the following includes have
+been integrated into one header and put in <code class="docutils literal"><span class="pre">icall_ble_api.h</span></code>:</p>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre><span></span>#include &quot;bcomdef.h&quot;
+#include &quot;hci_tl.h&quot;
+#include &quot;linkdb.h&quot;
+#include &quot;gatt.h&quot;
+#include &quot;gapgattserver.h&quot;
+#include &quot;gattservapp.h&quot;
+#include &quot;gapbondmgr.h&quot;
+#include &quot;osal_snv.h&quot;
+#include &quot;icall_apimsg.h&quot;
+#include &quot;icall.h&quot;
+#include &quot;icall_api.h&quot;
+</pre></div>
+</div>
+</div></blockquote>
+<p>Instead of the above headers, the following should be used in the application
+source file:</p>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre><span></span>#include &lt;icall.h&gt;
+/* This Header file contains all BLE API and icall structure definition */
+#include &quot;icall_ble_api.h&quot;
+</pre></div>
+</div>
+</div></blockquote>
+<p>In this example, <code class="docutils literal"><span class="pre">multi_role.c</span></code> gets modified such that:</p>
+<blockquote>
+<div><p>Diff of modified <a class="reference download internal" href="../_downloads/multi_role.c" download=""><code class="xref download docutils literal"><span class="pre">resources/multi_role.c</span></code></a> and
+original <a class="reference download internal" href="../_downloads/multi_role.orig.c" download=""><code class="xref download docutils literal"><span class="pre">resources/multi_role.orig.c</span></code></a></p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>--- resources/multi_role.orig.c
++++ resources/multi_role.c
+@@ -55,19 +55,13 @@
+ #include &lt;ti/sysbios/knl/Event.h&gt;
+ #include &lt;ti/sysbios/knl/Queue.h&gt;
+ 
+-#include &quot;bcomdef.h&quot;
+-#include &quot;hci_tl.h&quot;
+-#include &quot;linkdb.h&quot;
+-#include &quot;gatt.h&quot;
+-#include &quot;gapgattserver.h&quot;
+-#include &quot;gattservapp.h&quot;
++#include &lt;icall.h&gt;
++/* This Header file contains all BLE API and icall structure definition */
++#include &quot;icall_ble_api.h&quot;
++
+ #include &quot;devinfoservice.h&quot;
+ #include &quot;simple_gatt_profile.h&quot;
+ #include &quot;multi.h&quot;
+-#include &quot;gapbondmgr.h&quot;
+-#include &quot;osal_snv.h&quot;
+-#include &quot;icall_apimsg.h&quot;
+-#include &quot;icall.h&quot;
+ #include &quot;util.h&quot;
+ #include &quot;ll_common.h&quot;
+ 
+@@ -88,8 +82,6 @@
+ #if defined( USE_FPGA ) || defined( DEBUG_SW_TRACE )
+ #include &lt;driverlib/ioc.h&gt;
+ #endif // USE_FPGA | DEBUG_SW_TRACE
+-
+-#include &quot;icall_api.h&quot;
+ 
+ /*********************************************************************
+ * CONSTANTS
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="sdk-ble-stack-ti-driver-modifications">
+<h3>SDK/BLE-Stack/TI-Driver Modifications<a class="headerlink" href="#sdk-ble-stack-ti-driver-modifications" title="Permalink to this headline">¶</a></h3>
+<p>If you started the porting process with a project from BLE5-Stack 1.00.00, all
+changes you have done to your original (BLE-Stack 3.00.01) must also be done
+here. Any remaining changes that were done to BLE-Stack 3.00.01 files must be
+done to the BLE5-Stack 1.00.00 files.</p>
+<p>Examples of this is changes to existing profile or TI-Driver. For example, if
+<code class="docutils literal"><span class="pre">ble_user_config.c</span></code> was modified in BLE-Stack 3.00.01, apply the same changes
+to the <code class="docutils literal"><span class="pre">ble_user_config.c</span></code> of BLE5-Stack 1.00.00. Refer to
+<a class="reference internal" href="../cc2640/architecture.html#tbl-root-folder"><span class="std std-ref">SDK root folders</span></a> for directories of various components.</p>
+<p>This also includes enabling any specific BLE5-Stack 1.00.00 features that aren&#8217;t
+enabled by default in the <code class="docutils literal"><span class="pre">build_config.opt</span></code>. LE 2M PHY is enabled by default
+in BLE5-Stack 1.00.00.</p>
+<p>At this point the project is fully converted to begin utilizing
+BLE5-Stack 1.00.00 features.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="blestack3.00.00-to-blestack3.00.01.html" class="btn btn-neutral float-right" title="BLE-Stack 3.00.00 to BLE-Stack 3.00.01" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ble5stack1.00.00-to-ble5stack1.00.01.html" class="btn btn-neutral" title="BLE5-Stack 1.00.00 to BLE5-Stack 1.00.01" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Texas Instruments.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.00.01.04',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

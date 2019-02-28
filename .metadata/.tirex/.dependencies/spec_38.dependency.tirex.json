@@ -1,0 +1,25 @@
+[
+   {
+      "compiler" : {
+         "effective" : "na",
+         "location" : "na",
+         "specified" : "na"
+      },
+      "default" : "na",
+      "packages" : [],
+      "name" : "na",
+      "files" : [
+         "+../../Board.h -> Board.h",
+         "+../../CC2640R2_LAUNCHXL.c -> CC2640R2_LAUNCHXL.c",
+         "+../../CC2640R2_LAUNCHXL.h -> CC2640R2_LAUNCHXL.h",
+         "+CC2640R2_LAUNCHXL_TIRTOS.cmd -> CC2640R2_LAUNCHXL_TIRTOS.cmd",
+         "+../../README.html -> README.html",
+         "+../../README.md -> README.md",
+         "+../../ccfg.c -> ccfg.c",
+         "+../../gpiointerrupt.c -> gpiointerrupt.c",
+         "+../main_tirtos.c -> main_tirtos.c",
+         "+../../overview.rov.json -> overview.rov.json",
+         "+../../../../../../../source/ti/blestack/boards/CC2640R2_LAUNCHXL/Board.html -> Board.html"
+      ]
+   }
+]

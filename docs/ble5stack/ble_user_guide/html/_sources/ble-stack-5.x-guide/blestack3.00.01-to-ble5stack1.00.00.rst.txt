@@ -1,0 +1,474 @@
+.. _TI-RTOS Kernel Users Guide: ..\/..\/..\/..\/..\/tirtos\/sysbios\/docs\/Bios_User_Guide.pdf
+
+BLE-Stack 3.00.01 to BLE5-Stack 1.00.00
+=======================================
+
+This section will describe a way to migrate a BLE-Stack 3.00.01 project to
+BLE5-Stack 1.00.00. This will allow use of BLE5 features that are contained
+in the BLE5-Stack 1.00.00.
+
+The easiest way of migrating to BLE5 is by starting with a project in
+BLE5-Stack 1.00.00. For example, if your base project is simple\_peripheral
+in BLE-Stack 3.00.01, use simple\_peripheral in BLE5-Stack 1.00.00 and do
+application-level modifications
+If you follow this way, jump directly to
+:ref:`sec-application-changes-porting-guide`, no project configuration changes
+are required.
+
+If you want to start from a BLE-Stack 3.00.01 project, the migration has two steps:
+
+    #. :ref:`sec-project-configuration-changes-porting-guide`
+    #. :ref:`sec-application-changes-porting-guide`.
+
+The majority of the effort is in the configuration modifications.
+The application-level changes are minor.
+
+If an in-place migration is required, both steps must be done. This is the case
+if your project contains files that can not be moved into BLE5-Stack 1.00.00.
+
+In this section, the multi\_role project will be used as an example. The
+BLE-Stack 3.00.01 multi\_role project will be converted to use
+BLE5-Stack 1.00.00.
+
+It is assumed that the default installation directory was used for both
+installations of the |SDK| (both the SDK containing the BLE-Stack 3.00.01 project
+and the |BLESTACK|).
+
+.. _sec-project-configuration-changes-porting-guide:
+
+Project Configuration Changes
+-----------------------------
+
+The project configuration structures are different in BLE5-Stack 1.00.00
+than in BLE-Stack 3.00.01. Depending on the IDE being utilized, the steps
+for changing them are different. The steps for CCS users follow after the
+steps for IAR users.
+
+IAR
+^^^
+
+For IAR, two files types are important to understand. ``*.ewp`` files
+and ``*.custom_argvars``. In the ``*.custom_argvars``-file, file location
+paths are defined. These defines are used by the ``*.ewp`` files.
+
+.. attention::
+    After you have changed the ``*.custom_argvars`` and ``*.ewp`` files, you
+    must close and re-open the workspace. You can do this from the **File** menu.
+
+In the project being ported, the ``*.custom_argvars`` file needs to be modified
+to use the updated path names. In other words, the ``*.custom_argvars`` needs to
+be replaced with the template shown in :numref:`argvars-general`.
+
+Emphasized lines in :numref:`argvars-general` must be changed to paths of
+the BLE5-Stack 1.00.00. An overview of the paths
+that must be changed is given in :numref:`argvars-table`
+See :numref:`argvars-multirole` to see the new values.
+
+.. _argvars-general:
+.. code-block:: xml
+        :emphasize-lines: 7, 11, 15, 23, 27, 31, 35
+        :caption: New ``*.custom_argvars`` structure - highlighted lines indicate required values.
+
+        <?xml version="1.0" encoding="iso-8859-1"?>
+
+        <iarUserArgVars>
+          <group active="true" name="SIMPLELINK_CC2640R2_SDK">
+            <variable>
+              <name>SIMPLELINK_CORE_SDK_INSTALL_DIR</name>
+              <value></value>
+            </variable>
+            <variable>
+              <name>XDCROOT</name>
+              <value></value>
+            </variable>
+            <variable>
+              <name>EXAMPLE_ROOT</name>
+              <value></value>
+            </variable>
+            <variable>
+              <name>XDCPATH</name>
+              <value>$SIMPLELINK_CORE_SDK_INSTALL_DIR$/kernel/tirtos/packages;$SIMPLELINK_CORE_SDK_INSTALL_DIR$/source;$SRC_BLE_DIR$</value>
+            </variable>
+            <variable>
+              <name>SRC_BLE_DIR</name>
+              <value></value>
+            </variable>
+            <variable>
+              <name>SRC_COMMON_DIR</name>
+              <value></value>
+            </variable>
+            <variable>
+              <name>TOOLS_BLE_DIR</name>
+              <value></value>
+            </variable>
+            <variable>
+              <name>ROM_DIR</name>
+              <value></value>
+            </variable>
+          </group>
+        </iarUserArgVars>
+
+.. _argvars-table:
+.. table:: File location path names found in ``*.custom_argvars``.
+
+    ===============================     ======================================================
+    Variable Name                       Description
+    ===============================     ======================================================
+    SIMPLELINK_CORE_SDK_INSTALL_DIR     Directory of SDK containing the ble-stack being used.
+    XDCROOT                             Installation of XDCTools to be used with the stack.
+    EXAMPLE_ROOT                        Directory of the project being ported.
+    XDCPATH                             Refers to paths used by XDCTools during prebuild steps.
+    SRC_BLE_DIR                         Directory of the stack being used.
+    SRC_COMMON_DIR                      Directory of the stack being used.
+    TOOLS_BLE_DIR                       Tools directory of the stack being used.
+    ROM_DIR                             ROM directory of the stack being used.
+    ===============================     ======================================================
+
+In this example, open ``multi_role.custom_argvars`` with a text editor.
+``multi_role.custom_argvars`` is located in
+``<SDK_INSTALL_DIR>\examples\rtos\CC2640R2_LAUNCHXL\blestack\multi_role\tirtos\iar``.
+
+Change the contents of ``multi_role.custom_argvars`` to be:
+
+.. code-block:: xml
+        :emphasize-lines: 7, 11, 15, 23, 27, 31, 35
+        :caption: ``multi_role.custom_argvars`` with updated file location paths.
+        :name: argvars-multirole
+
+        <?xml version="1.0" encoding="iso-8859-1"?>
+
+        <iarUserArgVars>
+          <group active="true" name="SIMPLELINK_CC2640R2_SDK">
+            <variable>
+              <name>SIMPLELINK_CORE_SDK_INSTALL_DIR</name>
+              <value>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb</value>
+            </variable>
+            <variable>
+              <name>XDCROOT</name>
+              <value>c:/ti/xdctools_M_mm_pp_bb_core</value>
+            </variable>
+            <variable>
+              <name>EXAMPLE_ROOT</name>
+              <value>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/examples/rtos/CC2640R2_LAUNCHXL/blestack/multi_role</value>
+            </variable>
+            <variable>
+              <name>XDCPATH</name>
+              <value>$SIMPLELINK_CORE_SDK_INSTALL_DIR$/kernel/tirtos/packages;$SIMPLELINK_CORE_SDK_INSTALL_DIR$/source;$SRC_BLE_DIR$</value>
+            </variable>
+            <variable>
+              <name>SRC_BLE_DIR</name>
+              <value>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/source/ti/ble5stack</value>
+            </variable>
+            <variable>
+              <name>SRC_COMMON_DIR</name>
+              <value>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/source/ti/ble5stack</value>
+            </variable>
+            <variable>
+              <name>TOOLS_BLE_DIR</name>
+              <value>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/tools/ble5stack</value>
+            </variable>
+            <variable>
+              <name>ROM_DIR</name>
+              <value>C:/ti/simplelink_cc2640r2_sdk_M_mm_pp_bb/source/ti/ble5stack/rom</value>
+            </variable>
+          </group>
+        </iarUserArgVars>
+
+Now these variables need to be used in the projects. This is done by modifying
+the ``*.ewp`` files associated with both the application and stack projects.
+
+In this example, the ``*.ewp`` files by default are located at
+``C:\ti\simplelink_cc2640r2_sdk_M_mm_pp_bb\examples\rtos\CC2640R2_LAUNCHXL\blestack\multi_role\tirtos\iar\app``
+and ``C:\ti\simplelink_cc2640r2_sdk_M_mm_pp_bb\examples\rtos\CC2640R2_LAUNCHXL\blestack\multi_role\tirtos\iar\stack``
+for the application and stack respectively.
+
+A substitution table can be made to replace the references in ``cc2640r2lp_app.ewp``
+and ``cc2640r2lp_stack.ewp``:
+
+======================      ==================
+Original Reference          Updated Reference
+======================      ==================
+$SRC_BLE$                   $SRC_BLE_DIR$
+$SRC_COMMON$                $SRC_COMMON_DIR$
+$CC26XXWARE$                $SIMPLELINK_CORE_SDK_INSTALL_DIR$/source/ti/devices/cc26x0r2
+$TI_RTOS_DRIVERS_BASE$      $SIMPLELINK_CORE_SDK_INSTALL_DIR$/source
+$TI_RTOS_KERNEL$            $SIMPLELINK_CORE_SDK_INSTALL_DIR$/kernel/tirtos
+$TOOLS_BLE$                 $TOOLS_BLE_DIR$
+======================      ==================
+
+This result in the following files if the substitutions are made:
+
+    Partial diff of modified :download:`resources/cc2640r2lp_app.ewp` and
+    original :download:`resources/cc2640r2lp_app.orig.ewp`
+
+    .. literalinclude:: resources/cc2640r2lp_app.ewp
+        :language: xml
+        :lines: 0-30
+        :diff: resources/cc2640r2lp_app.orig.ewp
+
+    Partial diff of modified :download:`resources/cc2640r2lp_stack.ewp` and
+    original :download:`resources/cc2640r2lp_stack.orig.ewp`
+
+    .. literalinclude:: resources/cc2640r2lp_stack.ewp
+        :language: xml
+        :lines: 0-30
+        :diff: resources/cc2640r2lp_stack.orig.ewp
+
+After you have changed the ``*.custom_argvars`` and ``*.ewp`` files, close the
+workspace. Select **File** and **Close Workspace**. Then re-open your workspace.
+At this point :ref:`sec-application-changes-porting-guide` are required to
+finish porting.
+
+CCS
+^^^
+
+There are two main ways to convert a CCS project:
+    * Adjustment of project settings, paths, etc through CCS's GUI or
+    * Modification of the project files directly.
+
+.. warning::
+        Modify files directly at your own risk. Have a back up ready. If a
+        wrong modification is made your project will not function.
+
+First, modify the project configuration to support BLE5-Stack 1.00.00 paths.
+This operation can be done while the application and stack projects are
+opened/imported into the current CCS workspace.
+
+For **both** the application project and the stack project:
+
+    #.  In **Project Explorer**, right click on the application/stack project
+    #.  Select the **Properties** Item
+    #.  Select **General** in the navigation pane
+    #.  Select **RTSC** tab in the window
+    #.  Select **1.35.00.26** under **SimpleLink CC2640R2 SDK** in the Products and Repositories
+
+    .. figure:: resources/3-5-ccs-selecting-ble-sdk-in-rtsc.png
+        :align: center
+        :width: 75%
+
+        Selecting SDK in CCS
+
+This will change a number of build paths to use the selected SDK.
+
+Change the ``TI_BLE_SDK_BASE`` path variable to point to the
+BLE5-Stack 1.00.00 as well for both application and stack projects.
+For **both** the application project and the stack project:
+
+    #.  In **Project Explorer**, right click on the application/stack project
+    #.  Select the **Properties** item
+    #.  Expand **Resource** in the navigation pane, and select **Linked Resources**
+    #.  Select ``TI_BLE_SDK_BASE`` in the Path Variables listing
+    #.  Click **Edit**, and change the location to ``${COM_TI_SIMPLELINK_CC2640R2_SDK_INSTALL_DIR}``
+
+    .. figure:: resources/3-5-ccs-modifying-the-path-variable.png
+        :align: center
+        :width: 95%
+
+        Changing Path Variable in CCS
+
+All linked resources need to be coming from BLE5-Stack 1.00.00. These are
+all the files that are referenced in the project, but are located within the SDK. All the files
+contained in a project is located in the ``.project`` file associated with the project.
+The ``.project`` file can be modified from within CCS with the following instructions:
+
+For **both** the application project and the stack project:
+
+    #.  In **Project Explorer**, right click on the application/stack project
+    #.  Select the **Properties** item
+    #.  Expand **Resource** in the navigation pane, and select **Linked Resources**
+    #.  Select the **Linked Resources** tab in the window
+    #.  Edit **every** entry to use ``ble5stack`` instead of ``blestack``
+    #.  In the spp project, remove the ``icall_apimsg.h`` entry. (It is not needed in BLE5-Stack.)
+
+    .. figure:: resources/3-5-ccs-modifying-linked-resources.png
+        :align: center
+        :width: 75%
+
+        Changing Linked Resources in CCS
+
+.. note::
+        See :ref:`sec-application-changes-porting-guide` for how to deal
+        with the ``#include`` changes regarding ``icall_apimsg.h`` in the application code.
+
+The ``.project`` files for the application and stack projects can be modified
+directly to produce the same effect. Change all ``<locationURI>`` tags to use
+``ble5stack`` instead of ``blestack``, and remove the ``icall_apimsg.h`` entry.
+
+In this example, applying the changes to the multi\_role project
+results in the following:
+
+Partial diff of modified :download:`resources/app.project` and
+    original :download:`resources/app.orig.project`
+
+    .. literalinclude:: resources/app.project
+        :language: xml
+        :lines: 0-30
+        :diff: resources/app.orig.project
+
+Partial diff of modified :download:`resources/stack.project` and
+    original :download:`resources/stack.orig.project`
+
+    .. literalinclude:: resources/stack.project
+        :language: xml
+        :lines: 0-30
+        :diff: resources/stack.orig.project
+
+The next step is to modify the tools used for pre-build and post-build steps,
+to be the tools from BLE5-Stack 1.00.00.
+
+For **both** the application project and the stack project:
+
+    #.  In **Project Explorer**, right click on the application/stack project
+    #.  Select the **Properties** item
+    #.  Select **CCS Build** in the navigation pane
+    #.  Select the **Steps** tab in the window
+    #.  Edit **Pre-Build** and **Post-build** steps to use ``ble5stack`` instead of ``blestack``.
+
+    .. figure:: resources/3-5-ccs-changing-pre-and-post-build.png
+        :align: center
+        :width: 75%
+
+        Changing Build Steps in CCS.
+
+Modify of the include paths to utilize BLE5-Stack 1.00.00 headers. The correct
+header files allow use of the correct stack API.
+
+For **both** the application project and the stack project:
+
+    #.  In **Project Explorer**, right click on the application/stack project
+    #.  Select the **Properties** item
+    #.  Select **CCS Build** in the navigation pane, and expand **ARM Compiler**
+    #.  Select **Include Options**
+    #.  Edit items to use ``ble5stack`` instead of ``blestack``.
+
+    .. figure:: resources/3-5-ccs-modifying-include-paths.png
+        :align: center
+        :width: 75%
+
+        Changing Include Paths in CCS.
+
+Modification of the included linker command files is required is to
+pull in default configurations and correct libraries for BLE5-Stack 1.00.00.
+This is done by correctly selecting the ``build_components.opt`` and
+``factory_config.opt`` files for the stack being used. Both these files feed
+into the linker, and enable linking of BLE5-Stack 1.00.00 features.
+
+For only the application project:
+
+    #.  In **Project Explorer**, right click on the application project
+    #.  Select the **Properties** item
+    #.  Expand **CCS Build** in the navigation pane, then expand **ARM Compiler**
+    #.  Expand **Advanced Options** and select **Command Files**
+    #.  Edit items to use ``ble5stack`` instead of ``blestack``.
+
+    .. figure:: resources/3-5-ccs-changing-cmd-files.png
+        :align: center
+        :width: 75%
+
+        Changing Linker Command Files Passed to Linker in CCS.
+
+Lastly, modification to the XDC Tools packet repositories is needed to make
+them point to BLE5-Stack 1.00.00.
+
+For the application project:
+
+    #.  In **Project Explorer**, right click on the application project
+    #.  Select the **Properties** item
+    #.  Expand **CCS Build** in the navigation pane, then expand **XDCtools**
+    #.  Select **Package Repositories**
+    #.  Edit items to use ``ble5stack`` instead of ``blestack``.
+
+    .. figure:: resources/3-5-ccs-xdctools-modification.png
+        :align: center
+        :width: 75%
+
+        Changing XDC Tools repositories in CCS.
+
+The ``.cproject`` for the application and stack project can be modified directly
+to produce the same effect as modifications via CCS GUI. This must be done on
+pre-build and post-build steps, include paths, linker, and XDC tools. In this
+example, applying the above changes to the ``.cproject`` file for multi\_role
+results in the following:
+
+Partial diff of modified :download:`resources/app.cproject` and
+    original :download:`resources/app.orig.cproject`
+
+    .. literalinclude:: resources/app.cproject
+        :language: xml
+        :lines: 0-30
+        :diff: resources/app.orig.cproject
+
+Partial diff of modified :download:`resources/stack.cproject` and
+    original :download:`resources/stack.orig.cproject`
+
+    .. literalinclude:: resources/stack.cproject
+        :language: xml
+        :lines: 0-30
+        :diff: resources/stack.orig.cproject
+
+.. _sec-application-changes-porting-guide:
+
+Application Modifications
+-------------------------
+
+Header File Modification
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Changes have been made to how the BLE5-Stack 1.00.00 API is included into
+application code. This simplifies the code and reduces build issues.
+
+For any application using the BLE5-Stack 1.00.00, the following includes have
+been integrated into one header and put in ``icall_ble_api.h``:
+
+    .. code-block:: none
+
+        #include "bcomdef.h"
+        #include "hci_tl.h"
+        #include "linkdb.h"
+        #include "gatt.h"
+        #include "gapgattserver.h"
+        #include "gattservapp.h"
+        #include "gapbondmgr.h"
+        #include "osal_snv.h"
+        #include "icall_apimsg.h"
+        #include "icall.h"
+        #include "icall_api.h"
+
+
+Instead of the above headers, the following should be used in the application
+source file:
+
+    .. code-block:: none
+
+        #include <icall.h>
+        /* This Header file contains all BLE API and icall structure definition */
+        #include "icall_ble_api.h"
+
+In this example, ``multi_role.c`` gets modified such that:
+
+    Diff of modified :download:`resources/multi_role.c` and
+    original :download:`resources/multi_role.orig.c`
+
+    .. literalinclude:: resources/multi_role.c
+        :language: none
+        :diff: resources/multi_role.orig.c
+
+SDK/BLE-Stack/TI-Driver Modifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you started the porting process with a project from BLE5-Stack 1.00.00, all
+changes you have done to your original (BLE-Stack 3.00.01) must also be done
+here. Any remaining changes that were done to BLE-Stack 3.00.01 files must be
+done to the BLE5-Stack 1.00.00 files.
+
+Examples of this is changes to existing profile or TI-Driver. For example, if
+``ble_user_config.c`` was modified in BLE-Stack 3.00.01, apply the same changes
+to the ``ble_user_config.c`` of BLE5-Stack 1.00.00. Refer to
+:ref:`tbl-root-folder` for directories of various components.
+
+This also includes enabling any specific BLE5-Stack 1.00.00 features that aren't
+enabled by default in the ``build_config.opt``. LE 2M PHY is enabled by default
+in BLE5-Stack 1.00.00.
+
+At this point the project is fully converted to begin utilizing
+BLE5-Stack 1.00.00 features.

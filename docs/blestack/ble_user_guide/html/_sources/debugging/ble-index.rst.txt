@@ -1,0 +1,11 @@
+*********
+Debugging
+*********
+
+.. rubric:: Table of contents
+
+.. toctree::
+   :maxdepth: 2
+
+   gen-debugging
+   ble-debugging

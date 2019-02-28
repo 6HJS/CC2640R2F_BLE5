@@ -1,0 +1,679 @@
+.. _sec-oad-concepts:
+
+OAD Concept Overview
+--------------------
+
+This section aims to explain the major concepts involved in the OAD
+process from a high level. The concepts here will be expanded upon further
+in the following sections. Some concepts, such as the Boot Image Manager
+(:term:`BIM`), may vary in their implementation details. Wherever possible, the
+concepts will be covered in this chapter with their implementation
+details covered in the following chapters.
+
+OAD Types
+^^^^^^^^^
+
+|BLESTACK| only supports off-chip OAD. During off-chip OAD, the candidate
+image is stored in a low power external flash and loaded into the |DEVICE|
+internal flash by the :term:`BIM`.
+
+.. There are two methods of implementing an over the air download update: On-chip
+.. and Off-chip. The key difference between the two methods is where the
+.. downloaded image is to be stored during the OAD process. During on-chip OAD, the
+.. downloaded image is written to internal flash, allowing for a single
+.. chip OAD solution. :ref:`sect-off-chip-oad` stores the downloaded image in an
+.. external flash part, requiring a two chip OAD solution.
+.. :numref:`fig-oad-type-comparison` shows a comparison of different OAD methods.
+.. Each type of OAD has associated trade offs and benefits which will be discussed
+.. in their respective sections. Despite their differences, both OAD methods share
+.. the same over the air profile and metadata vector described in this section
+
+.. .. _fig-oad-type-comparison:
+.. .. figure:: media/image1.png
+..     :align: center
+
+..     OAD Types Overview
+
+
+.. .. _oad_types_overview:
+.. .. table:: OAD Types Overview.
+
+..     +----------+-----------------------------------------------------------+-------------------------------+
+..     | OAD      | Advantages                                                | Limitations                   |
+..     | Type     |                                                           |                               |
+..     +----------+-----------------------------------------------------------+-------------------------------+
+..     |  On-chip | No                                                        | Application                   |
+..     |          | external flash required                                   | size restriction              |
+..     |          |                                                           | Stack image not upgraded      |
+..     +----------+-----------------------------------------------------------+-------------------------------+
+..     | Off-chip | Ability                                                   | Low                           |
+..     |          | to store multiple / backup images                         | power external flash required |
+..     |          | Full application + stack upgrade,Maximum application size |                               |
+..     +----------+-----------------------------------------------------------+-------------------------------+
+
+.. _sec-oad-topology:
+
+OAD Topology Overview
+^^^^^^^^^^^^^^^^^^^^^
+
+Two BLE capable devices are required for implementing the OAD custom GATT
+service. The terms for the devices involved in an OAD exchange are listed below:
+
+    - :term:`OAD Target`
+    - :term:`OAD Downloader`
+
+The :term:`OAD Target` is always the device that implements the OAD service
+GATT server. Typically this is the peripheral device that is being updated.
+The OAD Target uses a Boot Image Manager (BIM) to facilitate the application of
+a new firmware update image. The BIM executes on a device reset and determines
+if a firmware update is to be applied. If no update is being applied, then the
+BIM will transfer program execution to the main application image.
+
+The :term:`OAD Downloader` is always the device that implements
+the OAD service GATT client. Typically this is the central device that is
+supplying the firmware update image.
+:numref:`fig-oad-downloader-and-target` shows a graphical relationship of the
+devices required for an OAD transfer. The :term:`OAD Downloader` can be any
+compliant BLE device that meets the minimum requirements needed to implement
+the OAD service (e.g, a smartphone).
+
+.. _fig-oad-downloader-and-target:
+.. figure:: media/image2.png
+    :align: center
+
+    :term:`OAD Downloader` and Target
+
+All provided TI example applications (BTool, mobile
+applications, etc.) are implemented such that the :term:`OAD Target` is a
+peripheral device, and the :term:`OAD Downloader` is a central device.
+Other configurations are outside of the scope of this document.
+
+.. _sec-oad-image-metadata:
+
+OAD Image Metadata
+^^^^^^^^^^^^^^^^^^
+
+All firmware images delivered via OAD are in binary format and contain an image
+metadata header The information in the metadata header is used by the OAD service
+to determine whether or not an image is acceptable for download or by
+the BIM to determine which image should be loaded/executed in the main system
+flash. In order to prevent this information from being calculated multiple times
+all TI OAD images use a standard 16-byte metadata vector. This metadata vector
+is embedded at the beginning of the image, occupying the first 16 bytes before
+the application code firmware content.
+
+This section explains the various fields within the metadata
+vector and what they mean.
+
+Most metadata checking is done in :code:`OADTarget_validateNewImage()`.
+
+TI provides a tool to generate an OAD ready image, which contains a metadata
+vector called the OAD Image Tool. See :ref:`sec-generating-metadata-vector`.
+
+:numref:`tbl-metadata-description-table` below shows a description of the
+metadata vector.
+
+.. _tbl-metadata-description-table:
+.. table:: Description of the metadata vector.
+
+    +-----------------+-------------------+------------------------------------+
+    | Field           | Size (in bytes)   | Description                        |
+    +=================+===================+====================================+
+    | CRC             | 2                 | Cyclic Redundancy Check            |
+    +-----------------+-------------------+------------------------------------+
+    | CRC Shadow      | 2                 | Place holder for CRC               |
+    +-----------------+-------------------+------------------------------------+
+    | Version         | 2                 | Version                            |
+    +-----------------+-------------------+------------------------------------+
+    | Length          | 2                 | Length of the image in words\*     |
+    +-----------------+-------------------+------------------------------------+
+    | UID             | 4                 | User Identification                |
+    +-----------------+-------------------+------------------------------------+
+    | Start Address   | 2                 | The destination address of the     |
+    |                 |                   | image in words\*                   |
+    +-----------------+-------------------+------------------------------------+
+    | Image Type      | 1                 | The type of image to be downloaded |
+    +-----------------+-------------------+------------------------------------+
+    | State           | 1                 | The status of this image           |
+    +-----------------+-------------------+------------------------------------+
+
+
+.. [*]
+    These fields are measured in 32-bit words.
+
+    For example, an image length of 0x100
+    describes an image that is 1024 bytes in size. This OAD word size is
+    defined by :code:`EFL_OAD_ADDR_RESOLUTION` for off-chip OAD
+
+CRC and CRC Shadow
+""""""""""""""""""
+
+The cyclic redundancy check (CRC) is a means to check the integrity of an image.
+This must be done in two steps. First the CRC must be calculated when the image
+is generated from the toolchain, this will be stored in the CRC field within the
+metadata vector.
+
+This initial CRC will be sent over the air via the OAD service (see
+:ref:`sect-oad-service-desc` section).
+
+Later, once the target has received the OAD image, CRC shadow will be
+calculated to determine if the image has been corrupted during transfer.
+The target will re-calculate the CRC of the downloaded image and store the result
+in the CRC shadow field of the metadata vector.
+
+If the CRC and CRC shadow are equivalent, the target can assume that the
+image was not corrupted while sending over the air.
+
+The algorithm selected for CRC calculations is the CRC-16-CCITT, it is a
+16 bit CRC calculation that has a 99.9984% error detection rate in
+the worst case. In addition to this CRC, all data transfers in BLE are protected
+by a CRC on the link layer so the risk of an undetected data corruption is even
+further reduced.
+
+Version
+"""""""
+
+The image version field is used to track revisions of images and ensure
+upgrade compatibility. Customers may implement their own versioning
+scheme; however, there are additional checks imposed by the TI OAD profile.
+See the function :code:`OADTarget_validateNewImage()` within
+:code:`oad_target_external_flash.c` to see
+how these version checks are done in Off-chip OAD.
+
+
+Length
+""""""
+
+The length field is the length of the image in words, where the word
+size is defined by :code:`EFL_OAD_ADDR_RESOLUTION`
+for Off-chip OAD. Off-chip OAD customers who
+are using different external flash parts may need to modify
+:code:`EFL_OAD_ADDR_RESOLUTION` to match the word size of their part.
+
+User Identification (UID)
+"""""""""""""""""""""""""
+
+This field is un-used by the TI OAD profile, but the hooks are in place
+for a customer to add their own implementation of verifying images based
+on UID.
+
+Off-chip images use ‘E’, ‘E’, ‘E’, ‘E’ by default.
+
+Start Address
+"""""""""""""
+
+The start address is the first address where the proposed image is to be
+stored in internal flash. Similar to the length field, this is
+calculated in words. Off-chip OAD solutions put restrictions on the
+start address based on image type (more on this in the next section).
+
+
+Image Type
+""""""""""
+
+In Off-chip OAD systems with external flash, there are multiple types of
+images that can be uploaded. These image types include:
+
+    - App + Stack
+    - App only
+    - Network Processor
+    - Stack only
+
+.. warning::
+    While stack only upgrades are possible with off-chip OAD, the user must be
+    sure that the App/Stack boundary RAM and flash addresses have not changed
+    between the current firmware image and the proposed OAD image. Since there
+    are no runtime checks on the App/Stack boundary, a stack only OAD will
+    overwrite the resident application if the boundary has grown. Users should
+    exercise care when using this option. TI recommends performing a app + stack
+    upgrade when using the off-chip OAD method.
+
+If a boundary address change is required (i.e. stack is growing or
+shrinking), it is required that a user perform a merged update
+(App+Stack) to ensure that the OAD image is ready to run.
+
+
+The supported image types are listed below:
+
+.. _tbl-off-chip-oad-image-types:
+.. table:: Off-chip OAD Image Types.
+
+    +--------------------------------+---------+-------------------------------+
+    | Image Type                     | Value   | Description                   |
+    +================================+=========+===============================+
+    | EFL\_OAD\_IMG\_TYPE\_APP       | 1       | An application or application |
+    |                                |         | + stack merged update         |
+    +--------------------------------+---------+-------------------------------+
+    | EFL\_OAD\_IMG\_TYPE\_STACK     | 2       | A stack only update           |
+    +--------------------------------+---------+-------------------------------+
+    | EFL\_OAD\_IMG\_TYPE\_NP        | 3       | A network processor update.   |
+    |                                |         |  This only applies to the     |
+    |                                |         |  SimpleAP + SimpleNP demo     |
+    +--------------------------------+---------+-------------------------------+
+    | EFL\_OAD\_IMG\_TYPE\_FACTORY   | 4       | Describes the permanently     |
+    |                                |         | resident production image that|
+    |                                |         | runs on the device before any |
+    |                                |         | OTA updates.                  |
+    +--------------------------------+---------+-------------------------------+
+
+Image State
+"""""""""""
+
+The image state is a one byte metadata field that is used only by
+Off-chip OAD solutions. The state informs the :term:`BIM` whether or not
+the image is ready to run or currently running. This prevents the
+:term:`BIM` from copying the same image from external to internal flash
+on every boot.
+
+.. _sect-oad-service-desc:
+
+OAD Service (0xFFC0)
+^^^^^^^^^^^^^^^^^^^^
+
+The OAD service has been designed to provide a simple and customizable
+implementation for the customer. In its most rudimentary form, this
+service is responsible for accepting/rejecting an OAD interaction based
+on image header criteria, storing the image in its appropriate location,
+and causing a device reset if the download is successful so that the
+downloaded application image is run by the :term:`BIM`.
+
+A screenshot of BTool displaying the OAD service is shown below:
+
+.. _fig-oad-service-overview:
+.. figure:: ./media/image3.png
+    :align: center
+
+    OAD Service Overview
+
+The OAD service is a primary service with four characteristics. The
+characteristics of the OAD service, their UUIDs, and descriptions are
+listed in :numref:`fig-oad-service-overview`
+
+.. note::
+    The characteristics use the 128-bit TI base UUID of the
+    format F000XXXX-0451-4000-B000-000000000000 where XXXX is their
+    shortened 16bit UUID. For brevity, this document will refer to the
+    characteristics by their 16-bit short UUID.
+
+.. _tbl-oad-service-description:
+.. table:: OAD Service Description.
+
+    +----------+------------------+-------------------------------------------+
+    | UUID     | Name             | Description                               |
+    +==========+==================+===========================================+
+    | 0xFFC0   | OAD Service      | OAD service declaration                   |
+    +----------+------------------+-------------------------------------------+
+    | 0xFFC1   | Image Identify   | Used to send image metadata over the air  |
+    |          |                  | so that the :term:`OAD Target` device can |
+    |          |                  | determine                                 |
+    |          |                  | if it should accept or reject the proposed|
+    |          |                  | image                                     |
+    +----------+------------------+-------------------------------------------+
+    | 0xFFC2   | Image Block      | Actual block of image data along with     |
+    |          |                  | offset into the image.                    |
+    +----------+------------------+-------------------------------------------+
+    | 0xFFC3   | Image Count      | Number of complete images to be downloaded|
+    |          |                  | in the OAD session                        |
+    +----------+------------------+-------------------------------------------+
+    | 0xFFC4   | Image Status     | Status of current OAD download            |
+    +----------+------------------+-------------------------------------------+
+
+The primary method for sending data from the :term:`OAD Downloader` to the OAD
+target is the GATT writes with no response message. GATT notifications
+are the primary method used to send status data from the target to the
+downloader. This communication scheme was selected to prevent the target
+device from having to include the GATT client code required in order to
+receive notifications from the downloader. The :term:`OAD Downloader`
+shall register for notifications from any characteristic with a :term:`CCCD`
+(by writing 01:00 to the :term:`CCCD`).
+
+.. note::
+    Both GATT notifications and GATT write without response are
+    non-acknowledged message types. To ensure reliability, it is recommended to
+    limit OAD payload transfers to one procedure per connection event.
+
+For a message sequence chart describing the OAD process in terms OAD
+service messages exchanged between the target and :term:`OAD Downloader` please
+see :numref:`fig-oad-sequence-diagram`.
+
+OAD Image Identify (0xFFC1)
+"""""""""""""""""""""""""""
+
+The Image Identify characteristic is used to exchange image metadata
+between :term:`OAD Downloader` and target. The OAD process begins when the
+:term:`OAD Downloader` sends the 16 byte metadata of the proposed OAD image to
+the target. Upon receiving the candidate metadata, the target will do some
+calculations to determine whether or not the proposed image should be
+downloaded. “01:00” shall be written to the :term:`CCCD` of this characteristic
+so that notification for metadata rejection is enabled.
+
+.. note::
+    Please see :code:`OADTarget_validateNewImage()` in
+    :code:`oad_target_external_flash.c` or off-chip OAD. These functions
+    implement the image reject conditions.
+
+If the target accepts the image it will continue the OAD process by
+sending a notification on the Image Block characteristic requesting the
+first block. Otherwise the target will reject the image by sending back
+a portion the currently resident image’s metadata. The reject metadata
+contains the Image version, and User ID fields. For more
+information about these fields, please refer to :ref:`sec-oad-image-metadata`.
+
+A sniffer capture of the image identify characteristic being used to
+reject a candidate OAD image is shown below. Note that only image
+version, length, and user ID are contained in the reject notification.
+
+.. _fig-reject-notification-sniffer-capture:
+.. figure:: ./media/image4.png
+    :align: center
+
+    Reject Notification in Sniffer Capture
+
+Alternatively, a successful OAD initiation is shown in below:
+
+.. _fig-oad-initiation-sniffer-capture:
+.. figure:: ./media/image5.png
+    :align: center
+
+    Successful OAD Initiation Sniffer Capture
+
+OAD Image Block Characteristic (0xFFC2)
+"""""""""""""""""""""""""""""""""""""""
+
+The OAD Image Block characteristic is used to request and transfer a
+block of the OAD image. “01:00” shall be written to the :term:`CCCD` of this
+characteristic so that notification for block request is enabled. The
+target requests the next block of the image by sending a GATT
+notification to the :term:`OAD Downloader` with the requested block number. The
+:term:`OAD Downloader` will respond (GATT write no response) with the block
+number and a 16 byte OAD image block. The image block contains the actual
+binary data from OAD image offset by the block number.
+:numref:`fig-block-request-response-sniffer-capture` shows a
+block request/response sniffer capture.
+
+.. _fig-block-request-response-sniffer-capture:
+.. figure:: ./media/image6.png
+    :align: center
+
+    Block Request/Response Sniffer Capture
+
+In :numref:`fig-block-request-response-sniffer-capture` above, the block number
+field is 2 bytes (little endian) and
+highlighted in red. The OAD image block is 16 bytes and highlighted in
+purple.
+
+OAD Image Count Characteristic (0xFFC3)
+"""""""""""""""""""""""""""""""""""""""
+
+The OAD Image Count characteristic is used to set the number of OAD
+images to be downloaded. This is used for only Off-chip OAD and the
+default value of the characteristic is 1.
+
+OAD Image Status (0xFFC4)
+"""""""""""""""""""""""""
+
+The OAD image status characteristic is used to report various failures
+that may occur during the OAD process. The :term:`OAD Downloader` may use this
+information to determine why an OAD failed, so that it may correct for
+the errors and try again. To enable notifications on this characteristic
+“01:00” shall be written to the :term:`CCCD` of this characteristic.
+There are four OAD status messages that are defined by default. The OAD status
+codes are listed in the table below:
+
+.. _oad-status-codes:
+.. table:: OAD Status Codes
+
+    +--------------------+---------+-------------------------------------------+
+    | OAD Status Code    | Value   | Description                               |
+    +====================+=========+===========================================+
+    | OAD\_SUCCESS       | 0       | OAD succeeded                             |
+    +--------------------+---------+-------------------------------------------+
+    | OAD\_CRC\_ERR      | 1       | The downloaded image’s CRC doesn’t match  |
+    |                    |         | the one expected from the metadata        |
+    +--------------------+---------+-------------------------------------------+
+    | OAD\_FLASH\_ERR    | 2       | The external flash cannot be opened       |
+    +--------------------+---------+-------------------------------------------+
+    | OAD\_BUFFER\_OFL   | 3       | The block number of the received packet   |
+    |                    |         | doesn’t match the one requested.          |
+    |                    |         | An overflow has occurred.                 |
+    +--------------------+---------+-------------------------------------------+
+
+The customer may extend these values as needed, and use the
+:code:`OAD_sendStatus()` function to send updates to the downloader.
+
+.. _oad-reset-service:
+
+.. OAD Reset Service (0xFFD0)
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. The OAD reset service is only used by on-chip OAD solutions. It
+.. implements a method for invalidating the currently running image and
+.. resetting the device. This must occur because in on-chip solutions the
+.. currently running image cannot update itself. More information about the
+.. on-chip OAD process will be covered in the on-chip OAD chapter.
+.. :numref:`fig-oad-reset-service` shows an overview of the OAD reset service and
+.. it’s characteristic. Like the OAD service, the reset service uses the 128 bit TI
+.. base UUID with a 16 bit short UUID of 0xFFD0.
+
+.. .. _fig-oad-reset-service:
+.. .. figure:: ./media/btool_oad_reset_service.png
+..     :align: center
+
+..     OAD Reset Service
+
+.. OAD Reset (0xFFD1)
+.. """"""""""""""""""
+
+.. The OAD reset is accomplished by invalidating Image B, which forces the
+.. :term:`BIM` to revert to Image A until another successful OAD of Image B
+.. has occurred. Image B is invalidated by corrupting its CRC. After the
+.. corruption, the reset service immediately invokes a HAL reset to jump to
+.. the :term:`BIM`. Note that a GATT write of any value to the reset service
+.. will trigger a reset of the device/invalidation of Image B.
+
+.. .. _oad-process:
+
+OAD Process
+^^^^^^^^^^^
+
+This Profile has been designed to provide a simple and customizable OAD
+Profile for the customer. In its most rudimentary form, this profile is
+responsible for accepting an OAD interaction based on image header criteria,
+storing the image onto the flash and causing a device reset if the download is
+successful so that the downloaded application image is run by the :term:`BIM`.
+The :term:`OAD Downloader` and OAD Target perform Client role and Server role
+respectively.
+
+Initiation of the OAD Process
+"""""""""""""""""""""""""""""
+
+After establishing a new connection, updating the connection interval
+for a faster OAD and enabling notifications of OAD Image Identify and
+OAD Image Block characteristics on the :term:`OAD Target`, the
+:term:`OAD Downloader` shall write to the Image Identify characteristic of the
+:term:`OAD Target`. The message data will be the header retrieved from the OAD
+Image available for OAD.
+
+.. _fig-oad-sequence-diagram:
+.. uml::
+    :caption: Sequence diagram for OAD process
+    :align: center
+
+    @startuml
+    Downloader <- Target: Advertisements
+    Downloader -> Target: Connect Req
+    Downloader <-> Target: OAD Service Discovery
+
+    Downloader -> Target: Enable Notifications on Img Notify Char
+    Downloader -> Target: Enable Notifications on Img Block Char
+    Downloader -> Target: Enable Notifications on Img Status Char
+
+    group Optional for Network Processor OAD
+    Downloader -> Target: Write to Img Count Char
+    end
+
+    note left of Downloader
+    Generate metadata
+    end note
+
+    Downloader -> Target: Write metadata to Image Identify Char
+
+    note right of Target
+    Target validates metadata
+    end note
+
+    alt Image is rejected by Target
+    Downloader <- Target: Notification on Image Identify Char of current metadata
+    note over Downloader, Target
+      OAD process terminates in the case of rejected metadata
+    end note
+
+    else Image is accepted by Target
+    Downloader <- Target: Notification on Image Block Char requesting 1st block
+    end
+
+    note left of Downloader
+    Read requested block
+    from image file
+    end note
+
+    Downloader -> Target: Write 1st block with block num to Image Block Char
+
+    group Repeat For Each Block In the Image
+
+    Downloader <- Target: Notification on Image Block Char requesting next block
+    note left of Downloader
+    Read requested block
+    from image file
+    end note
+
+    Downloader -> Target: Write requested block with block num to Image Block Char
+
+    note right of Target
+    Write block to flash
+    end note
+    end
+
+    ...Repeat above until all blocks are sent...
+
+    Target -> Target: Validate Received Image
+    alt Image fails post download checks
+
+    Downloader <- Target: Notification on Image Status Char: FAILURE_CODE
+    note over Downloader, Target
+      OAD process terminates in the case of rejected image, never jump to BIM
+    end note
+    else Image passes post download checks
+    Downloader <- Target: Notification on Image Status Char: SUCCESS
+    note right of Target
+     Write metadata to flash
+    end note
+    note right of Target
+     Reset Device
+    end note
+    note left of Downloader
+     Terminate connection
+     (Supervision timeout)
+    end note
+    end
+
+
+    @enduml
+
+Upon receiving the write request to the Image Identify characteristic,
+the :term:`OAD Target` will compare the image available for OAD to its own
+running image. :code:`OADTarget_validateNewImage()` in the OAD profile is
+responsible for determining the acceptance of the new image.
+
+If the :term:`OAD Target` determines that the image available for OAD is
+acceptable, the :term:`OAD Target` will initiate the OAD process by notifying
+the Image Block Transfer characteristic to the :term:`OAD Downloader` requesting the
+first block of the new image. Otherwise, if the :term:`OAD Target` finds that
+the new image does not meet its criteria to begin the OAD process, it
+shall respond by notifying the Image Identify characteristic with its
+own Image Header data as sign of rejection. In that case, the OAD
+procedure will end immediately as
+depicted in :numref:`fig-oad-sequence-diagram`.
+
+Image Block Transfers
+"""""""""""""""""""""
+
+The Image Block Transfer characteristic allows the two devices to
+request and respond with the OAD image, one block at a time. The image
+block size is defined to be 16 bytes – see :code:`OAD_BLOCK_SIZE` in
+:code:`oad.h`. The :term:`OAD Target` will request an image block from the
+:term:`OAD Downloader` by notifying the OAD Image Block characteristic with the
+correct block index. The :term:`OAD Downloader` shall then respond by writing to
+the OAD Image Block characteristic. The message’s data will be the requested
+block’s index followed by the corresponding 16-byte block of the image. Whenever
+the :term:`OAD Target` is ready to digest another block of the OAD image, it
+will notify the Image Block Transfer characteristic with the index of
+the desired image block. The :term:`OAD Downloader` will then respond.
+
+Completion of the OAD Process
+"""""""""""""""""""""""""""""
+
+After the :term:`OAD Target` has received the final image block, it will verify
+that the image is correctly received and stored by calculating the CRC
+over the stored OAD image.
+
+The :term:`OAD Target` will then reset so that the bootloader (:term:`BIM`)
+can verify and boot the new image downloaded.
+
+The burden of verification is then on the Downloader, which will lose BLE
+connection to the :term:`OAD Target` during this verification and instantiation
+process, to restart scanning and the to reestablish a connection and
+verify that the new image is indeed running.
+
+.. _sec-bim-concept-section:
+
+Handling Errors During the OAD Process
+""""""""""""""""""""""""""""""""""""""
+
+To ensure reliability, any error or faults that occurs during an OAD transfer
+requires the :term:`OAD Downloader` to restart the OAD transfer procedure from the
+beginning. Errors may be reported through the OAD Image Status characteristic if
+notifications have been enabled
+
+
+Boot Image Manager (BIM)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since a running image cannot update itself OAD methods must employ a boot image
+manager (BIM). The :term:`BIM` is a
+lightweight section of code that is designed to run every time the device resets,
+check the validity of newly downloaded images, and if necessary, load
+the new image into internal flash.
+
+    -  :code:`bim_oad_offchip` See :ref:`sect-bim-for-off-chip-oad`
+
+.. note::
+
+    As of |BLESTACKVER| :term:`BIM` is always linked to page 31 of internal
+    flash, and will always link the :term:`CCFG` section with it.
+    Thus the OAD application will not need its own CCFG.
+
+.. _sec-concepts-linker:
+
+Linker Responsibilities
+^^^^^^^^^^^^^^^^^^^^^^^
+
+In general, there are a few bare requirements that the linker command file must
+have to support the TI OAD Profile, TI Tools, and TI BIM (The TI OAD Ecosystem):
+
+  - Flash Space for :ref:`sec-oad-image-metadata` and App Start location
+  - Preservation of Page 31 (CCFGs + BIM) see :ref:`sec-bim-concept-section`
+  - Alignment of Interrupt Vector Table see :ref:`sec-oad-reset-vect-change`
+
+These requirements are critical; not just to be supported in the TI OAD Ecosystem
+but for stability of application as discussed in earlier sections.
+
+The |SDK| provides ``cc26xx_app_oad.cmd`` (CCS) and ``cc26xx_app_oad.icf`` (IAR)
+linker command files to show these requirements for compatibility with TI OAD
+Ecosystem. Example modifications to an existing linker command file to make an
+Library OAD off-chip possible is shown in
+:ref:``sec-generating-library-oad-linker-file``.
+
+Generally, the TI Image Tool will handle page alignment of OAD images, no linker
+intervention is required. However, if desired, some stack side changes can be done
+to make the stack entry point page aligned, see :ref:`sec-stack-side-changes-oad`.

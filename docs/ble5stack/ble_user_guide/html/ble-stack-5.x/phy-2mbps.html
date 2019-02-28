@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LE 2M PHY &mdash; BLE5-Stack User&#39;s Guide 1.00.01.04 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="BLE5-Stack User&#39;s Guide 1.00.01.04 documentation" href="../index.html"/>
+        <link rel="up" title="Developing a Bluetooth Low Energy Application" href="index.html"/>
+        <link rel="next" title="Defining Application Behavior" href="creating-a-custom-bluetooth-low-energy-application.html"/>
+        <link rel="prev" title="Host Controller Interface (HCI)" href="hci.html"/> 
+    <script language="JavaScript">
+        var tiPageName;
+        tiPageName = "sug ble-stack-5.x phy-2mbps";
+
+        if (location.protocol == "file:"){
+            var ci_analytics_poc_load = true;
+        }
+    </script> 
+
+    <script src="http://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8">     
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../ble-stack-5.x-guide/index.html" class="icon icon-home"> BLE5-Stack User's Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.00.01.04
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cc2640/disclaimer.html">Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ble-stack-5.x-guide/get-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cc2640/platform.html">The CC2640R2F SDK Platform</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developing a Bluetooth Low Energy Application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the-application.html">The Application</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#the-stack">The Stack</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="gap.html">Generic Access Profile (GAP)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gaprole.html">GAPRole Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gatt.html">Generic Attribute Profile (GATT)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gatt.html#gap-gatt-service-ggs">GAP GATT Service (GGS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gatt.html#generic-attribute-profile-service-gatt-service">Generic Attribute Profile Service (GATT Service)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gatt.html#gattservapp-module">GATTServApp Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gapbondmngr.html">GAP Bond Manager and LE Secure Connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gapbondmngr.html#privacy">Privacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="l2cap.html">Logical Link Control and Adaptation Layer Protocol (L2CAP)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-length-extensions.html">LE Data Length Extension (DLE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="channel-selection-algorithm-number-two.html">Channel Selection Algorithm #2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hci.html">Host Controller Interface (HCI)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LE 2M PHY</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#le-2m-phy-vs-le-1m-phy">LE 2M PHY vs LE 1M PHY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phy-limitations">PHY Limitations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-phy">Default PHY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-phy">Changing PHY</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#creating-a-custom-bluetooth-low-energy-application">Creating a Custom Bluetooth low energy Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#running-the-sdk-on-custom-boards">Running the SDK on Custom Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../u-stack/index.html">Micro BLE Stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oad/oad.html">Over the Air Download (OAD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../voice/voice.html">Creating a Voice Enabled Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sensor-controller/sensor-controller.html">Sensor Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../debugging/ble-index.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ble-stack-5.x-guide/migration.html">Migration Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ble-stack-5.x-guide/api-reference.html">API References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ble-stack-5.x-guide/reference.html">Terms and Definitions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../ble-stack-5.x-guide/index.html">BLE5-Stack User's Guide</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../ble-stack-5.x-guide/index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Developing a Bluetooth Low Energy Application</a> &raquo;</li>
+        
+      <li>LE 2M PHY</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="le-2m-phy">
+<span id="sec-phy-2mbps"></span><h1>LE 2M PHY<a class="headerlink" href="#le-2m-phy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The BLE5-Stack supports transferring data over the mandatory
+symbol rate of 1 megasymbol per second (Msym/s) where 1 symbol represents 1 bit.
+This results in a bit rate of 1 megabit per second (Mb/s), which is referred to
+as LE 1M PHY. The stack also supports an optional symbol rate of 2 Msym/s, with
+bit rate of 2 Mb/s, which is referred to as LE 2M PHY. This LE 2M PHY feature is
+introduced in the <a class="reference external" href="https://www.bluetooth.com/specifications/adopted-specifications">Bluetooth Core Specification Version 5.0</a> in addition to the LE 1M PHY previously supported.</p>
+<p>All the projects in BLE5-Stack have support for LE 2M PHY by default; APIs
+need to be called in the application to utilize the feature.</p>
+<dl class="docutils">
+<dt>The following HCI commands were added to support this feature:</dt>
+<dd><ul class="first last simple">
+<li>LE Set PHY Command (<a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a>)</li>
+<li>LE Set Default PHY Command (<a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a>)</li>
+<li>LE Read PHY Command (<a class="reference external" href="../doxygen/group___h_c_i.html#gab861d912273534c2be1b31cfa6564ce7">HCI_LE_ReadPhyCmd()</a>)</li>
+</ul>
+</dd>
+</dl>
+<p>When the <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> is called, the controller starts the PHY
+Update Procedure to change the PHYs. The procedure consists of exchanging the
+PHY preferences of both devices and negotiating the correct PHY to use based on
+the PHY preferences. Depending on peer device capability and preference(s), the
+PHY Update Procedure may not result in a change to the active PHY configuration.</p>
+</div>
+<div class="section" id="le-2m-phy-vs-le-1m-phy">
+<h2>LE 2M PHY vs LE 1M PHY<a class="headerlink" href="#le-2m-phy-vs-le-1m-phy" title="Permalink to this headline">¶</a></h2>
+<p>The LE 2M PHY feature uses the same transmit power as the LE 1M PHY, the only
+change is in the modulation of data in the PHY. Using the LE 2M PHY, the energy
+consumption decreases due to higher data modulation at the same output power.
+The following table lists some of the differences between the two PHYs:</p>
+<table border="1" class="docutils" id="id2">
+<span id="phy-tradeoffs"></span><caption><span class="caption-number">Table 12. </span><span class="caption-text">Tradeoff between 1M and 2M PHYs</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Comparison</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Power consumption</td>
+<td>Energy consumption is reduced using the same transmit power.</td>
+</tr>
+<tr class="row-odd"><td>Data Rate</td>
+<td>LE 2M PHY is 2x faster to transmit data than LE 1M PHY.</td>
+</tr>
+<tr class="row-even"><td>Receive Sensitivity</td>
+<td>The link budget will be lower relative to LE 1M PHY, due to
+the increased symbol rate.</td>
+</tr>
+<tr class="row-odd"><td>Tramsmit Power</td>
+<td>The output power is same for both PHYs.</td>
+</tr>
+</tbody>
+</table>
+<p>The main advantage to use the LE 2M PHY is for high throughput applications to transfer
+data at a higher speed.</p>
+</div>
+<div class="section" id="phy-limitations">
+<span id="limitations-phy"></span><h2>PHY Limitations<a class="headerlink" href="#phy-limitations" title="Permalink to this headline">¶</a></h2>
+<p>The following are the current PHY limitations in BLE5-Stack:</p>
+<ul class="simple">
+<li>The BLE controller does not support autonomous change of PHY during connection
+where the Link Layer initiates PHY change. Connections are always formed at 1M
+PHY. It is up to the application or the peer device to call
+<a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> to change to a different PHY.</li>
+<li>The BLE controller does not support asymmetric connections where the
+connection uses different PHYs in each direction (RX and TX).</li>
+<li>The PHY_options parameter in <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> will be supported in
+future release along with LE Long Range feature.</li>
+</ul>
+</div>
+<div class="section" id="default-phy">
+<h2>Default PHY<a class="headerlink" href="#default-phy" title="Permalink to this headline">¶</a></h2>
+<p>The application can call <a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a> to set the default
+PHY preferences for both master and slave configurations. If no preference is
+specified or the API is never called, then the stack will use all supported
+PHY(1M + 2M). Similarly for <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a>, if no preference is
+specified, then the stack will use the default PHY (i.e. the connection PHY as
+defined by <a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a>), otherwise it will use what is
+specified in the parameters.</p>
+<p>The <a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a> should be called before forming the
+connection while the <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> can only be called during a
+connection. Also note that the <a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a> does not
+change the PHY, only the <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> can change the PHY. The
+preferences set by <a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a> are used in these two
+cases:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The peer remote device initiates the PHY Update Procedure using
+<a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> to negotiate the correct PHY to use based on the
+preferences from both devices.</li>
+<li>The <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> is called with the AllPhys parameter set to
+1(indicating no preference among the supported PHYs)</li>
+</ul>
+</div></blockquote>
+<p>See an example of this in <a class="reference internal" href="#negotiating-phy"><span class="std std-ref">PHY Negotiation</span></a>.</p>
+</div>
+<div class="section" id="changing-phy">
+<span id="id1"></span><h2>Changing PHY<a class="headerlink" href="#changing-phy" title="Permalink to this headline">¶</a></h2>
+<p>The application can initiate a PHY Update Procedure in a connection regardless
+of the roles of the devices. The PHY preferences that are set by
+<a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a> are used by default during a set PHY
+negotiation unless changed by the <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a>. The
+<a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a> is used to specify the preferred PHY for
+transmit and receive for all subsequent connections. However, when the
+<a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> is used to change the PHY for the connection, the
+change only applies to that connection (subsequent connections will revert to
+using the default PHYs).</p>
+<p>The parameters for both <a class="reference external" href="../doxygen/group___h_c_i.html#gae3788543722bdd6ca32740ecb8d48cd8">HCI_LE_SetDefaultPhyCmd()</a> and
+<a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> are same. The ALL_PHYS parameter specifies whether
+the other two parameters (TX_PHYS and RX_PHYS) are used or not.
+Master value of &#8216;1&#8217; indicates the client has no PHY preference for that
+direction, while a &#8216;0&#8217; indicates that the corresponding parameter should be
+used. The TX_PHYS and RX_PHYS can be set to specify which PHY to use for
+transmitting and receiving, respectively. Note that when all supported PHY are
+specified, the stack always tries to select the fastest PHY during a set PHY
+negotiation, see an illustration of this in <a class="reference internal" href="#negotiating-phy"><span class="std std-ref">PHY Negotiation</span></a>.</p>
+<p>The sequence diagram below shows the use case where the master initiates the PHY
+update procedure:</p>
+<div class="figure align-center" id="id3">
+<span id="fig-phy-update-master"></span><p class="plantuml">
+<img src="../_images/plantuml-bfe018bc60a694672d6c8bab1c60c48ed0bdf89d.png" alt="&#64;startuml
+hide footbox
+
+
+            participant Master
+            participant MasterLL
+            participant SlaveLL
+            participant Slave
+
+
+            group Establish connection
+                            Master -&gt; MasterLL: GAPCentralRole_EstablishLink()
+                            note left: Master and Slave are in connection
+            end
+            == LE 1M PHY ==
+...
+
+            group Change PHY
+                    Master -&gt; MasterLL: HCI_LE_SetPhyCmd()
+                    note left: Master application initiates PHY change
+                    ...
+
+                    MasterLL -&gt; SlaveLL : LE_PHY_REQ
+                    SlaveLL -&gt; MasterLL : LE_PHY_RES
+                    note left: Link layer messages exchanged
+                    ...
+                    MasterLL -&gt; SlaveLL : LE_PHY_UPDATE_IND
+
+            end
+            == Change of PHY ==
+...
+
+            group Receive event
+                    MasterLL -&gt; Master : LE PHY Update Complete
+                    note left: Application receives event from stack
+                    SlaveLL --&gt; Slave : LE PHY Update Complete
+            end
+
+&#64;enduml" />
+</p>
+<p class="caption"><span class="caption-number">Figure 69. </span><span class="caption-text">Sequence diagram for changing PHY by Master</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Alternatively, the slave can also initiate the PHY Update Procedure as well
+using the same API as shown below:</p>
+<div class="figure align-center" id="id4">
+<span id="fig-phy-update-slave"></span><p class="plantuml">
+<img src="../_images/plantuml-d8be1d2cc3479770aa899be8d62773aee4c8c82b.png" alt="&#64;startuml
+hide footbox
+
+
+participant Master
+            participant MasterLL
+            participant SlaveLL
+participant Slave
+
+            group Establish connection
+                            Master -&gt; MasterLL: GAPCentralRole_EstablishLink()
+                            note right: Master and Slave are in connection
+            end
+            == LE 1M PHY ==
+...
+
+            group Change PHY
+                    SlaveLL &lt;- Slave: HCI_LE_SetPhyCmd()
+                    note left: Slave application initiates PHY change
+                    ...
+
+                    MasterLL &lt;- SlaveLL : LE_PHY_REQ
+                    note left: Link layer messages exchanged
+                    ...
+                    MasterLL -&gt; SlaveLL : LE_PHY_UPDATE_IND
+
+            end
+            == Change of PHY ==
+...
+
+            group Receive event
+                    MasterLL --&gt; Master : LE PHY Update Complete
+                    SlaveLL -&gt; Slave : LE PHY Update Complete
+                    note left: Application receives event from stack
+            end
+
+&#64;enduml" />
+</p>
+<p class="caption"><span class="caption-number">Figure 70. </span><span class="caption-text">Sequence diagram for changing PHY by Slave</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>If the PHY does not change (for example, if Master tries to change to a PHY not
+supported by the Slave), then only the side that initiated the PHY Update
+Procedure will get <a class="reference external" href="../doxygen/structhci_evt___b_l_e_phy_update_complete__t.html">hciEvt_BLEPhyUpdateComplete_t</a> event. The other
+side will not receive a <a class="reference external" href="../doxygen/structhci_evt___b_l_e_phy_update_complete__t.html">hciEvt_BLEPhyUpdateComplete_t</a> event if the
+PHY is not changed represented by the dotted arrow line.</p>
+<div class="section" id="phy-negotiation">
+<span id="negotiating-phy"></span><h3>PHY Negotiation<a class="headerlink" href="#phy-negotiation" title="Permalink to this headline">¶</a></h3>
+<p>Determining when the PHY will change can be determined by looking at the PHY
+preferences of both devices after the <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> is called.
+If both devices prefers to use 2M, the PHY will change to 2M. If the PHY is
+changed to 2M due to Master preference of only 2M, then the Slave cannot change
+the PHY back to 1M until the Master changes its PHY preference to support 1M as
+well. Similarly if the PHY is changed to 1M due to the Slave preference of only
+1M, the Master will not be able to change the PHY to 2M until the Slave changes
+its PHY preference to support 2M as well.</p>
+<p>If one device initiates change to a PHY not supported on other remote device,
+the initiating side will receive a <a class="reference external" href="../doxygen/structhci_evt___b_l_e_phy_update_complete__t.html">hciEvt_BLEPhyUpdateComplete_t</a>
+event with nonzero status indicating the change was not successful. If the PHY
+does not change after <a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a> is called, the connection
+continues with the current PHY.</p>
+<p>Use the following API to change/set the PHY:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 79. </span><span class="caption-text">Call API to set the PHY</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">uint8_t</span> <span class="n">phy</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+<span class="hll">  <span class="n">HCI_PHY_1_MBPS</span><span class="p">,</span> <span class="n">HCI_PHY_2_MBPS</span><span class="p">,</span> <span class="n">HCI_PHY_1_MBPS</span> <span class="o">|</span> <span class="n">HCI_PHY_2_MBPS</span><span class="p">,</span>
+</span><span class="p">};</span>
+
+<span class="c1">// Set Phy Preference on the current connection. Apply the same value</span>
+<span class="c1">// for RX and TX.</span>
+<span class="hll"><span class="n">HCI_LE_SetPhyCmd</span><span class="p">(</span><span class="n">connectionHandle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">phy</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">phy</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="mi">0</span><span class="p">);</span>
+</span></pre></div>
+</td></tr></table></div>
+</div>
+<p>The user selects the preference of the PHY to use by selecting an index of the
+<cite>phy[]</cite> array. For example, if the user prefers to use 2M PHY, the user would
+pass in <cite>HCI_PHY_2_MBPS</cite> for the TX and RX PHY preferences for the
+<a class="reference external" href="../doxygen/group___h_c_i.html#ga540aa5d357dedb39422bfe98bada4b22">HCI_LE_SetPhyCmd()</a>. Then based on the PHY negotatiation, the PHY will
+change if the peer remote device supports it, otherwise, it will continue using
+the current PHY. This is one way to change the API, see simple_peripheral
+project for the complete example. After this command is sent, the controller
+will send a <a class="reference external" href="../doxygen/structhci_evt___b_l_e_phy_update_complete__t.html">hciEvt_BLEPhyUpdateComplete_t</a> which will indicate
+completion of this command:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Listing 80. </span><span class="caption-text">Receive PHY Update Complete event</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">uint8_t</span> <span class="nf">SimpleBLEPeripheral_processStackMsg</span><span class="p">(</span><span class="n">ICall_Hdr</span> <span class="o">*</span><span class="n">pMsg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">...</span>
+<span class="k">case</span> <span class="nl">HCI_LE_EVENT_CODE</span><span class="p">:</span>
+<span class="p">{</span>
+  <span class="n">hciEvt_BLEPhyUpdateComplete_t</span> <span class="o">*</span><span class="n">pPUC</span> <span class="o">=</span> <span class="p">(</span><span class="n">hciEvt_BLEPhyUpdateComplete_t</span><span class="o">*</span><span class="p">)</span> <span class="n">pMsg</span><span class="p">;</span>
+
+<span class="hll">  <span class="k">if</span> <span class="p">(</span><span class="n">pPUC</span><span class="o">-&gt;</span><span class="n">BLEEventCode</span> <span class="o">==</span> <span class="n">HCI_BLE_PHY_UPDATE_COMPLETE_EVENT</span><span class="p">)</span>
+</span>  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pPUC</span><span class="o">-&gt;</span><span class="n">status</span> <span class="o">!=</span> <span class="n">SUCCESS</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">Display_print0</span><span class="p">(</span><span class="n">dispHandle</span><span class="p">,</span> <span class="n">SBP_ROW_STATUS_1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;PHY Change failure&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+<span class="hll">      <span class="n">Display_print0</span><span class="p">(</span><span class="n">dispHandle</span><span class="p">,</span> <span class="n">SBP_ROW_STATUS_1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="s">&quot;PHY Update Complete&quot;</span><span class="p">);</span>
+</span>      <span class="p">...</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>See <a class="reference internal" href="hci.html#sec-hci"><span class="std std-ref">Host Controller Interface (HCI)</span></a> for more information on receiving HCI events.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information on the LE 2M PHY, see
+<a class="reference external" href="https://www.bluetooth.com/specifications/adopted-specifications">See [Vol 6] Part Master, Section 4.6.9, Multiple PHYs, of the BLE 5 Specification</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="creating-a-custom-bluetooth-low-energy-application.html" class="btn btn-neutral float-right" title="Defining Application Behavior" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hci.html" class="btn btn-neutral" title="Host Controller Interface (HCI)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Texas Instruments.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.00.01.04',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

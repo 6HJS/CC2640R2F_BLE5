@@ -1,0 +1,30 @@
+[
+   {
+      "compiler" : {
+         "specified" : "na",
+         "location" : "na",
+         "effective" : "na"
+      },
+      "default" : "na",
+      "files" : [
+         "+../../Board.h -> Board.h",
+         "+../../CC2640R2_LAUNCHXL.c -> CC2640R2_LAUNCHXL.c",
+         "+../../CC2640R2_LAUNCHXL.h -> CC2640R2_LAUNCHXL.h",
+         "+CC2640R2_LAUNCHXL_TIRTOS.cmd -> CC2640R2_LAUNCHXL_TIRTOS.cmd",
+         "+../../README.html -> README.html",
+         "+../../../../../../../kernel/tirtos/builds/CC2640R2_LAUNCHXL/release/README.html -> README.html",
+         "+../../README.md -> README.md",
+         "+../../../../../../../kernel/tirtos/builds/CC2640R2_LAUNCHXL/release/README.md -> README.md",
+         "+../../ccfg.c -> ccfg.c",
+         "+../../console.c -> console.c",
+         "+../main_tirtos.c -> main_tirtos.c",
+         "+../../../../../../../kernel/tirtos/builds/CC2640R2_LAUNCHXL/release/ccs/makefile.defs -> makefile.defs",
+         "+../../overview.rov.json -> overview.rov.json",
+         "+../../../../../../../kernel/tirtos/builds/CC2640R2_LAUNCHXL/release/release.cfg -> release.cfg",
+         "+../../temperature.c -> temperature.c",
+         "+../../../../../../../source/ti/blestack/boards/CC2640R2_LAUNCHXL/Board.html -> Board.html"
+      ],
+      "packages" : [],
+      "name" : "na"
+   }
+]

@@ -1,0 +1,6630 @@
+[
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/bim_oad_offchip/README.html",
+        "name": "bim_oad_offchip",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "bim_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "bim_oad_offchip_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/bim_oad_offchip/tirtos/ccs/ble5_bim_oad_offchip_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "bim_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/host_test/README.html",
+        "name": "host_test",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "host_test",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "host_test_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/host_test/tirtos/ccs/ble5_host_test_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "host_test",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "host_test",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "host_test_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/host_test/tirtos/ccs/ble5_host_test_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "host_test",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/micro_eddystone_beacon/README.html",
+        "name": "micro_eddystone_beacon",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "micro_eddystone_beacon",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "micro_eddystone_beacon_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/micro_eddystone_beacon/tirtos/ccs/ble5_micro_eddystone_beacon_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "micro_eddystone_beacon",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/multi_role/README.html",
+        "name": "multi_role",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "multi_role",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "multi_role_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/multi_role/tirtos/ccs/ble5_multi_role_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "multi_role",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "multi_role",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "multi_role_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/multi_role/tirtos/ccs/ble5_multi_role_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "multi_role",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_broadcaster/README.html",
+        "name": "simple_broadcaster",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_broadcaster",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_broadcaster_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_broadcaster/tirtos/ccs/ble5_simple_broadcaster_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_broadcaster",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_broadcaster",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_broadcaster_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_broadcaster/tirtos/ccs/ble5_simple_broadcaster_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_broadcaster",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_central/README.html",
+        "name": "simple_central",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_central",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_central_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_central/tirtos/ccs/ble5_simple_central_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_central",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_central",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_central_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_central/tirtos/ccs/ble5_simple_central_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_central",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_np/README.html",
+        "name": "simple_np",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_np",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_np_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_np/tirtos/ccs/ble5_simple_np_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_np",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_np",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_np_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_np/tirtos/ccs/ble5_simple_np_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_np",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_observer/README.html",
+        "name": "simple_observer",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_observer",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_observer_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_observer/tirtos/ccs/ble5_simple_observer_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_observer",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_observer",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_observer_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_observer/tirtos/ccs/ble5_simple_observer_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_observer",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_peripheral/README.html",
+        "name": "simple_peripheral",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_peripheral",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_peripheral/tirtos/ccs/ble5_simple_peripheral_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_peripheral",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_peripheral",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_peripheral/tirtos/ccs/ble5_simple_peripheral_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_peripheral",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_peripheral_oad_offchip/README.html",
+        "name": "simple_peripheral_oad_offchip",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_app_oad_offchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_peripheral_oad_offchip/tirtos/ccs/ble5_simple_peripheral_cc2640r2lp_app_oad_offchip.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "ble5stack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_stack_oad_offchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/ble5stack/simple_peripheral_oad_offchip/tirtos/ccs/ble5_simple_peripheral_cc2640r2lp_stack_oad_offchip.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "ble5stack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/connection_monitor/README.html",
+        "name": "connection_monitor",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "connection_monitor",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "connection_monitor_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/connection_monitor/tirtos/ccs/connection_monitor_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "connection_monitor",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/host_test/README.html",
+        "name": "host_test",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "host_test",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "host_test_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/host_test/tirtos/ccs/host_test_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "host_test",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "host_test",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "host_test_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/host_test/tirtos/ccs/host_test_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "host_test",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/micro_eddystone_beacon/README.html",
+        "name": "micro_eddystone_beacon",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "micro_eddystone_beacon",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "micro_eddystone_beacon_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/micro_eddystone_beacon/tirtos/ccs/micro_eddystone_beacon_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "micro_eddystone_beacon",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/multi_role/README.html",
+        "name": "multi_role",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "multi_role",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "multi_role_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/multi_role/tirtos/ccs/multi_role_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "multi_role",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "multi_role",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "multi_role_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/multi_role/tirtos/ccs/multi_role_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "multi_role",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/secure_fw/README.html",
+        "name": "secure_fw",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "secure_fw",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "secure_fw_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/secure_fw/tirtos/ccs/secure_fw_cc2640r2lp.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "secure_fw",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_broadcaster/README.html",
+        "name": "simple_broadcaster",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_broadcaster",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_broadcaster_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_broadcaster/tirtos/ccs/simple_broadcaster_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_broadcaster",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_broadcaster",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_broadcaster_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_broadcaster/tirtos/ccs/simple_broadcaster_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_broadcaster",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_central/README.html",
+        "name": "simple_central",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_central",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_central_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_central/tirtos/ccs/simple_central_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_central",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_central",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_central_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_central/tirtos/ccs/simple_central_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_central",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_np/README.html",
+        "name": "simple_np",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_np",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_np_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_np/tirtos/ccs/simple_np_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_np",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_np",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_np_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_np/tirtos/ccs/simple_np_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_np",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_observer/README.html",
+        "name": "simple_observer",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_observer",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_observer_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_observer/tirtos/ccs/simple_observer_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_observer",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_observer",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_observer_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_observer/tirtos/ccs/simple_observer_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_observer",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral/README.html",
+        "name": "simple_peripheral",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_app",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral/tirtos/ccs/simple_peripheral_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_stack_library",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral/tirtos/ccs/simple_peripheral_cc2640r2lp_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_offchip/README.html",
+        "name": "simple_peripheral_oad_offchip",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_bim_oad_offchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_offchip/tirtos/ccs/bim_oad_offchip_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_app_oad_offchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_offchip/tirtos/ccs/simple_peripheral_cc2640r2lp_oad_offchip_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_stack_oad_offchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_offchip/tirtos/ccs/simple_peripheral_cc2640r2lp_oad_offchip_stack.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_oad_offchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_onchip/README.html",
+        "name": "simple_peripheral_oad_onchip",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_oad_onchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_bim_oad_onchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_onchip/tirtos/ccs/bim_oad_onchip_cc2640r2lp_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_oad_onchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_oad_onchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_persistent_app_oad_onchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_onchip/tirtos/ccs/persistent_app_cc2640r2lp.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_oad_onchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_oad_onchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_app_oad_onchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_onchip/tirtos/ccs/simple_peripheral_cc2640r2lp_oad_onchip_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_oad_onchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_oad_onchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_stack_oad_onchip",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_oad_onchip/tirtos/ccs/simple_peripheral_cc2640r2lp_oad_onchip_stack.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_oad_onchip",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_secure_fw/README.html",
+        "name": "simple_peripheral_secure_fw",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_secure_fw",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_app_secure_fw",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_secure_fw/tirtos/ccs/simple_peripheral_cc2640r2lp_secure_fw_app.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_secure_fw",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "blestack",
+            "simple_peripheral_secure_fw",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "simple_peripheral_stack_secure_fw",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": " ",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/blestack/simple_peripheral_secure_fw/tirtos/ccs/simple_peripheral_cc2640r2lp_secure_fw_stack_library.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "blestack",
+            "simple_peripheral_secure_fw",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "Demos"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/demos/portable/README.html",
+        "name": "portable",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "Demos"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "Demos",
+            "portable",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "portable",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "portable",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/demos/portable/tirtos/ccs/portable_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "Demos",
+            "portable",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "Demos",
+            "portable",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "portable",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "portable",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/demos/portable/tirtos/gcc/portable_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "Demos",
+            "portable",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "Demos",
+            "portable",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "portable",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "portable",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/demos/portable/tirtos/iar/portable.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "Demos",
+            "portable",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "Demos"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/demos/portableNative/README.html",
+        "name": "portableNative",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "Demos"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "Demos",
+            "portableNative",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "portableNative",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "portableNative",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/demos/portableNative/tirtos/ccs/portableNative_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "Demos",
+            "portableNative",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "Demos",
+            "portableNative",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "portableNative",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "portableNative",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/demos/portableNative/tirtos/gcc/portableNative_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "Demos",
+            "portableNative",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "Demos",
+            "portableNative",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "portableNative",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "portableNative",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/demos/portableNative/tirtos/iar/portableNative.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "Demos",
+            "portableNative",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/adcbufcontinuous/README.html",
+        "name": "adcbufcontinuous",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "adcbufcontinuous",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "adcbufcontinuous",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "adcbufcontinuous",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/adcbufcontinuous/tirtos/ccs/adcbufcontinuous_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "adcbufcontinuous",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "adcbufcontinuous",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "adcbufcontinuous",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "adcbufcontinuous",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/adcbufcontinuous/tirtos/gcc/adcbufcontinuous_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "adcbufcontinuous",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "adcbufcontinuous",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "adcbufcontinuous",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "adcbufcontinuous",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/adcbufcontinuous/tirtos/iar/adcbufcontinuous.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "adcbufcontinuous",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/adcsinglechannel/README.html",
+        "name": "adcsinglechannel",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "adcsinglechannel",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "adcsinglechannel",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "adcsinglechannel",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/adcsinglechannel/tirtos/ccs/adcsinglechannel_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "adcsinglechannel",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "adcsinglechannel",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "adcsinglechannel",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "adcsinglechannel",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/adcsinglechannel/tirtos/gcc/adcsinglechannel_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "adcsinglechannel",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "adcsinglechannel",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "adcsinglechannel",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "adcsinglechannel",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/adcsinglechannel/tirtos/iar/adcsinglechannel.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "adcsinglechannel",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/display/README.html",
+        "name": "display",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "display",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "display",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "display",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/display/tirtos/ccs/display_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "display",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "display",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "display",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "display",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/display/tirtos/gcc/display_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "display",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "display",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "display",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "display",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/display/tirtos/iar/display.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "display",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/empty/README.html",
+        "name": "empty",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "empty",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "empty",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "empty",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/empty/tirtos/ccs/empty_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "empty",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "empty",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "empty",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "empty",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/empty/tirtos/gcc/empty_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "empty",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "empty",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "empty",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "empty",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/empty/tirtos/iar/empty.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "empty",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/gpiointerrupt/README.html",
+        "name": "gpiointerrupt",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "gpiointerrupt",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "gpiointerrupt",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "gpiointerrupt",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/gpiointerrupt/tirtos/ccs/gpiointerrupt_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "gpiointerrupt",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "gpiointerrupt",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "gpiointerrupt",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "gpiointerrupt",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/gpiointerrupt/tirtos/gcc/gpiointerrupt_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "gpiointerrupt",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "gpiointerrupt",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "gpiointerrupt",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "gpiointerrupt",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/gpiointerrupt/tirtos/iar/gpiointerrupt.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "gpiointerrupt",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/i2ctmp007/README.html",
+        "name": "i2ctmp007",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "i2ctmp007",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "i2ctmp007",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "i2ctmp007",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/i2ctmp007/tirtos/ccs/i2ctmp007_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "i2ctmp007",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "i2ctmp007",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "i2ctmp007",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "i2ctmp007",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/i2ctmp007/tirtos/gcc/i2ctmp007_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "i2ctmp007",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "i2ctmp007",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "i2ctmp007",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "i2ctmp007",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/i2ctmp007/tirtos/iar/i2ctmp007.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "i2ctmp007",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/nvs/README.html",
+        "name": "nvs",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "nvs",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "nvs",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "nvs",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/nvs/tirtos/ccs/nvs_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "nvs",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "nvs",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "nvs",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "nvs",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/nvs/tirtos/gcc/nvs_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "nvs",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "nvs",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "nvs",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "nvs",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/nvs/tirtos/iar/nvs.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "nvs",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/nvsspi/README.html",
+        "name": "nvsspi",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "nvsspi",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "nvsspi",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "nvsspi",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/nvsspi/tirtos/ccs/nvsspi_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "nvsspi",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "nvsspi",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "nvsspi",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "nvsspi",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/nvsspi/tirtos/gcc/nvsspi_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "nvsspi",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "nvsspi",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "nvsspi",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "nvsspi",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/nvsspi/tirtos/iar/nvsspi.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "nvsspi",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinInterrupt/README.html",
+        "name": "pinInterrupt",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinInterrupt",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "pinInterrupt",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinInterrupt",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinInterrupt/tirtos/ccs/pinInterrupt_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinInterrupt",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinInterrupt",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "pinInterrupt",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinInterrupt",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinInterrupt/tirtos/gcc/pinInterrupt_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinInterrupt",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinInterrupt",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "pinInterrupt",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinInterrupt",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinInterrupt/tirtos/iar/pinInterrupt.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinInterrupt",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinShutdown/README.html",
+        "name": "pinShutdown",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinShutdown",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "pinShutdown",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinShutdown",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinShutdown/tirtos/ccs/pinShutdown_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinShutdown",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinShutdown",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "pinShutdown",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinShutdown",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinShutdown/tirtos/gcc/pinShutdown_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinShutdown",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinShutdown",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "pinShutdown",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinShutdown",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinShutdown/tirtos/iar/pinShutdown.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinShutdown",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinStandby/README.html",
+        "name": "pinStandby",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinStandby",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "pinStandby",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinStandby",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinStandby/tirtos/ccs/pinStandby_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinStandby",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinStandby",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "pinStandby",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinStandby",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinStandby/tirtos/gcc/pinStandby_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinStandby",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pinStandby",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "pinStandby",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pinStandby",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pinStandby/tirtos/iar/pinStandby.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pinStandby",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pwmled/README.html",
+        "name": "pwmled",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pwmled",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "pwmled",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pwmled",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pwmled/tirtos/ccs/pwmled_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pwmled",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pwmled",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "pwmled",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pwmled",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pwmled/tirtos/gcc/pwmled_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pwmled",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "pwmled",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "pwmled",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "pwmled",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/pwmled/tirtos/iar/pwmled.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "pwmled",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/README.html",
+        "name": "rfPacketErrorRate",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "rfPacketErrorRate",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "rfPacketErrorRate",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "rfPacketErrorRate",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/tirtos/ccs/rfPacketErrorRate_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "rfPacketErrorRate",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "rfPacketErrorRate",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "rfPacketErrorRate",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "rfPacketErrorRate",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/tirtos/gcc/rfPacketErrorRate_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "rfPacketErrorRate",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "rfPacketErrorRate",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "rfPacketErrorRate",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "rfPacketErrorRate",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/tirtos/iar/rfPacketErrorRate.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "rfPacketErrorRate",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/uartecho/README.html",
+        "name": "uartecho",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "uartecho",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "uartecho",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "uartecho",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/uartecho/tirtos/ccs/uartecho_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "uartecho",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "uartecho",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "uartecho",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "uartecho",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/uartecho/tirtos/gcc/uartecho_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "uartecho",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "uartecho",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "uartecho",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "uartecho",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/uartecho/tirtos/iar/uartecho.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "uartecho",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/uartmonitor/README.html",
+        "name": "uartmonitor",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "uartmonitor",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "uartmonitor",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "uartmonitor",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/uartmonitor/tirtos/ccs/uartmonitor_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "uartmonitor",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "uartmonitor",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "uartmonitor",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "uartmonitor",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/uartmonitor/tirtos/gcc/uartmonitor_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "uartmonitor",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "uartmonitor",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "uartmonitor",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "uartmonitor",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/uartmonitor/tirtos/iar/uartmonitor.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "uartmonitor",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/watchdog/README.html",
+        "name": "watchdog",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "watchdog",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "watchdog",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "watchdog",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/watchdog/tirtos/ccs/watchdog_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "watchdog",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "watchdog",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "watchdog",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "watchdog",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/watchdog/tirtos/gcc/watchdog_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "watchdog",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI Drivers",
+            "watchdog",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "watchdog",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "watchdog",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/drivers/watchdog/tirtos/iar/watchdog.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI Drivers",
+            "watchdog",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/benchloop/README.html",
+        "name": "benchloop",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "benchloop",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "benchloop",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "benchloop",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/benchloop/tirtos/ccs/benchloop_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "benchloop",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "benchloop",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "benchloop",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "benchloop",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/benchloop/tirtos/gcc/benchloop_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "benchloop",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "benchloop",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "benchloop",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "benchloop",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/benchloop/tirtos/iar/benchloop.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "benchloop",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/bigtime/README.html",
+        "name": "bigtime",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "bigtime",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "bigtime",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "bigtime",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/bigtime/tirtos/ccs/bigtime_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "bigtime",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "bigtime",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "bigtime",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "bigtime",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/bigtime/tirtos/gcc/bigtime_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "bigtime",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/clock/README.html",
+        "name": "clock",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "clock",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "clock",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "clock",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/clock/tirtos/ccs/clock_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "clock",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "clock",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "clock",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "clock",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/clock/tirtos/gcc/clock_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "clock",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "clock",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "clock",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "clock",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/clock/tirtos/iar/clock.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "clock",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/error/README.html",
+        "name": "error",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "error",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "error",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "error",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/error/tirtos/ccs/error_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "error",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "error",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "error",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "error",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/error/tirtos/gcc/error_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "error",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "error",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "error",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "error",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/error/tirtos/iar/error.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "error",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/hello/README.html",
+        "name": "hello",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "hello",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "hello",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "hello",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/hello/tirtos/ccs/hello_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "hello",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "hello",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "hello",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "hello",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/hello/tirtos/gcc/hello_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "hello",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "hello",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "hello",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "hello",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/hello/tirtos/iar/hello.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "hello",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/mailbox/README.html",
+        "name": "mailbox",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mailbox",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "mailbox",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "mailbox",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/mailbox/tirtos/ccs/mailbox_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mailbox",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mailbox",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "mailbox",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "mailbox",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/mailbox/tirtos/gcc/mailbox_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mailbox",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mailbox",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "mailbox",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "mailbox",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/mailbox/tirtos/iar/mailbox.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mailbox",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/memory/README.html",
+        "name": "memory",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "memory",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "memory",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "memory",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/memory/tirtos/ccs/memory_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "memory",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "memory",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "memory",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "memory",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/memory/tirtos/gcc/memory_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "memory",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "memory",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "memory",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "memory",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/memory/tirtos/iar/memory.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "memory",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/mutex/README.html",
+        "name": "mutex",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mutex",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "mutex",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "mutex",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/mutex/tirtos/ccs/mutex_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mutex",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mutex",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "mutex",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "mutex",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/mutex/tirtos/gcc/mutex_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mutex",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mutex",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "mutex",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "mutex",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/mutex/tirtos/iar/mutex.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "mutex",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    },
+    {
+        "resourceType": "categoryInfo",
+        "devices": [
+            "CC2640R2F"
+        ],
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/swi/README.html",
+        "name": "swi",
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)"
+        ],
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ]
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "swi",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "name": "swi",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "swi",
+        "compiler": [
+            "ccs"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/swi/tirtos/ccs/swi_CC2640R2_LAUNCHXL_tirtos_ccs.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "swi",
+            "TI-RTOS",
+            "CCS Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.ccs",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "swi",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "name": "swi",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "swi",
+        "compiler": [
+            "gcc"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/swi/tirtos/gcc/swi_CC2640R2_LAUNCHXL_tirtos_gcc.projectspec",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "swi",
+            "TI-RTOS",
+            "GCC Compiler"
+        ],
+        "advanced": {
+            "overrideProjectSpecDeviceId": true
+        }
+    },
+    {
+        "resourceType": "project.iar",
+        "devtools": [
+            "LAUNCHXL-CC2640R2"
+        ],
+        "subCategories": [
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "swi",
+            "TI-RTOS",
+            "IAR Compiler"
+        ],
+        "name": "swi",
+        "kernel": [
+            "tirtos"
+        ],
+        "description": "swi",
+        "compiler": [
+            "iar"
+        ],
+        "devices": [
+            "CC2640R2F"
+        ],
+        "location": "../../examples/rtos/CC2640R2_LAUNCHXL/sysbios/swi/tirtos/iar/swi.ipcf",
+        "mainCategories": [
+            [
+                "Examples",
+                "Development Tools"
+            ]
+        ],
+        "coreTypes": [
+            "Cortex M.CC2640R2F"
+        ],
+        "categories": [
+            "Examples",
+            "Development Tools",
+            "TI-RTOS Kernel (SYS/BIOS)",
+            "swi",
+            "TI-RTOS",
+            "IAR Compiler"
+        ]
+    }
+]

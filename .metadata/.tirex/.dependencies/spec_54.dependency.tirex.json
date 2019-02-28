@@ -1,0 +1,38 @@
+[
+   {
+      "name" : "na",
+      "packages" : [],
+      "files" : [
+         "+../../Board.h -> Board.h",
+         "+../../CC2640R2_LAUNCHXL.c -> CC2640R2_LAUNCHXL.c",
+         "+../../CC2640R2_LAUNCHXL.h -> CC2640R2_LAUNCHXL.h",
+         "+CC2640R2_LAUNCHXL_TIRTOS.cmd -> CC2640R2_LAUNCHXL_TIRTOS.cmd",
+         "+../../README.html -> README.html",
+         "+../../README.md -> README.md",
+         "+../../RFQueue.c -> RFQueue.c",
+         "+../../RFQueue.h -> RFQueue.h",
+         "+../../ccfg.c -> ccfg.c",
+         "+../../config.c -> config.c",
+         "+../../config.h -> config.h",
+         "+../../menu.c -> menu.c",
+         "+../../menu.h -> menu.h",
+         "+../../overview.rov.json -> overview.rov.json",
+         "+../../rfPacketErrorRate.c -> rfPacketErrorRate.c",
+         "+../../rx.c -> rx.c",
+         "+../../smartrf_settings/smartrf_settings.c -> smartrf_settings/smartrf_settings.c",
+         "+../../smartrf_settings/smartrf_settings.h -> smartrf_settings/smartrf_settings.h",
+         "+../../smartrf_settings/smartrf_settings_ble.c -> smartrf_settings/smartrf_settings_ble.c",
+         "+../../smartrf_settings/smartrf_settings_ble.h -> smartrf_settings/smartrf_settings_ble.h",
+         "+../../smartrf_settings/smartrf_settings_predefined.c -> smartrf_settings/smartrf_settings_predefined.c",
+         "+../../smartrf_settings/smartrf_settings_predefined.h -> smartrf_settings/smartrf_settings_predefined.h",
+         "+../../tx.c -> tx.c",
+         "+../../../../../../../source/ti/blestack/boards/CC2640R2_LAUNCHXL/Board.html -> Board.html"
+      ],
+      "default" : "na",
+      "compiler" : {
+         "effective" : "na",
+         "specified" : "na",
+         "location" : "na"
+      }
+   }
+]

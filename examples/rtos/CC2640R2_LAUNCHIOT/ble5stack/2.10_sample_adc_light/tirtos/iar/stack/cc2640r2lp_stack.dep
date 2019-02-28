@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>127687253</fileChecksum>
+    <configuration>
+        <name>FlashROM_Library</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>IARCHIVE</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

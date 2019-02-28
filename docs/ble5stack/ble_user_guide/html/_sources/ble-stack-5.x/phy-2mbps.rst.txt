@@ -1,0 +1,301 @@
+.. _sec-phy_2mbps:
+
+LE 2M PHY
+---------
+
+Introduction
+^^^^^^^^^^^^
+
+The |BLESTACK| supports transferring data over the mandatory
+symbol rate of 1 megasymbol per second (Msym/s) where 1 symbol represents 1 bit.
+This results in a bit rate of 1 megabit per second (Mb/s), which is referred to
+as LE 1M PHY. The stack also supports an optional symbol rate of 2 Msym/s, with
+bit rate of 2 Mb/s, which is referred to as LE 2M PHY. This LE 2M PHY feature is
+introduced in the |CORESPEC| in addition to the LE 1M PHY previously supported.
+
+All the projects in |BLESTACK| have support for LE 2M PHY by default; APIs
+need to be called in the application to utilize the feature.
+
+The following HCI commands were added to support this feature:
+	- LE Set PHY Command (:ble_api:`HCI_LE_SetPhyCmd`)
+	- LE Set Default PHY Command (:ble_api:`HCI_LE_SetDefaultPhyCmd`)
+	- LE Read PHY Command (:ble_api:`HCI_LE_ReadPhyCmd`)
+
+When the :ble_api:`HCI_LE_SetPhyCmd` is called, the controller starts the PHY
+Update Procedure to change the PHYs. The procedure consists of exchanging the
+PHY preferences of both devices and negotiating the correct PHY to use based on
+the PHY preferences. Depending on peer device capability and preference(s), the
+PHY Update Procedure may not result in a change to the active PHY configuration.
+
+LE 2M PHY vs LE 1M PHY
+^^^^^^^^^^^^^^^^^^^^^^
+
+The LE 2M PHY feature uses the same transmit power as the LE 1M PHY, the only
+change is in the modulation of data in the PHY. Using the LE 2M PHY, the energy
+consumption decreases due to higher data modulation at the same output power.
+The following table lists some of the differences between the two PHYs:
+
+.. _PHY_tradeoffs:
+.. table:: Tradeoff between 1M and 2M PHYs
+
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     Parameter                            |     Comparison                                                             |
+   +==========================================+============================================================================+
+   |     Power consumption                    |     Energy consumption is reduced using the same transmit power.           |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     Data Rate                            |     LE 2M PHY is 2x faster to transmit data than LE 1M PHY.                |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     Receive Sensitivity                  |     The link budget will be lower relative to LE 1M PHY, due to            |
+   |                                          |     the increased symbol rate.                                             |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     Tramsmit Power                       |     The output power is same for both PHYs.                                |
+   +------------------------------------------+----------------------------------------------------------------------------+
+
+The main advantage to use the LE 2M PHY is for high throughput applications to transfer
+data at a higher speed.
+
+.. _limitations-PHY:
+
+PHY Limitations
+^^^^^^^^^^^^^^^
+
+The following are the current PHY limitations in |BLESTACK|:
+
+* The BLE controller does not support autonomous change of PHY during connection
+  where the Link Layer initiates PHY change. Connections are always formed at 1M
+  PHY. It is up to the application or the peer device to call
+  :ble_api:`HCI_LE_SetPhyCmd` to change to a different PHY.
+
+* The BLE controller does not support asymmetric connections where the
+  connection uses different PHYs in each direction (RX and TX).
+
+* The PHY_options parameter in :ble_api:`HCI_LE_SetPhyCmd` will be supported in
+  future release along with LE Long Range feature.
+
+Default PHY
+^^^^^^^^^^^
+
+The application can call :ble_api:`HCI_LE_SetDefaultPhyCmd` to set the default
+PHY preferences for both master and slave configurations. If no preference is
+specified or the API is never called, then the stack will use all supported
+PHY(1M + 2M). Similarly for :ble_api:`HCI_LE_SetPhyCmd`, if no preference is
+specified, then the stack will use the default PHY (i.e. the connection PHY as
+defined by :ble_api:`HCI_LE_SetDefaultPhyCmd`), otherwise it will use what is
+specified in the parameters.
+
+The :ble_api:`HCI_LE_SetDefaultPhyCmd` should be called before forming the
+connection while the :ble_api:`HCI_LE_SetPhyCmd` can only be called during a
+connection. Also note that the :ble_api:`HCI_LE_SetDefaultPhyCmd` does not
+change the PHY, only the :ble_api:`HCI_LE_SetPhyCmd` can change the PHY. The
+preferences set by :ble_api:`HCI_LE_SetDefaultPhyCmd` are used in these two
+cases:
+
+  - The peer remote device initiates the PHY Update Procedure using
+    :ble_api:`HCI_LE_SetPhyCmd` to negotiate the correct PHY to use based on the
+    preferences from both devices.
+  - The :ble_api:`HCI_LE_SetPhyCmd` is called with the AllPhys parameter set to
+    1(indicating no preference among the supported PHYs)
+
+See an example of this in :ref:`negotiating-phy`.
+
+.. _changing-PHY:
+
+Changing PHY
+^^^^^^^^^^^^
+
+The application can initiate a PHY Update Procedure in a connection regardless
+of the roles of the devices. The PHY preferences that are set by
+:ble_api:`HCI_LE_SetDefaultPhyCmd` are used by default during a set PHY
+negotiation unless changed by the :ble_api:`HCI_LE_SetPhyCmd`. The
+:ble_api:`HCI_LE_SetDefaultPhyCmd` is used to specify the preferred PHY for
+transmit and receive for all subsequent connections. However, when the
+:ble_api:`HCI_LE_SetPhyCmd` is used to change the PHY for the connection, the
+change only applies to that connection (subsequent connections will revert to
+using the default PHYs).
+
+The parameters for both :ble_api:`HCI_LE_SetDefaultPhyCmd` and
+:ble_api:`HCI_LE_SetPhyCmd` are same. The ALL_PHYS parameter specifies whether
+the other two parameters (TX_PHYS and RX_PHYS) are used or not.
+Master value of '1' indicates the client has no PHY preference for that
+direction, while a '0' indicates that the corresponding parameter should be
+used. The TX_PHYS and RX_PHYS can be set to specify which PHY to use for
+transmitting and receiving, respectively. Note that when all supported PHY are
+specified, the stack always tries to select the fastest PHY during a set PHY
+negotiation, see an illustration of this in :ref:`negotiating-phy`.
+
+The sequence diagram below shows the use case where the master initiates the PHY
+update procedure:
+
+.. _fig-phy-update-master:
+.. uml::
+    :caption: Sequence diagram for changing PHY by Master
+    :align: center
+
+    @startuml
+    hide footbox
+
+
+		participant Master
+		participant MasterLL
+		participant SlaveLL
+		participant Slave
+
+
+		group Establish connection
+				Master -> MasterLL: GAPCentralRole_EstablishLink()
+				note left: Master and Slave are in connection
+		end
+		== LE 1M PHY ==
+    ...
+
+		group Change PHY
+			Master -> MasterLL: HCI_LE_SetPhyCmd()
+			note left: Master application initiates PHY change
+			...
+
+			MasterLL -> SlaveLL : LE_PHY_REQ
+			SlaveLL -> MasterLL : LE_PHY_RES
+			note left: Link layer messages exchanged
+			...
+			MasterLL -> SlaveLL : LE_PHY_UPDATE_IND
+
+		end
+		== Change of PHY ==
+    ...
+
+		group Receive event
+			MasterLL -> Master : LE PHY Update Complete
+			note left: Application receives event from stack
+			SlaveLL --> Slave : LE PHY Update Complete
+		end
+
+    @enduml
+
+
+Alternatively, the slave can also initiate the PHY Update Procedure as well
+using the same API as shown below:
+
+.. _fig-phy-update-slave:
+.. uml::
+    :caption: Sequence diagram for changing PHY by Slave
+    :align: center
+
+    @startuml
+    hide footbox
+
+
+    participant Master
+		participant MasterLL
+		participant SlaveLL
+    participant Slave
+
+		group Establish connection
+				Master -> MasterLL: GAPCentralRole_EstablishLink()
+				note right: Master and Slave are in connection
+		end
+		== LE 1M PHY ==
+    ...
+
+		group Change PHY
+			SlaveLL <- Slave: HCI_LE_SetPhyCmd()
+			note left: Slave application initiates PHY change
+			...
+
+			MasterLL <- SlaveLL : LE_PHY_REQ
+			note left: Link layer messages exchanged
+			...
+			MasterLL -> SlaveLL : LE_PHY_UPDATE_IND
+
+		end
+		== Change of PHY ==
+    ...
+
+		group Receive event
+			MasterLL --> Master : LE PHY Update Complete
+			SlaveLL -> Slave : LE PHY Update Complete
+			note left: Application receives event from stack
+		end
+
+    @enduml
+
+
+If the PHY does not change (for example, if Master tries to change to a PHY not
+supported by the Slave), then only the side that initiated the PHY Update
+Procedure will get :ble_api:`hciEvt_BLEPhyUpdateComplete_t` event. The other
+side will not receive a :ble_api:`hciEvt_BLEPhyUpdateComplete_t` event if the
+PHY is not changed represented by the dotted arrow line.
+
+.. _negotiating-phy:
+
+PHY Negotiation
+"""""""""""""""
+
+Determining when the PHY will change can be determined by looking at the PHY
+preferences of both devices after the :ble_api:`HCI_LE_SetPhyCmd` is called.
+If both devices prefers to use 2M, the PHY will change to 2M. If the PHY is
+changed to 2M due to Master preference of only 2M, then the Slave cannot change
+the PHY back to 1M until the Master changes its PHY preference to support 1M as
+well. Similarly if the PHY is changed to 1M due to the Slave preference of only
+1M, the Master will not be able to change the PHY to 2M until the Slave changes
+its PHY preference to support 2M as well.
+
+If one device initiates change to a PHY not supported on other remote device,
+the initiating side will receive a :ble_api:`hciEvt_BLEPhyUpdateComplete_t`
+event with nonzero status indicating the change was not successful. If the PHY
+does not change after :ble_api:`HCI_LE_SetPhyCmd` is called, the connection
+continues with the current PHY.
+
+Use the following API to change/set the PHY:
+
+.. code-block:: c
+  :caption: Call API to set the PHY
+  :linenos:
+  :emphasize-lines: 2,7
+
+  static uint8_t phy[] = {
+    HCI_PHY_1_MBPS, HCI_PHY_2_MBPS, HCI_PHY_1_MBPS | HCI_PHY_2_MBPS,
+  };
+
+  // Set Phy Preference on the current connection. Apply the same value
+  // for RX and TX.
+  HCI_LE_SetPhyCmd(connectionHandle, 0, phy[index], phy[index], 0);
+
+The user selects the preference of the PHY to use by selecting an index of the
+`phy[]` array. For example, if the user prefers to use 2M PHY, the user would
+pass in `HCI_PHY_2_MBPS` for the TX and RX PHY preferences for the
+:ble_api:`HCI_LE_SetPhyCmd`. Then based on the PHY negotatiation, the PHY will
+change if the peer remote device supports it, otherwise, it will continue using
+the current PHY. This is one way to change the API, see simple\_peripheral
+project for the complete example. After this command is sent, the controller
+will send a :ble_api:`hciEvt_BLEPhyUpdateComplete_t` which will indicate
+completion of this command:
+
+.. code-block:: c
+  :caption: Receive PHY Update Complete event
+  :linenos:
+  :emphasize-lines: 8,16
+
+
+  static uint8_t SimpleBLEPeripheral_processStackMsg(ICall_Hdr *pMsg)
+  {
+  ...
+  case HCI_LE_EVENT_CODE:
+  {
+    hciEvt_BLEPhyUpdateComplete_t *pPUC = (hciEvt_BLEPhyUpdateComplete_t*) pMsg;
+
+    if (pPUC->BLEEventCode == HCI_BLE_PHY_UPDATE_COMPLETE_EVENT)
+    {
+      if (pPUC->status != SUCCESS)
+      {
+        Display_print0(dispHandle, SBP_ROW_STATUS_1, 0, "PHY Change failure");
+      }
+      else
+      {
+        Display_print0(dispHandle, SBP_ROW_STATUS_1, 0,"PHY Update Complete");
+        ...
+
+See :ref:`sec-hci` for more information on receiving HCI events.
+
+.. note::
+      For more information on the LE 2M PHY, see
+      `See [Vol 6] Part Master, Section 4.6.9, Multiple PHYs, of the BLE 5 Specification <https://www.bluetooth.com/specifications/adopted-specifications>`_

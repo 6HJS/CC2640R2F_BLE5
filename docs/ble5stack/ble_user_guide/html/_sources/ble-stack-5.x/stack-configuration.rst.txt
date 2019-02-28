@@ -1,0 +1,101 @@
+.. _stack_features_configuration:
+
+Stack Configurations
+--------------------
+
+Configuring Bluetooth low energy Protocol Stack Features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Bluetooth low energy protocol stack can be configured to include
+or exclude certain Bluetooth Low Energy features by changing the
+library configuration in the stack project. The available Bluetooth
+low energy features are defined in the ``build_config.opt`` file in
+the Tools folder of the stack project within the IDE. Based on the
+features selected in the ``build_config.opt`` file, the ``lib_search.exe`` tool
+selects the respective precompiled library during the build process of the
+stack project.
+
+At compile time, some options can also be modified; for information
+on these see :ref:`tbl_preproc_symbols_ble_stack`.
+
+.. note::
+
+      Selecting the correct stack configuration is essential in
+      optimizing the amount of flash memory available to the application.
+      To conserve memory, exclude certain Bluetooth Low Energy protocol
+      stack features that may not be required.
+
+Run-Time Bluetooth low energy Protocol Stack Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Bluetooth low energy protocol stack can be configured with
+various parameters that control its runtime behavior and RF antenna
+layout. The available configuration parameters are described in the
+``ble_user_config.h`` file in the ICallBLE IDE folder of the
+application. During initialization, these parameters are supplied to
+the Bluetooth Low Energy protocol stack by the user0Cfg structure,
+declared in main.c.
+
+.. code-block:: c
+
+  #include "ble_user_config.h"
+
+  // BLE user defined configuration
+  bleUserCfg_t user0Cfg = BLE_USER_CFG;
+
+Because the ``ble_user_config.h`` file is shared with projects within
+the SDK, TI recommends defining the configuration parameters in the
+preprocessor symbols of the application when using a non default
+value. For example, to change the maximum PDU size from the default
+27 to 162, set the preprocessor symbol ``MAX_PDU_SIZE=162`` in the
+preprocessor symbols for the application project. Increasing certain
+parameters may increase heap memory use by the protocol stack;
+adjust the ``HEAPMGR_SIZE`` as required (if not using auto sized heap). :numref:`stackconfigurablefeatures` lists the available configuration parameters.
+
+.. _stackconfigurablefeatures:
+.. table:: Bluetooth Low Energy Stack Configuration Parameters
+
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |       Parameter                          |       Description                                                          |
+   +==========================================+============================================================================+
+   |     MAX\_NUM\_BLE\_CONNS                 |     Maximum number of simultaneous Bluetooth low energy                    |
+   |                                          |     connections. Default is 1 for Peripheral and Central roles.            |
+   |                                          |     Maximum value is based on GAPRole.                                     |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     MAX\_NUM\_PDU                        |     Maximum number of Bluetooth low energy HCI PDUs. Default is            |
+   |                                          |     5. If the maximum number of connections is set to 0, then this         |
+   |                                          |     number should also be set to 0.                                        |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     MAX\_PDU\_SIZE                       |     Maximum size in bytes of the Bluetooth low energy HCI PDU.             |
+   |                                          |     Default is 27. Valid range is 27 to 255. The maximum ATT\_MTU          |
+   |                                          |     is MAX\_PDU\_SIZE - 4. See :ref:`configuring_for_larger_MTU_values`.   |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     L2CAP\_NUM\_PSM                      |     Maximum number of L2CAP Protocol/Service Multiplexers                  |
+   |                                          |     (PSM). Default is 3.                                                   |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     L2CAP\_NUM\_CO\_CHANNELS             |     Maximum number of L2CAP Connection-Oriented (CO)                       |
+   |                                          |     Channels. Default is 3.                                                |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     PM\_STARTUP\_MARGIN                  |     Defines time in microseconds (us) the system will wake up              |
+   |                                          |     before the start of the connection event. Default is 300. This         |
+   |                                          |     value is optimized for the example projects.                           |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     RF\_FE\_MODE\_AND\_BIAS              |     Defines the RF antenna front end and bias configuration. Set           |
+   |                                          |     this value to match the actual hardware antenna layout. This           |
+   |                                          |     value can be set directly, or through ``Board.h``. For more            |
+   |                                          |     information see                                                        |
+   |                                          |     :ref:`sec-creating-a-custom-ble-app-rf-front-end-and-antennas`         |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     ICALL\_MAX\_NUM\_TASKS (App)         |     Defines the max number of ICall enabled tasks. These defines,          |
+   |     OSAL\_MAX\_NUM\_PROXY\_TASKS (Stack) |     although on different sides, (app and stack), must be the same.        |
+   |                                          |     OSAL\_MAX\_NUM\_PROXY\_TASKS defaults to 2.                            |
+   |                                          |     ICALL\_MAX\_NUM\_Tasks defaults to 2.                                  |
+   +------------------------------------------+----------------------------------------------------------------------------+
+   |     ICALL_MAX_NUM_ENTITIES (App)         |     This Maximum number of entities that use ICall, including              |
+   |                                          |     service entities and application entities.                             |
+   +------------------------------------------+----------------------------------------------------------------------------+
+
+.. warning::
+      TI Recommends limiting the number of ICall enabled tasks due to resource usage.
+      For more information on creating ICall enabled tasks, see
+      `Adding ICall RTOS Tasks <http://processors.wiki.ti.com/index.php/Adding_Custom_RTOS_Task>`_

@@ -1,0 +1,36 @@
+[
+   {
+      "name" : "na",
+      "packages" : [],
+      "files" : [
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/RFQueue.c -> RFQueue.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/smartrf_settings/smartrf_settings.c -> smartrf_settings/smartrf_settings.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/smartrf_settings/smartrf_settings_ble.c -> smartrf_settings/smartrf_settings_ble.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/smartrf_settings/smartrf_settings_predefined.c -> smartrf_settings/smartrf_settings_predefined.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/config.c -> config.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/menu.c -> menu.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/rfPacketErrorRate.c -> rfPacketErrorRate.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/rx.c -> rx.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/tx.c -> tx.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/CC2640R2_LAUNCHXL.c -> CC2640R2_LAUNCHXL.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/ccfg.c -> ccfg.c",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/tirtos/iar/CC2640R2_LAUNCHXL_TIRTOS.icf -> rfPacketErrorRate_CC2640R2_LAUNCHXL_TIRTOS.icf",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/RFQueue.h -> RFQueue.h",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/smartrf_settings/smartrf_settings.h -> smartrf_settings/smartrf_settings.h",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/smartrf_settings/smartrf_settings_ble.h -> smartrf_settings/smartrf_settings_ble.h",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/smartrf_settings/smartrf_settings_predefined.h -> smartrf_settings/smartrf_settings_predefined.h",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/config.h -> config.h",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/menu.h -> menu.h",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/Board.h -> Board.h",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/CC2640R2_LAUNCHXL.h -> CC2640R2_LAUNCHXL.h",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/README.md -> README.md",
+         "+../../../../../../../../../../../../examples/rtos/CC2640R2_LAUNCHXL/drivers/rfPacketErrorRate/README.html -> README.html"
+      ],
+      "default" : "na",
+      "compiler" : {
+         "effective" : "na",
+         "location" : "na",
+         "specified" : "na"
+      }
+   }
+]
