@@ -103,14 +103,22 @@
 #define SBB_TASK_STACK_SIZE                   660
 #endif
 
+// How often to perform periodic event (in msec)
+#define SBB_PERIODIC_EVT_PERIOD               60000
+
 #define SBB_STATE_CHANGE_EVT                  0x0001
 
 // Internal Events for RTOS application
 #define SBB_ICALL_EVT                         ICALL_MSG_EVENT_ID // Event_Id_31
 #define SBB_QUEUE_EVT                         UTIL_QUEUE_EVENT_ID // Event_Id_30
 
+#define SBB_PERIODIC_EVT                      Event_Id_00
+#define SBB_TIMER_PERIODIC_EVT                Event_Id_01
+// Bitwise OR of all events to pend on
 #define SBB_ALL_EVENTS                        (SBB_ICALL_EVT | \
-                                               SBB_QUEUE_EVT)
+                                               SBB_QUEUE_EVT | \
+                                               SBB_PERIODIC_EVT     | \
+                                               SBB_TIMER_PERIODIC_EVT  )
 
 /*********************************************************************
  * TYPEDEFS
@@ -128,6 +136,8 @@ typedef struct
 
 // Display Interface
 Display_Handle dispHandle = NULL;
+
+uint8_t gled_s= 0;
 
 /*********************************************************************
  * EXTERNAL VARIABLES
@@ -148,6 +158,10 @@ static ICall_EntityID selfEntity;
 // local events.
 static ICall_SyncHandle syncEvent;
 
+// Clock instances for internal periodic events./////////////////////////////
+static Clock_Struct periodicClock;
+static Clock_Struct TIMER_periodicClock;
+
 // Queue object used for app messages
 static Queue_Struct appMsg;
 static Queue_Handle appMsgQueue;
@@ -162,26 +176,26 @@ static uint8 scanRspData[] =
   // complete name
   0x15,   // length of this data
   GAP_ADTYPE_LOCAL_NAME_COMPLETE,
+  'C',
+  'P',
   'S',
-  'i',
-  'm',
-  'p',
-  'l',
-  'e',
-  'B',
-  'L',
-  'E',
-  'B',
-  'r',
-  'o',
-  'a',
-  'd',
-  'c',
-  'a',
-  's',
-  't',
-  'e',
-  'e',
+  '-',
+  'M',
+  'A',
+  'R',
+  '2',
+  '0',
+  '1',
+  '9',
+  ':',
+  ':',
+  ':',
+  ':',
+  ':',
+  ':',
+  ':',
+  ':',
+  ':',
 
   // Tx power level
   0x02,   // length of this data
@@ -264,6 +278,9 @@ static void SimpleBLEBroadcaster_processStateChangeEvt(gaprole_States_t newState
 
 static void SimpleBLEBroadcaster_stateChangeCB(gaprole_States_t newState);
 
+static void SimpleBLEPeripheral_clockHandler(UArg arg);
+static void SimpleBLEPeripheral_performPeriodicTask(void);
+
 /*********************************************************************
  * PROFILE CALLBACKS
  */
@@ -333,13 +350,20 @@ static void SimpleBLEBroadcaster_init(void)
   // Create an RTOS queue for message from profile to be sent to app.
   appMsgQueue = Util_constructQueue(&appMsg);
 
+    // Create one-shot clocks for internal periodic events.
+  Util_constructClock(&periodicClock, SimpleBLEPeripheral_clockHandler,
+                      SBB_PERIODIC_EVT_PERIOD, 0, false, SBB_PERIODIC_EVT);
+
+  Util_constructClock(&TIMER_periodicClock, SimpleBLEPeripheral_clockHandler,
+                      SBB_PERIODIC_EVT_PERIOD, SBB_PERIODIC_EVT_PERIOD, true, SBB_TIMER_PERIODIC_EVT);
+  
   // Open LCD
   dispHandle = Display_open(SBB_DISPLAY_TYPE, NULL);
-
+  
   // Setup the GAP Broadcaster Role Profile
   {
     // For all hardware platforms, device starts advertising upon initialization
-    uint8_t initial_advertising_enable = TRUE;
+    uint8_t initial_advertising_enable = TRUE; // turn off, advertise every 5min
 
     // By setting this to zero, the device will go into the waiting state after
     // being discoverable for 30.72 second, and will not being advertising again
@@ -450,6 +474,19 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
             ICall_free(pMsg);
           }
         }
+      }
+      if (events & SBB_PERIODIC_EVT)
+      {
+        Util_startClock(&periodicClock);
+
+        // Perform periodic application task
+        SimpleBLEPeripheral_performPeriodicTask();
+      }
+
+      if (events & SBB_TIMER_PERIODIC_EVT)
+      {
+        HwGPIOSet(Board_GLED,gled_s);
+        gled_s = ~gled_s;
       }
     }
   }
@@ -573,5 +610,37 @@ static void SimpleBLEBroadcaster_processStateChangeEvt(gaprole_States_t newState
   }
 }
 
+/*********************************************************************
+ * @fn      SimpleBLEPeripheral_clockHandler
+ *
+ * @brief   Handler function for clock timeouts.
+ *
+ * @param   arg - event type
+ *
+ * @return  None.
+ */
+static void SimpleBLEPeripheral_clockHandler(UArg arg)
+{
+  // Wake up the application.
+  Event_post(syncEvent, arg);
+}
+
+/*********************************************************************
+ * @fn      SimpleBLEPeripheral_performPeriodicTask
+ *
+ * @brief   Perform a periodic application task. This function gets called
+ *          every five seconds (SBP_PERIODIC_EVT_PERIOD). In this example,
+ *          the value of the third characteristic in the SimpleGATTProfile
+ *          service is retrieved from the profile, and then copied into the
+ *          value of the the fourth characteristic.
+ *
+ * @param   None.
+ *
+ * @return  None.
+ */
+static void SimpleBLEPeripheral_performPeriodicTask(void)
+{
+
+}
 /*********************************************************************
 *********************************************************************/

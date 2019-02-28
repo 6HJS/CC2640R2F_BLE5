@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.11.3.13950/W32 for ARM                26/Feb/2019  20:41:08
+# IAR ELF Linker V8.11.3.13950/W32 for ARM                28/Feb/2019  17:04:37
 # Copyright 2007-2017 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.4_simple_broadcaster\tirtos\iar\app\FlashROM_StackLibrary\List\ble5_simple_broadcaster_cc2640r2lp_app_FlashROM_StackLibrary.map
 #    Command line =  
-#        -f C:\Users\Yang\AppData\Local\Temp\EWCBE9.tmp
+#        -f C:\Users\Yang\AppData\Local\Temp\EW4795.tmp
 #        (C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.4_simple_broadcaster\tirtos\iar\app\FlashROM_StackLibrary\Obj\ble_user_config.o
 #        C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.4_simple_broadcaster\tirtos\iar\app\FlashROM_StackLibrary\Obj\board.o
 #        C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.4_simple_broadcaster\tirtos\iar\app\FlashROM_StackLibrary\Obj\broadcaster.o
@@ -1437,22 +1437,22 @@ keep { ro section .intvec };
   .intvec                 const    0x00000000    0x3c  app_ble_prm3.orm3 [3]
                                  - 0x0000003c    0x3c
 
-"P1", part 1 of 2:                              0x259
+"P1", part 1 of 2:                              0x252
   .rodata                 const    0x0000003c     0x0  zero_init3.o [22]
   .rodata                 const    0x0000003c     0x0  lz77_init_single.o [22]
-  Initializer bytes       const    0x0000003c   0x1c9  <for RWDATA-1>
-  Initializer bytes       const    0x00000205    0x1b  <for rw section .data_ti_sysbios_knl_Task_Module__state__V-1>
-  Initializer bytes       const    0x00000220    0x1c  <for rw section .data_ti_sysbios_family_arm_m3_Hwi_Module__state__V-1>
-  Initializer bytes       const    0x0000023c    0x18  <for rw section .data_ti_sysbios_knl_Clock_Module__state__V-1>
-  Initializer bytes       const    0x00000254    0x1a  <for rw section .data_ti_sysbios_BIOS_Module__state__V-1>
-  Initializer bytes       const    0x0000026e     0xc  <for rw section .data_ti_sysbios_knl_Swi_Module__state__V-1>
-  Initializer bytes       const    0x0000027a     0x9  <for rw section .data_ti_sysbios_family_arm_cc26xx_Timer_Module__state__V-1>
-  Initializer bytes       const    0x00000283     0x3  <for rw section .data_xdc_runtime_Startup_Module__state__V-1>
-  Initializer bytes       const    0x00000286     0x3  <for rw section .data_xdc_runtime_System_Module__state__V-1>
-  Initializer bytes       const    0x00000289     0x3  <for rw section .data_ti_sysbios_family_arm_cc26xx_TimestampProvider_Module__state__V-1>
-  Initializer bytes       const    0x0000028c     0x6  <for rw section .data_xdc_runtime_Memory_Module__state__V-1>
-  Initializer bytes       const    0x00000292     0x3  <for rw section .data_xdc_runtime_Error_Module__state__V-1>
-                                 - 0x00000295   0x259
+  Initializer bytes       const    0x0000003c   0x1c2  <for RWDATA-1>
+  Initializer bytes       const    0x000001fe    0x1b  <for rw section .data_ti_sysbios_knl_Task_Module__state__V-1>
+  Initializer bytes       const    0x00000219    0x1c  <for rw section .data_ti_sysbios_family_arm_m3_Hwi_Module__state__V-1>
+  Initializer bytes       const    0x00000235    0x18  <for rw section .data_ti_sysbios_knl_Clock_Module__state__V-1>
+  Initializer bytes       const    0x0000024d    0x1a  <for rw section .data_ti_sysbios_BIOS_Module__state__V-1>
+  Initializer bytes       const    0x00000267     0xc  <for rw section .data_ti_sysbios_knl_Swi_Module__state__V-1>
+  Initializer bytes       const    0x00000273     0x9  <for rw section .data_ti_sysbios_family_arm_cc26xx_Timer_Module__state__V-1>
+  Initializer bytes       const    0x0000027c     0x3  <for rw section .data_xdc_runtime_Startup_Module__state__V-1>
+  Initializer bytes       const    0x0000027f     0x3  <for rw section .data_xdc_runtime_System_Module__state__V-1>
+  Initializer bytes       const    0x00000282     0x3  <for rw section .data_ti_sysbios_family_arm_cc26xx_TimestampProvider_Module__state__V-1>
+  Initializer bytes       const    0x00000285     0x6  <for rw section .data_xdc_runtime_Memory_Module__state__V-1>
+  Initializer bytes       const    0x0000028b     0x3  <for rw section .data_xdc_runtime_Error_Module__state__V-1>
+                                 - 0x0000028e   0x252
 
 "A50":                                           0x28
   .const_ti_sysbios_heaps_HeapMem_Module__FXNS__C
@@ -2492,9 +2492,9 @@ keep { ro section .intvec };
                           inited   0x20000204     0x2  app_ble_prm3.orm3 [3]
                                  - 0x20000206     0x2
 
-"P2":                                          0x16f8
-  RWDATA                           0x20000208  0x16f8  <Block>
-    RWDATA-1                       0x20000208   0x50e  <Init block>
+"P2":                                          0x1700
+  RWDATA                           0x20000208  0x1700  <Block>
+    RWDATA-1                       0x20000208   0x512  <Init block>
       .data               inited   0x20000208    0x48  app_ble_prm3.orm3 [3]
       .data               inited   0x20000250     0xc  ble_user_config.o [1]
       .data               inited   0x2000025c     0x8  ble_user_config.o [1]
@@ -2509,115 +2509,115 @@ keep { ro section .intvec };
       .data               inited   0x20000338     0x8  icall_cc2650.o [1]
       .data               inited   0x20000340    0x10  icall_user_config.o [1]
       .data               inited   0x20000350    0x10  main.o [1]
-      .data               inited   0x20000360    0x44  simple_broadcaster.o [1]
-      .data               inited   0x200003a4    0x20  app_ble_prm3.orm3 [3]
-      .data               inited   0x200003c4     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x200003cc    0x18  app_ble_prm3.orm3 [3]
-      .data               inited   0x200003e4     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x200003ec     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x200003f4    0x38  app_ble_prm3.orm3 [3]
-      .data               inited   0x2000042c     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000434     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x2000043c     0xc  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000448     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000450     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000458    0x20  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000478     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000480     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000488     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000490     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000498     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x200004a0    0x30  app_ble_prm3.orm3 [3]
-      .data               inited   0x200004d0    0x30  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000500     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000508    0x4c  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000554    0x30  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000584     0x4  app_ble_prm3.orm3 [3]
-      .data               inited   0x20000588   0x114  PowerCC26XX.orm3 [17]
-      .data               inited   0x2000069c    0x10  ll.o [7]
-      .data               inited   0x200006ac    0x10  osal.o [8]
-      .data               inited   0x200006bc     0x4  hal_assert.o [8]
-      .data               inited   0x200006c0    0x3c  ll_config.o [7]
-      .data               inited   0x200006fc     0x8  ll_data.o [7]
+      .data               inited   0x20000360    0x48  simple_broadcaster.o [1]
+      .data               inited   0x200003a8    0x20  app_ble_prm3.orm3 [3]
+      .data               inited   0x200003c8     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x200003d0    0x18  app_ble_prm3.orm3 [3]
+      .data               inited   0x200003e8     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x200003f0     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x200003f8    0x38  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000430     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000438     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000440     0xc  app_ble_prm3.orm3 [3]
+      .data               inited   0x2000044c     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000454     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x2000045c    0x20  app_ble_prm3.orm3 [3]
+      .data               inited   0x2000047c     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000484     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x2000048c     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000494     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x2000049c     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x200004a4    0x30  app_ble_prm3.orm3 [3]
+      .data               inited   0x200004d4    0x30  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000504     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x2000050c    0x4c  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000558    0x30  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000588     0x4  app_ble_prm3.orm3 [3]
+      .data               inited   0x2000058c   0x114  PowerCC26XX.orm3 [17]
+      .data               inited   0x200006a0    0x10  ll.o [7]
+      .data               inited   0x200006b0    0x10  osal.o [8]
+      .data               inited   0x200006c0     0x4  hal_assert.o [8]
+      .data               inited   0x200006c4    0x3c  ll_config.o [7]
+      .data               inited   0x20000700     0x8  ll_data.o [7]
       .data_xdc_runtime_Registry_Module__state__V
-                          inited   0x20000704     0x8  app_ble_prm3.orm3 [3]
-      .data               inited   0x2000070c     0x2  osal_cbtimer.o [8]
-      .data               inited   0x2000070e     0x2  sm_mgr.o [12]
-      .data               inited   0x20000710     0x4  osal_snv_wrapper.o [8]
-      .data               inited   0x20000714     0x1  hal_assert.o [8]
-      .data               inited   0x20000715     0x1  npi.o [8]
-    .bss                  zero     0x20000718   0x200  app_ble_prm3.orm3 [3]
-    .bss                  zero     0x20000918   0x100  RFCC26XX_singleMode.orm3 [20]
-    .bss                  zero     0x20000a18    0x80  board.o [1]
-    .bss                  zero     0x20000a98     0xc  board.o [1]
-    .bss                  zero     0x20000aa4    0x80  board.o [1]
-    .bss                  zero     0x20000b24   0x12c  board.o [1]
-    .bss                  zero     0x20000c50   0x1e0  broadcaster.o [1]
-    .bss                  zero     0x20000e30     0x8  ECCROMCC26XX.o [1]
-    .bss                  zero     0x20000e38    0x6c  icall.o [1]
-    .bss                  zero     0x20000ea4    0x1c  icall.o [1]
-    .bss                  zero     0x20000ec0     0x4  icall_api_lite.o [1]
-    .bss                  zero     0x20000ec4     0x4  icall_api_lite.o [1]
-    .bss                  zero     0x20000ec8   0x2e4  simple_broadcaster.o [1]
-    .bss                  zero     0x200011ac    0x10  util.o [1]
-    .bss                  zero     0x200011bc    0xc8  app_ble_prm3.orm3 [3]
-    .bss                  zero     0x20001284     0x4  app_ble_prm3.orm3 [3]
-    .bss                  zero     0x20001288     0x4  app_ble_prm3.orm3 [3]
-    .bss                  zero     0x2000128c    0x1c  CryptoCC26XX.orm3 [17]
-    .bss                  zero     0x200012a8   0x124  RFCC26XX_singleMode.orm3 [20]
-    .bss                  zero     0x200013cc    0x18  RFCC26XX_singleMode.orm3 [20]
-    .bss                  zero     0x200013e4    0xf0  PINCC26XX.orm3 [17]
-    .bss                  zero     0x200014d4    0x20  PINCC26XX.orm3 [17]
-    .bss                  zero     0x200014f4     0x8  PowerCC26XX_tirtos.orm3 [15]
-    .bss                  zero     0x200014fc     0x4  ClockP_tirtos.orm3 [15]
-    .bss                  zero     0x20001500    0x14  osc.o [16]
-    .bss                  zero     0x20001514     0x8  sys_ctrl.o [16]
-    .bss                  zero     0x2000151c     0x4  osal_icall_ble.o [8]
-    .bss                  zero     0x20001520    0x24  ll.o [7]
-    .bss                  zero     0x20001544    0x14  ll.o [7]
-    .bss                  zero     0x20001558     0x4  ll.o [7]
-    .bss                  zero     0x2000155c     0x4  ll.o [7]
-    .bss                  zero     0x20001560     0x4  osal.o [8]
-    .bss                  zero     0x20001564     0x4  osal.o [8]
+                          inited   0x20000708     0x8  app_ble_prm3.orm3 [3]
+      .data               inited   0x20000710     0x2  osal_cbtimer.o [8]
+      .data               inited   0x20000712     0x2  sm_mgr.o [12]
+      .data               inited   0x20000714     0x4  osal_snv_wrapper.o [8]
+      .data               inited   0x20000718     0x1  hal_assert.o [8]
+      .data               inited   0x20000719     0x1  npi.o [8]
+    .bss                  zero     0x20000720   0x200  app_ble_prm3.orm3 [3]
+    .bss                  zero     0x20000920   0x100  RFCC26XX_singleMode.orm3 [20]
+    .bss                  zero     0x20000a20    0x80  board.o [1]
+    .bss                  zero     0x20000aa0     0xc  board.o [1]
+    .bss                  zero     0x20000aac    0x80  board.o [1]
+    .bss                  zero     0x20000b2c   0x12c  board.o [1]
+    .bss                  zero     0x20000c58   0x1e0  broadcaster.o [1]
+    .bss                  zero     0x20000e38     0x8  ECCROMCC26XX.o [1]
+    .bss                  zero     0x20000e40    0x6c  icall.o [1]
+    .bss                  zero     0x20000eac    0x1c  icall.o [1]
+    .bss                  zero     0x20000ec8     0x4  icall_api_lite.o [1]
+    .bss                  zero     0x20000ecc     0x4  icall_api_lite.o [1]
+    .bss                  zero     0x20000ed0   0x2e4  simple_broadcaster.o [1]
+    .bss                  zero     0x200011b4    0x10  util.o [1]
+    .bss                  zero     0x200011c4    0xc8  app_ble_prm3.orm3 [3]
+    .bss                  zero     0x2000128c     0x4  app_ble_prm3.orm3 [3]
+    .bss                  zero     0x20001290     0x4  app_ble_prm3.orm3 [3]
+    .bss                  zero     0x20001294    0x1c  CryptoCC26XX.orm3 [17]
+    .bss                  zero     0x200012b0   0x124  RFCC26XX_singleMode.orm3 [20]
+    .bss                  zero     0x200013d4    0x18  RFCC26XX_singleMode.orm3 [20]
+    .bss                  zero     0x200013ec    0xf0  PINCC26XX.orm3 [17]
+    .bss                  zero     0x200014dc    0x20  PINCC26XX.orm3 [17]
+    .bss                  zero     0x200014fc     0x8  PowerCC26XX_tirtos.orm3 [15]
+    .bss                  zero     0x20001504     0x4  ClockP_tirtos.orm3 [15]
+    .bss                  zero     0x20001508    0x14  osc.o [16]
+    .bss                  zero     0x2000151c     0x8  sys_ctrl.o [16]
+    .bss                  zero     0x20001524     0x4  osal_icall_ble.o [8]
+    .bss                  zero     0x20001528    0x24  ll.o [7]
+    .bss                  zero     0x2000154c    0x14  ll.o [7]
+    .bss                  zero     0x20001560     0x4  ll.o [7]
+    .bss                  zero     0x20001564     0x4  ll.o [7]
     .bss                  zero     0x20001568     0x4  osal.o [8]
     .bss                  zero     0x2000156c     0x4  osal.o [8]
     .bss                  zero     0x20001570     0x4  osal.o [8]
     .bss                  zero     0x20001574     0x4  osal.o [8]
-    .bss                  zero     0x20001578   0x278  ll_privacy.o [7]
-    .bss                  zero     0x200017f0     0xc  ll_scheduler.o [7]
-    .bss                  zero     0x200017fc    0x38  ble.o [7]
-    .bss                  zero     0x20001834    0x1c  ble.o [7]
-    .bss                  zero     0x20001850    0x78  osal_cbtimer.o [8]
-    .bss                  zero     0x200018c8     0x4  osal_bufmgr.o [8]
-    .bss                  zero     0x200018cc     0x4  osal_timers.o [8]
-    .bss                  zero     0x200018d0     0x4  osal_timers.o [8]
+    .bss                  zero     0x20001578     0x4  osal.o [8]
+    .bss                  zero     0x2000157c     0x4  osal.o [8]
+    .bss                  zero     0x20001580   0x278  ll_privacy.o [7]
+    .bss                  zero     0x200017f8     0xc  ll_scheduler.o [7]
+    .bss                  zero     0x20001804    0x38  ble.o [7]
+    .bss                  zero     0x2000183c    0x1c  ble.o [7]
+    .bss                  zero     0x20001858    0x78  osal_cbtimer.o [8]
+    .bss                  zero     0x200018d0     0x4  osal_bufmgr.o [8]
     .bss                  zero     0x200018d4     0x4  osal_timers.o [8]
-    .bss                  zero     0x200018d8     0x4  ble_user_config.o [8]
-    .bss                  zero     0x200018dc     0x4  osal_clock.o [8]
-    .bss                  zero     0x200018e0     0x4  osal_clock.o [8]
-    .bss                  zero     0x200018e4     0x2  app_ble_prm3.orm3 [3]
-    .bss                  zero     0x200018e6     0x2  ll.o [7]
-    .bss                  zero     0x200018e8     0x2  ll.o [7]
-    .bss                  zero     0x200018ea     0x2  osal_pwrmgr.o [8]
-    .bss                  zero     0x200018ec     0x1  board.o [1]
-    .bss                  zero     0x200018ed     0x1  TRNGCC26XX.o [1]
-    .bss                  zero     0x200018ee     0x1  CryptoCC26XX.orm3 [17]
-    .bss                  zero     0x200018ef     0x2  UARTCC26XX.orm3 [17]
-    .bss                  zero     0x200018f1     0x1  UART.orm3 [17]
-    .bss                  zero     0x200018f2     0x1  driverlib_release.o [16]
-    .bss                  zero     0x200018f3     0x1  ll.o [7]
-    .bss                  zero     0x200018f4     0x1  ll.o [7]
-    .bss                  zero     0x200018f5     0x1  osal.o [8]
-    .bss                  zero     0x200018f6     0x1  hci_tl.o [11]
-    .bss                  zero     0x200018f7     0x1  hci_tl.o [11]
-    .bss                  zero     0x200018f8     0x1  hci_tl.o [11]
-    .bss                  zero     0x200018f9     0x1  hci_tl.o [11]
-    .bss                  zero     0x200018fa     0x1  hci_tl.o [11]
-    .bss                  zero     0x200018fb     0x1  hal_assert.o [8]
-    .bss                  zero     0x200018fc     0x1  ble_dispatch_lite.o [8]
-    .bss                  zero     0x200018fd     0x1  osal_pwrmgr.o [8]
-  .heap_start             uninit   0x20001900     0x0  command line/config [4]
-                                 - 0x20001900  0x16f8
+    .bss                  zero     0x200018d8     0x4  osal_timers.o [8]
+    .bss                  zero     0x200018dc     0x4  osal_timers.o [8]
+    .bss                  zero     0x200018e0     0x4  ble_user_config.o [8]
+    .bss                  zero     0x200018e4     0x4  osal_clock.o [8]
+    .bss                  zero     0x200018e8     0x4  osal_clock.o [8]
+    .bss                  zero     0x200018ec     0x2  app_ble_prm3.orm3 [3]
+    .bss                  zero     0x200018ee     0x2  ll.o [7]
+    .bss                  zero     0x200018f0     0x2  ll.o [7]
+    .bss                  zero     0x200018f2     0x2  osal_pwrmgr.o [8]
+    .bss                  zero     0x200018f4     0x1  board.o [1]
+    .bss                  zero     0x200018f5     0x1  TRNGCC26XX.o [1]
+    .bss                  zero     0x200018f6     0x1  CryptoCC26XX.orm3 [17]
+    .bss                  zero     0x200018f7     0x2  UARTCC26XX.orm3 [17]
+    .bss                  zero     0x200018f9     0x1  UART.orm3 [17]
+    .bss                  zero     0x200018fa     0x1  driverlib_release.o [16]
+    .bss                  zero     0x200018fb     0x1  ll.o [7]
+    .bss                  zero     0x200018fc     0x1  ll.o [7]
+    .bss                  zero     0x200018fd     0x1  osal.o [8]
+    .bss                  zero     0x200018fe     0x1  hci_tl.o [11]
+    .bss                  zero     0x200018ff     0x1  hci_tl.o [11]
+    .bss                  zero     0x20001900     0x1  hci_tl.o [11]
+    .bss                  zero     0x20001901     0x1  hci_tl.o [11]
+    .bss                  zero     0x20001902     0x1  hci_tl.o [11]
+    .bss                  zero     0x20001903     0x1  hal_assert.o [8]
+    .bss                  zero     0x20001904     0x1  ble_dispatch_lite.o [8]
+    .bss                  zero     0x20001905     0x1  osal_pwrmgr.o [8]
+  .heap_start             uninit   0x20001908     0x0  command line/config [4]
+                                 - 0x20001908  0x1700
 
 "A4":                                           0x401
   END_OF_RAM                       0x20003fff   0x401  <Block>
@@ -2637,79 +2637,79 @@ keep { ro section .intvec };
           -------     ----
 Zero (__iar_zero_init3)
     1 destination range, total size 0x11e6:
-          0x20000718  0x11e6
+          0x20000720  0x11e6
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x18 (54% of destination):
-          0x0000023c    0x18
+          0x00000235    0x18
     1 destination range, total size 0x2c:
           0x20000178    0x2c
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x3 (75% of destination):
-          0x00000289     0x3
+          0x00000282     0x3
     1 destination range, total size 0x4:
           0x200001ec     0x4
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x3 (37% of destination):
-          0x00000283     0x3
+          0x0000027c     0x3
     1 destination range, total size 0x8:
           0x200001f0     0x8
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x1a (72% of destination):
-          0x00000254    0x1a
+          0x0000024d    0x1a
     1 destination range, total size 0x24:
           0x200001a4    0x24
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0xc (42% of destination):
-          0x0000026e     0xc
+          0x00000267     0xc
     1 destination range, total size 0x1c:
           0x200001c8    0x1c
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x1b (39% of destination):
-          0x00000205    0x1b
+          0x000001fe    0x1b
     1 destination range, total size 0x44:
           0x20000100    0x44
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x6 (150% of destination):
-          0x0000028c     0x6
+          0x00000285     0x6
     1 destination range, total size 0x4:
           0x20000200     0x4
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x3 (37% of destination):
-          0x00000286     0x3
+          0x0000027f     0x3
     1 destination range, total size 0x8:
           0x200001f8     0x8
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x1c (53% of destination):
-          0x00000220    0x1c
+          0x00000219    0x1c
     1 destination range, total size 0x34:
           0x20000144    0x34
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x3 (150% of destination):
-          0x00000292     0x3
+          0x0000028b     0x3
     1 destination range, total size 0x2:
           0x20000204     0x2
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x9 (112% of destination):
-          0x0000027a     0x9
+          0x00000273     0x9
     1 destination range, total size 0x8:
           0x200001e4     0x8
 
 Copy/lz77 (__iar_lz77_init_single3)
-    1 source range, total size 0x1c9 (35% of destination):
-          0x0000003c   0x1c9
-    1 destination range, total size 0x50e:
-          0x20000208   0x50e
+    1 source range, total size 0x1c2 (34% of destination):
+          0x0000003c   0x1c2
+    1 destination range, total size 0x512:
+          0x20000208   0x512
 
 
 
@@ -2724,27 +2724,27 @@ C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5st
     TRNGCC26XX.o                         280                 1
     ble_user_config.o                     34      257       48
     board.o                               28      156      569
-    broadcaster.o                      1 106       48      616
+    broadcaster.o                      1 106       47      616
     ccfg_app_ble.o                                 88
     hw_gpio.o                             36       11       32
-    icall.o                            2 572        4      148
-    icall_api_lite.o                       2        2       12
+    icall.o                            2 572        5      148
+    icall_api_lite.o                       2        1       12
     icall_cc2650.o                       244        3        8
     icall_user_config.o                           101       16
     main.o                               372        6       16
-    simple_broadcaster.o                 568       24      808
+    simple_broadcaster.o                 568       25      812
     util.o                               336                16
     ----------------------------------------------------------
-    Total:                             6 442      700    2 298
+    Total:                             6 442      700    2 302
 
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.4_simple_broadcaster\tirtos\iar\config: [2]
     ----------------------------------------------------------
     Total:
 
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.4_simple_broadcaster\tirtos\iar\config\configPkg\package\cfg: [3]
-    app_ble_prm3.orm3                    660    1 976    1 548
+    app_ble_prm3.orm3                    660    1 972    1 548
     ----------------------------------------------------------
-    Total:                               660    1 976    1 548
+    Total:                               660    1 972    1 548
 
 command line: [4]
     command line/config
@@ -2769,7 +2769,7 @@ cc2640_ll_xxbx.a: [7]
     ll.o                               6 328        6       86
     ll_adv_end_causes.o                  264
     ll_common.o                        1 116
-    ll_config.o                                   113       60
+    ll_config.o                                   112       60
     ll_data.o                             20        3        8
     ll_error_end_causes.o                  6
     ll_isr.o                             922
@@ -2777,20 +2777,20 @@ cc2640_ll_xxbx.a: [7]
     ll_scheduler.o                     1 080                12
     ll_wl.o                               28
     ----------------------------------------------------------
-    Total:                            10 620      122      882
+    Total:                            10 620      121      882
 
 cc2640r2lp_stack_FlashROM_Library.a: [8]
     ble_dispatch_lite.o                   84                 1
     ble_user_config.o                    248                 4
     common_rom_init.o                      2
     gap.o                                 44
-    hal_assert.o                          76        1        6
+    hal_assert.o                          76        2        6
     hal_flash_wrapper.o                   88
     icall_lite_translation.o              80
     icall_startup.o                       52
     npi.o                                 72        1        1
     onboard.o                             18
-    osal.o                             1 996        6       41
+    osal.o                             1 996        5       41
     osal_bufmgr.o                        224                 4
     osal_cbtimer.o                       590        1      122
     osal_clock.o                          80                 8
@@ -2865,13 +2865,13 @@ drivers_cc26x0r2.arm3: [17]
     CryptoCC26XX.orm3                  1 018                29
     List.orm3                             86
     PINCC26XX.orm3                     1 192               272
-    PowerCC26XX.orm3                   2 064       97      276
+    PowerCC26XX.orm3                   2 064       95      276
     PowerCC26XX_calibrateRCOSC.orm3    1 196
     RingBuf.orm3                         136
     UART.orm3                            188                 1
     UARTCC26XX.orm3                    2 432       40        2
     ----------------------------------------------------------
-    Total:                             8 312      137      580
+    Total:                             8 312      135      580
 
 lcd.arm3: [18]
     ----------------------------------------------------------
@@ -2907,10 +2907,10 @@ rt7M_tl.a: [22]
     ----------------------------------------------------------
     Total:                               962
 
-    Gaps                                  23       12        2
+    Gaps                                  23       12        6
     Linker created                       760      208    1 025
 --------------------------------------------------------------
-    Grand Total:                      44 756   10 011    7 165
+    Grand Total:                      44 756   10 004    7 173
 
 
 *******************************************************************************
@@ -3007,7 +3007,7 @@ ClockP_isActive         0x000025a1    0xe  Code  Gb  ClockP_tirtos.orm3 [15]
 ClockP_setTimeout       0x000025b5    0x4  Code  Gb  ClockP_tirtos.orm3 [15]
 ClockP_start            0x000025b9    0x4  Code  Gb  ClockP_tirtos.orm3 [15]
 ClockP_stop             0x000025bd    0x4  Code  Gb  ClockP_tirtos.orm3 [15]
-ClockP_tickPeriod       0x200014fc    0x4  Data  Gb  ClockP_tirtos.orm3 [15]
+ClockP_tickPeriod       0x20001504    0x4  Data  Gb  ClockP_tirtos.orm3 [15]
 CommonROM_Init          0x0000c9dd    0x2  Code  Wk  common_rom_init.o [8]
 CryptoCC26XX_Params_init
                         0x000079bf    0x8  Code  Gb  CryptoCC26XX.orm3 [17]
@@ -3021,7 +3021,7 @@ CryptoCC26XX_open       0x000079c7   0xc2  Code  Gb  CryptoCC26XX.orm3 [17]
 CryptoCC26XX_transact   0x00007b35    0x4  Code  Gb  CryptoCC26XX.orm3 [17]
 CryptoCC26XX_transactPolling
                         0x00007b39    0x4  Code  Gb  CryptoCC26XX.orm3 [17]
-CryptoSem               0x2000128c   0x1c  Data  Lc  CryptoCC26XX.orm3 [17]
+CryptoSem               0x20001294   0x1c  Data  Lc  CryptoCC26XX.orm3 [17]
 DDI32RegRead            0x000036ed   0x28  Code  Lc  PowerCC26XX_calibrateRCOSC.orm3 [17]
 DefaultAssertCback      0x0000a1d1    0x2  Code  Gb  ble_user_config.o [1]
 DisplayUartAnsi_clear   0x00008f41   0x28  Code  Gb  DisplayUart.orm3 [13]
@@ -3050,11 +3050,11 @@ ECCROMCC26XX_genDHKey   0x00007fab  0x144  Code  Gb  ECCROMCC26XX.o [1]
 ECCROMCC26XX_genKeys    0x00007eb9   0xf2  Code  Gb  ECCROMCC26XX.o [1]
 ECCROMCC26XX_init       0x00007e45   0x3a  Code  Gb  ECCROMCC26XX.o [1]
 ECCROMCC26XX_init::isInit
-                        0x20000e30    0x1  Data  Lc  ECCROMCC26XX.o [1]
+                        0x20000e38    0x1  Data  Lc  ECCROMCC26XX.o [1]
 ECC_DATA$$Base {Abs}    0x20004f80          --   Gb  ble_r2.symbols [2]
 ECC_DATA$$Limit {Abs}   0x20005000          --   Gb  ble_r2.symbols [2]
 ECC_initGlobals         0x0000813b   0x2c  Code  Lc  ECCROMCC26XX.o [1]
-ECC_semaphore           0x20000e34    0x4  Data  Lc  ECCROMCC26XX.o [1]
+ECC_semaphore           0x20000e3c    0x4  Data  Lc  ECCROMCC26XX.o [1]
 END_OF_RAM$$Base        0x20003fff          --   Gb  - Linker created -
 END_OF_RAM$$Limit       0x20004400          --   Gb  - Linker created -
 GAPRole_GetParameter    0x00007527   0x96  Code  Gb  broadcaster.o [1]
@@ -3182,7 +3182,7 @@ HCI_VendorSpecifcCommandCompleteEvent {Abs}
 HCI_bm_alloc {Abs}      0x1000a7f1    0xc  Code  Gb  ble_r2.symbols [2]
 HEAPMGR_GETLARGESTFREEBUF
                         0x0000599d   0x56  Code  Gb  icall.o [1]
-HEAPMGR_SIZE            0x20000ebc    0x4  Data  Gb  icall.o [1]
+HEAPMGR_SIZE            0x20000ec4    0x4  Data  Gb  icall.o [1]
 HEAP_END$$Base          0x20003fff          --   Gb  - Linker created -
 HEAP_END$$Limit         0x20004000          --   Gb  - Linker created -
 HalFlashGetAddress      0x00008d7f   0x16  Code  Wk  hal_flash_wrapper.o [8]
@@ -3222,7 +3222,7 @@ ICall_enrollService     0x00005d5b   0x5a  Code  Gb  icall.o [1]
 ICall_enterCSImpl       0x0000584b   0x16  Code  Gb  icall.o [1]
 ICall_enterCriticalSection
                         0x20000328    0x4  Data  Gb  icall.o [1]
-ICall_entities          0x20000e38   0x48  Data  Lc  icall.o [1]
+ICall_entities          0x20000e40   0x48  Data  Lc  icall.o [1]
 ICall_fetchMsg          0x00005e0d   0x58  Code  Gb  icall.o [1]
 ICall_fetchServiceMsg   0x00005cbf   0x36  Code  Gb  icall.o [1]
 ICall_free              0x00005dc5    0x2  Code  Gb  icall.o [1]
@@ -3233,7 +3233,7 @@ ICall_getLocalMsgEntityId
                         0x000060fd   0x26  Code  Gb  icall.o [1]
 ICall_getMaxMSecs       0x00005e7f   0x2c  Code  Gb  icall.o [1]
 ICall_getTicks          0x00005e7b    0x4  Code  Gb  icall.o [1]
-ICall_heapCSState       0x20000ea8    0x4  Data  Lc  icall.o [1]
+ICall_heapCSState       0x20000eb0    0x4  Data  Lc  icall.o [1]
 ICall_heapFree          0x0000596d   0x30  Code  Gb  icall.o [1]
 ICall_heapGetStats      0x000059f3   0x20  Code  Gb  icall.o [1]
 ICall_heapInit          0x00005877   0x6a  Code  Gb  icall.o [1]
@@ -3267,7 +3267,7 @@ ICall_signal            0x00005d4d    0x2  Code  Gb  icall.o [1]
 ICall_stopTimer         0x00005f59    0xc  Code  Gb  icall.o [1]
 ICall_taskEntry         0x00005b11    0x8  Code  Lc  icall.o [1]
 ICall_taskEntryFuncs    0x0000623c    0xc  Data  Lc  icall.o [1]
-ICall_tasks             0x20000e80   0x24  Data  Lc  icall.o [1]
+ICall_tasks             0x20000e88   0x24  Data  Lc  icall.o [1]
 ICall_wait              0x00005cf5   0x58  Code  Gb  icall.o [1]
 ICall_waitMatch         0x00005f95  0x116  Code  Gb  icall.o [1]
 L2CAP_BuildCmdReject {Abs}
@@ -3592,8 +3592,8 @@ PINCC26XX_hwAttrs       0x0000b97c    0x8  Data  Gb  board.o [1]
 PINCC26XX_setIoCfg      0x00006f29   0xc8  Code  Lc  PINCC26XX.orm3 [17]
 PINCC26XX_setIoCfgMux   0x00006ff1   0x1e  Code  Lc  PINCC26XX.orm3 [17]
 PINCC26XX_setMux        0x00007305   0x1e  Code  Gb  PINCC26XX.orm3 [17]
-PIN_HandleTable         0x200013e8   0x7c  Data  Gb  PINCC26XX.orm3 [17]
-PIN_NumPins             0x200013e4    0x4  Data  Gb  PINCC26XX.orm3 [17]
+PIN_HandleTable         0x200013f0   0x7c  Data  Gb  PINCC26XX.orm3 [17]
+PIN_NumPins             0x200013ec    0x4  Data  Gb  PINCC26XX.orm3 [17]
 PIN_close               0x00007261   0x1a  Code  Gb  PINCC26XX.orm3 [17]
 PIN_ctz                 0x00006ed5    0xa  Code  Lc  PINCC26XX.orm3 [17]
 PIN_hwi                 0x00006f15   0x14  Code  Lc  PINCC26XX.orm3 [17]
@@ -3605,10 +3605,10 @@ PIN_setOutputEnable     0x0000727b   0x34  Code  Gb  PINCC26XX.orm3 [17]
 PIN_setOutputValue      0x000072af   0x2c  Code  Gb  PINCC26XX.orm3 [17]
 PIN_swi                 0x00006edf   0x36  Code  Lc  PINCC26XX.orm3 [17]
 PRCMSleep               0x00003321    0x2  Code  Lc  PowerCC26XX_tirtos.orm3 [15]
-PinGpioConfigTable      0x200014d4   0x20  Data  Lc  PINCC26XX.orm3 [17]
-PinHwi                  0x20001468   0x1c  Data  Lc  PINCC26XX.orm3 [17]
-PinSem                  0x200014b8   0x1c  Data  Lc  PINCC26XX.orm3 [17]
-PinSwi                  0x20001484   0x34  Data  Lc  PINCC26XX.orm3 [17]
+PinGpioConfigTable      0x200014dc   0x20  Data  Lc  PINCC26XX.orm3 [17]
+PinHwi                  0x20001470   0x1c  Data  Lc  PINCC26XX.orm3 [17]
+PinSem                  0x200014c0   0x1c  Data  Lc  PINCC26XX.orm3 [17]
+PinSwi                  0x2000148c   0x34  Data  Lc  PINCC26XX.orm3 [17]
 PowerCC26XX_RCOSC_clockFunc
                         0x000039e5   0x46  Code  Gb  PowerCC26XX_calibrateRCOSC.orm3 [17]
 PowerCC26XX_auxISR      0x00003779  0x124  Code  Gb  PowerCC26XX_calibrateRCOSC.orm3 [17]
@@ -3620,17 +3620,17 @@ PowerCC26XX_initiateCalibration
                         0x00003715   0x62  Code  Gb  PowerCC26XX_calibrateRCOSC.orm3 [17]
 PowerCC26XX_isStableXOSC_HF
                         0x00002b65   0x22  Code  Gb  PowerCC26XX.orm3 [17]
-PowerCC26XX_module      0x20000588  0x114  Data  Gb  PowerCC26XX.orm3 [17]
+PowerCC26XX_module      0x2000058c  0x114  Data  Gb  PowerCC26XX.orm3 [17]
 PowerCC26XX_schedulerDisable
                         0x000033df   0x16  Code  Gb  PowerCC26XX_tirtos.orm3 [15]
 PowerCC26XX_schedulerRestore
                         0x000033f5   0x18  Code  Gb  PowerCC26XX_tirtos.orm3 [15]
 PowerCC26XX_standbyPolicy
                         0x00003323   0xbc  Code  Gb  PowerCC26XX_tirtos.orm3 [15]
-PowerCC26XX_swiKey      0x200014f8    0x4  Data  Gb  PowerCC26XX_tirtos.orm3 [15]
+PowerCC26XX_swiKey      0x20001500    0x4  Data  Gb  PowerCC26XX_tirtos.orm3 [15]
 PowerCC26XX_switchXOSC_HF
                         0x00002b87   0x2e  Code  Gb  PowerCC26XX.orm3 [17]
-PowerCC26XX_taskKey     0x200014f4    0x4  Data  Gb  PowerCC26XX_tirtos.orm3 [15]
+PowerCC26XX_taskKey     0x200014fc    0x4  Data  Gb  PowerCC26XX_tirtos.orm3 [15]
 Power_getConstraintMask
                         0x00002607    0x8  Code  Gb  PowerCC26XX.orm3 [17]
 Power_getTransitionLatency
@@ -3673,11 +3673,11 @@ RF_runCmd               0x000020f1   0x38  Code  Gb  RFCC26XX_singleMode.orm3 [2
 RF_runDirectCmd         0x000022ed   0x10  Code  Gb  RFCC26XX_singleMode.orm3 [20]
 RF_runImmediateCmd      0x000022db   0x12  Code  Gb  RFCC26XX_singleMode.orm3 [20]
 RF_wakeupNotifyFxn      0x000013a9   0x46  Code  Lc  RFCC26XX_singleMode.orm3 [20]
-RF_wakeupNotifyObj      0x200013b8   0x14  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+RF_wakeupNotifyObj      0x200013c0   0x14  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 ROM_BASE_ADDR {Abs}     0x10004941          --   Gb  ble_r2.symbols [2]
 ROM_Init                0x0000c885   0x38  Code  Wk  rom_init.o [8]
 RWDATA$$Base            0x20000208          --   Gb  - Linker created -
-RWDATA$$Limit           0x20001900          --   Gb  - Linker created -
+RWDATA$$Limit           0x20001908          --   Gb  - Linker created -
 Region$$Table$$Base     0x0000cdc4          --   Gb  - Linker created -
 Region$$Table$$Limit    0x0000ce94          --   Gb  - Linker created -
 RegisterAssertCback     0x0000a1b1    0x6  Code  Gb  ble_user_config.o [1]
@@ -3728,7 +3728,7 @@ TRNGCC26XX_config       0x0000b9bc   0x10  Data  Gb  board.o [1]
 TRNGCC26XX_getNumber    0x0000ab29   0x80  Code  Gb  TRNGCC26XX.o [1]
 TRNGCC26XX_init         0x0000aaed   0x22  Code  Gb  TRNGCC26XX.o [1]
 TRNGCC26XX_init::isInit
-                        0x200018ed    0x1  Data  Lc  TRNGCC26XX.o [1]
+                        0x200018f5    0x1  Data  Lc  TRNGCC26XX.o [1]
 TRNGCC26XX_isParamValid
                         0x0000aba9   0x2c  Code  Gb  TRNGCC26XX.o [1]
 TRNGCC26XX_open         0x0000ab0f   0x1a  Code  Gb  TRNGCC26XX.o [1]
@@ -3766,7 +3766,7 @@ Util_constructClock     0x00007841   0x4a  Code  Gb  util.o [1]
 Util_constructQueue     0x000078cf    0xe  Code  Gb  util.o [1]
 Util_convertBdAddr2Str  0x0000792b   0x46  Code  Gb  util.o [1]
 Util_convertBdAddr2Str::str
-                        0x200011ac   0x10  Data  Lc  util.o [1]
+                        0x200011b4   0x10  Data  Lc  util.o [1]
 Util_dequeueMsg         0x00007911   0x1a  Code  Gb  util.o [1]
 Util_enqueueMsg         0x000078dd   0x34  Code  Gb  util.o [1]
 Util_isActive           0x000078ab    0xe  Code  Gb  util.o [1]
@@ -3814,11 +3814,11 @@ __low_level_init        0x0000d09f    0x4  Code  Gb  low_level_init.o [14]
 __vector_table          0x00000000   0x3c  Data  Gb  app_ble_prm3.orm3 [3]
 _call_main              0x0000d095         Code  Gb  cmain.orm3 [5]
 _main                   0x0000d09b         Code  Gb  cmain.orm3 [5]
-aCmdPool                0x20000918  0x100  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+aCmdPool                0x20000920  0x100  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 abort                   0x00006251    0x6  Code  Gb  abort.o [14]
 abortCmd                0x00002143  0x130  Code  Lc  RFCC26XX_singleMode.orm3 [20]
-activeTaskID            0x200006ac    0x1  Data  Lc  osal.o [8]
-activeTimeInUs          0x200012ec    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+activeTaskID            0x200006b0    0x1  Data  Lc  osal.o [8]
+activeTimeInUs          0x200012f4    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 advChan {Abs}           0x10019a40    0x4  Data  Gb  ble_r2.symbols [2]
 advCmd {Abs}            0x20004a20   0x48  Data  Gb  ble_r2.symbols [2]
 advDataQueue {Abs}      0x20004da4   0x10  Data  Gb  ble_r2.symbols [2]
@@ -3827,7 +3827,7 @@ advEvt2State {Abs}      0x10019a28    0x8  Data  Gb  ble_r2.symbols [2]
 advInfo {Abs}           0x20004f10    0x4  Data  Gb  ble_r2.symbols [2]
 advOutput {Abs}         0x20004db4   0x10  Data  Gb  ble_r2.symbols [2]
 advParam {Abs}          0x20004bf4   0x20  Data  Gb  ble_r2.symbols [2]
-advertData              0x20000398    0x8  Data  Lc  simple_broadcaster.o [1]
+advertData              0x20000398    0xc  Data  Lc  simple_broadcaster.o [1]
 appAssertCback          0x2000027c    0x4  Data  Gb  ble_user_config.o [1]
 appMsg                  0x2000038c    0xc  Data  Lc  simple_broadcaster.o [1]
 appMsgQueue             0x20000384    0x4  Data  Lc  simple_broadcaster.o [1]
@@ -3836,17 +3836,17 @@ applyBt5Patch           0x00003e01   0x20  Code  Lc  ll.o [7]
 attSendMsg {Abs}        0x10016071   0xa0  Code  Gb  ble_r2.symbols [2]
 attSendRspMsg {Abs}     0x10019099   0x36  Code  Gb  ble_r2.symbols [2]
 bDisableFlashInIdleConstraint
-                        0x200012c8    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bInitAvailRatCh         0x200012c2    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bPowerDownActive        0x200012c4    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bPowerUpActive          0x200012c3    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bRadioActive            0x200012c0    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bRatActive              0x200013e0    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bRestart                0x200013e3    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bStart                  0x200012c1    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bXOSCSwitchConstraint   0x200012c7    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bYieldPwrDnCalled       0x200012c5    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-bYieldPwrDnCancel       0x200012c6    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+                        0x200012d0    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bInitAvailRatCh         0x200012ca    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bPowerDownActive        0x200012cc    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bPowerUpActive          0x200012cb    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bRadioActive            0x200012c8    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bRatActive              0x200013e8    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bRestart                0x200013eb    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bStart                  0x200012c9    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bXOSCSwitchConstraint   0x200012cf    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bYieldPwrDnCalled       0x200012cd    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+bYieldPwrDnCancel       0x200012ce    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 bleAppServiceInfoTable  0x20000340   0x10  Data  Gb  icall_user_config.o [1]
 bleDispatch_BMAlloc     0x0000d299    0x6  Code  Wk  ble_dispatch_lite.o [8]
 bleDispatch_BMFree      0x0000d29f    0x6  Code  Wk  ble_dispatch_lite.o [8]
@@ -3855,17 +3855,17 @@ ble_dispatch_liteInit   0x0000c1b1    0xc  Code  Wk  ble_dispatch_lite.o [8]
 ble_dispatch_liteProcess
                         0x0000cda1   0x24  Code  Wk  ble_dispatch_lite.o [8]
 bm_desc_from_payload    0x0000cca1   0x24  Code  Lc  osal_bufmgr.o [8]
-bm_list_ptr             0x200018c8    0x4  Data  Lc  osal_bufmgr.o [8]
+bm_list_ptr             0x200018d0    0x4  Data  Lc  osal_bufmgr.o [8]
 boardConfig             0x0000b508   0x18  Data  Gb  ble_user_config.o [1]
 buildInfo {Abs}         0x20004f0c    0x4  Data  Gb  ble_r2.symbols [2]
 calibrateRcoscHf1       0x00003a2b  0x130  Code  Lc  PowerCC26XX_calibrateRCOSC.orm3 [17]
 cbTimerSetup            0x0000b7c9   0xb8  Code  Lc  osal_cbtimer.o [8]
 characterUUID           0x00006256    0x2  Data  Wk  gatt_uuid.o [10]
 clkInactivityFxn        0x00001603    0x4  Code  Lc  RFCC26XX_singleMode.orm3 [20]
-clkPowerUp              0x20001394   0x24  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+clkPowerUp              0x2000139c   0x24  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 clkPowerUpFxn           0x00001655    0x2  Code  Lc  RFCC26XX_singleMode.orm3 [20]
-cmdDirImm               0x200012a8   0x18  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-cmdQ                    0x200012cc   0x14  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+cmdDirImm               0x200012b0   0x18  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+cmdQ                    0x200012d4   0x14  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 compactPage             0x00008ba3   0xfc  Code  Lc  osal_snv_wrapper.o [8]
 configureRFCoreClocks   0x00002c5f   0x12  Code  Lc  PowerCC26XX.orm3 [17]
 configureXOSCHF         0x00002ccf   0x56  Code  Lc  PowerCC26XX.orm3 [17]
@@ -3874,7 +3874,7 @@ connInitialMaxTxOctets {Abs}
 connInitialMaxTxTime {Abs}
                         0x20004f46    0x2  Data  Gb  ble_r2.symbols [2]
 cryptoCC26XXHWAttrs     0x0000b940   0x10  Data  Gb  board.o [1]
-cryptoCC26XXObjects     0x20000a18   0x80  Data  Gb  board.o [1]
+cryptoCC26XXObjects     0x20000a20   0x80  Data  Gb  board.o [1]
 cryptoDriverTableBLE    0x0000b4a4   0x2c  Data  Gb  ble_user_config.o [1]
 cryptoDrvTblPtr {Abs}   0x20004ef8    0x4  Data  Gb  ble_r2.symbols [2]
 cryptoPostNotify        0x00007b3d    0x8  Code  Lc  CryptoCC26XX.orm3 [17]
@@ -3886,21 +3886,21 @@ curTxPowerVal {Abs}     0x20004f71    0x1  Data  Gb  ble_r2.symbols [2]
 dataLength              0x00006da0   0x10  Data  Lc  UARTCC26XX.orm3 [17]
 decActiveClientCnt      0x000013ef   0x56  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 defaultCallback         0x0000163d    0x2  Code  Lc  RFCC26XX_singleMode.orm3 [20]
-deviceFeatureSet        0x20001544   0x14  Data  Wk  ll.o [7]
+deviceFeatureSet        0x2000154c   0x14  Data  Wk  ll.o [7]
 disableCache            0x00008d2f   0x2e  Code  Lc  osal_snv_wrapper.o [8]
 disableLFClockQualifiers
                         0x00002bb9   0x66  Code  Lc  PowerCC26XX.orm3 [17]
 disconnectNext {Abs}    0x10011c8d   0x26  Code  Gb  ble_r2.symbols [2]
 dispHandle              0x2000037c    0x4  Data  Gb  simple_broadcaster.o [1]
-dispatchInUs            0x200012f0    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+dispatchInUs            0x200012f8    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 dispatchOpWhen          0x0000144d   0x32  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 displayUartHWAttrs      0x0000b958   0x14  Data  Gb  board.o [1]
-displayUartObject       0x20000a98    0xc  Data  Gb  board.o [1]
+displayUartObject       0x20000aa0    0xc  Data  Gb  board.o [1]
 driverTable             0x0000b4f4   0x14  Data  Gb  ble_user_config.o [1]
 driverTable_fnSpinlock  0x0000a1bd   0x14  Code  Gb  ble_user_config.o [1]
 driverlib_release_0_48919
-                        0x200018f2    0x1  Data  Gb  driverlib_release.o [16]
-dtmInfo                 0x2000155c    0x4  Data  Wk  ll.o [7]
+                        0x200018fa    0x1  Data  Gb  driverlib_release.o [16]
+dtmInfo                 0x20001564    0x4  Data  Wk  ll.o [7]
 eccDriverTable          0x0000c434   0x10  Data  Gb  icall_user_config.o [1]
 eccRom_genKeys {Abs}    0x10016c1d   0x2c  Code  Gb  ble_r2.symbols [2]
 eccRom_genSharedSecret {Abs}
@@ -3917,8 +3917,8 @@ eccRom_workzone {Abs}   0x20004f88    0x4  Data  Gb  ble_r2.symbols [2]
 emptyClockFunc          0x00002bb5    0x2  Code  Lc  PowerCC26XX.orm3 [17]
 enableCache             0x00008d19   0x16  Code  Lc  osal_snv_wrapper.o [8]
 erasePage               0x00008b33   0x3a  Code  Lc  osal_snv_wrapper.o [8]
-failF                   0x20000710    0x1  Data  Lc  osal_snv_wrapper.o [8]
-failW                   0x20000711    0x1  Data  Lc  osal_snv_wrapper.o [8]
+failF                   0x20000714    0x1  Data  Lc  osal_snv_wrapper.o [8]
+failW                   0x20000715    0x1  Data  Lc  osal_snv_wrapper.o [8]
 findOffset              0x00008b6d   0x2c  Code  Lc  osal_snv_wrapper.o [8]
 fsmActiveState          0x00001a3d  0x29c  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 fsmPowerUpState         0x0000177b   0xd6  Code  Lc  RFCC26XX_singleMode.orm3 [20]
@@ -3926,7 +3926,7 @@ fsmSetupState           0x00001851  0x182  Code  Lc  RFCC26XX_singleMode.orm3 [2
 fsmXOSCState            0x000019e5   0x56  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 fwImmedCmd {Abs}        0x20004e44    0x8  Data  Gb  ble_r2.symbols [2]
 fwParDtmCmd {Abs}       0x20004d14   0x18  Data  Gb  ble_r2.symbols [2]
-g_hwiInt                0x200018ee    0x1  Data  Gb  CryptoCC26XX.orm3 [17]
+g_hwiInt                0x200018f6    0x1  Data  Gb  CryptoCC26XX.orm3 [17]
 gapAddAddrAdj {Abs}     0x10018741   0x26  Code  Gb  ble_r2.symbols [2]
 gapAddAdvToken {Abs}    0x100149fd   0x3c  Code  Gb  ble_r2.symbols [2]
 gapAllocAdvRecs {Abs}   0x1001476d   0x4e  Code  Gb  ble_r2.symbols [2]
@@ -3997,8 +3997,8 @@ gapRegisterPeripheral {Abs}
                         0x10018b49    0x6  Code  Gb  ble_r2.symbols [2]
 gapRegisterPeripheralConn {Abs}
                         0x100120f9    0x6  Code  Gb  ble_r2.symbols [2]
-gapRoleTask             0x20000c50   0x50  Data  Gb  broadcaster.o [1]
-gapRoleTaskStack        0x20000ca0  0x190  Data  Gb  broadcaster.o [1]
+gapRoleTask             0x20000c58   0x50  Data  Gb  broadcaster.o [1]
+gapRoleTaskStack        0x20000ca8  0x190  Data  Gb  broadcaster.o [1]
 gapRole_AdvChanMap      0x20000288    0x1  Data  Lc  broadcaster.o [1]
 gapRole_AdvDirectAddr   0x20000300    0x8  Data  Lc  broadcaster.o [1]
 gapRole_AdvDirectType   0x20000287    0x1  Data  Lc  broadcaster.o [1]
@@ -4131,35 +4131,35 @@ getCmd                  0x00001383   0x26  Code  Lc  RFCC26XX_singleMode.orm3 [2
 halAssertHandler        0x00004bd5    0x2  Code  Wk  hal_assert.o [8]
 halAssertHandlerExt     0x00004abd   0x2c  Code  Wk  hal_assert.o [8]
 halAssertInit           0x0000b401   0x1c  Code  Wk  hal_assert.o [8]
-hciGapTaskID            0x200018f8    0x1  Data  Wk  hci_tl.o [11]
+hciGapTaskID            0x20001900    0x1  Data  Wk  hci_tl.o [11]
 hciInitEventMasks       0x0000c1d5   0x54  Code  Wk  hci_event.o [6]
-hciL2capTaskID          0x200018f9    0x1  Data  Wk  hci_tl.o [11]
+hciL2capTaskID          0x20001901    0x1  Data  Wk  hci_tl.o [11]
 hciPTMenabled {Abs}     0x20004f62    0x1  Data  Gb  ble_r2.symbols [2]
-hciSmpTaskID            0x200018fa    0x1  Data  Wk  hci_tl.o [11]
-hciTaskID               0x200018f6    0x1  Data  Wk  hci_tl.o [11]
-hciTestTaskID           0x200018f7    0x1  Data  Wk  hci_tl.o [11]
+hciSmpTaskID            0x20001902    0x1  Data  Wk  hci_tl.o [11]
+hciTaskID               0x200018fe    0x1  Data  Wk  hci_tl.o [11]
+hciTestTaskID           0x200018ff    0x1  Data  Wk  hci_tl.o [11]
 heapEnd                 0x20003fff         Data  Gb  command line/config [4]
-heapInitialize          0x20000ea4    0x1  Data  Lc  icall.o [1]
-heapStart               0x20001900         Data  Gb  command line/config [4]
-heapmgrFf1              0x20000eac    0x4  Data  Lc  icall.o [1]
-heapmgrFf2              0x20000eb0    0x4  Data  Lc  icall.o [1]
-heapmgrHeap             0x20000eb8    0x4  Data  Lc  icall.o [1]
-heapmgrMemFreeTotal     0x20000eb4    0x4  Data  Gb  icall.o [1]
-hwiCpe0                 0x20001328   0x1c  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+heapInitialize          0x20000eac    0x1  Data  Lc  icall.o [1]
+heapStart               0x20001908         Data  Gb  command line/config [4]
+heapmgrFf1              0x20000eb4    0x4  Data  Lc  icall.o [1]
+heapmgrFf2              0x20000eb8    0x4  Data  Lc  icall.o [1]
+heapmgrHeap             0x20000ec0    0x4  Data  Lc  icall.o [1]
+heapmgrMemFreeTotal     0x20000ebc    0x4  Data  Gb  icall.o [1]
+hwiCpe0                 0x20001330   0x1c  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 hwiFxnCpe0Active        0x0000153d   0xbe  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 hwiFxnCpe0PowerFsm      0x0000165f   0x1a  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 hwiFxnHw                0x0000147f   0x44  Code  Lc  RFCC26XX_singleMode.orm3 [20]
-hwiHw                   0x20001378   0x1c  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+hwiHw                   0x20001380   0x1c  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 iar_xdc_startup_exec    0x0000cf4d    0xc  Code  Gb  iar_xdc_init.orm3 [5]
 iar_xdc_startup_reset   0x0000cf41    0xc  Code  Gb  iar_xdc_init.orm3 [5]
 icallServiceTable       0x0000c450   0x44  Data  Gb  icall_user_config.o [1]
-icallServiceTblPtr      0x200018d8    0x4  Data  Wk  ble_user_config.o [8]
+icallServiceTblPtr      0x200018e0    0x4  Data  Wk  ble_user_config.o [8]
 icall_directAPI         0x00006131   0x72  Code  Gb  icall.o [1]
 icall_liteMsgParser     0x0000d14d   0x18  Code  Wk  ble_dispatch_lite.o [8]
 icall_liteTranslation   0x0000c5e1   0x50  Code  Wk  icall_lite_translation.o [8]
 initInfo {Abs}          0x20004f18    0x4  Data  Gb  ble_r2.symbols [2]
 isFlowControlEnabled    0x00006463   0x14  Code  Lc  UARTCC26XX.orm3 [17]
-isInitialized           0x200018f1    0x1  Data  Lc  UART.orm3 [17]
+isInitialized           0x200018f9    0x1  Data  Lc  UART.orm3 [17]
 isLimitedDiscoverableMode {Abs}
                         0x10014c75   0x2c  Code  Gb  ble_r2.symbols [2]
 l2capAllocChannel {Abs}
@@ -4342,11 +4342,11 @@ llSetupVersionIndReq {Abs}
                         0x10007d5d   0x60  Code  Gb  ble_r2.symbols [2]
 llState {Abs}           0x20004f6f    0x1  Data  Gb  ble_r2.symbols [2]
 llTaskError             0x0000d2a5    0x6  Code  Wk  ll_error_end_causes.o [7]
-llTaskList              0x200017f0    0xc  Data  Wk  ll_scheduler.o [7]
+llTaskList              0x200017f8    0xc  Data  Wk  ll_scheduler.o [7]
 llTime2Octets           0x0000c6d9   0x44  Code  Wk  ll_common.o [7]
 llTimeCompare {Abs}     0x100197b9   0x1a  Code  Gb  ble_r2.symbols [2]
 llTimeDelta {Abs}       0x100197dd    0x4  Code  Gb  ble_r2.symbols [2]
-llUserConfig            0x200006c0   0x3c  Data  Wk  ll_config.o [7]
+llUserConfig            0x200006c4   0x3c  Data  Wk  ll_config.o [7]
 llValidateConnParams    0x0000bf35   0x74  Code  Wk  ll_common.o [7]
 llVerifyConnParamReqParams {Abs}
                         0x10008e45   0x88  Code  Gb  ble_r2.symbols [2]
@@ -4364,12 +4364,12 @@ maxTxPwrForDTM {Abs}    0x20004f72    0x1  Data  Gb  ble_r2.symbols [2]
 memcmp                  0x00008e09         Code  Gb  memcmp.o [22]
 memcpy {Abs}            0x1001cb39         Data  Gb  command line/config [4]
 memset {Abs}            0x1001cb51         Data  Gb  command line/config [4]
-nActiveClients          0x200013e2    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-nClients                0x200013e1    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-nRtc1                   0x200012e8    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+nActiveClients          0x200013ea    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+nClients                0x200013e9    0x1  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+nRtc1                   0x200012f0    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 nopResourceHandler      0x00002c1f    0x4  Code  Lc  PowerCC26XX.orm3 [17]
 notify                  0x00002c23   0x3c  Code  Lc  PowerCC26XX.orm3 [17]
-opRatSync               0x200013cc   0x14  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+opRatSync               0x200013d4   0x14  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 openTRNG                0x0000abf1   0x14  Code  Gb  TRNGCC26XX.o [1]
 osalAdjustTimer         0x0000975d   0x50  Code  Wk  osal_clock.o [8]
 osalHeapAllocFxn        0x00005a1f    0x4  Code  Gb  icall.o [1]
@@ -4393,9 +4393,9 @@ osal_bm_free            0x0000bc0d   0x54  Code  Wk  osal_bufmgr.o [8]
 osal_buffer_uint32      0x00003cdf   0x12  Code  Wk  osal.o [8]
 osal_build_uint32       0x0000319f   0x3e  Code  Wk  osal.o [8]
 osal_clear_event        0x0000a7bd   0x44  Code  Wk  osal.o [8]
-osal_dispatch_entities  0x200006b8    0x4  Data  Lc  osal.o [8]
+osal_dispatch_entities  0x200006bc    0x4  Data  Lc  osal.o [8]
 osal_enroll_senderid    0x0000c1bd   0x18  Code  Wk  osal.o [8]
-osal_entity             0x200018f5    0x1  Data  Wk  osal.o [8]
+osal_entity             0x200018fd    0x1  Data  Wk  osal.o [8]
 osal_event_send         0x00004c29   0x78  Code  Lc  osal.o [8]
 osal_get_timeoutEx      0x0000be85   0x30  Code  Wk  osal_timers.o [8]
 osal_init_system        0x0000c369   0x50  Code  Wk  osal.o [8]
@@ -4407,16 +4407,16 @@ osal_memcpy             0x0000a021   0x14  Code  Wk  osal.o [8]
 osal_memdup             0x0000d015   0x1c  Code  Wk  osal.o [8]
 osal_memset             0x0000a881   0x14  Code  Wk  osal.o [8]
 osal_msec_timer_cback   0x00004d25   0x2e  Code  Lc  osal.o [8]
-osal_msec_timer_seq     0x200006b4    0x4  Data  Lc  osal.o [8]
+osal_msec_timer_seq     0x200006b8    0x4  Data  Lc  osal.o [8]
 osal_msg_allocate       0x00004bd7   0x24  Code  Wk  osal.o [8]
 osal_msg_deallocate     0x00004c09   0x1e  Code  Wk  osal.o [8]
 osal_msg_enqueue_push   0x00004ca1   0x62  Code  Lc  osal.o [8]
 osal_msg_receive        0x0000bba1   0x6c  Code  Wk  osal.o [8]
 osal_msg_send           0x00004d71   0x1e  Code  Wk  osal.o [8]
 osal_next_timeout       0x00009699   0x24  Code  Wk  osal_timers.o [8]
-osal_notask_entity      0x200006ad    0x1  Data  Lc  osal.o [8]
+osal_notask_entity      0x200006b1    0x1  Data  Lc  osal.o [8]
 osal_proxy2alien        0x00004d03   0x18  Code  Lc  osal.o [8]
-osal_proxy_tasks        0x200006ae    0x2  Data  Lc  osal.o [8]
+osal_proxy_tasks        0x200006b2    0x2  Data  Lc  osal.o [8]
 osal_pwrmgr_init        0x0000c41d   0x18  Code  Wk  osal_pwrmgr.o [8]
 osal_rand               0x0000d301    0x4  Code  Wk  osal.o [8]
 osal_revmemcpy          0x0000d135   0x18  Code  Wk  osal.o [8]
@@ -4430,38 +4430,38 @@ osal_start_reload_timer
 osal_start_system       0x0000c3b9   0x40  Code  Wk  osal.o [8]
 osal_start_timerEx      0x0000ad3d   0x44  Code  Wk  osal_timers.o [8]
 osal_stop_timerEx       0x0000a785   0x38  Code  Wk  osal_timers.o [8]
-osal_syncHandle         0x2000156c    0x4  Data  Wk  osal.o [8]
-osal_systemClock        0x200018d4    0x4  Data  Lc  osal_timers.o [8]
-osal_tickperiod         0x20001570    0x4  Data  Wk  osal.o [8]
+osal_syncHandle         0x20001574    0x4  Data  Wk  osal.o [8]
+osal_systemClock        0x200018dc    0x4  Data  Lc  osal_timers.o [8]
+osal_tickperiod         0x20001578    0x4  Data  Wk  osal.o [8]
 osal_timer_init         0x0000b41d   0x14  Code  Wk  osal.o [8]
 osal_timer_refTimeUpdate
                         0x000096bd   0x68  Code  Wk  osal_timers.o [8]
 osal_timerid_msec_timer
-                        0x200006b0    0x4  Data  Lc  osal.o [8]
-oscHfGlobals            0x20001500   0x14  Data  Lc  osc.o [16]
+                        0x200006b4    0x4  Data  Lc  osal.o [8]
+oscHfGlobals            0x20001508   0x14  Data  Lc  osc.o [16]
 ownPublicAddr {Abs}     0x20004e2c    0x8  Data  Gb  ble_r2.symbols [2]
 ownRandomAddr {Abs}     0x20004e34    0x8  Data  Gb  ble_r2.symbols [2]
 ownSavedPublicAddr {Abs}
                         0x20004e3c    0x8  Data  Gb  ble_r2.symbols [2]
 pBleEvtMask {Abs}       0x20004e14    0x8  Data  Gb  ble_r2.symbols [2]
-pCurrClient             0x200012e0    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
-pFsmState               0x200012e4    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+pCurrClient             0x200012e8    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+pFsmState               0x200012ec    0x4  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 pGapRoles_AppCGs        0x20000290    0x4  Data  Lc  broadcaster.o [1]
 pHciEvtMask {Abs}       0x20004e1c    0x8  Data  Gb  ble_r2.symbols [2]
 pHciEvtMask2 {Abs}      0x20004e24    0x8  Data  Gb  ble_r2.symbols [2]
 pPairingParams {Abs}    0x20004f30    0x4  Data  Gb  ble_r2.symbols [2]
-pPinGpio                0x20001464    0x4  Data  Lc  PINCC26XX.orm3 [17]
+pPinGpio                0x2000146c    0x4  Data  Lc  PINCC26XX.orm3 [17]
 pRfErrCb                0x20000334    0x4  Data  Gb  icall_api_lite.o [1]
 padding {Abs}           0x10012861   0x1c  Code  Gb  ble_r2.symbols [2]
 parityType              0x00006db8   0x14  Data  Lc  UARTCC26XX.orm3 [17]
 patchBleRfe             0x00004078  0x710  Data  Lc  ll.o [7]
 patchImageBt5           0x00003e80  0x1f8  Data  Lc  ll.o [7]
-pfnBMAlloc              0x20000ec0    0x4  Data  Gb  icall_api_lite.o [1]
-pfnBMFree               0x20000ec4    0x4  Data  Gb  icall_api_lite.o [1]
-pgOff                   0x20000712    0x2  Data  Lc  osal_snv_wrapper.o [8]
+pfnBMAlloc              0x20000ec8    0x4  Data  Gb  icall_api_lite.o [1]
+pfnBMFree               0x20000ecc    0x4  Data  Gb  icall_api_lite.o [1]
+pgOff                   0x20000716    0x2  Data  Lc  osal_snv_wrapper.o [8]
 postDirImmCmd           0x000022a5   0x36  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 postRfOperations {Abs}  0x20004f52    0x2  Data  Gb  ble_r2.symbols [2]
-powerQualGlobals        0x20001514    0x8  Data  Lc  sys_ctrl.o [16]
+powerQualGlobals        0x2000151c    0x8  Data  Lc  sys_ctrl.o [16]
 primaryServiceUUID      0x00004c26    0x2  Data  Wk  gatt_uuid.o [10]
 privInfo {Abs}          0x20004e78    0x8  Data  Gb  ble_r2.symbols [2]
 radioOpDoneCb           0x00001679   0xfc  Code  Lc  RFCC26XX_singleMode.orm3 [20]
@@ -4469,7 +4469,7 @@ ratChanFree             0x0000239d   0x44  Code  Lc  RFCC26XX_singleMode.orm3 [2
 readData                0x000064ed   0x2e  Code  Lc  UARTCC26XX.orm3 [17]
 readData2RingBuf        0x0000651b   0x28  Code  Lc  UARTCC26XX.orm3 [17]
 readSemCallback         0x000064bb    0x8  Code  Lc  UARTCC26XX.orm3 [17]
-resolvingList           0x20001578  0x278  Data  Wk  ll_privacy.o [7]
+resolvingList           0x20001580  0x278  Data  Wk  ll_privacy.o [7]
 resourceDB              0x00002d8c   0x4c  Data  Gb  PowerCC26XX.orm3 [17]
 rfCallback              0x0000c8f5   0x38  Code  Wk  ll_isr.o [7]
 rfCfgAdiVal {Abs}       0x20004f54    0x2  Data  Gb  ble_r2.symbols [2]
@@ -4485,16 +4485,16 @@ rfRegTbl                0x20000250    0xc  Data  Gb  ble_user_config.o [1]
 rfRegTbl1M              0x2000025c    0x8  Data  Gb  ble_user_config.o [1]
 rfRegTbl2M              0x20000264    0x8  Data  Gb  ble_user_config.o [1]
 rfRegTblCoded           0x2000026c   0x10  Data  Gb  ble_user_config.o [1]
-rfSetup                 0x20001520   0x24  Data  Wk  ll.o [7]
+rfSetup                 0x20001528   0x24  Data  Wk  ll.o [7]
 rf_init                 0x00001cf1   0xce  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 rf_patch_rfe_ble        0x00003e21   0x54  Code  Lc  ll.o [7]
 rssiCorrection {Abs}    0x20004f70    0x1  Data  Gb  ble_r2.symbols [2]
 rxFifoFlowCtrl {Abs}    0x20004f79    0x1  Data  Gb  ble_r2.symbols [2]
 rxTestOut {Abs}         0x20004de0    0xc  Data  Gb  ble_r2.symbols [2]
 rxTestParam {Abs}       0x20004d70   0x14  Data  Gb  ble_r2.symbols [2]
-sbbTask                 0x20000ec8   0x50  Data  Gb  simple_broadcaster.o [1]
-sbbTaskStack            0x20000f18  0x294  Data  Gb  simple_broadcaster.o [1]
-scanReqRpt              0x200018f4    0x1  Data  Wk  ll.o [7]
+sbbTask                 0x20000ed0   0x50  Data  Gb  simple_broadcaster.o [1]
+sbbTaskStack            0x20000f20  0x294  Data  Gb  simple_broadcaster.o [1]
+scanReqRpt              0x200018fc    0x1  Data  Wk  ll.o [7]
 scanRspData             0x20000360   0x1c  Data  Lc  simple_broadcaster.o [1]
 sclkSrc {Abs}           0x20004f08    0x4  Data  Gb  ble_r2.symbols [2]
 secondaryServiceUUID    0x00004d8e    0x2  Data  Wk  gatt_uuid.o [10]
@@ -4508,8 +4508,8 @@ serviceChangedUUID      0x00006346    0x2  Data  Wk  gatt_uuid.o [10]
 setActivePage           0x00008b1d   0x10  Code  Lc  osal_snv_wrapper.o [8]
 setBleUserConfig        0x0000b309   0xf8  Code  Wk  ble_user_config.o [8]
 simpleBLEBroadcaster_BroadcasterCBs
-                        0x200003a0    0x4  Data  Lc  simple_broadcaster.o [1]
-sizeInfo                0x200006fc    0x8  Data  Wk  ll_data.o [7]
+                        0x200003a4    0x4  Data  Lc  simple_broadcaster.o [1]
+sizeInfo                0x20000700    0x8  Data  Wk  ll_data.o [7]
 smAuthReqToUint8        0x000032d1   0x3a  Code  Wk  sm_mgr.o [12]
 smDetermineIOCaps {Abs}
                         0x1000f819   0x38  Code  Gb  ble_r2.symbols [2]
@@ -4567,7 +4567,7 @@ smRegisterResponder {Abs}
                         0x1000ec99    0x8  Code  Gb  ble_r2.symbols [2]
 smResponderAuthStageTwo {Abs}
                         0x100134cd   0x6e  Code  Gb  ble_r2.symbols [2]
-smRspWaitingConnHandle  0x2000070e    0x2  Data  Wk  sm_mgr.o [12]
+smRspWaitingConnHandle  0x20000712    0x2  Data  Wk  sm_mgr.o [12]
 smSavePairInfo          0x00009e85  0x19c  Code  Wk  sm_pairing.o [12]
 smSaveRemotePublicKeys {Abs}
                         0x1000f18d   0x30  Code  Gb  ble_r2.symbols [2]
@@ -4683,10 +4683,10 @@ supportedMaxTxOctets {Abs}
                         0x20004f48    0x2  Data  Gb  ble_r2.symbols [2]
 supportedMaxTxTime {Abs}
                         0x20004f4a    0x2  Data  Gb  ble_r2.symbols [2]
-swiFsm                  0x200012f4   0x34  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+swiFsm                  0x200012fc   0x34  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 swiFxnFsm               0x0000163f   0x16  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 swiFxnHw                0x000014c3   0x74  Code  Lc  RFCC26XX_singleMode.orm3 [20]
-swiHw                   0x20001344   0x34  Data  Lc  RFCC26XX_singleMode.orm3 [20]
+swiHw                   0x2000134c   0x34  Data  Lc  RFCC26XX_singleMode.orm3 [20]
 switchXOSCHFclockFunc   0x00002c71   0x54  Code  Lc  PowerCC26XX.orm3 [17]
 syncCb                  0x00001607   0x36  Code  Lc  RFCC26XX_singleMode.orm3 [20]
 syncEvent               0x2000028c    0x4  Data  Lc  broadcaster.o [1]
@@ -4695,7 +4695,7 @@ taskEndAction {Abs}     0x20004f20    0x4  Data  Gb  ble_r2.symbols [2]
 taskEndStatus {Abs}     0x20004f50    0x2  Data  Gb  ble_r2.symbols [2]
 tasksArr                0x0000d1a8   0x14  Data  Wk  osal_icall_ble.o [8]
 tasksCnt                0x0000a347    0x1  Data  Wk  osal_icall_ble.o [8]
-tasksEvents             0x2000151c    0x4  Data  Wk  osal_icall_ble.o [8]
+tasksEvents             0x20001524    0x4  Data  Wk  osal_icall_ble.o [8]
 threadSafeStdbyDisRelease
                         0x00006491   0x18  Code  Lc  UARTCC26XX.orm3 [17]
 threadSafeStdbyDisSet   0x00006477   0x1a  Code  Lc  UARTCC26XX.orm3 [17]
@@ -4796,15 +4796,15 @@ ti_sysbios_family_arm_m3_Hwi_Instance_finalize__E {Abs}
 ti_sysbios_family_arm_m3_Hwi_Instance_init__E {Abs}
                         0x10019fc1         Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_Hwi_Module_State_0_excActive__A
-                        0x200018e4    0x2  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200018ec    0x2  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Module_State_0_excContext__A
-                        0x20001284    0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x2000128c    0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Module_State_0_excStack__A
-                        0x20001288    0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20001290    0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Module__id__C
                         0x00001284    0x2  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Module__root__V
-                        0x200003c4    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200003c8    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Module__startupDone__S {Abs}
                         0x1001b939         Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_Hwi_Module__state__V
@@ -4830,7 +4830,7 @@ ti_sysbios_family_arm_m3_Hwi_Object__get__S {Abs}
 ti_sysbios_family_arm_m3_Hwi_Object__table__C
                         0x0000120c    0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Object__table__V
-                        0x200003cc   0x18  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200003d0   0x18  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Params__init__S {Abs}
                         0x1001bf79         Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_Hwi_Params_init
@@ -4854,7 +4854,7 @@ ti_sysbios_family_arm_m3_Hwi_disableInterrupt__E {Abs}
 ti_sysbios_family_arm_m3_Hwi_dispatchC__I {Abs}
                         0x1001a81d         Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_Hwi_dispatchTable
-                        0x200011bc   0xc8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200011c4   0xc8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_dispatch__I {Abs}
                         0x1001c7a5         Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_Hwi_doSwiRestore__I {Abs}
@@ -4936,7 +4936,7 @@ ti_sysbios_gates_GateHwi_Module__FXNS__C
 ti_sysbios_gates_GateHwi_Module__id__C
                         0x00001286    0x2  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateHwi_Module__root__V
-                        0x200003e4    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200003e8    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateHwi_Object__DESC__C
                         0x00001090   0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateHwi_Object__PARAMS__C
@@ -4962,7 +4962,7 @@ ti_sysbios_gates_GateMutex_Module__FXNS__C
 ti_sysbios_gates_GateMutex_Module__id__C
                         0x00001288    0x2  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateMutex_Module__root__V
-                        0x200003ec    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200003f0    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateMutex_Object__DESC__C
                         0x000010b0   0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateMutex_Object__PARAMS__C
@@ -4974,7 +4974,7 @@ ti_sysbios_gates_GateMutex_Object__delete__S {Abs}
 ti_sysbios_gates_GateMutex_Object__destruct__S {Abs}
                         0x1001b9f9         Data  Gb  command line/config [4]
 ti_sysbios_gates_GateMutex_Object__table__V
-                        0x200003f4   0x38  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200003f8   0x38  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateMutex_Params__init__S {Abs}
                         0x1001bfb5         Data  Gb  command line/config [4]
 ti_sysbios_gates_GateMutex_construct {Abs}
@@ -5018,7 +5018,7 @@ ti_sysbios_hal_Hwi_Instance_finalize__E {Abs}
 ti_sysbios_hal_Hwi_Instance_init__E {Abs}
                         0x1001b81d         Data  Gb  command line/config [4]
 ti_sysbios_hal_Hwi_Module__root__V
-                        0x2000042c    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000430    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_hal_Hwi_Module_startup__E {Abs}
                         0x1001be5d         Data  Gb  command line/config [4]
 ti_sysbios_hal_Hwi_Object__DESC__C
@@ -5048,7 +5048,7 @@ ti_sysbios_heaps_HeapCallback_Instance_init__E
 ti_sysbios_heaps_HeapCallback_Module__FXNS__C
                         0x0000cbd8   0x28  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Module__root__V
-                        0x20000434    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000438    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Module_startup__E
                         0x0000c84d   0x38  Code  Wk  rom_sysbios.obj [21]
 ti_sysbios_heaps_HeapCallback_Object__DESC__C
@@ -5062,7 +5062,7 @@ ti_sysbios_heaps_HeapCallback_Object__create__S
 ti_sysbios_heaps_HeapCallback_Object__get__S
                         0x000087b5   0x12  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Object__table__V
-                        0x2000043c    0xc  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000440    0xc  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_allocInstFxn__C
                         0x0000d2b8    0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_alloc__E
@@ -5110,7 +5110,7 @@ ti_sysbios_heaps_HeapMem_Module__gateObj__C
 ti_sysbios_heaps_HeapMem_Module__id__C
                         0x0000128a    0x2  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapMem_Module__root__V
-                        0x20000448    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x2000044c    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapMem_Object__DESC__C
                         0x000010f0   0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapMem_Object__PARAMS__C
@@ -5148,7 +5148,7 @@ ti_sysbios_knl_Clock_Instance_finalize__E {Abs}
 ti_sysbios_knl_Clock_Instance_init__E {Abs}
                         0x1001b1c5         Data  Gb  command line/config [4]
 ti_sysbios_knl_Clock_Module__root__V
-                        0x20000450    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000454    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_Module__state__V
                         0x20000178   0x2c  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_Module_startup__E {Abs}
@@ -5162,7 +5162,7 @@ ti_sysbios_knl_Clock_Object__delete__S {Abs}
 ti_sysbios_knl_Clock_Object__destruct__S {Abs}
                         0x1001ba99         Data  Gb  command line/config [4]
 ti_sysbios_knl_Clock_Object__table__V
-                        0x20000458   0x20  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x2000045c   0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_Params__init__S {Abs}
                         0x1001bfc1         Data  Gb  command line/config [4]
 ti_sysbios_knl_Clock_Params_init
@@ -5234,7 +5234,7 @@ ti_sysbios_knl_Clock_workFunc__E {Abs}
 ti_sysbios_knl_Event_Instance_init__E {Abs}
                         0x1001be49         Data  Gb  command line/config [4]
 ti_sysbios_knl_Event_Module__root__V
-                        0x20000478    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x2000047c    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Event_Object__DESC__C
                         0x00001130   0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Event_Object__PARAMS__C
@@ -5276,7 +5276,7 @@ ti_sysbios_knl_Mailbox_Instance_finalize__E {Abs}
 ti_sysbios_knl_Mailbox_Instance_init__E {Abs}
                         0x10019dad         Data  Gb  command line/config [4]
 ti_sysbios_knl_Mailbox_Module__root__V
-                        0x20000480    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000484    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Mailbox_Module_startup__E {Abs}
                         0x1001afcd         Data  Gb  command line/config [4]
 ti_sysbios_knl_Mailbox_Object__DESC__C
@@ -5314,7 +5314,7 @@ ti_sysbios_knl_Mailbox_post__E {Abs}
 ti_sysbios_knl_Queue_Instance_init__E {Abs}
                         0x1001c073         Data  Gb  command line/config [4]
 ti_sysbios_knl_Queue_Module__root__V
-                        0x20000488    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x2000048c    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Queue_Object__DESC__C
                         0x00001170   0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Queue_Object__PARAMS__C
@@ -5360,7 +5360,7 @@ ti_sysbios_knl_Semaphore_Instance_finalize__E {Abs}
 ti_sysbios_knl_Semaphore_Instance_init__E {Abs}
                         0x1001a685         Data  Gb  command line/config [4]
 ti_sysbios_knl_Semaphore_Module__root__V
-                        0x20000490    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000494    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Semaphore_Object__DESC__C
                         0x00001190   0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Semaphore_Object__PARAMS__C
@@ -5396,9 +5396,9 @@ ti_sysbios_knl_Swi_Instance_finalize__E {Abs}
 ti_sysbios_knl_Swi_Instance_init__E {Abs}
                         0x1001a9a5         Data  Gb  command line/config [4]
 ti_sysbios_knl_Swi_Module_State_0_readyQ__A
-                        0x200004d0   0x30  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200004d4   0x30  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Swi_Module__root__V
-                        0x20000498    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x2000049c    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Swi_Module__state__V
                         0x200001c8   0x1c  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Swi_Module_startup__E {Abs}
@@ -5418,7 +5418,7 @@ ti_sysbios_knl_Swi_Object__get__S {Abs}
 ti_sysbios_knl_Swi_Object__table__C
                         0x00001260    0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Swi_Object__table__V
-                        0x200004a0   0x30  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200004a4   0x30  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Swi_Params__init__S {Abs}
                         0x1001c015         Data  Gb  command line/config [4]
 ti_sysbios_knl_Swi_Params_init
@@ -5460,17 +5460,17 @@ ti_sysbios_knl_Swi_schedule__I {Abs}
 ti_sysbios_knl_Swi_startup__E {Abs}
                         0x1001c085         Data  Gb  command line/config [4]
 ti_sysbios_knl_Task_Instance_State_0_stack__A
-                        0x20000718  0x200  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000720  0x200  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Instance_finalize__E {Abs}
                         0x1001a059         Data  Gb  command line/config [4]
 ti_sysbios_knl_Task_Instance_init__E {Abs}
                         0x10019ce1         Data  Gb  command line/config [4]
 ti_sysbios_knl_Task_Module_State_0_idleTask__A
-                        0x20000584    0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000588    0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Module_State_0_readyQ__A
-                        0x20000554   0x30  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000558   0x30  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Module__root__V
-                        0x20000500    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000504    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Module__state__V
                         0x20000100   0x44  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Module_startup__E {Abs}
@@ -5490,7 +5490,7 @@ ti_sysbios_knl_Task_Object__get__S {Abs}
 ti_sysbios_knl_Task_Object__table__C
                         0x0000126c    0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Object__table__V
-                        0x20000508   0x4c  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x2000050c   0x4c  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Params__init__S {Abs}
                         0x1001c021         Data  Gb  command line/config [4]
 ti_sysbios_knl_Task_Params_init
@@ -5587,20 +5587,20 @@ ti_sysbios_rom_cortexm_cc26xx_r2_CC26xx_badRomLink__E
                         0x0000877f    0x2  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_rom_cortexm_cc26xx_r2_CC26xx_badRomRevision__E
                         0x0000877d    0x2  Code  Gb  app_ble_prm3.orm3 [3]
-timeMSec                0x200018dc    0x4  Data  Lc  osal_clock.o [8]
-trngCC26XXObjects       0x200018ec    0x1  Data  Gb  board.o [1]
+timeMSec                0x200018e4    0x4  Data  Lc  osal_clock.o [8]
+trngCC26XXObjects       0x200018f4    0x1  Data  Gb  board.o [1]
 trngDriverTable         0x0000c444    0xc  Data  Gb  icall_user_config.o [1]
 trngDrvTblPtr {Abs}     0x20004efc    0x4  Data  Gb  ble_r2.symbols [2]
-trxTestCmd              0x20001834   0x1c  Data  Wk  ble.o [7]
+trxTestCmd              0x2000183c   0x1c  Data  Wk  ble.o [7]
 txTestOut {Abs}         0x20004e94    0x4  Data  Gb  ble_r2.symbols [2]
 txTestParam {Abs}       0x20004dc4   0x10  Data  Gb  ble_r2.symbols [2]
-uartAppTaskId           0x20000715    0x1  Data  Lc  npi.o [8]
+uartAppTaskId           0x20000719    0x1  Data  Lc  npi.o [8]
 uartCC26XXHWAttrs       0x0000b988   0x20  Data  Gb  board.o [1]
-uartCC26XXObjects       0x20000b24  0x12c  Data  Gb  board.o [1]
+uartCC26XXObjects       0x20000b2c  0x12c  Data  Gb  board.o [1]
 uartPostNotify          0x00006d7d   0x10  Code  Lc  UARTCC26XX.orm3 [17]
-uartRxPowerConstraint   0x200018ef    0x1  Data  Lc  UARTCC26XX.orm3 [17]
-uartStringBuf           0x20000aa4   0x80  Data  Lc  board.o [1]
-uartTxPowerConstraint   0x200018f0    0x1  Data  Lc  UARTCC26XX.orm3 [17]
+uartRxPowerConstraint   0x200018f7    0x1  Data  Lc  UARTCC26XX.orm3 [17]
+uartStringBuf           0x20000aac   0x80  Data  Lc  board.o [1]
+uartTxPowerConstraint   0x200018f8    0x1  Data  Lc  UARTCC26XX.orm3 [17]
 user0Cfg                0x20000350   0x10  Data  Gb  main.o [1]
 verInfo {Abs}           0x20004e60    0x8  Data  Gb  ble_r2.symbols [2]
 wlTable {Abs}           0x200047cc   0xdc  Data  Gb  ble_r2.symbols [2]
@@ -5630,7 +5630,7 @@ xdc_runtime_Core_destructObject__I {Abs}
 xdc_runtime_Error_E_memory__C
                         0x000012a4    0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Error_IgnoreBlock
-                        0x200003a4   0x20  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x200003a8   0x20  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Error_Module__state__V
                         0x20000204    0x2  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Error_check__E {Abs}
@@ -5682,7 +5682,7 @@ xdc_runtime_Memory_getMaxDefaultTypeAlign__E {Abs}
 xdc_runtime_Memory_valloc__E {Abs}
                         0x1001c689         Data  Gb  command line/config [4]
 xdc_runtime_Registry_Module__state__V
-                        0x20000704    0x8  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x20000708    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_Module__state__V
                         0x200001f0    0x8  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup__EXECFXN__C {Abs}
@@ -5862,8 +5862,8 @@ xor_128 {Abs}           0x1001284d   0x14  Code  Gb  ble_r2.symbols [2]
 [22] = rt7M_tl.a
 
   44 756 bytes of readonly  code memory
-  10 011 bytes of readonly  data memory
-   7 165 bytes of readwrite data memory
+  10 004 bytes of readonly  data memory
+   7 173 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

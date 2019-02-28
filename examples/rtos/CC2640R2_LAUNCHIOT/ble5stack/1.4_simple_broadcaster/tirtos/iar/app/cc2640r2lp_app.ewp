@@ -214,8 +214,8 @@
                     <state>BOARD_DISPLAY_USE_LCD=1</state>
                     <state>BOARD_DISPLAY_USE_UART=1</state>
                     <state>BOARD_DISPLAY_USE_UART_ANSI=1</state>
-                    <state>_CC2640R2MOD_RGZ</state>
-                    <state>CC2640R2MOD_RSM</state>
+                    <state>CC2640R2MOD_RGZ</state>
+                    <state>_CC2640R2MOD_RSM</state>
                     <state>CC26XX</state>
                     <state>CC26XX_R2</state>
                     <state>DeviceFamily_CC26X0R2</state>
