@@ -508,6 +508,8 @@ static void SimpleBLEObserver_processRoleEvent(gapObserverRoleEvent_t *pEvent)
       {
         SimpleBLEObserver_addDeviceInfo(pEvent->deviceInfo.addr,
                                         pEvent->deviceInfo.addrType, pEvent->deviceInfo.pEvtData, pEvent->deviceInfo.dataLen);
+        HwUARTWrite((char *)Util_convertBdAddr2Str(pEvent->deviceInfo.addr),14);
+        HwUARTWrite("\r\n",2);
       }
       break;
 

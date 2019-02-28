@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.11.3.13950/W32 for ARM                28/Feb/2019  11:23:54
+# IAR ELF Linker V8.11.3.13950/W32 for ARM                28/Feb/2019  11:37:26
 # Copyright 2007-2017 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.3_simple_observer\tirtos\iar\app\FlashROM_StackLibrary\List\ble5_simple_observer_cc2640r2lp_app_FlashROM_StackLibrary.map
 #    Command line =  
-#        -f C:\Users\Yang\AppData\Local\Temp\EW534D.tmp
+#        -f C:\Users\Yang\AppData\Local\Temp\EWBB78.tmp
 #        (C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.3_simple_observer\tirtos\iar\app\FlashROM_StackLibrary\Obj\ble_user_config.o
 #        C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.3_simple_observer\tirtos\iar\app\FlashROM_StackLibrary\Obj\board.o
 #        C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.3_simple_observer\tirtos\iar\stack\FlashROM_Library\Exe\cc2640r2lp_stack_FlashROM_Library.a
@@ -1940,7 +1940,7 @@ keep { ro section .intvec };
                           const    0x0000132c     0x4  app_ble_prm3.orm3 [3]
                                  - 0x00001330     0x4
 
-"P1", part 2 of 2:                             0xf608
+"P1", part 2 of 2:                             0xf624
   .rodata                 const    0x00001330  0x13fc  TFT128.o [19]
   .text                   ro code  0x0000272c  0x1144  RFCC26XX_singleMode.orm3 [21]
   Veneer                  ro code  0x00003870     0x8  - Linker created -
@@ -2060,401 +2060,401 @@ keep { ro section .intvec };
   .rodata                 const    0x00009ed6     0x2  ll_config.o [7]
   Veneer                  ro code  0x00009ed8     0x8  - Linker created -
   Veneer                  ro code  0x00009ee0     0x8  - Linker created -
-  .text                   ro code  0x00009ee8   0x464  simple_observer.o [1]
-  Veneer                  ro code  0x0000a34c     0x8  - Linker created -
-  Veneer                  ro code  0x0000a354     0x8  - Linker created -
-  Veneer                  ro code  0x0000a35c     0x8  - Linker created -
-  .text                   ro code  0x0000a364   0x110  util.o [1]
-  .text                   ro code  0x0000a474    0xc0  iotboard_key.o [1]
-  .text                   ro code  0x0000a534    0x79  Display.orm3 [13]
-  .text                   ro code  0x0000a5ae     0x2  rom_sysbios.obj [22]
-  .text                   ro code  0x0000a5b0   0x170  observer.o [1]
-  .text                   ro code  0x0000a720    0x24  hw_gpio.o [1]
-  .text                   ro code  0x0000a744    0x94  hw_uart.o [1]
-  .text                   ro code  0x0000a7d8    0x68  memcmp.o [23]
-  .text                   ro code  0x0000a840    0xc8  UART.orm3 [17]
-  .text                   ro code  0x0000a908   0x3fa  CryptoCC26XX.orm3 [17]
-  .text                   ro code  0x0000ad02     0x2  rom_sysbios.obj [22]
-  .text                   ro code  0x0000ad04    0xa8  crypto.o [16]
-  Veneer                  ro code  0x0000adac     0x8  - Linker created -
-  Veneer                  ro code  0x0000adb4     0x8  - Linker created -
-  .text                   ro code  0x0000adbc   0x360  ECCROMCC26XX.o [1]
-  .rodata                 const    0x0000b11c   0x2e0  board.o [1]
-  .text                   ro code  0x0000b3fc   0x2c0  rom_sysbios.obj [22]
-  .text                   ro code  0x0000b6bc    0x2c  rom_sysbios.obj [22]
-  .text                   ro code  0x0000b6e8    0x4c  rom_sysbios.obj [22]
-  .text                   ro code  0x0000b734    0x36  strlen.o [23]
-  .text                   ro code  0x0000b76a     0x2  rom_sysbios.obj [22]
-  Veneer                  ro code  0x0000b76c     0x8  - Linker created -
-  Veneer                  ro code  0x0000b774     0x8  - Linker created -
-  Veneer                  ro code  0x0000b77c     0x8  - Linker created -
-  Veneer                  ro code  0x0000b784     0x8  - Linker created -
-  Veneer                  ro code  0x0000b78c     0x8  - Linker created -
-  Veneer                  ro code  0x0000b794     0x8  - Linker created -
-  Veneer                  ro code  0x0000b79c     0x8  - Linker created -
-  Veneer                  ro code  0x0000b7a4     0x8  - Linker created -
-  Veneer                  ro code  0x0000b7ac     0x8  - Linker created -
-  Veneer                  ro code  0x0000b7b4     0x8  - Linker created -
-  Veneer                  ro code  0x0000b7bc     0x8  - Linker created -
-  Veneer                  ro code  0x0000b7c4     0x8  - Linker created -
-  Veneer                  ro code  0x0000b7cc     0x8  - Linker created -
-  Veneer                  ro code  0x0000b7d4     0x8  - Linker created -
-  .text                   ro code  0x0000b7dc   0x294  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x0000ba70     0x4  rom_sysbios.obj [22]
-  .text                   ro code  0x0000ba74    0x60  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bad4    0x80  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bb54     0xc  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bb60     0xc  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bb6c    0x18  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bb84   0x124  setup.o [16]
-  .text                   ro code  0x0000bca8    0x78  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bd20    0x2c  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bd4c    0x18  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bd64    0x10  rom_sysbios.obj [22]
-  .text                   ro code  0x0000bd74   0x262  osal_snv_wrapper.o [8]
-  .text                   ro code  0x0000bfd6    0x16  hal_flash_wrapper.o [8]
-  .text                   ro code  0x0000bfec    0x30  flash.o [16]
-  .text                   ro code  0x0000c01c    0x38  hal_flash_wrapper.o [8]
-  .text                   ro code  0x0000c054     0xa  hal_flash_wrapper.o [8]
-  .text                   ro code  0x0000c05e     0x2  hal_assert.o [8]
-  .text                   ro code  0x0000c060    0x50  osal_snv_wrapper.o [8]
-  Veneer                  ro code  0x0000c0b0     0x8  - Linker created -
-  .text                   ro code  0x0000c0b8   0x204  sm_pairing.o [12]
-  .text                   ro code  0x0000c2bc    0x14  osal.o [8]
-  .text                   ro code  0x0000c2d0   0x1d0  osal.o [8]
-  .text                   ro code  0x0000c4a0    0x24  osal_timers.o [8]
-  .text                   ro code  0x0000c4c4    0x68  osal_timers.o [8]
-  .text                   ro code  0x0000c52c    0x38  osal.o [8]
-  .text                   ro code  0x0000c564    0x50  osal_clock.o [8]
-  .text                   ro code  0x0000c5b4    0xe0  osal_timers.o [8]
-  Veneer                  ro code  0x0000c694     0x8  - Linker created -
-  Veneer                  ro code  0x0000c69c     0x8  - Linker created -
-  .text                   ro code  0x0000c6a4   0x1b8  ll_isr.o [7]
-  .text                   ro code  0x0000c85c    0x58  ll_common.o [7]
-  .text                   ro code  0x0000c8b4   0x1a8  ll.o [7]
-  .text                   ro code  0x0000ca5c    0x3c  ll_common.o [7]
-  Veneer                  ro code  0x0000ca98     0x8  - Linker created -
-  Veneer                  ro code  0x0000caa0     0x8  - Linker created -
-  Veneer                  ro code  0x0000caa8     0x8  - Linker created -
-  Veneer                  ro code  0x0000cab0     0x8  - Linker created -
-  .text                   ro code  0x0000cab8   0x198  ll_common.o [7]
-  .text                   ro code  0x0000cc50    0x48  ble.o [7]
-  Veneer                  ro code  0x0000cc98     0x8  - Linker created -
-  .text                   ro code  0x0000cca0   0x174  main.o [1]
-  .text                   ro code  0x0000ce14    0x22  ble_user_config.o [1]
+  .text                   ro code  0x00009ee8   0x480  simple_observer.o [1]
+  Veneer                  ro code  0x0000a368     0x8  - Linker created -
+  Veneer                  ro code  0x0000a370     0x8  - Linker created -
+  Veneer                  ro code  0x0000a378     0x8  - Linker created -
+  .text                   ro code  0x0000a380   0x110  util.o [1]
+  .text                   ro code  0x0000a490    0xc0  iotboard_key.o [1]
+  .text                   ro code  0x0000a550    0x79  Display.orm3 [13]
+  .text                   ro code  0x0000a5ca     0x2  rom_sysbios.obj [22]
+  .text                   ro code  0x0000a5cc   0x170  observer.o [1]
+  .text                   ro code  0x0000a73c    0x24  hw_gpio.o [1]
+  .text                   ro code  0x0000a760    0x94  hw_uart.o [1]
+  .text                   ro code  0x0000a7f4    0x68  memcmp.o [23]
+  .text                   ro code  0x0000a85c    0xc8  UART.orm3 [17]
+  .text                   ro code  0x0000a924   0x3fa  CryptoCC26XX.orm3 [17]
+  .text                   ro code  0x0000ad1e     0x2  rom_sysbios.obj [22]
+  .text                   ro code  0x0000ad20    0xa8  crypto.o [16]
+  Veneer                  ro code  0x0000adc8     0x8  - Linker created -
+  Veneer                  ro code  0x0000add0     0x8  - Linker created -
+  .text                   ro code  0x0000add8   0x360  ECCROMCC26XX.o [1]
+  .rodata                 const    0x0000b138   0x2e0  board.o [1]
+  .text                   ro code  0x0000b418   0x2c0  rom_sysbios.obj [22]
+  .text                   ro code  0x0000b6d8    0x2c  rom_sysbios.obj [22]
+  .text                   ro code  0x0000b704    0x4c  rom_sysbios.obj [22]
+  .text                   ro code  0x0000b750    0x36  strlen.o [23]
+  .text                   ro code  0x0000b786     0x2  rom_sysbios.obj [22]
+  Veneer                  ro code  0x0000b788     0x8  - Linker created -
+  Veneer                  ro code  0x0000b790     0x8  - Linker created -
+  Veneer                  ro code  0x0000b798     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7a0     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7a8     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7b0     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7b8     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7c0     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7c8     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7d0     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7d8     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7e0     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7e8     0x8  - Linker created -
+  Veneer                  ro code  0x0000b7f0     0x8  - Linker created -
+  .text                   ro code  0x0000b7f8   0x294  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x0000ba8c     0x4  rom_sysbios.obj [22]
+  .text                   ro code  0x0000ba90    0x60  rom_sysbios.obj [22]
+  .text                   ro code  0x0000baf0    0x80  rom_sysbios.obj [22]
+  .text                   ro code  0x0000bb70     0xc  rom_sysbios.obj [22]
+  .text                   ro code  0x0000bb7c     0xc  rom_sysbios.obj [22]
+  .text                   ro code  0x0000bb88    0x18  rom_sysbios.obj [22]
+  .text                   ro code  0x0000bba0   0x124  setup.o [16]
+  .text                   ro code  0x0000bcc4    0x78  rom_sysbios.obj [22]
+  .text                   ro code  0x0000bd3c    0x2c  rom_sysbios.obj [22]
+  .text                   ro code  0x0000bd68    0x18  rom_sysbios.obj [22]
+  .text                   ro code  0x0000bd80    0x10  rom_sysbios.obj [22]
+  .text                   ro code  0x0000bd90   0x262  osal_snv_wrapper.o [8]
+  .text                   ro code  0x0000bff2    0x16  hal_flash_wrapper.o [8]
+  .text                   ro code  0x0000c008    0x30  flash.o [16]
+  .text                   ro code  0x0000c038    0x38  hal_flash_wrapper.o [8]
+  .text                   ro code  0x0000c070     0xa  hal_flash_wrapper.o [8]
+  .text                   ro code  0x0000c07a     0x2  hal_assert.o [8]
+  .text                   ro code  0x0000c07c    0x50  osal_snv_wrapper.o [8]
+  Veneer                  ro code  0x0000c0cc     0x8  - Linker created -
+  .text                   ro code  0x0000c0d4   0x204  sm_pairing.o [12]
+  .text                   ro code  0x0000c2d8    0x14  osal.o [8]
+  .text                   ro code  0x0000c2ec   0x1d0  osal.o [8]
+  .text                   ro code  0x0000c4bc    0x24  osal_timers.o [8]
+  .text                   ro code  0x0000c4e0    0x68  osal_timers.o [8]
+  .text                   ro code  0x0000c548    0x38  osal.o [8]
+  .text                   ro code  0x0000c580    0x50  osal_clock.o [8]
+  .text                   ro code  0x0000c5d0    0xe0  osal_timers.o [8]
+  Veneer                  ro code  0x0000c6b0     0x8  - Linker created -
+  Veneer                  ro code  0x0000c6b8     0x8  - Linker created -
+  .text                   ro code  0x0000c6c0   0x1b8  ll_isr.o [7]
+  .text                   ro code  0x0000c878    0x58  ll_common.o [7]
+  .text                   ro code  0x0000c8d0   0x1a8  ll.o [7]
+  .text                   ro code  0x0000ca78    0x3c  ll_common.o [7]
+  Veneer                  ro code  0x0000cab4     0x8  - Linker created -
+  Veneer                  ro code  0x0000cabc     0x8  - Linker created -
+  Veneer                  ro code  0x0000cac4     0x8  - Linker created -
+  Veneer                  ro code  0x0000cacc     0x8  - Linker created -
+  .text                   ro code  0x0000cad4   0x198  ll_common.o [7]
+  .text                   ro code  0x0000cc6c    0x48  ble.o [7]
+  Veneer                  ro code  0x0000ccb4     0x8  - Linker created -
+  .text                   ro code  0x0000ccbc   0x174  main.o [1]
+  .text                   ro code  0x0000ce30    0x22  ble_user_config.o [1]
   .const_xdc_runtime_Text_charTab__A
-                          const    0x0000ce36     0x1  app_ble_prm3.orm3 [3]
-  .rodata                 const    0x0000ce37     0x1  osal_icall_ble.o [8]
-  .text                   ro code  0x0000ce38   0x15e  DisplayTFT128.o [19]
-  .rodata                 const    0x0000cf96     0x1  ll_config.o [7]
-  .rodata                 const    0x0000cf97     0x1  ll_config.o [7]
-  Veneer                  ro code  0x0000cf98     0x8  - Linker created -
-  Veneer                  ro code  0x0000cfa0     0x8  - Linker created -
-  Veneer                  ro code  0x0000cfa8     0x8  - Linker created -
-  .text                   ro code  0x0000cfb0   0x154  ll_isr.o [7]
-  .text                   ro code  0x0000d104    0x1c  osal.o [8]
-  .text                   ro code  0x0000d120    0x38  ll_privacy.o [7]
-  .text                   ro code  0x0000d158    0x2e  ll_privacy.o [7]
-  .text                   ro code  0x0000d186    0x62  ll_privacy.o [7]
-  .text                   ro code  0x0000d1e8   0x138  ll.o [7]
-  Veneer                  ro code  0x0000d320     0x8  - Linker created -
-  .text                   ro code  0x0000d328   0x128  ll_scheduler.o [7]
-  .text                   ro code  0x0000d450     0xc  ll_scheduler.o [7]
-  .text                   ro code  0x0000d45c    0x38  ll_scheduler.o [7]
-  .text                   ro code  0x0000d494    0x38  ll_scheduler.o [7]
-  .text                   ro code  0x0000d4cc   0x118  TRNGCC26XX.o [1]
-  Veneer                  ro code  0x0000d5e4     0x8  - Linker created -
-  Veneer                  ro code  0x0000d5ec     0x8  - Linker created -
-  .text                   ro code  0x0000d5f4   0x118  ll.o [7]
-  .text                   ro code  0x0000d70c    0x10  ll_scheduler.o [7]
-  .text                   ro code  0x0000d71c    0x44  osal_timers.o [8]
-  .text                   ro code  0x0000d760     0x2  onboard.o [8]
-  .text                   ro code  0x0000d764    0x60  ll_common.o [7]
-  Veneer                  ro code  0x0000d7c4     0x8  - Linker created -
-  .text                   ro code  0x0000d7cc    0xec  ll.o [7]
-  .text                   ro code  0x0000d8b8    0x40  osal_timers.o [8]
-  .text                   ro code  0x0000d8f8    0x88  ll_common.o [7]
-  .text                   ro code  0x0000d980    0x3c  ll_scheduler.o [7]
-  .text                   ro code  0x0000d9bc    0x38  ll_common.o [7]
-  .text                   ro code  0x0000d9f4    0x68  ll_privacy.o [7]
-  .text                   ro code  0x0000da5c    0x1c  osal_timers.o [8]
-  .text                   ro code  0x0000da78     0x6  ABImemclr.o [23]
-  .text                   ro code  0x0000da80    0x38  osal_timers.o [8]
-  .text                   ro code  0x0000dab8    0x44  osal.o [8]
-  Veneer                  ro code  0x0000dafc     0x8  - Linker created -
-  Veneer                  ro code  0x0000db04     0x8  - Linker created -
-  .text                   ro code  0x0000db0c    0x1a  ll_privacy.o [7]
-  .text                   ro code  0x0000db28    0x54  ll.o [7]
-  .text                   ro code  0x0000db7c    0x14  osal.o [8]
-  .text                   ro code  0x0000db90    0x66  ABImemset.o [23]
-  .text                   ro code  0x0000dbf6     0x8  osal_timers.o [8]
-  .text                   ro code  0x0000dbfe    0x1e  ll_privacy.o [7]
-  Veneer                  ro code  0x0000dc1c     0x8  - Linker created -
-  .text                   ro code  0x0000dc24   0x118  ll.o [7]
-  .text                   ro code  0x0000dd3c    0x16  ll_privacy.o [7]
-  Veneer                  ro code  0x0000dd54     0x8  - Linker created -
-  Veneer                  ro code  0x0000dd5c     0x8  - Linker created -
-  .text                   ro code  0x0000dd64   0x104  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000de68    0x4c  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000deb4    0x2c  gap_centdevmgr.o [9]
-  Veneer                  ro code  0x0000dee0     0x8  - Linker created -
-  Veneer                  ro code  0x0000dee8     0x8  - Linker created -
-  Veneer                  ro code  0x0000def0     0x8  - Linker created -
-  Veneer                  ro code  0x0000def8     0x8  - Linker created -
-  Veneer                  ro code  0x0000df00     0x8  - Linker created -
-  .text                   ro code  0x0000df08   0x100  ll_scan_end_causes.o [7]
-  .text                   ro code  0x0000e008    0xd0  ll_scan_end_causes.o [7]
-  .text                   ro code  0x0000e0d8    0x66  ll_privacy.o [7]
-  .rodata                 const    0x0000e140    0xf8  ble_user_config.o [1]
-  Veneer                  ro code  0x0000e238     0x8  - Linker created -
-  .text                   ro code  0x0000e240    0xf0  ll.o [7]
-  .text                   ro code  0x0000e330    0x7c  ll_scheduler.o [7]
-  .text                   ro code  0x0000e3ac    0x28  ll_privacy.o [7]
-  Veneer                  ro code  0x0000e3d4     0x8  - Linker created -
-  .text                   ro code  0x0000e3dc    0x70  ll_scheduler.o [7]
-  .text                   ro code  0x0000e44c     0xc  ll_scheduler.o [7]
-  .text                   ro code  0x0000e458    0x44  ll_scheduler.o [7]
-  .text                   ro code  0x0000e49c    0x66  ll_privacy.o [7]
-  .text                   ro code  0x0000e504    0x88  ll_scheduler.o [7]
-  .text                   ro code  0x0000e58c    0x4e  ll_privacy.o [7]
-  .text                   ro code  0x0000e5dc    0xdc  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000e6b8    0x7c  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000e734    0xd0  ble_user_config.o [8]
-  .text                   ro code  0x0000e804    0x1c  hal_assert.o [8]
-  .text                   ro code  0x0000e820    0x14  osal.o [8]
-  Veneer                  ro code  0x0000e834     0x8  - Linker created -
-  .text                   ro code  0x0000e83c    0xcc  ll.o [7]
-  .text                   ro code  0x0000e908    0xba  DisplayUart.orm3 [13]
-  .text                   ro code  0x0000e9c2     0x4  SystemP_tirtos.orm3 [15]
-  .text                   ro code  0x0000e9c8    0xb8  osal_cbtimer.o [8]
-  Veneer                  ro code  0x0000ea80     0x8  - Linker created -
-  Veneer                  ro code  0x0000ea88     0x8  - Linker created -
-  .text                   ro code  0x0000ea90    0x9c  rom_sysbios.obj [22]
-  Veneer                  ro code  0x0000eb2c     0x8  - Linker created -
-  Veneer                  ro code  0x0000eb34     0x8  - Linker created -
-  Veneer                  ro code  0x0000eb3c     0x8  - Linker created -
-  Veneer                  ro code  0x0000eb44     0x8  - Linker created -
-  .text                   ro code  0x0000eb4c    0x98  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000ebe4    0x98  ll.o [7]
-  .text                   ro code  0x0000ec7c    0x90  hci_tl.o [11]
-  .text                   ro code  0x0000ed0c    0x6c  osal.o [8]
-  .text                   ro code  0x0000ed78    0x54  osal_bufmgr.o [8]
-  .text                   ro code  0x0000edcc    0x48  npi.o [8]
-  .text                   ro code  0x0000ee14    0x40  osal.o [8]
-  .text                   ro code  0x0000ee54    0x88  ll.o [7]
-  .text                   ro code  0x0000eedc    0x88  osal_cbtimer.o [8]
-  .text                   ro code  0x0000ef64    0x30  osal_timers.o [8]
-  .text                   ro code  0x0000ef94    0x88  ll_scan_end_causes.o [7]
-  .text                   ro code  0x0000f01c    0x78  osal_cbtimer.o [8]
-  Veneer                  ro code  0x0000f094     0x8  - Linker created -
-  .text                   ro code  0x0000f09c    0x74  ll_common.o [7]
-  .text                   ro code  0x0000f110    0x6c  rom_sysbios.obj [22]
-  .text                   ro code  0x0000f17c    0x6c  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000f1e8    0x6c  ll.o [7]
-  .text                   ro code  0x0000f254    0x6c  ble.o [7]
-  Veneer                  ro code  0x0000f2c0     0x8  - Linker created -
-  .text                   ro code  0x0000f2c8    0x68  osal_icall_ble.o [8]
-  .text                   ro code  0x0000f330    0x34  hci_tl.o [11]
-  .text                   ro code  0x0000f364    0x20  osal_cbtimer.o [8]
-  .text                   ro code  0x0000f384     0xc  ble_dispatch_lite.o [8]
-  .text                   ro code  0x0000f390    0x18  osal.o [8]
-  .text                   ro code  0x0000f3a8    0x54  hci_event.o [6]
-  .text                   ro code  0x0000f3fc    0x68  osal_cbtimer.o [8]
-  .text                   ro code  0x0000f464    0x64  osal_icall_ble.o [8]
-  .text                   ro code  0x0000f4c8     0xc  osal.o [8]
-  .text                   ro code  0x0000f4d4    0x50  osal.o [8]
-  .text                   ro code  0x0000f524    0x40  osal.o [8]
-  .text                   ro code  0x0000f564    0x24  osal_timers.o [8]
-  .text                   ro code  0x0000f588    0x18  osal_pwrmgr.o [8]
-  .rodata                 const    0x0000f5a0    0x60  icall_user_config.o [1]
-  .rodata                 const    0x0000f600    0x58  rom_sysbios.obj [22]
-  Veneer                  ro code  0x0000f658     0x8  - Linker created -
-  .text                   ro code  0x0000f660    0x58  gap_centdevmgr.o [9]
-  Veneer                  ro code  0x0000f6b8     0x8  - Linker created -
-  .text                   ro code  0x0000f6c0    0x1c  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000f6dc    0x54  ll.o [7]
-  .text                   ro code  0x0000f730    0x50  ll.o [7]
-  .text                   ro code  0x0000f780    0x50  ll.o [7]
-  .text                   ro code  0x0000f7d0    0x50  icall_lite_translation.o [8]
-  .text                   ro code  0x0000f820    0x18  osal.o [8]
-  .rodata                 const    0x0000f838    0x48  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x0000f880    0x48  rom_sysbios.obj [22]
-  .text                   ro code  0x0000f8c8    0x44  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000f90c    0x44  ll_common.o [7]
-  Veneer                  ro code  0x0000f950     0x8  - Linker created -
-  .text                   ro code  0x0000f958    0x40  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000f998    0x40  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000f9d8    0x40  osal_bufmgr.o [8]
-  .text                   ro code  0x0000fa18    0x40  zero_init3.o [23]
+                          const    0x0000ce52     0x1  app_ble_prm3.orm3 [3]
+  .rodata                 const    0x0000ce53     0x1  osal_icall_ble.o [8]
+  .text                   ro code  0x0000ce54   0x15e  DisplayTFT128.o [19]
+  .rodata                 const    0x0000cfb2     0x1  ll_config.o [7]
+  .rodata                 const    0x0000cfb3     0x1  ll_config.o [7]
+  Veneer                  ro code  0x0000cfb4     0x8  - Linker created -
+  Veneer                  ro code  0x0000cfbc     0x8  - Linker created -
+  Veneer                  ro code  0x0000cfc4     0x8  - Linker created -
+  .text                   ro code  0x0000cfcc   0x154  ll_isr.o [7]
+  .text                   ro code  0x0000d120    0x1c  osal.o [8]
+  .text                   ro code  0x0000d13c    0x38  ll_privacy.o [7]
+  .text                   ro code  0x0000d174    0x2e  ll_privacy.o [7]
+  .text                   ro code  0x0000d1a2    0x62  ll_privacy.o [7]
+  .text                   ro code  0x0000d204   0x138  ll.o [7]
+  Veneer                  ro code  0x0000d33c     0x8  - Linker created -
+  .text                   ro code  0x0000d344   0x128  ll_scheduler.o [7]
+  .text                   ro code  0x0000d46c     0xc  ll_scheduler.o [7]
+  .text                   ro code  0x0000d478    0x38  ll_scheduler.o [7]
+  .text                   ro code  0x0000d4b0    0x38  ll_scheduler.o [7]
+  .text                   ro code  0x0000d4e8   0x118  TRNGCC26XX.o [1]
+  Veneer                  ro code  0x0000d600     0x8  - Linker created -
+  Veneer                  ro code  0x0000d608     0x8  - Linker created -
+  .text                   ro code  0x0000d610   0x118  ll.o [7]
+  .text                   ro code  0x0000d728    0x10  ll_scheduler.o [7]
+  .text                   ro code  0x0000d738    0x44  osal_timers.o [8]
+  .text                   ro code  0x0000d77c     0x2  onboard.o [8]
+  .text                   ro code  0x0000d780    0x60  ll_common.o [7]
+  Veneer                  ro code  0x0000d7e0     0x8  - Linker created -
+  .text                   ro code  0x0000d7e8    0xec  ll.o [7]
+  .text                   ro code  0x0000d8d4    0x40  osal_timers.o [8]
+  .text                   ro code  0x0000d914    0x88  ll_common.o [7]
+  .text                   ro code  0x0000d99c    0x3c  ll_scheduler.o [7]
+  .text                   ro code  0x0000d9d8    0x38  ll_common.o [7]
+  .text                   ro code  0x0000da10    0x68  ll_privacy.o [7]
+  .text                   ro code  0x0000da78    0x1c  osal_timers.o [8]
+  .text                   ro code  0x0000da94     0x6  ABImemclr.o [23]
+  .text                   ro code  0x0000da9c    0x38  osal_timers.o [8]
+  .text                   ro code  0x0000dad4    0x44  osal.o [8]
+  Veneer                  ro code  0x0000db18     0x8  - Linker created -
+  Veneer                  ro code  0x0000db20     0x8  - Linker created -
+  .text                   ro code  0x0000db28    0x1a  ll_privacy.o [7]
+  .text                   ro code  0x0000db44    0x54  ll.o [7]
+  .text                   ro code  0x0000db98    0x14  osal.o [8]
+  .text                   ro code  0x0000dbac    0x66  ABImemset.o [23]
+  .text                   ro code  0x0000dc12     0x8  osal_timers.o [8]
+  .text                   ro code  0x0000dc1a    0x1e  ll_privacy.o [7]
+  Veneer                  ro code  0x0000dc38     0x8  - Linker created -
+  .text                   ro code  0x0000dc40   0x118  ll.o [7]
+  .text                   ro code  0x0000dd58    0x16  ll_privacy.o [7]
+  Veneer                  ro code  0x0000dd70     0x8  - Linker created -
+  Veneer                  ro code  0x0000dd78     0x8  - Linker created -
+  .text                   ro code  0x0000dd80   0x104  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000de84    0x4c  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000ded0    0x2c  gap_centdevmgr.o [9]
+  Veneer                  ro code  0x0000defc     0x8  - Linker created -
+  Veneer                  ro code  0x0000df04     0x8  - Linker created -
+  Veneer                  ro code  0x0000df0c     0x8  - Linker created -
+  Veneer                  ro code  0x0000df14     0x8  - Linker created -
+  Veneer                  ro code  0x0000df1c     0x8  - Linker created -
+  .text                   ro code  0x0000df24   0x100  ll_scan_end_causes.o [7]
+  .text                   ro code  0x0000e024    0xd0  ll_scan_end_causes.o [7]
+  .text                   ro code  0x0000e0f4    0x66  ll_privacy.o [7]
+  .rodata                 const    0x0000e15c    0xf8  ble_user_config.o [1]
+  Veneer                  ro code  0x0000e254     0x8  - Linker created -
+  .text                   ro code  0x0000e25c    0xf0  ll.o [7]
+  .text                   ro code  0x0000e34c    0x7c  ll_scheduler.o [7]
+  .text                   ro code  0x0000e3c8    0x28  ll_privacy.o [7]
+  Veneer                  ro code  0x0000e3f0     0x8  - Linker created -
+  .text                   ro code  0x0000e3f8    0x70  ll_scheduler.o [7]
+  .text                   ro code  0x0000e468     0xc  ll_scheduler.o [7]
+  .text                   ro code  0x0000e474    0x44  ll_scheduler.o [7]
+  .text                   ro code  0x0000e4b8    0x66  ll_privacy.o [7]
+  .text                   ro code  0x0000e520    0x88  ll_scheduler.o [7]
+  .text                   ro code  0x0000e5a8    0x4e  ll_privacy.o [7]
+  .text                   ro code  0x0000e5f8    0xdc  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000e6d4    0x7c  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000e750    0xd0  ble_user_config.o [8]
+  .text                   ro code  0x0000e820    0x1c  hal_assert.o [8]
+  .text                   ro code  0x0000e83c    0x14  osal.o [8]
+  Veneer                  ro code  0x0000e850     0x8  - Linker created -
+  .text                   ro code  0x0000e858    0xcc  ll.o [7]
+  .text                   ro code  0x0000e924    0xba  DisplayUart.orm3 [13]
+  .text                   ro code  0x0000e9de     0x4  SystemP_tirtos.orm3 [15]
+  .text                   ro code  0x0000e9e4    0xb8  osal_cbtimer.o [8]
+  Veneer                  ro code  0x0000ea9c     0x8  - Linker created -
+  Veneer                  ro code  0x0000eaa4     0x8  - Linker created -
+  .text                   ro code  0x0000eaac    0x9c  rom_sysbios.obj [22]
+  Veneer                  ro code  0x0000eb48     0x8  - Linker created -
+  Veneer                  ro code  0x0000eb50     0x8  - Linker created -
+  Veneer                  ro code  0x0000eb58     0x8  - Linker created -
+  Veneer                  ro code  0x0000eb60     0x8  - Linker created -
+  .text                   ro code  0x0000eb68    0x98  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000ec00    0x98  ll.o [7]
+  .text                   ro code  0x0000ec98    0x90  hci_tl.o [11]
+  .text                   ro code  0x0000ed28    0x6c  osal.o [8]
+  .text                   ro code  0x0000ed94    0x54  osal_bufmgr.o [8]
+  .text                   ro code  0x0000ede8    0x48  npi.o [8]
+  .text                   ro code  0x0000ee30    0x40  osal.o [8]
+  .text                   ro code  0x0000ee70    0x88  ll.o [7]
+  .text                   ro code  0x0000eef8    0x88  osal_cbtimer.o [8]
+  .text                   ro code  0x0000ef80    0x30  osal_timers.o [8]
+  .text                   ro code  0x0000efb0    0x88  ll_scan_end_causes.o [7]
+  .text                   ro code  0x0000f038    0x78  osal_cbtimer.o [8]
+  Veneer                  ro code  0x0000f0b0     0x8  - Linker created -
+  .text                   ro code  0x0000f0b8    0x74  ll_common.o [7]
+  .text                   ro code  0x0000f12c    0x6c  rom_sysbios.obj [22]
+  .text                   ro code  0x0000f198    0x6c  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000f204    0x6c  ll.o [7]
+  .text                   ro code  0x0000f270    0x6c  ble.o [7]
+  Veneer                  ro code  0x0000f2dc     0x8  - Linker created -
+  .text                   ro code  0x0000f2e4    0x68  osal_icall_ble.o [8]
+  .text                   ro code  0x0000f34c    0x34  hci_tl.o [11]
+  .text                   ro code  0x0000f380    0x20  osal_cbtimer.o [8]
+  .text                   ro code  0x0000f3a0     0xc  ble_dispatch_lite.o [8]
+  .text                   ro code  0x0000f3ac    0x18  osal.o [8]
+  .text                   ro code  0x0000f3c4    0x54  hci_event.o [6]
+  .text                   ro code  0x0000f418    0x68  osal_cbtimer.o [8]
+  .text                   ro code  0x0000f480    0x64  osal_icall_ble.o [8]
+  .text                   ro code  0x0000f4e4     0xc  osal.o [8]
+  .text                   ro code  0x0000f4f0    0x50  osal.o [8]
+  .text                   ro code  0x0000f540    0x40  osal.o [8]
+  .text                   ro code  0x0000f580    0x24  osal_timers.o [8]
+  .text                   ro code  0x0000f5a4    0x18  osal_pwrmgr.o [8]
+  .rodata                 const    0x0000f5bc    0x60  icall_user_config.o [1]
+  .rodata                 const    0x0000f61c    0x58  rom_sysbios.obj [22]
+  Veneer                  ro code  0x0000f674     0x8  - Linker created -
+  .text                   ro code  0x0000f67c    0x58  gap_centdevmgr.o [9]
+  Veneer                  ro code  0x0000f6d4     0x8  - Linker created -
+  .text                   ro code  0x0000f6dc    0x1c  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000f6f8    0x54  ll.o [7]
+  .text                   ro code  0x0000f74c    0x50  ll.o [7]
+  .text                   ro code  0x0000f79c    0x50  ll.o [7]
+  .text                   ro code  0x0000f7ec    0x50  icall_lite_translation.o [8]
+  .text                   ro code  0x0000f83c    0x18  osal.o [8]
+  .rodata                 const    0x0000f854    0x48  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x0000f89c    0x48  rom_sysbios.obj [22]
+  .text                   ro code  0x0000f8e4    0x44  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000f928    0x44  ll_common.o [7]
+  Veneer                  ro code  0x0000f96c     0x8  - Linker created -
+  .text                   ro code  0x0000f974    0x40  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000f9b4    0x40  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000f9f4    0x40  osal_bufmgr.o [8]
+  .text                   ro code  0x0000fa34    0x40  zero_init3.o [23]
   .const_ti_sysbios_knl_Task_Object__PARAMS__C
-                          const    0x0000fa58    0x3c  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x0000fa94    0x3c  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000fad0    0x3c  osal_timers.o [8]
-  .rodata                 const    0x0000fb0c    0x38  ll_config.o [7]
-  .text                   ro code  0x0000fb44    0x38  rom_sysbios.obj [22]
-  .text                   ro code  0x0000fb7c    0x38  gap_centdevmgr.o [9]
-  .text                   ro code  0x0000fbb4    0x38  rom_init.o [8]
-  .text                   ro code  0x0000fbec    0x38  ll.o [7]
-  .text                   ro code  0x0000fc24    0x38  ll_isr.o [7]
+                          const    0x0000fa74    0x3c  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x0000fab0    0x3c  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000faec    0x3c  osal_timers.o [8]
+  .rodata                 const    0x0000fb28    0x38  ll_config.o [7]
+  .text                   ro code  0x0000fb60    0x38  rom_sysbios.obj [22]
+  .text                   ro code  0x0000fb98    0x38  gap_centdevmgr.o [9]
+  .text                   ro code  0x0000fbd0    0x38  rom_init.o [8]
+  .text                   ro code  0x0000fc08    0x38  ll.o [7]
+  .text                   ro code  0x0000fc40    0x38  ll_isr.o [7]
   .const_ti_sysbios_knl_Mailbox_Object__PARAMS__C
-                          const    0x0000fc5c    0x34  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x0000fc90    0x34  icall_startup.o [8]
-  .text                   ro code  0x0000fcc4     0x2  common_rom_init.o [8]
-  .text                   ro code  0x0000fcc8    0x34  rom_sysbios.obj [22]
-  .text                   ro code  0x0000fcfc    0x34  ll_scheduler.o [7]
-  .text                   ro code  0x0000fd30    0x32  rom_sysbios.obj [22]
+                          const    0x0000fc78    0x34  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x0000fcac    0x34  icall_startup.o [8]
+  .text                   ro code  0x0000fce0     0x2  common_rom_init.o [8]
+  .text                   ro code  0x0000fce4    0x34  rom_sysbios.obj [22]
+  .text                   ro code  0x0000fd18    0x34  ll_scheduler.o [7]
+  .text                   ro code  0x0000fd4c    0x32  rom_sysbios.obj [22]
   .const_ti_sysbios_family_arm_m3_Hwi_Object__PARAMS__C
-                          const    0x0000fd64    0x30  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x0000fd94    0x30  rom_sysbios.obj [22]
-  .text                   ro code  0x0000fdc4    0x30  ll.o [7]
-  Veneer                  ro code  0x0000fdf4     0x8  - Linker created -
-  .text                   ro code  0x0000fdfc    0x2e  gap.o [8]
-  Veneer                  ro code  0x0000fe2c     0x8  - Linker created -
-  .text                   ro code  0x0000fe34    0x18  gap_configmgr.o [9]
-  Veneer                  ro code  0x0000fe4c     0x8  - Linker created -
-  .text                   ro code  0x0000fe54     0xc  gap.o [8]
+                          const    0x0000fd80    0x30  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x0000fdb0    0x30  rom_sysbios.obj [22]
+  .text                   ro code  0x0000fde0    0x30  ll.o [7]
+  Veneer                  ro code  0x0000fe10     0x8  - Linker created -
+  .text                   ro code  0x0000fe18    0x2e  gap.o [8]
+  Veneer                  ro code  0x0000fe48     0x8  - Linker created -
+  .text                   ro code  0x0000fe50    0x18  gap_configmgr.o [9]
+  Veneer                  ro code  0x0000fe68     0x8  - Linker created -
+  .text                   ro code  0x0000fe70     0xc  gap.o [8]
   .const_ti_sysbios_hal_Hwi_Object__PARAMS__C
-                          const    0x0000fe60    0x2c  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x0000fe8c    0x2c  board.o [1]
-  .text                   ro code  0x0000feb8    0x2c  ll.o [7]
-  .text                   ro code  0x0000fee4    0x2c  ll_common.o [7]
-  .text                   ro code  0x0000ff10    0x2c  ll_isr.o [7]
-  Veneer                  ro code  0x0000ff3c     0x8  - Linker created -
-  .text                   ro code  0x0000ff44    0x16  ll_isr.o [7]
-  .text                   ro code  0x0000ff5c    0x2c  sm_mgr.o [12]
-  Veneer                  ro code  0x0000ff88     0x8  - Linker created -
-  Veneer                  ro code  0x0000ff90     0x8  - Linker created -
-  .text                   ro code  0x0000ff98    0x2c  sm_pairing.o [12]
-  .text                   ro code  0x0000ffc4    0x2a  rom_sysbios.obj [22]
-  .text                   ro code  0x0000fff0     0xc  rom_sysbios.obj [22]
+                          const    0x0000fe7c    0x2c  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x0000fea8    0x2c  board.o [1]
+  .text                   ro code  0x0000fed4    0x2c  ll.o [7]
+  .text                   ro code  0x0000ff00    0x2c  ll_common.o [7]
+  .text                   ro code  0x0000ff2c    0x2c  ll_isr.o [7]
+  Veneer                  ro code  0x0000ff58     0x8  - Linker created -
+  .text                   ro code  0x0000ff60    0x16  ll_isr.o [7]
+  .text                   ro code  0x0000ff78    0x2c  sm_mgr.o [12]
+  Veneer                  ro code  0x0000ffa4     0x8  - Linker created -
+  Veneer                  ro code  0x0000ffac     0x8  - Linker created -
+  .text                   ro code  0x0000ffb4    0x2c  sm_pairing.o [12]
+  .text                   ro code  0x0000ffe0    0x2a  rom_sysbios.obj [22]
+  .text                   ro code  0x0001000c     0xc  rom_sysbios.obj [22]
   .const_ti_sysbios_heaps_HeapCallback_Module__FXNS__C
-                          const    0x0000fffc    0x28  app_ble_prm3.orm3 [3]
+                          const    0x00010018    0x28  app_ble_prm3.orm3 [3]
   .const_ti_sysbios_knl_Swi_Object__PARAMS__C
-                          const    0x00010024    0x28  app_ble_prm3.orm3 [3]
+                          const    0x00010040    0x28  app_ble_prm3.orm3 [3]
   .const_xdc_runtime_Startup_sfxnTab__A
-                          const    0x0001004c    0x28  app_ble_prm3.orm3 [3]
-  .rodata                 const    0x00010074    0x28  UARTCC26XX.orm3 [17]
-  .text                   ro code  0x0001009c    0x28  osal_bufmgr.o [8]
-  .text                   ro code  0x000100c4    0x24  osal_bufmgr.o [8]
-  .text                   ro code  0x000100e8    0x28  data_init.o [23]
+                          const    0x00010068    0x28  app_ble_prm3.orm3 [3]
+  .rodata                 const    0x00010090    0x28  UARTCC26XX.orm3 [17]
+  .text                   ro code  0x000100b8    0x28  osal_bufmgr.o [8]
+  .text                   ro code  0x000100e0    0x24  osal_bufmgr.o [8]
+  .text                   ro code  0x00010104    0x28  data_init.o [23]
   .const_ti_sysbios_heaps_HeapMem_Object__PARAMS__C
-                          const    0x00010110    0x24  app_ble_prm3.orm3 [3]
+                          const    0x0001012c    0x24  app_ble_prm3.orm3 [3]
   .const_ti_sysbios_knl_Clock_Object__PARAMS__C
-                          const    0x00010134    0x24  app_ble_prm3.orm3 [3]
+                          const    0x00010150    0x24  app_ble_prm3.orm3 [3]
   .const_ti_sysbios_knl_Semaphore_Object__PARAMS__C
-                          const    0x00010158    0x24  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x0001017c    0x24  osal.o [8]
-  .text                   ro code  0x000101a0    0x24  ll.o [7]
-  .text                   ro code  0x000101c4    0x24  ble_dispatch_lite.o [8]
-  .iar.init_table         const    0x000101e8    0xd0  - Linker created -
+                          const    0x00010174    0x24  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x00010198    0x24  osal.o [8]
+  .text                   ro code  0x000101bc    0x24  ll.o [7]
+  .text                   ro code  0x000101e0    0x24  ble_dispatch_lite.o [8]
+  .iar.init_table         const    0x00010204    0xd0  - Linker created -
   .const_ti_sysbios_heaps_HeapCallback_Object__DESC__C
-                          const    0x000102b8    0x20  app_ble_prm3.orm3 [3]
-  .rodata                 const    0x000102d8    0x20  DisplayTFT128.o [19]
-  .rodata                 const    0x000102f8    0x20  DisplayUart.orm3 [13]
-  .text                   ro code  0x00010318    0x20  gap_centdevmgr.o [9]
-  .text                   ro code  0x00010338    0x20  osal.o [8]
-  Veneer                  ro code  0x00010358     0x8  - Linker created -
-  .text                   ro code  0x00010360    0x20  iar_xdc_init.orm3 [5]
-  .text                   ro code  0x00010380    0x20  ll.o [7]
-  .text                   ro code  0x000103a0    0x1e  rom_sysbios.obj [22]
+                          const    0x000102d4    0x20  app_ble_prm3.orm3 [3]
+  .rodata                 const    0x000102f4    0x20  DisplayTFT128.o [19]
+  .rodata                 const    0x00010314    0x20  DisplayUart.orm3 [13]
+  .text                   ro code  0x00010334    0x20  gap_centdevmgr.o [9]
+  .text                   ro code  0x00010354    0x20  osal.o [8]
+  Veneer                  ro code  0x00010374     0x8  - Linker created -
+  .text                   ro code  0x0001037c    0x20  iar_xdc_init.orm3 [5]
+  .text                   ro code  0x0001039c    0x20  ll.o [7]
+  .text                   ro code  0x000103bc    0x1e  rom_sysbios.obj [22]
   .const_ti_sysbios_heaps_HeapCallback_Object__PARAMS__C
-                          const    0x000103c0    0x1c  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x000103dc    0x1c  rom_sysbios.obj [22]
-  .text                   ro code  0x000103f8    0x1c  osal.o [8]
-  .text                   ro code  0x00010414    0x1c  ll_wl.o [7]
-  .text                   ro code  0x00010430    0x1c  ll_common.o [7]
-  .text                   ro code  0x0001044c    0x1a  cmain.orm3 [5]
-  .text                   ro code  0x00010466     0x4  low_level_init.o [14]
+                          const    0x000103dc    0x1c  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x000103f8    0x1c  rom_sysbios.obj [22]
+  .text                   ro code  0x00010414    0x1c  osal.o [8]
+  .text                   ro code  0x00010430    0x1c  ll_wl.o [7]
+  .text                   ro code  0x0001044c    0x1c  ll_common.o [7]
+  .text                   ro code  0x00010468    0x1a  cmain.orm3 [5]
+  .text                   ro code  0x00010482     0x4  low_level_init.o [14]
   .const_ti_sysbios_gates_GateHwi_Object__PARAMS__C
-                          const    0x0001046c    0x18  app_ble_prm3.orm3 [3]
+                          const    0x00010488    0x18  app_ble_prm3.orm3 [3]
   .const_ti_sysbios_gates_GateMutex_Object__PARAMS__C
-                          const    0x00010484    0x18  app_ble_prm3.orm3 [3]
+                          const    0x000104a0    0x18  app_ble_prm3.orm3 [3]
   .const_ti_sysbios_knl_Event_Object__PARAMS__C
-                          const    0x0001049c    0x18  app_ble_prm3.orm3 [3]
+                          const    0x000104b8    0x18  app_ble_prm3.orm3 [3]
   .const_ti_sysbios_knl_Queue_Object__PARAMS__C
-                          const    0x000104b4    0x18  app_ble_prm3.orm3 [3]
-  .rodata                 const    0x000104cc    0x18  SPICC26XXDMA.orm3 [17]
-  .rodata                 const    0x000104e4    0x18  hci_tl.o [11]
-  .text                   ro code  0x000104fc    0x18  rom_sysbios.obj [22]
-  .text                   ro code  0x00010514    0x18  osal.o [8]
-  .text                   ro code  0x0001052c    0x18  ble_dispatch_lite.o [8]
-  .text                   ro code  0x00010544    0x16  cstartup_M.orm3 [5]
-  CODE                    ro code  0x0001055c    0x16  boot.orm3 [5]
+                          const    0x000104d0    0x18  app_ble_prm3.orm3 [3]
+  .rodata                 const    0x000104e8    0x18  SPICC26XXDMA.orm3 [17]
+  .rodata                 const    0x00010500    0x18  hci_tl.o [11]
+  .text                   ro code  0x00010518    0x18  rom_sysbios.obj [22]
+  .text                   ro code  0x00010530    0x18  osal.o [8]
+  .text                   ro code  0x00010548    0x18  ble_dispatch_lite.o [8]
+  .text                   ro code  0x00010560    0x16  cstartup_M.orm3 [5]
+  CODE                    ro code  0x00010578    0x16  boot.orm3 [5]
   .const_xdc_runtime_Startup_sfxnRts__A
-                          const    0x00010574    0x14  app_ble_prm3.orm3 [3]
-  .rodata                 const    0x00010588    0x14  osal_icall_ble.o [8]
-  .text                   ro code  0x0001059c    0x14  rom_init.o [8]
-  .text                   ro code  0x000105b0    0x14  ll_data.o [7]
+                          const    0x00010590    0x14  app_ble_prm3.orm3 [3]
+  .rodata                 const    0x000105a4    0x14  osal_icall_ble.o [8]
+  .text                   ro code  0x000105b8    0x14  rom_init.o [8]
+  .text                   ro code  0x000105cc    0x14  ll_data.o [7]
   .const_xdc_runtime_Startup_firstFxns__A
-                          const    0x000105c4    0x10  app_ble_prm3.orm3 [3]
-  .text                   ro code  0x000105d4    0x10  rom_sysbios.obj [22]
-  .text                   ro code  0x000105e4    0x10  rom_sysbios.obj [22]
-  Veneer                  ro code  0x000105f4     0x8  - Linker created -
-  .text                   ro code  0x000105fc    0x10  onboard.o [8]
-  .text                   ro code  0x0001060c    0x10  ll.o [7]
-  .text                   ro code  0x0001061c     0xe  osal_cbtimer.o [8]
-  .text                   ro code  0x0001062c     0xc  rom_sysbios.obj [22]
-  .text                   ro code  0x00010638     0xc  rom_sysbios.obj [22]
-  .text                   ro code  0x00010644     0xc  gap_centdevmgr.o [9]
-  .text                   ro code  0x00010650     0xc  hci_tl.o [11]
-  .text                   ro code  0x0001065c     0xc  hci_tl.o [11]
-  .text                   ro code  0x00010668     0xc  hci_tl.o [11]
-  .rodata                 const    0x00010674     0x8  ll_config.o [7]
-  .text                   ro code  0x0001067c     0x8  ll.o [7]
-  .text                   ro code  0x00010684     0x6  ble_dispatch_lite.o [8]
-  .text                   ro code  0x0001068a     0x6  ble_dispatch_lite.o [8]
-  .text                   ro code  0x00010690     0x6  ll_error_end_causes.o [7]
+                          const    0x000105e0    0x10  app_ble_prm3.orm3 [3]
+  .text                   ro code  0x000105f0    0x10  rom_sysbios.obj [22]
+  .text                   ro code  0x00010600    0x10  rom_sysbios.obj [22]
+  Veneer                  ro code  0x00010610     0x8  - Linker created -
+  .text                   ro code  0x00010618    0x10  onboard.o [8]
+  .text                   ro code  0x00010628    0x10  ll.o [7]
+  .text                   ro code  0x00010638     0xe  osal_cbtimer.o [8]
+  .text                   ro code  0x00010648     0xc  rom_sysbios.obj [22]
+  .text                   ro code  0x00010654     0xc  rom_sysbios.obj [22]
+  .text                   ro code  0x00010660     0xc  gap_centdevmgr.o [9]
+  .text                   ro code  0x0001066c     0xc  hci_tl.o [11]
+  .text                   ro code  0x00010678     0xc  hci_tl.o [11]
+  .text                   ro code  0x00010684     0xc  hci_tl.o [11]
+  .rodata                 const    0x00010690     0x8  ll_config.o [7]
+  .text                   ro code  0x00010698     0x8  ll.o [7]
+  .text                   ro code  0x000106a0     0x6  ble_dispatch_lite.o [8]
+  .text                   ro code  0x000106a6     0x6  ble_dispatch_lite.o [8]
+  .text                   ro code  0x000106ac     0x6  ll_error_end_causes.o [7]
   .const_ti_sysbios_family_arm_m3_Hwi_swiDisable__C
-                          const    0x00010698     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_family_arm_m3_Hwi_swiRestoreHwi__C
-                          const    0x0001069c     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_heaps_HeapCallback_Object__count__C
-                          const    0x000106a0     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_heaps_HeapCallback_allocInstFxn__C
-                          const    0x000106a4     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_heaps_HeapCallback_createInstFxn__C
-                          const    0x000106a8     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_heaps_HeapCallback_freeInstFxn__C
-                          const    0x000106ac     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_heaps_HeapCallback_getStatsInstFxn__C
-                          const    0x000106b0     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_heaps_HeapCallback_initInstFxn__C
                           const    0x000106b4     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_heaps_HeapCallback_isBlockingInstFxn__C
+  .const_ti_sysbios_family_arm_m3_Hwi_swiRestoreHwi__C
                           const    0x000106b8     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_knl_Clock_tickPeriod__C
+  .const_ti_sysbios_heaps_HeapCallback_Object__count__C
                           const    0x000106bc     0x4  app_ble_prm3.orm3 [3]
-  .const_ti_sysbios_knl_Idle_funcList__A
+  .const_ti_sysbios_heaps_HeapCallback_allocInstFxn__C
                           const    0x000106c0     0x4  app_ble_prm3.orm3 [3]
-  .const_xdc_runtime_SysCallback_putchFxn__C
+  .const_ti_sysbios_heaps_HeapCallback_createInstFxn__C
                           const    0x000106c4     0x4  app_ble_prm3.orm3 [3]
-  .const_xdc_runtime_SysCallback_readyFxn__C
+  .const_ti_sysbios_heaps_HeapCallback_freeInstFxn__C
                           const    0x000106c8     0x4  app_ble_prm3.orm3 [3]
-  .const_xdc_runtime_System_extendFxn__C
+  .const_ti_sysbios_heaps_HeapCallback_getStatsInstFxn__C
                           const    0x000106cc     0x4  app_ble_prm3.orm3 [3]
-  .const_xdc_runtime_Text_visitRopeFxn__C
+  .const_ti_sysbios_heaps_HeapCallback_initInstFxn__C
                           const    0x000106d0     0x4  app_ble_prm3.orm3 [3]
-  .rodata                 const    0x000106d4     0x4  ll_config.o [7]
-  .rodata                 const    0x000106d8     0x4  ll_config.o [7]
-  .rodata                 const    0x000106dc     0x4  ll_config.o [7]
-  .rodata                 const    0x000106e0     0x4  ll_config.o [7]
-  .text                   ro code  0x000106e4     0x4  rom_sysbios.obj [22]
-  .text                   ro code  0x000106e8     0x4  rom_sysbios.obj [22]
-  .text                   ro code  0x000106ec     0x4  osal.o [8]
-  .text                   ro code  0x000106f0     0x2  icall_api_lite.o [1]
-  Initializer bytes       const    0x000106f2   0x1b6  <for RWDATA-1>
-  Initializer bytes       const    0x000108a8    0x1b  <for rw section .data_ti_sysbios_knl_Task_Module__state__V-1>
-  Initializer bytes       const    0x000108c3    0x1c  <for rw section .data_ti_sysbios_family_arm_m3_Hwi_Module__state__V-1>
-  Initializer bytes       const    0x000108df    0x18  <for rw section .data_ti_sysbios_knl_Clock_Module__state__V-1>
-  Initializer bytes       const    0x000108f7    0x1a  <for rw section .data_ti_sysbios_BIOS_Module__state__V-1>
-  Initializer bytes       const    0x00010911     0xc  <for rw section .data_ti_sysbios_knl_Swi_Module__state__V-1>
-  Initializer bytes       const    0x0001091d     0x9  <for rw section .data_ti_sysbios_family_arm_cc26xx_Timer_Module__state__V-1>
-  Initializer bytes       const    0x00010926     0x3  <for rw section .data_xdc_runtime_Startup_Module__state__V-1>
-  Initializer bytes       const    0x00010929     0x3  <for rw section .data_xdc_runtime_System_Module__state__V-1>
-  Initializer bytes       const    0x0001092c     0x3  <for rw section .data_ti_sysbios_family_arm_cc26xx_TimestampProvider_Module__state__V-1>
-  Initializer bytes       const    0x0001092f     0x6  <for rw section .data_xdc_runtime_Memory_Module__state__V-1>
-  Initializer bytes       const    0x00010935     0x3  <for rw section .data_xdc_runtime_Error_Module__state__V-1>
-                                 - 0x00010938  0xf608
+  .const_ti_sysbios_heaps_HeapCallback_isBlockingInstFxn__C
+                          const    0x000106d4     0x4  app_ble_prm3.orm3 [3]
+  .const_ti_sysbios_knl_Clock_tickPeriod__C
+                          const    0x000106d8     0x4  app_ble_prm3.orm3 [3]
+  .const_ti_sysbios_knl_Idle_funcList__A
+                          const    0x000106dc     0x4  app_ble_prm3.orm3 [3]
+  .const_xdc_runtime_SysCallback_putchFxn__C
+                          const    0x000106e0     0x4  app_ble_prm3.orm3 [3]
+  .const_xdc_runtime_SysCallback_readyFxn__C
+                          const    0x000106e4     0x4  app_ble_prm3.orm3 [3]
+  .const_xdc_runtime_System_extendFxn__C
+                          const    0x000106e8     0x4  app_ble_prm3.orm3 [3]
+  .const_xdc_runtime_Text_visitRopeFxn__C
+                          const    0x000106ec     0x4  app_ble_prm3.orm3 [3]
+  .rodata                 const    0x000106f0     0x4  ll_config.o [7]
+  .rodata                 const    0x000106f4     0x4  ll_config.o [7]
+  .rodata                 const    0x000106f8     0x4  ll_config.o [7]
+  .rodata                 const    0x000106fc     0x4  ll_config.o [7]
+  .text                   ro code  0x00010700     0x4  rom_sysbios.obj [22]
+  .text                   ro code  0x00010704     0x4  rom_sysbios.obj [22]
+  .text                   ro code  0x00010708     0x4  osal.o [8]
+  .text                   ro code  0x0001070c     0x2  icall_api_lite.o [1]
+  Initializer bytes       const    0x0001070e   0x1b6  <for RWDATA-1>
+  Initializer bytes       const    0x000108c4    0x1b  <for rw section .data_ti_sysbios_knl_Task_Module__state__V-1>
+  Initializer bytes       const    0x000108df    0x1c  <for rw section .data_ti_sysbios_family_arm_m3_Hwi_Module__state__V-1>
+  Initializer bytes       const    0x000108fb    0x18  <for rw section .data_ti_sysbios_knl_Clock_Module__state__V-1>
+  Initializer bytes       const    0x00010913    0x1a  <for rw section .data_ti_sysbios_BIOS_Module__state__V-1>
+  Initializer bytes       const    0x0001092d     0xc  <for rw section .data_ti_sysbios_knl_Swi_Module__state__V-1>
+  Initializer bytes       const    0x00010939     0x9  <for rw section .data_ti_sysbios_family_arm_cc26xx_Timer_Module__state__V-1>
+  Initializer bytes       const    0x00010942     0x3  <for rw section .data_xdc_runtime_Startup_Module__state__V-1>
+  Initializer bytes       const    0x00010945     0x3  <for rw section .data_xdc_runtime_System_Module__state__V-1>
+  Initializer bytes       const    0x00010948     0x3  <for rw section .data_ti_sysbios_family_arm_cc26xx_TimestampProvider_Module__state__V-1>
+  Initializer bytes       const    0x0001094b     0x6  <for rw section .data_xdc_runtime_Memory_Module__state__V-1>
+  Initializer bytes       const    0x00010951     0x3  <for rw section .data_xdc_runtime_Error_Module__state__V-1>
+                                 - 0x00010954  0xf624
 
 "A2":                                          0x1000
   SNVSECT                          0x0001e000  0x1000  <Block>
@@ -2701,73 +2701,73 @@ Zero (__iar_zero_init3)
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x18 (54% of destination):
-          0x000108df    0x18
+          0x000108fb    0x18
     1 destination range, total size 0x2c:
           0x20000178    0x2c
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x3 (75% of destination):
-          0x0001092c     0x3
+          0x00010948     0x3
     1 destination range, total size 0x4:
           0x200001ec     0x4
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x3 (37% of destination):
-          0x00010926     0x3
+          0x00010942     0x3
     1 destination range, total size 0x8:
           0x200001f0     0x8
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x1a (72% of destination):
-          0x000108f7    0x1a
+          0x00010913    0x1a
     1 destination range, total size 0x24:
           0x200001a4    0x24
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0xc (42% of destination):
-          0x00010911     0xc
+          0x0001092d     0xc
     1 destination range, total size 0x1c:
           0x200001c8    0x1c
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x1b (39% of destination):
-          0x000108a8    0x1b
+          0x000108c4    0x1b
     1 destination range, total size 0x44:
           0x20000100    0x44
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x6 (150% of destination):
-          0x0001092f     0x6
+          0x0001094b     0x6
     1 destination range, total size 0x4:
           0x20000200     0x4
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x3 (37% of destination):
-          0x00010929     0x3
+          0x00010945     0x3
     1 destination range, total size 0x8:
           0x200001f8     0x8
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x1c (53% of destination):
-          0x000108c3    0x1c
+          0x000108df    0x1c
     1 destination range, total size 0x34:
           0x20000144    0x34
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x3 (150% of destination):
-          0x00010935     0x3
+          0x00010951     0x3
     1 destination range, total size 0x2:
           0x20000204     0x2
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x9 (112% of destination):
-          0x0001091d     0x9
+          0x00010939     0x9
     1 destination range, total size 0x8:
           0x200001e4     0x8
 
 Copy/lz77 (__iar_lz77_init_single3)
     1 source range, total size 0x1b6 (36% of destination):
-          0x000106f2   0x1b6
+          0x0001070e   0x1b6
     1 destination range, total size 0x4b6:
           0x20000520   0x4b6
 
@@ -2794,10 +2794,10 @@ C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5st
     iotboard_key.o                       192       26       72
     main.o                               372        6       16
     observer.o                           368               500
-    simple_observer.o                  1 124       10    1 392
+    simple_observer.o                  1 152       10    1 392
     util.o                               272                16
     ----------------------------------------------------------
-    Total:                             6 552    1 253    4 722
+    Total:                             6 580    1 253    4 722
 
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\1.3_simple_observer\tirtos\iar\config: [2]
     ----------------------------------------------------------
@@ -2984,7 +2984,7 @@ rt7M_tl.a: [23]
     Gaps                                  31       12        2
     Linker created                       872      208    1 025
 --------------------------------------------------------------
-    Grand Total:                      52 288   15 752    9 845
+    Grand Total:                      52 316   15 752    9 845
 
 
 *******************************************************************************
@@ -2993,9 +2993,9 @@ rt7M_tl.a: [23]
 
 Entry                      Address    Size  Type      Object
 -----                      -------    ----  ----      ------
-.iar.init_table$$Base   0x000101e8           --   Gb  - Linker created -
-.iar.init_table$$Limit  0x000102b8           --   Gb  - Linker created -
-?main                   0x0001044d          Code  Gb  cmain.orm3 [5]
+.iar.init_table$$Base   0x00010204           --   Gb  - Linker created -
+.iar.init_table$$Limit  0x000102d4           --   Gb  - Linker created -
+?main                   0x00010469          Code  Gb  cmain.orm3 [5]
 ATT_BuildErrorRsp {Abs}
                         0x10015c49    0x12  Code  Gb  ble_r2.symbols [2]
 ATT_BuildExchangeMTURsp {Abs}
@@ -3066,11 +3066,11 @@ ATT_RegisterServer {Abs}
                         0x10018e31     0x6  Code  Gb  ble_r2.symbols [2]
 ATT_UpdateMTU {Abs}     0x100161e9    0x34  Code  Gb  ble_r2.symbols [2]
 ATT_WriteRsp {Abs}      0x10018fed    0x10  Code  Gb  ble_r2.symbols [2]
-AssertHandler           0x0000ccdd    0x9a  Code  Gb  main.o [1]
-BoardGpioInitTable      0x0000fe8c    0x2c  Data  Gb  board.o [1]
-Board_initKeys          0x0000a475    0x68  Code  Gb  iotboard_key.o [1]
-Board_keyCallback       0x0000a4dd     0x6  Code  Lc  iotboard_key.o [1]
-Board_keyChangeHandler  0x0000a4e5    0x38  Code  Lc  iotboard_key.o [1]
+AssertHandler           0x0000ccf9    0x9a  Code  Gb  main.o [1]
+BoardGpioInitTable      0x0000fea8    0x2c  Data  Gb  board.o [1]
+Board_initKeys          0x0000a491    0x68  Code  Gb  iotboard_key.o [1]
+Board_keyCallback       0x0000a4f9     0x6  Code  Lc  iotboard_key.o [1]
+Board_keyChangeHandler  0x0000a501    0x38  Code  Lc  iotboard_key.o [1]
 CPUwfi                  0x00004725     0x4  Code  Lc  PowerCC26XX_tirtos.orm3 [15]
 CSTACK$$Base            0x20004000           --   Gb  - Linker created -
 CSTACK$$Length          0x00000400           --   Gb  - Linker created -
@@ -3085,77 +3085,77 @@ ClockP_setTimeout       0x000039b1     0x4  Code  Gb  ClockP_tirtos.orm3 [15]
 ClockP_start            0x000039b5     0x4  Code  Gb  ClockP_tirtos.orm3 [15]
 ClockP_stop             0x000039b9     0x4  Code  Gb  ClockP_tirtos.orm3 [15]
 ClockP_tickPeriod       0x200021b4     0x4  Data  Gb  ClockP_tirtos.orm3 [15]
-CommonROM_Init          0x0000fcc5     0x2  Code  Wk  common_rom_init.o [8]
+CommonROM_Init          0x0000fce1     0x2  Code  Wk  common_rom_init.o [8]
 CryptoCC26XX_Params_init
-                        0x0000a937     0x8  Code  Gb  CryptoCC26XX.orm3 [17]
+                        0x0000a953     0x8  Code  Gb  CryptoCC26XX.orm3 [17]
 CryptoCC26XX_allocateKey
-                        0x0000aa01    0x78  Code  Gb  CryptoCC26XX.orm3 [17]
-CryptoCC26XX_config     0x0000b12c     0x8  Data  Gb  board.o [1]
-CryptoCC26XX_hwiIntFxn  0x0000a909    0x24  Code  Gb  CryptoCC26XX.orm3 [17]
-CryptoCC26XX_init       0x0000a92d     0xa  Code  Gb  CryptoCC26XX.orm3 [17]
-CryptoCC26XX_loadKey    0x0000aa79    0x34  Code  Gb  CryptoCC26XX.orm3 [17]
-CryptoCC26XX_open       0x0000a93f    0xc2  Code  Gb  CryptoCC26XX.orm3 [17]
-CryptoCC26XX_transact   0x0000aaad     0x4  Code  Gb  CryptoCC26XX.orm3 [17]
+                        0x0000aa1d    0x78  Code  Gb  CryptoCC26XX.orm3 [17]
+CryptoCC26XX_config     0x0000b148     0x8  Data  Gb  board.o [1]
+CryptoCC26XX_hwiIntFxn  0x0000a925    0x24  Code  Gb  CryptoCC26XX.orm3 [17]
+CryptoCC26XX_init       0x0000a949     0xa  Code  Gb  CryptoCC26XX.orm3 [17]
+CryptoCC26XX_loadKey    0x0000aa95    0x34  Code  Gb  CryptoCC26XX.orm3 [17]
+CryptoCC26XX_open       0x0000a95b    0xc2  Code  Gb  CryptoCC26XX.orm3 [17]
+CryptoCC26XX_transact   0x0000aac9     0x4  Code  Gb  CryptoCC26XX.orm3 [17]
 CryptoCC26XX_transactPolling
-                        0x0000aab1     0x4  Code  Gb  CryptoCC26XX.orm3 [17]
+                        0x0000aacd     0x4  Code  Gb  CryptoCC26XX.orm3 [17]
 CryptoSem               0x20001f2c    0x1c  Data  Lc  CryptoCC26XX.orm3 [17]
 DDI32RegRead            0x00004af5    0x28  Code  Lc  PowerCC26XX_calibrateRCOSC.orm3 [17]
-DefaultAssertCback      0x0000ce35     0x2  Code  Gb  ble_user_config.o [1]
-DisplayTFT128_clear     0x0000cefd     0xe  Code  Gb  DisplayTFT128.o [19]
+DefaultAssertCback      0x0000ce51     0x2  Code  Gb  ble_user_config.o [1]
+DisplayTFT128_clear     0x0000cf19     0xe  Code  Gb  DisplayTFT128.o [19]
 DisplayTFT128_clearLines
-                        0x0000cf0b    0x1e  Code  Gb  DisplayTFT128.o [19]
-DisplayTFT128_close     0x0000cf5d    0x1c  Code  Gb  DisplayTFT128.o [19]
-DisplayTFT128_control   0x0000cf79    0x18  Code  Gb  DisplayTFT128.o [19]
-DisplayTFT128_fxnTable  0x000102d8    0x20  Data  Gb  DisplayTFT128.o [19]
-DisplayTFT128_getType   0x0000cf91     0x6  Code  Gb  DisplayTFT128.o [19]
-DisplayTFT128_init      0x0000ce39     0x2  Code  Gb  DisplayTFT128.o [19]
-DisplayTFT128_open      0x0000ce3b    0xbc  Code  Gb  DisplayTFT128.o [19]
-DisplayTFT128_printf    0x0000cf29    0x34  Code  Gb  DisplayTFT128.o [19]
-DisplayUartMin_clear    0x0000e94f     0x2  Code  Gb  DisplayUart.orm3 [13]
+                        0x0000cf27    0x1e  Code  Gb  DisplayTFT128.o [19]
+DisplayTFT128_close     0x0000cf79    0x1c  Code  Gb  DisplayTFT128.o [19]
+DisplayTFT128_control   0x0000cf95    0x18  Code  Gb  DisplayTFT128.o [19]
+DisplayTFT128_fxnTable  0x000102f4    0x20  Data  Gb  DisplayTFT128.o [19]
+DisplayTFT128_getType   0x0000cfad     0x6  Code  Gb  DisplayTFT128.o [19]
+DisplayTFT128_init      0x0000ce55     0x2  Code  Gb  DisplayTFT128.o [19]
+DisplayTFT128_open      0x0000ce57    0xbc  Code  Gb  DisplayTFT128.o [19]
+DisplayTFT128_printf    0x0000cf45    0x34  Code  Gb  DisplayTFT128.o [19]
+DisplayUartMin_clear    0x0000e96b     0x2  Code  Gb  DisplayUart.orm3 [13]
 DisplayUartMin_clearLines
-                        0x0000e951     0x2  Code  Gb  DisplayUart.orm3 [13]
-DisplayUartMin_close    0x0000e99f    0x18  Code  Gb  DisplayUart.orm3 [13]
-DisplayUartMin_control  0x0000e9b7     0x6  Code  Gb  DisplayUart.orm3 [13]
+                        0x0000e96d     0x2  Code  Gb  DisplayUart.orm3 [13]
+DisplayUartMin_close    0x0000e9bb    0x18  Code  Gb  DisplayUart.orm3 [13]
+DisplayUartMin_control  0x0000e9d3     0x6  Code  Gb  DisplayUart.orm3 [13]
 DisplayUartMin_fxnTable
-                        0x000102f8    0x20  Data  Gb  DisplayUart.orm3 [13]
-DisplayUartMin_getType  0x0000e9bd     0x6  Code  Gb  DisplayUart.orm3 [13]
-DisplayUartMin_init     0x0000e909     0x2  Code  Gb  DisplayUart.orm3 [13]
-DisplayUartMin_open     0x0000e90b    0x44  Code  Gb  DisplayUart.orm3 [13]
-DisplayUartMin_vprintf  0x0000e953    0x4c  Code  Gb  DisplayUart.orm3 [13]
-Display_config          0x0000b31c    0x18  Data  Gb  board.o [1]
-Display_count           0x0000b334     0x1  Data  Gb  board.o [1]
-Display_defaultParams   0x0000a5ac     0x1  Data  Gb  Display.orm3 [13]
-Display_doOpen          0x0000a535    0x58  Code  Gb  Display.orm3 [13]
-Display_doPrintf        0x0000a58d    0x16  Code  Gb  Display.orm3 [13]
+                        0x00010314    0x20  Data  Gb  DisplayUart.orm3 [13]
+DisplayUartMin_getType  0x0000e9d9     0x6  Code  Gb  DisplayUart.orm3 [13]
+DisplayUartMin_init     0x0000e925     0x2  Code  Gb  DisplayUart.orm3 [13]
+DisplayUartMin_open     0x0000e927    0x44  Code  Gb  DisplayUart.orm3 [13]
+DisplayUartMin_vprintf  0x0000e96f    0x4c  Code  Gb  DisplayUart.orm3 [13]
+Display_config          0x0000b338    0x18  Data  Gb  board.o [1]
+Display_count           0x0000b350     0x1  Data  Gb  board.o [1]
+Display_defaultParams   0x0000a5c8     0x1  Data  Gb  Display.orm3 [13]
+Display_doOpen          0x0000a551    0x58  Code  Gb  Display.orm3 [13]
+Display_doPrintf        0x0000a5a9    0x16  Code  Gb  Display.orm3 [13]
 ECCROMCC26XX_Params_init
-                        0x0000adf7    0x3a  Code  Gb  ECCROMCC26XX.o [1]
-ECCROMCC26XX_genDHKey   0x0000af23   0x144  Code  Gb  ECCROMCC26XX.o [1]
-ECCROMCC26XX_genKeys    0x0000ae31    0xf2  Code  Gb  ECCROMCC26XX.o [1]
-ECCROMCC26XX_init       0x0000adbd    0x3a  Code  Gb  ECCROMCC26XX.o [1]
+                        0x0000ae13    0x3a  Code  Gb  ECCROMCC26XX.o [1]
+ECCROMCC26XX_genDHKey   0x0000af3f   0x144  Code  Gb  ECCROMCC26XX.o [1]
+ECCROMCC26XX_genKeys    0x0000ae4d    0xf2  Code  Gb  ECCROMCC26XX.o [1]
+ECCROMCC26XX_init       0x0000add9    0x3a  Code  Gb  ECCROMCC26XX.o [1]
 ECCROMCC26XX_init::isInit
                         0x20001578     0x1  Data  Lc  ECCROMCC26XX.o [1]
 ECC_DATA$$Base {Abs}    0x20004f80           --   Gb  ble_r2.symbols [2]
 ECC_DATA$$Limit {Abs}   0x20005000           --   Gb  ble_r2.symbols [2]
-ECC_initGlobals         0x0000b0b3    0x2c  Code  Lc  ECCROMCC26XX.o [1]
+ECC_initGlobals         0x0000b0cf    0x2c  Code  Lc  ECCROMCC26XX.o [1]
 ECC_semaphore           0x2000157c     0x4  Data  Lc  ECCROMCC26XX.o [1]
 END_OF_RAM$$Base        0x20003fff           --   Gb  - Linker created -
 END_OF_RAM$$Limit       0x20004400           --   Gb  - Linker created -
 GAPObserverRole_CancelDiscovery
-                        0x0000a633    0x1a  Code  Gb  observer.o [1]
+                        0x0000a64f    0x1a  Code  Gb  observer.o [1]
 GAPObserverRole_SetParameter
-                        0x0000a5df    0x22  Code  Gb  observer.o [1]
+                        0x0000a5fb    0x22  Code  Gb  observer.o [1]
 GAPObserverRole_StartDevice
-                        0x0000a5b1    0x2e  Code  Gb  observer.o [1]
+                        0x0000a5cd    0x2e  Code  Gb  observer.o [1]
 GAPObserverRole_StartDiscovery
-                        0x0000a601    0x32  Code  Gb  observer.o [1]
+                        0x0000a61d    0x32  Code  Gb  observer.o [1]
 GAPObserverRole_createTask
-                        0x0000a64d    0x32  Code  Gb  observer.o [1]
-GAP_CentDevMgrInit      0x0000f959    0x40  Code  Wk  gap_centdevmgr.o [9]
+                        0x0000a669    0x32  Code  Gb  observer.o [1]
+GAP_CentDevMgrInit      0x0000f975    0x40  Code  Wk  gap_centdevmgr.o [9]
 GAP_DeviceDiscoveryCancel
-                        0x0000fb7d    0x38  Code  Wk  gap_centdevmgr.o [9]
+                        0x0000fb99    0x38  Code  Wk  gap_centdevmgr.o [9]
 GAP_DeviceDiscoveryRequest
-                        0x0000eb4d    0x98  Code  Wk  gap_centdevmgr.o [9]
-GAP_DeviceInit          0x0000fdfd    0x2e  Code  Wk  gap.o [8]
+                        0x0000eb69    0x98  Code  Wk  gap_centdevmgr.o [9]
+GAP_DeviceInit          0x0000fe19    0x2e  Code  Wk  gap.o [8]
 GAP_EndDiscoverable {Abs}
                         0x10014599    0x46  Code  Gb  ble_r2.symbols [2]
 GAP_GetIRK {Abs}        0x100185a5     0x6  Code  Gb  ble_r2.symbols [2]
@@ -3167,12 +3167,12 @@ GAP_NumActiveConnections {Abs}
 GAP_ParamsInit {Abs}    0x10018505    0x34  Code  Gb  ble_r2.symbols [2]
 GAP_PasscodeUpdate {Abs}
                         0x10011829    0x54  Code  Gb  ble_r2.symbols [2]
-GAP_PrivacyInit         0x0000fe35    0x18  Code  Wk  gap_configmgr.o [9]
+GAP_PrivacyInit         0x0000fe51    0x18  Code  Wk  gap_configmgr.o [9]
 GAP_ProcessEvent {Abs}  0x10018879    0x84  Code  Gb  ble_r2.symbols [2]
 GAP_SetParamValue {Abs}
                         0x100184bd    0x38  Code  Gb  ble_r2.symbols [2]
 GAP_UpdateResolvingList
-                        0x0000fe55     0xc  Code  Wk  gap.o [8]
+                        0x0000fe71     0xc  Code  Wk  gap.o [8]
 GATT_AppCompletedMsg {Abs}
                         0x1001814d    0x2e  Code  Gb  ble_r2.symbols [2]
 GATT_FindHandle {Abs}   0x1000fdbd    0x48  Code  Gb  ble_r2.symbols [2]
@@ -3207,15 +3207,15 @@ HCI_DataBufferOverflowEvent {Abs}
                         0x1000ba8d    0x24  Code  Gb  ble_r2.symbols [2]
 HCI_DisconnectCmd {Abs}
                         0x1000a875    0x1c  Code  Gb  ble_r2.symbols [2]
-HCI_GAPTaskRegister     0x00010651     0xc  Code  Wk  hci_tl.o [11]
+HCI_GAPTaskRegister     0x0001066d     0xc  Code  Wk  hci_tl.o [11]
 HCI_HardwareErrorEvent {Abs}
                         0x1000bced    0x2e  Code  Gb  ble_r2.symbols [2]
 HCI_HostBufferSizeCmd {Abs}
                         0x1000a9b9    0x2a  Code  Gb  ble_r2.symbols [2]
 HCI_HostNumCompletedPktCmd {Abs}
                         0x1000a9f1    0x5e  Code  Gb  ble_r2.symbols [2]
-HCI_Init                0x0000f331    0x34  Code  Wk  hci_tl.o [11]
-HCI_L2CAPTaskRegister   0x0001065d     0xc  Code  Wk  hci_tl.o [11]
+HCI_Init                0x0000f34d    0x34  Code  Wk  hci_tl.o [11]
+HCI_L2CAPTaskRegister   0x00010679     0xc  Code  Wk  hci_tl.o [11]
 HCI_LE_AddDeviceToResolvingListCmd {Abs}
                         0x1000b16d    0x1a  Code  Gb  ble_r2.symbols [2]
 HCI_LE_ConnUpdateCmd {Abs}
@@ -3254,12 +3254,12 @@ HCI_LE_SetScanRspDataCmd {Abs}
                         0x1000ac61    0x1e  Code  Gb  ble_r2.symbols [2]
 HCI_NumOfCompletedPacketsEvent {Abs}
                         0x1000bab1    0xc6  Code  Gb  ble_r2.symbols [2]
-HCI_ProcessEvent        0x0000ec7d    0x90  Code  Wk  hci_tl.o [11]
+HCI_ProcessEvent        0x0000ec99    0x90  Code  Wk  hci_tl.o [11]
 HCI_ReadBDADDRCmd {Abs}
                         0x1000ab05    0x1e  Code  Gb  ble_r2.symbols [2]
 HCI_ResetCmd {Abs}      0x1000a91d    0x3c  Code  Gb  ble_r2.symbols [2]
 HCI_ReverseBytes {Abs}  0x10019445    0x1e  Code  Gb  ble_r2.symbols [2]
-HCI_SMPTaskRegister     0x00010669     0xc  Code  Wk  hci_tl.o [11]
+HCI_SMPTaskRegister     0x00010685     0xc  Code  Wk  hci_tl.o [11]
 HCI_SendCommandCompleteEvent {Abs}
                         0x1000bd79    0xa8  Code  Gb  ble_r2.symbols [2]
 HCI_SendCommandStatusEvent {Abs}
@@ -3279,13 +3279,13 @@ HEAPMGR_GETLARGESTFREEBUF
 HEAPMGR_SIZE            0x200016f8     0x4  Data  Gb  icall.o [1]
 HEAP_END$$Base          0x20003fff           --   Gb  - Linker created -
 HEAP_END$$Limit         0x20004000           --   Gb  - Linker created -
-HalFlashGetAddress      0x0000bfd7    0x16  Code  Wk  hal_flash_wrapper.o [8]
-HalFlashRead            0x0000c01d    0x38  Code  Wk  hal_flash_wrapper.o [8]
-HalFlashWrite           0x0000c055     0xa  Code  Wk  hal_flash_wrapper.o [8]
-HwGPIOInit              0x0000a721    0x12  Code  Gb  hw_gpio.o [1]
-HwGPIOSet               0x0000a733     0xc  Code  Gb  hw_gpio.o [1]
-HwUARTInit              0x0000a769    0x58  Code  Gb  hw_uart.o [1]
-HwUARTWrite             0x0000a7c1     0xc  Code  Gb  hw_uart.o [1]
+HalFlashGetAddress      0x0000bff3    0x16  Code  Wk  hal_flash_wrapper.o [8]
+HalFlashRead            0x0000c039    0x38  Code  Wk  hal_flash_wrapper.o [8]
+HalFlashWrite           0x0000c071     0xa  Code  Wk  hal_flash_wrapper.o [8]
+HwGPIOInit              0x0000a73d    0x12  Code  Gb  hw_gpio.o [1]
+HwGPIOSet               0x0000a74f     0xc  Code  Gb  hw_gpio.o [1]
+HwUARTInit              0x0000a785    0x58  Code  Gb  hw_uart.o [1]
+HwUARTWrite             0x0000a7dd     0xc  Code  Gb  hw_uart.o [1]
 HwiP_Params_init        0x000038fd    0x10  Code  Gb  HwiP_tirtos.orm3 [15]
 HwiP_construct          0x000038a7    0x36  Code  Gb  HwiP_tirtos.orm3 [15]
 HwiP_destruct           0x000038e9     0x4  Code  Gb  HwiP_tirtos.orm3 [15]
@@ -3398,19 +3398,19 @@ LCDTFT_close            0x00006207    0x3c  Code  Gb  TFT128.o [19]
 LCDTFT_open             0x00006255   0x10c  Code  Gb  TFT128.o [19]
 LCD_Update              0x00006ddf    0x60  Code  Lc  TFT128.o [19]
 LCD_alphabet            0x000067d8   0x5f0  Data  Gb  TFT128.o [19]
-LCD_config              0x0000b30c     0x8  Data  Gb  board.o [1]
+LCD_config              0x0000b328     0x8  Data  Gb  board.o [1]
 LCD_delayMs             0x00006205     0x2  Code  Gb  TFT128.o [19]
 LCD_doBufferPrintString
                         0x00006687   0x150  Code  Lc  TFT128.o [19]
 LCD_fullRegion          0x000065ab    0x9c  Code  Lc  TFT128.o [19]
 LCD_getStringLength     0x000074a5    0x12  Code  Gb  LCDDogm1286_util.orm3 [18]
-LCD_initCmd             0x0000b148   0x1bc  Data  Lc  board.o [1]
+LCD_initCmd             0x0000b164   0x1bc  Data  Lc  board.o [1]
 LCD_sendArray           0x00006667    0x20  Code  Lc  TFT128.o [19]
 LCD_sendCommand         0x000064d9    0x20  Code  Lc  TFT128.o [19]
 LCD_sendData            0x000064f9    0x20  Code  Lc  TFT128.o [19]
 LCD_setRegion           0x00006531    0x5a  Code  Lc  TFT128.o [19]
 LL_AddDeviceToResolvingList
-                        0x0000e83d    0xcc  Code  Wk  ll.o [7]
+                        0x0000e859    0xcc  Code  Wk  ll.o [7]
 LL_AddWhiteListDevice {Abs}
                         0x100049f9    0x2a  Code  Gb  ble_r2.symbols [2]
 LL_AdvReportCback {Abs}
@@ -3418,7 +3418,7 @@ LL_AdvReportCback {Abs}
 LL_AuthPayloadTimeoutExpiredCback {Abs}
                         0x1000be71    0x72  Code  Gb  ble_r2.symbols [2]
 LL_ChanMapUpdate {Abs}  0x10005f95    0xb2  Code  Gb  ble_r2.symbols [2]
-LL_ClearResolvingList   0x0000db29    0x54  Code  Wk  ll.o [7]
+LL_ClearResolvingList   0x0000db45    0x54  Code  Wk  ll.o [7]
 LL_ClearWhiteList {Abs}
                         0x100049d9    0x20  Code  Gb  ble_r2.symbols [2]
 LL_ConnActive {Abs}     0x10005f61    0x30  Code  Gb  ble_r2.symbols [2]
@@ -3432,11 +3432,11 @@ LL_CtrlToHostFlowControl {Abs}
                         0x10004bbd    0x14  Code  Gb  ble_r2.symbols [2]
 LL_DataLengthChangeEventCback {Abs}
                         0x1000bf65    0x66  Code  Gb  ble_r2.symbols [2]
-LL_DirectTestEnd        0x0000ebe5    0x98  Code  Wk  ll.o [7]
+LL_DirectTestEnd        0x0000ec01    0x98  Code  Wk  ll.o [7]
 LL_DirectTestEndDoneCback {Abs}
                         0x1000cb35    0x26  Code  Gb  ble_r2.symbols [2]
-LL_DirectTestRxTest     0x0000d1e9   0x138  Code  Wk  ll.o [7]
-LL_DirectTestTxTest     0x0000c8b5   0x1a8  Code  Wk  ll.o [7]
+LL_DirectTestRxTest     0x0000d205   0x138  Code  Wk  ll.o [7]
+LL_DirectTestTxTest     0x0000c8d1   0x1a8  Code  Wk  ll.o [7]
 LL_Disconnect {Abs}     0x10004d15    0x60  Code  Gb  ble_r2.symbols [2]
 LL_DisconnectCback {Abs}
                         0x1000c695    0x78  Code  Gb  ble_r2.symbols [2]
@@ -3505,16 +3505,16 @@ LL_EXT_SetFastTxResponseTime {Abs}
 LL_EXT_SetFreqTune {Abs}
                         0x10006c95     0x4  Code  Gb  ble_r2.symbols [2]
 LL_EXT_SetLocalSupportedFeatures
-                        0x0000fbed    0x38  Code  Wk  ll.o [7]
+                        0x0000fc09    0x38  Code  Wk  ll.o [7]
 LL_EXT_SetMaxDataLen {Abs}
                         0x100063bd    0x5c  Code  Gb  ble_r2.symbols [2]
 LL_EXT_SetMaxDtmTxPower
-                        0x00010381    0x20  Code  Wk  ll.o [7]
+                        0x0001039d    0x20  Code  Wk  ll.o [7]
 LL_EXT_SetRxGain {Abs}  0x10006859     0xe  Code  Gb  ble_r2.symbols [2]
 LL_EXT_SetSCA {Abs}     0x10006c1d    0x78  Code  Gb  ble_r2.symbols [2]
 LL_EXT_SetSlaveLatencyOverride {Abs}
                         0x10006941    0x22  Code  Gb  ble_r2.symbols [2]
-LL_EXT_SetTxPower       0x0000fdc5    0x30  Code  Wk  ll.o [7]
+LL_EXT_SetTxPower       0x0000fde1    0x30  Code  Wk  ll.o [7]
 LL_EncChangeCback {Abs}
                         0x1000ca01    0x5c  Code  Gb  ble_r2.symbols [2]
 LL_EncKeyRefreshCback {Abs}
@@ -3529,33 +3529,33 @@ LL_GenerateDHKeyCmd {Abs}
                         0x10006819    0x3c  Code  Gb  ble_r2.symbols [2]
 LL_GenerateDHKeyCompleteEventCback {Abs}
                         0x1000c0f9    0xc2  Code  Gb  ble_r2.symbols [2]
-LL_GetNumActiveConns    0x0001060d    0x10  Code  Wk  ll.o [7]
+LL_GetNumActiveConns    0x00010629    0x10  Code  Wk  ll.o [7]
 LL_Init                 0x00005b91   0x334  Code  Wk  ll.o [7]
 LL_PRIV_Ah {Abs}        0x10016d29    0x48  Code  Gb  ble_r2.symbols [2]
 LL_PRIV_ClearExtWL {Abs}
                         0x10017021    0x30  Code  Gb  ble_r2.symbols [2]
-LL_PRIV_FindExtWLEntry  0x0000d121    0x38  Code  Wk  ll_privacy.o [7]
-LL_PRIV_FindPeerInRL    0x0000e0d9    0x66  Code  Wk  ll_privacy.o [7]
+LL_PRIV_FindExtWLEntry  0x0000d13d    0x38  Code  Wk  ll_privacy.o [7]
+LL_PRIV_FindPeerInRL    0x0000e0f5    0x66  Code  Wk  ll_privacy.o [7]
 LL_PRIV_GenerateRPA {Abs}
                         0x10016d71    0x5e  Code  Gb  ble_r2.symbols [2]
 LL_PRIV_GenerateRSA {Abs}
                         0x10016e1d    0x3a  Code  Gb  ble_r2.symbols [2]
-LL_PRIV_Init            0x0000d9f5    0x68  Code  Wk  ll_privacy.o [7]
-LL_PRIV_IsIDA           0x0000dd3d    0x16  Code  Wk  ll_privacy.o [7]
+LL_PRIV_Init            0x0000da11    0x68  Code  Wk  ll_privacy.o [7]
+LL_PRIV_IsIDA           0x0000dd59    0x16  Code  Wk  ll_privacy.o [7]
 LL_PRIV_IsRPA {Abs}     0x10016e89    0x14  Code  Gb  ble_r2.symbols [2]
-LL_PRIV_IsResolvable    0x0000d159    0x2e  Code  Wk  ll_privacy.o [7]
+LL_PRIV_IsResolvable    0x0000d175    0x2e  Code  Wk  ll_privacy.o [7]
 LL_PRIV_IsZeroIRK {Abs}
                         0x10016f01    0x16  Code  Gb  ble_r2.symbols [2]
 LL_PRIV_ResolveRPA {Abs}
                         0x10016e59    0x2e  Code  Gb  ble_r2.symbols [2]
 LL_PRIV_SetWLSize {Abs}
                         0x10017139    0x12  Code  Gb  ble_r2.symbols [2]
-LL_PRIV_SetupPrivacy    0x0000e3ad    0x28  Code  Wk  ll_privacy.o [7]
+LL_PRIV_SetupPrivacy    0x0000e3c9    0x28  Code  Wk  ll_privacy.o [7]
 LL_PRIV_TeardownPrivacy
-                        0x0000db0d    0x1a  Code  Wk  ll_privacy.o [7]
+                        0x0000db29    0x1a  Code  Wk  ll_privacy.o [7]
 LL_PRIV_UpdateExtWLEntry
-                        0x0000d187    0x62  Code  Wk  ll_privacy.o [7]
-LL_ProcessEvent         0x0000d5f5   0x118  Code  Wk  ll.o [7]
+                        0x0000d1a3    0x62  Code  Wk  ll_privacy.o [7]
+LL_ProcessEvent         0x0000d611   0x118  Code  Wk  ll.o [7]
 LL_PseudoRand {Abs}     0x10004ac1    0x2c  Code  Gb  ble_r2.symbols [2]
 LL_RX_bm_alloc {Abs}    0x10004969    0x22  Code  Gb  ble_r2.symbols [2]
 LL_Rand {Abs}           0x10004ab5     0xc  Code  Gb  ble_r2.symbols [2]
@@ -3573,15 +3573,15 @@ LL_ReadLocalP256PublicKeyCmd {Abs}
 LL_ReadLocalP256PublicKeyCompleteEventCback {Abs}
                         0x1000c015    0xca  Code  Gb  ble_r2.symbols [2]
 LL_ReadLocalResolvableAddress
-                        0x0000feb9    0x2c  Code  Wk  ll.o [7]
+                        0x0000fed5    0x2c  Code  Wk  ll.o [7]
 LL_ReadLocalSupportedFeatures
-                        0x000101a1    0x24  Code  Wk  ll.o [7]
+                        0x000101bd    0x24  Code  Wk  ll.o [7]
 LL_ReadLocalVersionInfo {Abs}
                         0x10004b7d    0x3e  Code  Gb  ble_r2.symbols [2]
 LL_ReadMaxDataLen {Abs}
                         0x1000637d    0x3e  Code  Gb  ble_r2.symbols [2]
 LL_ReadPeerResolvableAddress
-                        0x0000f731    0x50  Code  Wk  ll.o [7]
+                        0x0000f74d    0x50  Code  Wk  ll.o [7]
 LL_ReadRemoteUsedFeatures {Abs}
                         0x1000614d    0x5c  Code  Gb  ble_r2.symbols [2]
 LL_ReadRemoteUsedFeaturesCompleteCback {Abs}
@@ -3591,8 +3591,8 @@ LL_ReadRemoteVersionInfo {Abs}
 LL_ReadRemoteVersionInfoCback {Abs}
                         0x1000c8ad    0x6e  Code  Gb  ble_r2.symbols [2]
 LL_ReadResolvingListSize
-                        0x0001067d     0x8  Code  Wk  ll.o [7]
-LL_ReadRssi             0x0000f6dd    0x54  Code  Wk  ll.o [7]
+                        0x00010699     0x8  Code  Wk  ll.o [7]
+LL_ReadRssi             0x0000f6f9    0x54  Code  Wk  ll.o [7]
 LL_ReadSupportedStates {Abs}
                         0x10004aed    0x5c  Code  Gb  ble_r2.symbols [2]
 LL_ReadTxPowerLevel {Abs}
@@ -3605,14 +3605,14 @@ LL_RemoteConnParamReqNegReply {Abs}
 LL_RemoteConnParamReqReply {Abs}
                         0x10005189    0x9e  Code  Gb  ble_r2.symbols [2]
 LL_RemoveDeviceFromResolvingList
-                        0x0000f1e9    0x6c  Code  Wk  ll.o [7]
+                        0x0000f205    0x6c  Code  Wk  ll.o [7]
 LL_RemoveWhiteListDevice {Abs}
                         0x10004a25    0x2c  Code  Gb  ble_r2.symbols [2]
-LL_Reset                0x0000d7cd    0xec  Code  Wk  ll.o [7]
+LL_Reset                0x0000d7e9    0xec  Code  Wk  ll.o [7]
 LL_RxDataCompleteCback {Abs}
                         0x10019465    0xb4  Code  Gb  ble_r2.symbols [2]
 LL_SetAddressResolutionEnable
-                        0x0000ee55    0x88  Code  Wk  ll.o [7]
+                        0x0000ee71    0x88  Code  Wk  ll.o [7]
 LL_SetAdvControl {Abs}  0x100055f1   0x10c  Code  Gb  ble_r2.symbols [2]
 LL_SetAdvData {Abs}     0x1000559d    0x48  Code  Gb  ble_r2.symbols [2]
 LL_SetAdvParam {Abs}    0x1000536d   0x206  Code  Gb  ble_r2.symbols [2]
@@ -3620,9 +3620,9 @@ LL_SetDataLen {Abs}     0x10006269    0x7e  Code  Gb  ble_r2.symbols [2]
 LL_SetRandomAddress {Abs}
                         0x100049ad    0x2c  Code  Gb  ble_r2.symbols [2]
 LL_SetResolvablePrivateAddressTimeout
-                        0x0000f781    0x50  Code  Wk  ll.o [7]
-LL_SetScanControl       0x0000e241    0xf0  Code  Wk  ll.o [7]
-LL_SetScanParam         0x0000dc25   0x118  Code  Wk  ll.o [7]
+                        0x0000f79d    0x50  Code  Wk  ll.o [7]
+LL_SetScanControl       0x0000e25d    0xf0  Code  Wk  ll.o [7]
+LL_SetScanParam         0x0000dc41   0x118  Code  Wk  ll.o [7]
 LL_SetScanRspData {Abs}
                         0x10005739    0x52  Code  Gb  ble_r2.symbols [2]
 LL_StartEncrypt {Abs}   0x1000604d    0xf4  Code  Gb  ble_r2.symbols [2]
@@ -3653,13 +3653,13 @@ NIST_Curve_P256_r {Abs}
 NOROM_CPUcpsid          0x00004add     0x8  Code  Gb  cpu.o [16]
 NOROM_CPUcpsie          0x00004ae5     0x8  Code  Gb  cpu.o [16]
 NOROM_CPUdelay          0x00004aed     0x8  Code  Gb  cpu.o [16]
-NOROM_CRYPTOAesLoadKey  0x0000ad05    0x78  Code  Gb  crypto.o [16]
+NOROM_CRYPTOAesLoadKey  0x0000ad21    0x78  Code  Gb  crypto.o [16]
 NOROM_ChipInfo_GetChipFamily
                         0x000074cd    0x24  Code  Gb  chipinfo.o [16]
 NOROM_ChipInfo_GetPackageType
                         0x000074b9    0x14  Code  Gb  chipinfo.o [16]
-NOROM_FlashProgram      0x0000bff9    0x12  Code  Gb  flash.o [16]
-NOROM_FlashSectorErase  0x0000bfed     0xc  Code  Gb  flash.o [16]
+NOROM_FlashProgram      0x0000c015    0x12  Code  Gb  flash.o [16]
+NOROM_FlashSectorErase  0x0000c009     0xc  Code  Gb  flash.o [16]
 NOROM_OSCHF_AttemptToSwitchToXosc
                         0x00004fc3    0x4c  Code  Gb  osc.o [16]
 NOROM_OSCHF_SwitchToRcOscTurnOffXosc
@@ -3683,7 +3683,7 @@ NOROM_RFCSynthPowerDown
                         0x0000429d    0x34  Code  Gb  rfc.o [16]
 NOROM_SSIConfigSetExpClk
                         0x00009e89    0x4e  Code  Gb  ssi.o [16]
-NOROM_SetupTrimDevice   0x0000bb85    0x72  Code  Gb  setup.o [16]
+NOROM_SetupTrimDevice   0x0000bba1    0x72  Code  Gb  setup.o [16]
 NOROM_SysCtrlAdjustRechargeAfterPowerDown
                         0x000049ef    0x54  Code  Gb  sys_ctrl.o [16]
 NOROM_SysCtrlSetRechargeBeforePowerDown
@@ -3699,17 +3699,17 @@ NOROM_UARTCharPutNonBlocking
 NOROM_UARTConfigSetExpClk
                         0x000094e1    0x30  Code  Gb  uart.o [16]
 NOROM_UARTDisable       0x00009511    0x22  Code  Gb  uart.o [16]
-NPI_WriteTransport      0x0000edcd    0x48  Code  Wk  npi.o [8]
+NPI_WriteTransport      0x0000ede9    0x48  Code  Wk  npi.o [8]
 OSCClockLossEventEnable
                         0x000039c5    0x20  Code  Lc  PowerCC26XX.orm3 [17]
 OSCHfSourceReady        0x000039e5    0x1e  Code  Lc  PowerCC26XX.orm3 [17]
 OSCHfSourceSwitch       0x00004fa1     0x8  Code  Lc  osc.o [16]
-Onboard_rand            0x000105fd    0x10  Code  Wk  onboard.o [8]
-Onboard_soft_reset      0x0000d761     0x2  Code  Wk  onboard.o [8]
+Onboard_rand            0x00010619    0x10  Code  Wk  onboard.o [8]
+Onboard_soft_reset      0x0000d77d     0x2  Code  Wk  onboard.o [8]
 PAGE_SIZE {Abs}         0x00001000          Data  Gb  command line/config [4]
 PINCC26XX_getConfig     0x000073f9    0x2c  Code  Gb  PINCC26XX.orm3 [17]
 PINCC26XX_getPinCount   0x0000704b    0x22  Code  Gb  PINCC26XX.orm3 [17]
-PINCC26XX_hwAttrs       0x0000b338     0x8  Data  Gb  board.o [1]
+PINCC26XX_hwAttrs       0x0000b354     0x8  Data  Gb  board.o [1]
 PINCC26XX_setIoCfg      0x00006f65    0xc8  Code  Lc  PINCC26XX.orm3 [17]
 PINCC26XX_setIoCfgMux   0x0000702d    0x1e  Code  Lc  PINCC26XX.orm3 [17]
 PINCC26XX_setMux        0x00007425    0x1e  Code  Gb  PINCC26XX.orm3 [17]
@@ -3739,7 +3739,7 @@ PowerCC26XX_RCOSC_clockFunc
                         0x00004ded    0x46  Code  Gb  PowerCC26XX_calibrateRCOSC.orm3 [17]
 PowerCC26XX_auxISR      0x00004b81   0x124  Code  Gb  PowerCC26XX_calibrateRCOSC.orm3 [17]
 PowerCC26XX_calibrate   0x00003f1b    0x50  Code  Gb  PowerCC26XX.orm3 [17]
-PowerCC26XX_config      0x0000b340    0x10  Data  Gb  board.o [1]
+PowerCC26XX_config      0x0000b35c    0x10  Data  Gb  board.o [1]
 PowerCC26XX_doCalibrate
                         0x00004ca5   0x148  Code  Gb  PowerCC26XX_calibrateRCOSC.orm3 [17]
 PowerCC26XX_initiateCalibration
@@ -3777,7 +3777,7 @@ Power_unregisterNotify  0x00003eff    0x1c  Code  Gb  PowerCC26XX.orm3 [17]
 Q_pop                   0x0000272d    0x18  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 Q_push                  0x00002745    0x3a  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 RAM_BASE_ADDR {Abs}     0x200044f8           --   Gb  ble_r2.symbols [2]
-RFCC26XX_hwAttrs        0x0000b350     0x4  Data  Gb  board.o [1]
+RFCC26XX_hwAttrs        0x0000b36c     0x4  Data  Gb  board.o [1]
 RFHAL_FreeNextTxDataEntry {Abs}
                         0x1000a55d    0x26  Code  Gb  ble_r2.symbols [2]
 RFHAL_GetNextDataEntry {Abs}
@@ -3805,12 +3805,12 @@ RF_runImmediateCmd      0x000036d7    0x12  Code  Gb  RFCC26XX_singleMode.orm3 [
 RF_wakeupNotifyFxn      0x000027a5    0x46  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 RF_wakeupNotifyObj      0x20002058    0x14  Data  Lc  RFCC26XX_singleMode.orm3 [21]
 ROM_BASE_ADDR {Abs}     0x10004941           --   Gb  ble_r2.symbols [2]
-ROM_Init                0x0000fbb5    0x38  Code  Wk  rom_init.o [8]
+ROM_Init                0x0000fbd1    0x38  Code  Wk  rom_init.o [8]
 RWDATA$$Base            0x20000520           --   Gb  - Linker created -
 RWDATA$$Limit           0x20002690           --   Gb  - Linker created -
-Region$$Table$$Base     0x000101e8           --   Gb  - Linker created -
-Region$$Table$$Limit    0x000102b8           --   Gb  - Linker created -
-RegisterAssertCback     0x0000ce15     0x6  Code  Gb  ble_user_config.o [1]
+Region$$Table$$Base     0x00010204           --   Gb  - Linker created -
+Region$$Table$$Limit    0x000102d4           --   Gb  - Linker created -
+RegisterAssertCback     0x0000ce31     0x6  Code  Gb  ble_user_config.o [1]
 RingBuf_construct       0x00009561    0x12  Code  Gb  RingBuf.orm3 [17]
 RingBuf_get             0x00009573    0x2a  Code  Gb  RingBuf.orm3 [17]
 RingBuf_put             0x000095ad    0x32  Code  Gb  RingBuf.orm3 [17]
@@ -3829,7 +3829,7 @@ SPICC26XXDMA_csnCallback
                         0x00009bb1    0x3c  Code  Lc  SPICC26XXDMA.orm3 [17]
 SPICC26XXDMA_flushFifos
                         0x000098e3    0x32  Code  Lc  SPICC26XXDMA.orm3 [17]
-SPICC26XXDMA_fxnTable   0x000104cc    0x18  Data  Gb  SPICC26XXDMA.orm3 [17]
+SPICC26XXDMA_fxnTable   0x000104e8    0x18  Data  Gb  SPICC26XXDMA.orm3 [17]
 SPICC26XXDMA_hwiFxn     0x00009813    0xa8  Code  Lc  SPICC26XXDMA.orm3 [17]
 SPICC26XXDMA_init       0x00009915     0xc  Code  Gb  SPICC26XXDMA.orm3 [17]
 SPICC26XXDMA_initHw     0x00009bed    0x4c  Code  Lc  SPICC26XXDMA.orm3 [17]
@@ -3843,8 +3843,8 @@ SPICC26XXDMA_transferCancel
                         0x00009afd    0x9a  Code  Gb  SPICC26XXDMA.orm3 [17]
 SPI_Params_init         0x00006ee1     0xa  Code  Gb  SPI.orm3 [17]
 SPI_close               0x00006e65     0x6  Code  Gb  SPI.orm3 [17]
-SPI_config              0x0000b38c    0x18  Data  Gb  board.o [1]
-SPI_count               0x0000b3a4     0x1  Data  Gb  board.o [1]
+SPI_config              0x0000b3a8    0x18  Data  Gb  board.o [1]
+SPI_count               0x0000b3c0     0x1  Data  Gb  board.o [1]
 SPI_defaultParams       0x00006ef0    0x20  Data  Gb  SPI.orm3 [17]
 SPI_init                0x00006e6b    0x38  Code  Gb  SPI.orm3 [17]
 SPI_open                0x00006ea3    0x2e  Code  Gb  SPI.orm3 [17]
@@ -3865,23 +3865,23 @@ SemaphoreP_post         0x00004433     0x4  Code  Gb  SemaphoreP_tirtos.orm3 [15
 SetupSignExtendVddrTrimValue
                         0x0000483d     0x8  Code  Lc  sys_ctrl.o [16]
 SimpleBLEObserver_addDeviceInfo
-                        0x0000a203    0x66  Code  Lc  simple_observer.o [1]
+                        0x0000a219    0x66  Code  Lc  simple_observer.o [1]
 SimpleBLEObserver_createTask
                         0x00009ee9    0x34  Code  Gb  simple_observer.o [1]
 SimpleBLEObserver_enqueueMsg
-                        0x0000a271    0x28  Code  Lc  simple_observer.o [1]
+                        0x0000a289    0x28  Code  Lc  simple_observer.o [1]
 SimpleBLEObserver_eventCB
-                        0x0000a1ef    0x14  Code  Lc  simple_observer.o [1]
+                        0x0000a205    0x14  Code  Lc  simple_observer.o [1]
 SimpleBLEObserver_handleKeys
-                        0x0000a03f   0x10c  Code  Lc  simple_observer.o [1]
+                        0x0000a041   0x10c  Code  Lc  simple_observer.o [1]
 SimpleBLEObserver_keyChangeHandler
-                        0x0000a269     0x8  Code  Gb  simple_observer.o [1]
+                        0x0000a281     0x8  Code  Gb  simple_observer.o [1]
 SimpleBLEObserver_processRoleEvent
-                        0x0000a14b    0x90  Code  Lc  simple_observer.o [1]
+                        0x0000a14d    0xa4  Code  Lc  simple_observer.o [1]
 SimpleBLEObserver_processStackMsg
-                        0x0000a033     0xc  Code  Lc  simple_observer.o [1]
+                        0x0000a035     0xc  Code  Lc  simple_observer.o [1]
 SimpleBLEObserver_taskFxn
-                        0x00009f1d   0x116  Code  Lc  simple_observer.o [1]
+                        0x00009f1d   0x118  Code  Lc  simple_observer.o [1]
 SwiP_Params_init        0x00004217    0x10  Code  Gb  SwiP_tirtos.orm3 [15]
 SwiP_construct          0x00004227    0x32  Code  Gb  SwiP_tirtos.orm3 [15]
 SwiP_destruct           0x00004265     0x4  Code  Gb  SwiP_tirtos.orm3 [15]
@@ -3891,22 +3891,22 @@ SwiP_or                 0x00004271     0x4  Code  Gb  SwiP_tirtos.orm3 [15]
 SwiP_post               0x00004275     0x4  Code  Gb  SwiP_tirtos.orm3 [15]
 SwiP_restore            0x00004279     0x4  Code  Gb  SwiP_tirtos.orm3 [15]
 SysBootMsg {Abs}        0x20004f04     0x4  Data  Gb  ble_r2.symbols [2]
-SystemP_vsnprintf       0x0000e9c3     0x4  Code  Gb  SystemP_tirtos.orm3 [15]
-TRNGCC26XXHWAttrs       0x0000b3e8     0x4  Data  Gb  board.o [1]
-TRNGCC26XX_config       0x0000b3ec    0x10  Data  Gb  board.o [1]
-TRNGCC26XX_getNumber    0x0000d509    0x80  Code  Gb  TRNGCC26XX.o [1]
-TRNGCC26XX_init         0x0000d4cd    0x22  Code  Gb  TRNGCC26XX.o [1]
+SystemP_vsnprintf       0x0000e9df     0x4  Code  Gb  SystemP_tirtos.orm3 [15]
+TRNGCC26XXHWAttrs       0x0000b404     0x4  Data  Gb  board.o [1]
+TRNGCC26XX_config       0x0000b408    0x10  Data  Gb  board.o [1]
+TRNGCC26XX_getNumber    0x0000d525    0x80  Code  Gb  TRNGCC26XX.o [1]
+TRNGCC26XX_init         0x0000d4e9    0x22  Code  Gb  TRNGCC26XX.o [1]
 TRNGCC26XX_init::isInit
                         0x2000267d     0x1  Data  Lc  TRNGCC26XX.o [1]
 TRNGCC26XX_isParamValid
-                        0x0000d589    0x2c  Code  Gb  TRNGCC26XX.o [1]
-TRNGCC26XX_open         0x0000d4ef    0x1a  Code  Gb  TRNGCC26XX.o [1]
+                        0x0000d5a5    0x2c  Code  Gb  TRNGCC26XX.o [1]
+TRNGCC26XX_open         0x0000d50b    0x1a  Code  Gb  TRNGCC26XX.o [1]
 TrimAfterColdResetWakeupFromShutDown
-                        0x0000bbf7    0x62  Code  Lc  setup.o [16]
-TxPowerTable            0x0000e140    0x28  Data  Gb  ble_user_config.o [1]
+                        0x0000bc13    0x62  Code  Lc  setup.o [16]
+TxPowerTable            0x0000e15c    0x28  Data  Gb  ble_user_config.o [1]
 UARTCC26XX_close        0x00008fe7    0x8c  Code  Gb  UARTCC26XX.orm3 [17]
 UARTCC26XX_control      0x00009073    0x5a  Code  Gb  UARTCC26XX.orm3 [17]
-UARTCC26XX_fxnTable     0x00010074    0x28  Data  Gb  UARTCC26XX.orm3 [17]
+UARTCC26XX_fxnTable     0x00010090    0x28  Data  Gb  UARTCC26XX.orm3 [17]
 UARTCC26XX_hwiIntFxn    0x00008d6d   0x114  Code  Gb  UARTCC26XX.orm3 [17]
 UARTCC26XX_init         0x00008e95    0x10  Code  Gb  UARTCC26XX.orm3 [17]
 UARTCC26XX_initHw       0x0000933d    0x9e  Code  Lc  UARTCC26XX.orm3 [17]
@@ -3923,37 +3923,37 @@ UARTCC26XX_writePolling
 UARTHandle              0x200015a4     0x4  Data  Gb  hw_uart.o [1]
 UARTIntDisable          0x00008b6b     0xc  Code  Lc  UARTCC26XX.orm3 [17]
 UARTIntEnable           0x00008b61     0xa  Code  Lc  UARTCC26XX.orm3 [17]
-UART_Params_init        0x0000a8c5     0xa  Code  Gb  UART.orm3 [17]
-UART_close              0x0000a841     0x6  Code  Gb  UART.orm3 [17]
-UART_config             0x0000b3c8     0xc  Data  Gb  board.o [1]
-UART_control            0x0000a847     0xa  Code  Gb  UART.orm3 [17]
-UART_count              0x0000b3d4     0x1  Data  Gb  board.o [1]
-UART_defaultParams      0x0000a8e4    0x24  Data  Gb  UART.orm3 [17]
-UART_init               0x0000a851    0x38  Code  Gb  UART.orm3 [17]
-UART_open               0x0000a889    0x2e  Code  Gb  UART.orm3 [17]
-UART_read               0x0000a8cf     0xa  Code  Gb  UART.orm3 [17]
-UART_write              0x0000a8d9     0xa  Code  Gb  UART.orm3 [17]
+UART_Params_init        0x0000a8e1     0xa  Code  Gb  UART.orm3 [17]
+UART_close              0x0000a85d     0x6  Code  Gb  UART.orm3 [17]
+UART_config             0x0000b3e4     0xc  Data  Gb  board.o [1]
+UART_control            0x0000a863     0xa  Code  Gb  UART.orm3 [17]
+UART_count              0x0000b3f0     0x1  Data  Gb  board.o [1]
+UART_defaultParams      0x0000a900    0x24  Data  Gb  UART.orm3 [17]
+UART_init               0x0000a86d    0x38  Code  Gb  UART.orm3 [17]
+UART_open               0x0000a8a5    0x2e  Code  Gb  UART.orm3 [17]
+UART_read               0x0000a8eb     0xa  Code  Gb  UART.orm3 [17]
+UART_write              0x0000a8f5     0xa  Code  Gb  UART.orm3 [17]
 UARTparams              0x20001580    0x24  Data  Gb  hw_uart.o [1]
 UDMACC26XX_channelDone  0x000095e9    0x14  Code  Lc  SPICC26XXDMA.orm3 [17]
 UDMACC26XX_close        0x00009e25    0x3c  Code  Gb  UDMACC26XX.orm3 [17]
-UDMACC26XX_config       0x0000b3e0     0x8  Data  Gb  board.o [1]
+UDMACC26XX_config       0x0000b3fc     0x8  Data  Gb  board.o [1]
 UDMACC26XX_hwiIntFxn    0x00009dd5     0xc  Code  Gb  UDMACC26XX.orm3 [17]
 UDMACC26XX_initHw       0x00009e61    0x1c  Code  Lc  UDMACC26XX.orm3 [17]
 UDMACC26XX_open         0x00009de1    0x44  Code  Gb  UDMACC26XX.orm3 [17]
-Uart_ReadCallback       0x0000a745    0x22  Code  Gb  hw_uart.o [1]
+Uart_ReadCallback       0x0000a761    0x22  Code  Gb  hw_uart.o [1]
 Uart_RxTempBuf          0x200015ac    0xc8  Data  Gb  hw_uart.o [1]
-Uart_WriteCallback      0x0000a767     0x2  Code  Gb  hw_uart.o [1]
-Util_constructClock     0x0000a365    0x4a  Code  Gb  util.o [1]
-Util_constructQueue     0x0000a3b3     0xe  Code  Gb  util.o [1]
-Util_convertBdAddr2Str  0x0000a40f    0x46  Code  Gb  util.o [1]
+Uart_WriteCallback      0x0000a783     0x2  Code  Gb  hw_uart.o [1]
+Util_constructClock     0x0000a381    0x4a  Code  Gb  util.o [1]
+Util_constructQueue     0x0000a3cf     0xe  Code  Gb  util.o [1]
+Util_convertBdAddr2Str  0x0000a42b    0x46  Code  Gb  util.o [1]
 Util_convertBdAddr2Str::str
                         0x20001e4c    0x10  Data  Lc  util.o [1]
-Util_dequeueMsg         0x0000a3f5    0x1a  Code  Gb  util.o [1]
-Util_enqueueMsg         0x0000a3c1    0x34  Code  Gb  util.o [1]
-Util_startClock         0x0000a3af     0x4  Code  Gb  util.o [1]
+Util_dequeueMsg         0x0000a411    0x1a  Code  Gb  util.o [1]
+Util_enqueueMsg         0x0000a3dd    0x34  Code  Gb  util.o [1]
+Util_startClock         0x0000a3cb     0x4  Code  Gb  util.o [1]
 WL_AddEntry {Abs}       0x10018ca9    0x96  Code  Gb  ble_r2.symbols [2]
 WL_Clear {Abs}          0x10018bb1    0x3c  Code  Gb  ble_r2.symbols [2]
-WL_ClearEntry           0x00010415    0x1c  Code  Wk  ll_wl.o [7]
+WL_ClearEntry           0x00010431    0x1c  Code  Wk  ll_wl.o [7]
 WL_ClearIgnoreList {Abs}
                         0x10018df9    0x38  Code  Gb  ble_r2.symbols [2]
 WL_FindEntry {Abs}      0x10018c51    0x56  Code  Gb  ble_r2.symbols [2]
@@ -3964,12 +3964,12 @@ WL_Init {Abs}           0x10018b81    0x22  Code  Gb  ble_r2.symbols [2]
 WL_RemoveEntry {Abs}    0x10018d41    0x56  Code  Gb  ble_r2.symbols [2]
 WL_SetWlIgnore {Abs}    0x10018dc1    0x36  Code  Gb  ble_r2.symbols [2]
 __aeabi_ldiv0           0x00008b5d          Code  Gb  I64DivZer.o [23]
-__aeabi_memclr          0x0000da79          Code  Gb  ABImemclr.o [23]
+__aeabi_memclr          0x0000da95          Code  Gb  ABImemclr.o [23]
 __aeabi_memclr4         0x000045a1          Code  Gb  ABImemclr4.o [23]
 __aeabi_memcpy          0x000044b1          Code  Gb  ABImemcpy.o [23]
 __aeabi_memcpy4         0x000044d1          Code  Gb  ABImemcpy.o [23]
 __aeabi_memcpy8         0x000044d1          Code  Gb  ABImemcpy.o [23]
-__aeabi_memset          0x0000db91          Code  Gb  ABImemset.o [23]
+__aeabi_memset          0x0000dbad          Code  Gb  ABImemset.o [23]
 __aeabi_memset4         0x000050f9          Code  Gb  ABImemset48.o [23]
 __aeabi_memset8         0x000050f9          Code  Gb  ABImemset48.o [23]
 __aeabi_uldivmod        0x0000896d          Code  Gb  I64DivMod.o [23]
@@ -3977,24 +3977,24 @@ __ccfg                  0x0001ffa8    0x58  Data  Gb  ccfg_app_ble.o [1]
 __checksum_begin {Abs}  0x10004940           --   Gb  ble_r2.symbols [2]
 __checksum_end {Abs}    0x10019afd           --   Gb  ble_r2.symbols [2]
 __checksum_value {Abs}  0x000081d7          Data  Gb  ble_r2.symbols [2]
-__cmain                 0x0001044d          Code  Gb  cmain.orm3 [5]
+__cmain                 0x00010469          Code  Gb  cmain.orm3 [5]
 __exit {Abs}            0x10019a1d          Code  Gb  ble_r2.symbols [2]
-__iar_Memset            0x0000db91          Code  Gb  ABImemset.o [23]
+__iar_Memset            0x0000dbad          Code  Gb  ABImemset.o [23]
 __iar_Memset4_word      0x00005101          Code  Gb  ABImemset48.o [23]
 __iar_Memset8_word      0x00005101          Code  Gb  ABImemset48.o [23]
-__iar_Memset_word       0x0000db99          Code  Gb  ABImemset.o [23]
-__iar_data_init3        0x000100e9    0x28  Code  Gb  data_init.o [23]
+__iar_Memset_word       0x0000dbb5          Code  Gb  ABImemset.o [23]
+__iar_data_init3        0x00010105    0x28  Code  Gb  data_init.o [23]
 __iar_lz77_init_single3
                         0x00004437    0x7a  Code  Gb  lz77_init_single.o [23]
-__iar_program_start     0x0001055d          Code  Gb  boot.orm3 [5]
-__iar_program_startC    0x00010545    0x16  Code  Gb  cstartup_M.orm3 [5]
+__iar_program_start     0x00010579          Code  Gb  boot.orm3 [5]
+__iar_program_startC    0x00010561    0x16  Code  Gb  cstartup_M.orm3 [5]
 __iar_systems$$module {Abs}
                         0x00000001          Data  Gb  command line/config [4]
-__iar_zero_init3        0x0000fa19    0x40  Code  Gb  zero_init3.o [23]
-__low_level_init        0x00010467     0x4  Code  Gb  low_level_init.o [14]
+__iar_zero_init3        0x0000fa35    0x40  Code  Gb  zero_init3.o [23]
+__low_level_init        0x00010483     0x4  Code  Gb  low_level_init.o [14]
 __vector_table          0x00000000    0x3c  Data  Gb  app_ble_prm3.orm3 [3]
-_call_main              0x0001045d          Code  Gb  cmain.orm3 [5]
-_main                   0x00010463          Code  Gb  cmain.orm3 [5]
+_call_main              0x00010479          Code  Gb  cmain.orm3 [5]
+_main                   0x0001047f          Code  Gb  cmain.orm3 [5]
 aCmdPool                0x20000bd8   0x100  Data  Lc  RFCC26XX_singleMode.orm3 [21]
 abort                   0x00008965     0x6  Code  Gb  abort.o [14]
 abortCmd                0x0000353f   0x130  Code  Lc  RFCC26XX_singleMode.orm3 [21]
@@ -4005,7 +4005,7 @@ appAssertCback          0x20000594     0x4  Data  Gb  ble_user_config.o [1]
 appKeyChangeHandler     0x200005e4     0x4  Data  Gb  iotboard_key.o [1]
 appMsg                  0x20000648     0xc  Data  Lc  simple_observer.o [1]
 appMsgQueue             0x20000644     0x4  Data  Lc  simple_observer.o [1]
-appTxPwrTbl             0x0000e168     0x8  Data  Gb  ble_user_config.o [1]
+appTxPwrTbl             0x0000e184     0x8  Data  Gb  ble_user_config.o [1]
 applyBt5Patch           0x00005209    0x20  Code  Lc  ll.o [7]
 attSendMsg {Abs}        0x10016071    0xa0  Code  Gb  ble_r2.symbols [2]
 attSendRspMsg {Abs}     0x10019099    0x36  Code  Gb  ble_r2.symbols [2]
@@ -4022,56 +4022,56 @@ bXOSCSwitchConstraint   0x20001f67     0x1  Data  Lc  RFCC26XX_singleMode.orm3 [
 bYieldPwrDnCalled       0x20001f65     0x1  Data  Lc  RFCC26XX_singleMode.orm3 [21]
 bYieldPwrDnCancel       0x20001f66     0x1  Data  Lc  RFCC26XX_singleMode.orm3 [21]
 bleAppServiceInfoTable  0x200005d0    0x10  Data  Gb  icall_user_config.o [1]
-bleDispatch_BMAlloc     0x00010685     0x6  Code  Wk  ble_dispatch_lite.o [8]
-bleDispatch_BMFree      0x0001068b     0x6  Code  Wk  ble_dispatch_lite.o [8]
-bleStackConfig          0x0000e1e8    0x24  Data  Gb  ble_user_config.o [1]
-ble_dispatch_liteInit   0x0000f385     0xc  Code  Wk  ble_dispatch_lite.o [8]
+bleDispatch_BMAlloc     0x000106a1     0x6  Code  Wk  ble_dispatch_lite.o [8]
+bleDispatch_BMFree      0x000106a7     0x6  Code  Wk  ble_dispatch_lite.o [8]
+bleStackConfig          0x0000e204    0x24  Data  Gb  ble_user_config.o [1]
+ble_dispatch_liteInit   0x0000f3a1     0xc  Code  Wk  ble_dispatch_lite.o [8]
 ble_dispatch_liteProcess
-                        0x000101c5    0x24  Code  Wk  ble_dispatch_lite.o [8]
-bm_desc_from_payload    0x000100c5    0x24  Code  Lc  osal_bufmgr.o [8]
+                        0x000101e1    0x24  Code  Wk  ble_dispatch_lite.o [8]
+bm_desc_from_payload    0x000100e1    0x24  Code  Lc  osal_bufmgr.o [8]
 bm_list_ptr             0x20002640     0x4  Data  Lc  osal_bufmgr.o [8]
-boardConfig             0x0000e220    0x18  Data  Gb  ble_user_config.o [1]
+boardConfig             0x0000e23c    0x18  Data  Gb  ble_user_config.o [1]
 buildInfo {Abs}         0x20004f0c     0x4  Data  Gb  ble_r2.symbols [2]
 calibrateRcoscHf1       0x00004e33   0x130  Code  Lc  PowerCC26XX_calibrateRCOSC.orm3 [17]
-cbTimerSetup            0x0000e9c9    0xb8  Code  Lc  osal_cbtimer.o [8]
+cbTimerSetup            0x0000e9e5    0xb8  Code  Lc  osal_cbtimer.o [8]
 characterUUID           0x00006e62     0x2  Data  Wk  gatt_uuid.o [10]
 clkInactivityFxn        0x000029ff     0x4  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 clkPowerUp              0x20002034    0x24  Data  Lc  RFCC26XX_singleMode.orm3 [21]
 clkPowerUpFxn           0x00002a51     0x2  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 cmdDirImm               0x20001f48    0x18  Data  Lc  RFCC26XX_singleMode.orm3 [21]
 cmdQ                    0x20001f6c    0x14  Data  Lc  RFCC26XX_singleMode.orm3 [21]
-compactPage             0x0000bdfb    0xfc  Code  Lc  osal_snv_wrapper.o [8]
+compactPage             0x0000be17    0xfc  Code  Lc  osal_snv_wrapper.o [8]
 configureRFCoreClocks   0x00004067    0x12  Code  Lc  PowerCC26XX.orm3 [17]
 configureXOSCHF         0x000040d7    0x56  Code  Lc  PowerCC26XX.orm3 [17]
 connInitialMaxTxOctets {Abs}
                         0x20004f44     0x2  Data  Gb  ble_r2.symbols [2]
 connInitialMaxTxTime {Abs}
                         0x20004f46     0x2  Data  Gb  ble_r2.symbols [2]
-cryptoCC26XXHWAttrs     0x0000b11c    0x10  Data  Gb  board.o [1]
+cryptoCC26XXHWAttrs     0x0000b138    0x10  Data  Gb  board.o [1]
 cryptoCC26XXObjects     0x20000cd8    0x80  Data  Gb  board.o [1]
-cryptoDriverTableBLE    0x0000e1bc    0x2c  Data  Gb  ble_user_config.o [1]
+cryptoDriverTableBLE    0x0000e1d8    0x2c  Data  Gb  ble_user_config.o [1]
 cryptoDrvTblPtr {Abs}   0x20004ef8     0x4  Data  Gb  ble_r2.symbols [2]
-cryptoPostNotify        0x0000aab5     0x8  Code  Lc  CryptoCC26XX.orm3 [17]
+cryptoPostNotify        0x0000aad1     0x8  Code  Lc  CryptoCC26XX.orm3 [17]
 cryptoTransactionExecute
-                        0x0000aaf9   0x1c8  Code  Lc  CryptoCC26XX.orm3 [17]
-cryptoTransactionPend   0x0000aabd    0x28  Code  Lc  CryptoCC26XX.orm3 [17]
-cryptoTransactionPoll   0x0000aae5    0x14  Code  Lc  CryptoCC26XX.orm3 [17]
+                        0x0000ab15   0x1c8  Code  Lc  CryptoCC26XX.orm3 [17]
+cryptoTransactionPend   0x0000aad9    0x28  Code  Lc  CryptoCC26XX.orm3 [17]
+cryptoTransactionPoll   0x0000ab01    0x14  Code  Lc  CryptoCC26XX.orm3 [17]
 curTxPowerVal {Abs}     0x20004f71     0x1  Data  Gb  ble_r2.symbols [2]
 dataLength              0x000094b4    0x10  Data  Lc  UARTCC26XX.orm3 [17]
 decActiveClientCnt      0x000027eb    0x56  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 defaultCallback         0x00002a39     0x2  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 devList                 0x20001bdc   0x270  Data  Lc  simple_observer.o [1]
 deviceFeatureSet        0x2000221c    0x14  Data  Wk  ll.o [7]
-disableCache            0x0000bf87    0x2e  Code  Lc  osal_snv_wrapper.o [8]
+disableCache            0x0000bfa3    0x2e  Code  Lc  osal_snv_wrapper.o [8]
 disableLFClockQualifiers
                         0x00003fc1    0x66  Code  Lc  PowerCC26XX.orm3 [17]
 disconnectNext {Abs}    0x10011c8d    0x26  Code  Gb  ble_r2.symbols [2]
 dispHandle              0x2000063c     0x4  Data  Gb  simple_observer.o [1]
 dispatchInUs            0x20001f90     0x4  Data  Lc  RFCC26XX_singleMode.orm3 [21]
 dispatchOpWhen          0x00002849    0x32  Code  Lc  RFCC26XX_singleMode.orm3 [21]
-displayTft128HWattrs    0x0000b314     0x8  Data  Gb  board.o [1]
+displayTft128HWattrs    0x0000b330     0x8  Data  Gb  board.o [1]
 displayTft128Object     0x20000e18   0x45c  Data  Gb  board.o [1]
-displayUartHWAttrs      0x0000b134    0x14  Data  Gb  board.o [1]
+displayUartHWAttrs      0x0000b150    0x14  Data  Gb  board.o [1]
 displayUartObject       0x20000d58     0xc  Data  Gb  board.o [1]
 dmaNullConfig           0x00009dcc     0x8  Data  Lc  SPICC26XXDMA.orm3 [17]
 dmaRxConfig             0x00009dc4     0x8  Data  Lc  SPICC26XXDMA.orm3 [17]
@@ -4084,12 +4084,12 @@ dmaSpi1RxControlTableEntry {Abs}
 dmaSpi1TxControlTableEntry {Abs}
                         0x20000510    0x10  Data  Lc  SPICC26XXDMA.orm3 [17]
 dmaTxConfig             0x00009dbc     0x8  Data  Lc  SPICC26XXDMA.orm3 [17]
-driverTable             0x0000e20c    0x14  Data  Gb  ble_user_config.o [1]
-driverTable_fnSpinlock  0x0000ce21    0x14  Code  Gb  ble_user_config.o [1]
+driverTable             0x0000e228    0x14  Data  Gb  ble_user_config.o [1]
+driverTable_fnSpinlock  0x0000ce3d    0x14  Code  Gb  ble_user_config.o [1]
 driverlib_release_0_48919
                         0x20002683     0x1  Data  Gb  driverlib_release.o [16]
 dtmInfo                 0x20002234     0x4  Data  Wk  ll.o [7]
-eccDriverTable          0x0000f5a0    0x10  Data  Gb  icall_user_config.o [1]
+eccDriverTable          0x0000f5bc    0x10  Data  Gb  icall_user_config.o [1]
 eccRom_genKeys {Abs}    0x10016c1d    0x2c  Code  Gb  ble_r2.symbols [2]
 eccRom_genSharedSecret {Abs}
                         0x10016c65    0x20  Code  Gb  ble_r2.symbols [2]
@@ -4103,11 +4103,11 @@ eccRom_windowSize {Abs}
                         0x20004f9c     0x1  Data  Gb  ble_r2.symbols [2]
 eccRom_workzone {Abs}   0x20004f88     0x4  Data  Gb  ble_r2.symbols [2]
 emptyClockFunc          0x00003fbd     0x2  Code  Lc  PowerCC26XX.orm3 [17]
-enableCache             0x0000bf71    0x16  Code  Lc  osal_snv_wrapper.o [8]
-erasePage               0x0000bd8b    0x3a  Code  Lc  osal_snv_wrapper.o [8]
+enableCache             0x0000bf8d    0x16  Code  Lc  osal_snv_wrapper.o [8]
+erasePage               0x0000bda7    0x3a  Code  Lc  osal_snv_wrapper.o [8]
 failF                   0x200009d0     0x1  Data  Lc  osal_snv_wrapper.o [8]
 failW                   0x200009d1     0x1  Data  Lc  osal_snv_wrapper.o [8]
-findOffset              0x0000bdc5    0x2c  Code  Lc  osal_snv_wrapper.o [8]
+findOffset              0x0000bde1    0x2c  Code  Lc  osal_snv_wrapper.o [8]
 frameFormat             0x00009da4    0x18  Data  Lc  SPICC26XXDMA.orm3 [17]
 fsmActiveState          0x00002e39   0x29c  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 fsmPowerUpState         0x00002b77    0xd6  Code  Lc  RFCC26XX_singleMode.orm3 [21]
@@ -4159,7 +4159,7 @@ gapObserverRoleTask     0x20001718    0x50  Data  Gb  observer.o [1]
 gapObserverRoleTaskStack
                         0x20001768   0x190  Data  Gb  observer.o [1]
 gapObserverRole_taskFxn
-                        0x0000a681    0x8a  Code  Lc  observer.o [1]
+                        0x0000a69d    0x8a  Code  Lc  observer.o [1]
 gapPairingCompleteCB {Abs}
                         0x10011f75   0x16e  Code  Gb  ble_r2.symbols [2]
 gapParams {Abs}         0x20004c50    0x1c  Data  Gb  ble_r2.symbols [2]
@@ -4317,9 +4317,9 @@ hKeyPins                0x200005e8     0x4  Data  Gb  iotboard_key.o [1]
 hPin                    0x200021b8     0x4  Data  Lc  TFT128.o [19]
 halAssertHandler        0x00005fdd     0x2  Code  Wk  hal_assert.o [8]
 halAssertHandlerExt     0x00005ec5    0x2c  Code  Wk  hal_assert.o [8]
-halAssertInit           0x0000e805    0x1c  Code  Wk  hal_assert.o [8]
+halAssertInit           0x0000e821    0x1c  Code  Wk  hal_assert.o [8]
 hciGapTaskID            0x20002688     0x1  Data  Wk  hci_tl.o [11]
-hciInitEventMasks       0x0000f3a9    0x54  Code  Wk  hci_event.o [6]
+hciInitEventMasks       0x0000f3c5    0x54  Code  Wk  hci_event.o [6]
 hciL2capTaskID          0x20002689     0x1  Data  Wk  hci_tl.o [11]
 hciPTMenabled {Abs}     0x20004f62     0x1  Data  Gb  ble_r2.symbols [2]
 hciSmpTaskID            0x2000268a     0x1  Data  Wk  hci_tl.o [11]
@@ -4337,13 +4337,13 @@ hwiFxnCpe0Active        0x00002939    0xbe  Code  Lc  RFCC26XX_singleMode.orm3 [
 hwiFxnCpe0PowerFsm      0x00002a5b    0x1a  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 hwiFxnHw                0x0000287b    0x44  Code  Lc  RFCC26XX_singleMode.orm3 [21]
 hwiHw                   0x20002018    0x1c  Data  Lc  RFCC26XX_singleMode.orm3 [21]
-iar_xdc_startup_exec    0x0001036d     0xc  Code  Gb  iar_xdc_init.orm3 [5]
-iar_xdc_startup_reset   0x00010361     0xc  Code  Gb  iar_xdc_init.orm3 [5]
-icallServiceTable       0x0000f5bc    0x44  Data  Gb  icall_user_config.o [1]
+iar_xdc_startup_exec    0x00010389     0xc  Code  Gb  iar_xdc_init.orm3 [5]
+iar_xdc_startup_reset   0x0001037d     0xc  Code  Gb  iar_xdc_init.orm3 [5]
+icallServiceTable       0x0000f5d8    0x44  Data  Gb  icall_user_config.o [1]
 icallServiceTblPtr      0x200021f4     0x4  Data  Wk  ble_user_config.o [8]
 icall_directAPI         0x00008845    0x72  Code  Gb  icall.o [1]
-icall_liteMsgParser     0x0001052d    0x18  Code  Wk  ble_dispatch_lite.o [8]
-icall_liteTranslation   0x0000f7d1    0x50  Code  Wk  icall_lite_translation.o [8]
+icall_liteMsgParser     0x00010549    0x18  Code  Wk  ble_dispatch_lite.o [8]
+icall_liteTranslation   0x0000f7ed    0x50  Code  Wk  icall_lite_translation.o [8]
 initInfo {Abs}          0x20004f18     0x4  Data  Gb  ble_r2.symbols [2]
 isFlowControlEnabled    0x00008b77    0x14  Code  Lc  UARTCC26XX.orm3 [17]
 isInitialized           0x20002681     0x1  Data  Lc  UART.orm3 [17]
@@ -4402,7 +4402,7 @@ l2capSendReq {Abs}      0x10014cf9    0x7a  Code  Gb  ble_r2.symbols [2]
 l2capStartTimer {Abs}   0x100152e9    0x20  Code  Gb  ble_r2.symbols [2]
 l2capStopTimer {Abs}    0x10015309    0x10  Code  Gb  ble_r2.symbols [2]
 l2capStoreFCPkt {Abs}   0x10014e05    0x26  Code  Gb  ble_r2.symbols [2]
-lcdHWAttrs              0x0000b304     0x8  Data  Gb  board.o [1]
+lcdHWAttrs              0x0000b320     0x8  Data  Gb  board.o [1]
 lcdObject               0x20000de4    0x34  Data  Gb  board.o [1]
 leftshift_onebit {Abs}  0x1001287d    0x18  Code  Gb  ble_r2.symbols [2]
 linkDB_Add {Abs}        0x10017e05    0x8a  Code  Gb  ble_r2.symbols [2]
@@ -4421,12 +4421,12 @@ linkDB_Update {Abs}     0x10017ed5    0x32  Code  Gb  ble_r2.symbols [2]
 linkDB_UpdateMTU {Abs}  0x10018021    0x1a  Code  Gb  ble_r2.symbols [2]
 linkDB_reportStatusChange {Abs}
                         0x100180e5    0x20  Code  Gb  ble_r2.symbols [2]
-llActiveTask            0x0000d45d    0x38  Code  Wk  ll_scheduler.o [7]
-llAddTxDataEntry        0x0000f255    0x6c  Code  Wk  ble.o [7]
+llActiveTask            0x0000d479    0x38  Code  Wk  ll_scheduler.o [7]
+llAddTxDataEntry        0x0000f271    0x6c  Code  Wk  ble.o [7]
 llAlignToNextEvent {Abs}
                         0x10008d71    0xca  Code  Gb  ble_r2.symbols [2]
 llAllocConnId {Abs}     0x100080f1   0x19a  Code  Gb  ble_r2.symbols [2]
-llAllocTask             0x0000e331    0x7c  Code  Wk  ll_scheduler.o [7]
+llAllocTask             0x0000e34d    0x7c  Code  Wk  ll_scheduler.o [7]
 llAtLeastTwoChans {Abs}
                         0x100080b9    0x38  Code  Gb  ble_r2.symbols [2]
 llCBTimer_AptoExpiredCback {Abs}
@@ -4435,8 +4435,8 @@ llCalcScaFactor {Abs}   0x1001993d    0x1c  Code  Gb  ble_r2.symbols [2]
 llCheckForLstoDuringSL {Abs}
                         0x10014435    0x24  Code  Gb  ble_r2.symbols [2]
 llCheckRxBuffers {Abs}  0x100093ad    0x2e  Code  Gb  ble_r2.symbols [2]
-llCheckWhiteListUsage   0x0000fee5    0x2c  Code  Wk  ll_common.o [7]
-llConfigTable           0x0000fb0c    0x38  Data  Wk  ll_config.o [7]
+llCheckWhiteListUsage   0x0000ff01    0x2c  Code  Wk  ll_common.o [7]
+llConfigTable           0x0000fb28    0x38  Data  Wk  ll_config.o [7]
 llConnCleanup {Abs}     0x10008479   0x110  Code  Gb  ble_r2.symbols [2]
 llConnExists {Abs}      0x10008385    0xea  Code  Gb  ble_r2.symbols [2]
 llConnTerminate {Abs}   0x100085a9    0x36  Code  Gb  ble_r2.symbols [2]
@@ -4446,34 +4446,34 @@ llConvertCtrlProcTimeoutToEvent {Abs}
 llConvertLstoToEvent {Abs}
                         0x10008699    0x20  Code  Gb  ble_r2.symbols [2]
 llCreateRxBuffer {Abs}  0x10009371    0x3c  Code  Gb  ble_r2.symbols [2]
-llDataGetConnPtr        0x000105b1    0x14  Code  Wk  ll_data.o [7]
+llDataGetConnPtr        0x000105cd    0x14  Code  Wk  ll_data.o [7]
 llDequeueCtrlPkt {Abs}  0x10007f09    0x4c  Code  Gb  ble_r2.symbols [2]
 llEnqueueCtrlPkt {Abs}  0x10007ead    0x56  Code  Gb  ble_r2.symbols [2]
 llEventDelta {Abs}      0x10008691     0x6  Code  Gb  ble_r2.symbols [2]
 llEventInRange {Abs}    0x10008669    0x28  Code  Gb  ble_r2.symbols [2]
 llFragmentPDU {Abs}     0x10008b81    0x78  Code  Gb  ble_r2.symbols [2]
-llFreeTask              0x0000e459    0x44  Code  Wk  ll_scheduler.o [7]
+llFreeTask              0x0000e475    0x44  Code  Wk  ll_scheduler.o [7]
 llGenerateCRC {Abs}     0x10008635    0x34  Code  Gb  ble_r2.symbols [2]
-llGetCurrentTask        0x0000d70d    0x10  Code  Wk  ll_scheduler.o [7]
+llGetCurrentTask        0x0000d729    0x10  Code  Wk  ll_scheduler.o [7]
 llGetCurrentTime {Abs}  0x100197b1     0x8  Code  Gb  ble_r2.symbols [2]
 llGetNextDataChan {Abs}
                         0x10007ff5    0x54  Code  Gb  ble_r2.symbols [2]
-llGetNumTasks           0x0000e44d     0xc  Code  Wk  ll_scheduler.o [7]
-llGetTaskState          0x0000fcfd    0x34  Code  Wk  ll_scheduler.o [7]
-llGetTxPower            0x00010431    0x1c  Code  Wk  ll_common.o [7]
+llGetNumTasks           0x0000e469     0xc  Code  Wk  ll_scheduler.o [7]
+llGetTaskState          0x0000fd19    0x34  Code  Wk  ll_scheduler.o [7]
+llGetTxPower            0x0001044d    0x1c  Code  Wk  ll_common.o [7]
 llHaltRadio {Abs}       0x10007075    0x3a  Code  Gb  ble_r2.symbols [2]
 llHardwareError {Abs}   0x1000929d     0xa  Code  Gb  ble_r2.symbols [2]
-llInitFeatureSet        0x0000d9bd    0x38  Code  Wk  ll_common.o [7]
+llInitFeatureSet        0x0000d9d9    0x38  Code  Wk  ll_common.o [7]
 llMemCopySrc {Abs}      0x100092d1    0x18  Code  Gb  ble_r2.symbols [2]
 llMoveTempTxDataEntries {Abs}
                         0x100095b9    0x50  Code  Gb  ble_r2.symbols [2]
-llOctets2Time           0x0000ca5d    0x3c  Code  Wk  ll_common.o [7]
+llOctets2Time           0x0000ca79    0x3c  Code  Wk  ll_common.o [7]
 llPendingUpdateParam {Abs}
                         0x100085e1    0x3e  Code  Gb  ble_r2.symbols [2]
 llProcessChanMap {Abs}  0x10007fb5    0x40  Code  Gb  ble_r2.symbols [2]
 llProcessPostRfOps {Abs}
                         0x1000713d    0x54  Code  Gb  ble_r2.symbols [2]
-llProcessScanRxFIFO     0x0000df09   0x100  Code  Wk  ll_scan_end_causes.o [7]
+llProcessScanRxFIFO     0x0000df25   0x100  Code  Wk  ll_scan_end_causes.o [7]
 llProcessSlaveControlProcedures {Abs}
                         0x10013f05   0x492  Code  Gb  ble_r2.symbols [2]
 llProcessTxData {Abs}   0x100086dd    0x7e  Code  Gb  ble_r2.symbols [2]
@@ -4482,17 +4482,17 @@ llReplaceCtrlPkt {Abs}  0x10007f69    0x2a  Code  Gb  ble_r2.symbols [2]
 llReplaceRxBuffers {Abs}
                         0x100093dd    0x3e  Code  Gb  ble_r2.symbols [2]
 llResetRadio {Abs}      0x10007071     0x2  Code  Gb  ble_r2.symbols [2]
-llRfInit                0x0000d8f9    0x88  Code  Wk  ll_common.o [7]
-llRfSetup               0x0000d765    0x60  Code  Wk  ll_common.o [7]
+llRfInit                0x0000d915    0x88  Code  Wk  ll_common.o [7]
+llRfSetup               0x0000d781    0x60  Code  Wk  ll_common.o [7]
 llRfStartFS {Abs}       0x100070b1    0x8c  Code  Gb  ble_r2.symbols [2]
-llScan_TaskEnd          0x0000ef95    0x88  Code  Wk  ll_scan_end_causes.o [7]
-llScheduleTask          0x0000e505    0x88  Code  Wk  ll_scheduler.o [7]
-llScheduler             0x0000e3dd    0x70  Code  Wk  ll_scheduler.o [7]
-llSchedulerInit         0x0000d981    0x3c  Code  Wk  ll_scheduler.o [7]
+llScan_TaskEnd          0x0000efb1    0x88  Code  Wk  ll_scan_end_causes.o [7]
+llScheduleTask          0x0000e521    0x88  Code  Wk  ll_scheduler.o [7]
+llScheduler             0x0000e3f9    0x70  Code  Wk  ll_scheduler.o [7]
+llSchedulerInit         0x0000d99d    0x3c  Code  Wk  ll_scheduler.o [7]
 llSendReject {Abs}      0x10008949    0x54  Code  Gb  ble_r2.symbols [2]
 llSetNextDataChan {Abs}
                         0x10008049    0x58  Code  Gb  ble_r2.symbols [2]
-llSetTxPower            0x0000c85d    0x58  Code  Wk  ll_common.o [7]
+llSetTxPower            0x0000c879    0x58  Code  Wk  ll_common.o [7]
 llSetupAdv {Abs}        0x10007251   0x226  Code  Gb  ble_r2.symbols [2]
 llSetupAdvDataEntryQueue {Abs}
                         0x100094dd    0x20  Code  Gb  ble_r2.symbols [2]
@@ -4522,9 +4522,9 @@ llSetupPingRsp {Abs}    0x1000885d    0x32  Code  Gb  ble_r2.symbols [2]
 llSetupRejectInd {Abs}  0x10007c39    0x32  Code  Gb  ble_r2.symbols [2]
 llSetupRejectIndExt {Abs}
                         0x10008aa5    0x48  Code  Gb  ble_r2.symbols [2]
-llSetupScan             0x0000cab9   0x198  Code  Wk  ll_common.o [7]
+llSetupScan             0x0000cad5   0x198  Code  Wk  ll_common.o [7]
 llSetupScanDataEntryQueue
-                        0x0000cc51    0x48  Code  Wk  ble.o [7]
+                        0x0000cc6d    0x48  Code  Wk  ble.o [7]
 llSetupStartEncReq {Abs}
                         0x10007aed    0x2a  Code  Gb  ble_r2.symbols [2]
 llSetupStartEncRsp {Abs}
@@ -4535,13 +4535,13 @@ llSetupUnknownRsp {Abs}
 llSetupVersionIndReq {Abs}
                         0x10007d5d    0x60  Code  Gb  ble_r2.symbols [2]
 llState {Abs}           0x20004f6f     0x1  Data  Gb  ble_r2.symbols [2]
-llTaskError             0x00010691     0x6  Code  Wk  ll_error_end_causes.o [7]
+llTaskError             0x000106ad     0x6  Code  Wk  ll_error_end_causes.o [7]
 llTaskList              0x200024b0     0xc  Data  Wk  ll_scheduler.o [7]
-llTime2Octets           0x0000f90d    0x44  Code  Wk  ll_common.o [7]
+llTime2Octets           0x0000f929    0x44  Code  Wk  ll_common.o [7]
 llTimeCompare {Abs}     0x100197b9    0x1a  Code  Gb  ble_r2.symbols [2]
 llTimeDelta {Abs}       0x100197dd     0x4  Code  Gb  ble_r2.symbols [2]
 llUserConfig            0x20000980    0x3c  Data  Wk  ll_config.o [7]
-llValidateConnParams    0x0000f09d    0x74  Code  Wk  ll_common.o [7]
+llValidateConnParams    0x0000f0b9    0x74  Code  Wk  ll_common.o [7]
 llVerifyConnParamReqParams {Abs}
                         0x10008e45    0x88  Code  Gb  ble_r2.symbols [2]
 llWriteTxData {Abs}     0x1000876d    0x8e  Code  Gb  ble_r2.symbols [2]
@@ -4549,13 +4549,13 @@ mADD {Abs}              0x1000e6c9          Code  Gb  ble_r2.symbols [2]
 mMULT {Abs}             0x1000e0f9          Code  Gb  ble_r2.symbols [2]
 mOUT {Abs}              0x1000e8c1          Code  Gb  ble_r2.symbols [2]
 mSUB {Abs}              0x1000e7c5          Code  Gb  ble_r2.symbols [2]
-main                    0x0000cca1    0x3a  Code  Gb  main.o [1]
+main                    0x0000ccbd    0x3a  Code  Gb  main.o [1]
 matchLiteCS             0x00008837     0xe  Code  Lc  icall.o [1]
 maxNumConns {Abs}       0x20004f7b     0x1  Data  Gb  ble_r2.symbols [2]
 maxNumTxDataBufs {Abs}  0x20004f6d     0x1  Data  Gb  ble_r2.symbols [2]
 maxPduSize {Abs}        0x20004f6b     0x1  Data  Gb  ble_r2.symbols [2]
 maxTxPwrForDTM {Abs}    0x20004f72     0x1  Data  Gb  ble_r2.symbols [2]
-memcmp                  0x0000a7d9          Code  Gb  memcmp.o [23]
+memcmp                  0x0000a7f5          Code  Gb  memcmp.o [23]
 memcpy {Abs}            0x1001cb39          Data  Gb  command line/config [4]
 memset {Abs}            0x1001cb51          Data  Gb  command line/config [4]
 mode                    0x00009d9c     0x8  Data  Lc  SPICC26XXDMA.orm3 [17]
@@ -4565,72 +4565,72 @@ nRtc1                   0x20001f88     0x4  Data  Lc  RFCC26XX_singleMode.orm3 [
 nopResourceHandler      0x00004027     0x4  Code  Lc  PowerCC26XX.orm3 [17]
 notify                  0x0000402b    0x3c  Code  Lc  PowerCC26XX.orm3 [17]
 opRatSync               0x2000206c    0x14  Data  Lc  RFCC26XX_singleMode.orm3 [21]
-openTRNG                0x0000d5d1    0x14  Code  Gb  TRNGCC26XX.o [1]
-osalAdjustTimer         0x0000c565    0x50  Code  Wk  osal_clock.o [8]
+openTRNG                0x0000d5ed    0x14  Code  Gb  TRNGCC26XX.o [1]
+osalAdjustTimer         0x0000c581    0x50  Code  Wk  osal_clock.o [8]
 osalHeapAllocFxn        0x00008133     0x4  Code  Gb  icall.o [1]
 osalHeapFreeFxn         0x00008137     0x4  Code  Gb  icall.o [1]
 osalHeapGetStatsFxn     0x0000813b     0xa  Code  Gb  icall.o [1]
 osalHeapInitFxn         0x00008127     0xc  Code  Gb  icall.o [1]
 osalHeapIsBlockingFxn   0x00008145     0x4  Code  Gb  icall.o [1]
-osalInitTasks           0x0000f2c9    0x68  Code  Wk  osal_icall_ble.o [8]
-osalTimerInit           0x0000f565    0x24  Code  Wk  osal_timers.o [8]
-osalTimerUpdate         0x0000c5b5    0xe0  Code  Wk  osal_timers.o [8]
-osal_CbTimerInit        0x0000f365    0x20  Code  Wk  osal_cbtimer.o [8]
+osalInitTasks           0x0000f2e5    0x68  Code  Wk  osal_icall_ble.o [8]
+osalTimerInit           0x0000f581    0x24  Code  Wk  osal_timers.o [8]
+osalTimerUpdate         0x0000c5d1    0xe0  Code  Wk  osal_timers.o [8]
+osal_CbTimerInit        0x0000f381    0x20  Code  Wk  osal_cbtimer.o [8]
 osal_CbTimerProcessEvent
-                        0x0000eedd    0x88  Code  Wk  osal_cbtimer.o [8]
-osal_CbTimerStart       0x0001061d     0xe  Code  Wk  osal_cbtimer.o [8]
-osal_CbTimerStop        0x0000f3fd    0x68  Code  Wk  osal_cbtimer.o [8]
-osal_CbTimerUpdate      0x0000f01d    0x78  Code  Wk  osal_cbtimer.o [8]
-osal_alien2proxy        0x0000c52d    0x38  Code  Wk  osal.o [8]
-osal_bm_adjust_header   0x0001009d    0x28  Code  Wk  osal_bufmgr.o [8]
-osal_bm_alloc           0x0000f9d9    0x40  Code  Wk  osal_bufmgr.o [8]
-osal_bm_free            0x0000ed79    0x54  Code  Wk  osal_bufmgr.o [8]
+                        0x0000eef9    0x88  Code  Wk  osal_cbtimer.o [8]
+osal_CbTimerStart       0x00010639     0xe  Code  Wk  osal_cbtimer.o [8]
+osal_CbTimerStop        0x0000f419    0x68  Code  Wk  osal_cbtimer.o [8]
+osal_CbTimerUpdate      0x0000f039    0x78  Code  Wk  osal_cbtimer.o [8]
+osal_alien2proxy        0x0000c549    0x38  Code  Wk  osal.o [8]
+osal_bm_adjust_header   0x000100b9    0x28  Code  Wk  osal_bufmgr.o [8]
+osal_bm_alloc           0x0000f9f5    0x40  Code  Wk  osal_bufmgr.o [8]
+osal_bm_free            0x0000ed95    0x54  Code  Wk  osal_bufmgr.o [8]
 osal_buffer_uint32      0x000050e7    0x12  Code  Wk  osal.o [8]
 osal_build_uint32       0x000045a7    0x3e  Code  Wk  osal.o [8]
-osal_clear_event        0x0000dab9    0x44  Code  Wk  osal.o [8]
+osal_clear_event        0x0000dad5    0x44  Code  Wk  osal.o [8]
 osal_dispatch_entities  0x20000968     0x4  Data  Lc  osal.o [8]
-osal_enroll_senderid    0x0000f391    0x18  Code  Wk  osal.o [8]
+osal_enroll_senderid    0x0000f3ad    0x18  Code  Wk  osal.o [8]
 osal_entity             0x20002682     0x1  Data  Wk  osal.o [8]
 osal_event_send         0x00006031    0x78  Code  Lc  osal.o [8]
-osal_get_timeoutEx      0x0000ef65    0x30  Code  Wk  osal_timers.o [8]
-osal_init_system        0x0000f4d5    0x50  Code  Wk  osal.o [8]
-osal_isbufset           0x00010339    0x20  Code  Wk  osal.o [8]
+osal_get_timeoutEx      0x0000ef81    0x30  Code  Wk  osal_timers.o [8]
+osal_init_system        0x0000f4f1    0x50  Code  Wk  osal.o [8]
+osal_isbufset           0x00010355    0x20  Code  Wk  osal.o [8]
 osal_mem_alloc          0x00005ef1    0x10  Code  Wk  osal_memory_icall.o [8]
 osal_mem_free           0x00005f01    0x10  Code  Wk  osal_memory_icall.o [8]
-osal_memcmp             0x0000d105    0x1c  Code  Wk  osal.o [8]
-osal_memcpy             0x0000c2bd    0x14  Code  Wk  osal.o [8]
-osal_memdup             0x000103f9    0x1c  Code  Wk  osal.o [8]
-osal_memset             0x0000db7d    0x14  Code  Wk  osal.o [8]
+osal_memcmp             0x0000d121    0x1c  Code  Wk  osal.o [8]
+osal_memcpy             0x0000c2d9    0x14  Code  Wk  osal.o [8]
+osal_memdup             0x00010415    0x1c  Code  Wk  osal.o [8]
+osal_memset             0x0000db99    0x14  Code  Wk  osal.o [8]
 osal_msec_timer_cback   0x0000612d    0x2e  Code  Lc  osal.o [8]
 osal_msec_timer_seq     0x20000964     0x4  Data  Lc  osal.o [8]
 osal_msg_allocate       0x00005fdf    0x24  Code  Wk  osal.o [8]
 osal_msg_deallocate     0x00006011    0x1e  Code  Wk  osal.o [8]
 osal_msg_enqueue_push   0x000060a9    0x62  Code  Lc  osal.o [8]
-osal_msg_receive        0x0000ed0d    0x6c  Code  Wk  osal.o [8]
+osal_msg_receive        0x0000ed29    0x6c  Code  Wk  osal.o [8]
 osal_msg_send           0x00006179    0x1e  Code  Wk  osal.o [8]
-osal_next_timeout       0x0000c4a1    0x24  Code  Wk  osal_timers.o [8]
+osal_next_timeout       0x0000c4bd    0x24  Code  Wk  osal_timers.o [8]
 osal_notask_entity      0x2000095d     0x1  Data  Lc  osal.o [8]
 osal_proxy2alien        0x0000610b    0x18  Code  Lc  osal.o [8]
 osal_proxy_tasks        0x2000095e     0x2  Data  Lc  osal.o [8]
-osal_pwrmgr_init        0x0000f589    0x18  Code  Wk  osal_pwrmgr.o [8]
-osal_rand               0x000106ed     0x4  Code  Wk  osal.o [8]
-osal_revmemcpy          0x00010515    0x18  Code  Wk  osal.o [8]
-osal_service_complete   0x0000f821    0x18  Code  Wk  osal.o [8]
-osal_service_entry      0x0001017d    0x24  Code  Wk  osal.o [8]
+osal_pwrmgr_init        0x0000f5a5    0x18  Code  Wk  osal_pwrmgr.o [8]
+osal_rand               0x00010709     0x4  Code  Wk  osal.o [8]
+osal_revmemcpy          0x00010531    0x18  Code  Wk  osal.o [8]
+osal_service_complete   0x0000f83d    0x18  Code  Wk  osal.o [8]
+osal_service_entry      0x00010199    0x24  Code  Wk  osal.o [8]
 osal_set_event          0x00005f11    0xcc  Code  Wk  osal.o [8]
-osal_set_icall_hook     0x0000f4c9     0xc  Code  Wk  osal.o [8]
-osal_snv_init           0x0000bfd1     0x6  Code  Wk  osal_snv_wrapper.o [8]
+osal_set_icall_hook     0x0000f4e5     0xc  Code  Wk  osal.o [8]
+osal_snv_init           0x0000bfed     0x6  Code  Wk  osal_snv_wrapper.o [8]
 osal_start_reload_timer
-                        0x0000fad1    0x3c  Code  Wk  osal_timers.o [8]
-osal_start_system       0x0000f525    0x40  Code  Wk  osal.o [8]
-osal_start_timerEx      0x0000d71d    0x44  Code  Wk  osal_timers.o [8]
-osal_stop_timerEx       0x0000da81    0x38  Code  Wk  osal_timers.o [8]
+                        0x0000faed    0x3c  Code  Wk  osal_timers.o [8]
+osal_start_system       0x0000f541    0x40  Code  Wk  osal.o [8]
+osal_start_timerEx      0x0000d739    0x44  Code  Wk  osal_timers.o [8]
+osal_stop_timerEx       0x0000da9d    0x38  Code  Wk  osal_timers.o [8]
 osal_syncHandle         0x200021a8     0x4  Data  Wk  osal.o [8]
 osal_systemClock        0x200021f0     0x4  Data  Lc  osal_timers.o [8]
 osal_tickperiod         0x200021ac     0x4  Data  Wk  osal.o [8]
-osal_timer_init         0x0000e821    0x14  Code  Wk  osal.o [8]
+osal_timer_init         0x0000e83d    0x14  Code  Wk  osal.o [8]
 osal_timer_refTimeUpdate
-                        0x0000c4c5    0x68  Code  Wk  osal_timers.o [8]
+                        0x0000c4e1    0x68  Code  Wk  osal_timers.o [8]
 osal_timerid_msec_timer
                         0x20000960     0x4  Data  Lc  osal.o [8]
 oscHfGlobals            0x200021c8    0x14  Data  Lc  osc.o [16]
@@ -4669,12 +4669,12 @@ readData2RingBuf        0x00008c2f    0x28  Code  Lc  UARTCC26XX.orm3 [17]
 readSemCallback         0x00008bcf     0x8  Code  Lc  UARTCC26XX.orm3 [17]
 resolvingList           0x20002238   0x278  Data  Wk  ll_privacy.o [7]
 resourceDB              0x00004194    0x4c  Data  Gb  PowerCC26XX.orm3 [17]
-rfCallback              0x0000ff11    0x2c  Code  Wk  ll_isr.o [7]
+rfCallback              0x0000ff2d    0x2c  Code  Wk  ll_isr.o [7]
 rfCfgAdiVal {Abs}       0x20004f54     0x2  Data  Gb  ble_r2.symbols [2]
 rfCmdHandle {Abs}       0x20004f42     0x2  Data  Gb  ble_r2.symbols [2]
-rfDriverTableBLE        0x0000e170    0x4c  Data  Gb  ble_user_config.o [1]
+rfDriverTableBLE        0x0000e18c    0x4c  Data  Gb  ble_user_config.o [1]
 rfDrvTblPtr {Abs}       0x20004ef0     0x4  Data  Gb  ble_r2.symbols [2]
-rfErrCb                 0x000106f1     0x2  Code  Gb  icall_api_lite.o [1]
+rfErrCb                 0x0001070d     0x2  Code  Gb  icall_api_lite.o [1]
 rfEvent {Abs}           0x20004e50     0x8  Data  Gb  ble_r2.symbols [2]
 rfFeModeBias {Abs}      0x20004f6c     0x1  Data  Gb  ble_r2.symbols [2]
 rfHandle {Abs}          0x20004eec     0x4  Data  Gb  ble_r2.symbols [2]
@@ -4709,9 +4709,9 @@ sendEstLinkEvent {Abs}  0x10011b85    0x72  Code  Gb  ble_r2.symbols [2]
 sendTerminateEvent {Abs}
                         0x10011bf9    0x3a  Code  Gb  ble_r2.symbols [2]
 serviceChangedUUID      0x000074b6     0x2  Data  Wk  gatt_uuid.o [10]
-setActivePage           0x0000bd75    0x10  Code  Lc  osal_snv_wrapper.o [8]
-setBleUserConfig        0x0000e735    0xd0  Code  Wk  ble_user_config.o [8]
-simpleBLERoleCB         0x0000a348     0x4  Data  Lc  simple_observer.o [1]
+setActivePage           0x0000bd91    0x10  Code  Lc  osal_snv_wrapper.o [8]
+setBleUserConfig        0x0000e751    0xd0  Code  Wk  ble_user_config.o [8]
+simpleBLERoleCB         0x0000a364     0x4  Data  Lc  simple_observer.o [1]
 sizeInfo                0x200009bc     0x8  Data  Wk  ll_data.o [7]
 smAuthReqToUint8        0x000046d9    0x3a  Code  Wk  sm_mgr.o [12]
 smDetermineIOCaps {Abs}
@@ -4771,7 +4771,7 @@ smRegisterResponder {Abs}
 smResponderAuthStageTwo {Abs}
                         0x100134cd    0x6e  Code  Gb  ble_r2.symbols [2]
 smRspWaitingConnHandle  0x200009ce     0x2  Data  Wk  sm_mgr.o [12]
-smSavePairInfo          0x0000c0b9   0x204  Code  Wk  sm_pairing.o [12]
+smSavePairInfo          0x0000c0d5   0x204  Code  Wk  sm_pairing.o [12]
 smSaveRemotePublicKeys {Abs}
                         0x1000f18d    0x30  Code  Gb  ble_r2.symbols [2]
 smSendDHKeyCheck {Abs}  0x1000f435    0x1e  Code  Gb  ble_r2.symbols [2]
@@ -4783,10 +4783,10 @@ smSetPairingReqRsp {Abs}
                         0x1000f9f1    0x48  Code  Gb  ble_r2.symbols [2]
 smStartEncryption {Abs}
                         0x1000f0bd    0x1c  Code  Gb  ble_r2.symbols [2]
-smStartRspTimer         0x0000ff5d    0x2c  Code  Wk  sm_mgr.o [12]
+smStartRspTimer         0x0000ff79    0x2c  Code  Wk  sm_mgr.o [12]
 smStopRspTimer {Abs}    0x100121a5    0x12  Code  Gb  ble_r2.symbols [2]
 smTaskID {Abs}          0x20004f7c     0x1  Data  Gb  ble_r2.symbols [2]
-smTimedOut              0x0000ff99    0x2c  Code  Wk  sm_pairing.o [12]
+smTimedOut              0x0000ffb5    0x2c  Code  Wk  sm_pairing.o [12]
 smUint8ToAuthReq        0x00004557    0x4a  Code  Wk  sm_mgr.o [12]
 sm_CMAC {Abs}           0x10012625   0x14c  Code  Gb  ble_r2.symbols [2]
 sm_allocateSCParameters {Abs}
@@ -4872,14 +4872,14 @@ smpResponderProcessPairingReq {Abs}
                         0x10013061    0x2e  Code  Gb  ble_r2.symbols [2]
 smpResponderProcessSigningInfo {Abs}
                         0x100136a1    0x4e  Code  Gb  ble_r2.symbols [2]
-spiCC26XXDMAHWAttrs     0x0000b354    0x38  Data  Gb  board.o [1]
+spiCC26XXDMAHWAttrs     0x0000b370    0x38  Data  Gb  board.o [1]
 spiCC26XXDMAObjects     0x20001274   0x1b8  Data  Gb  board.o [1]
 spiPostNotify           0x00009d91     0xc  Code  Lc  SPICC26XXDMA.orm3 [17]
-stack_main              0x0000f465    0x64  Code  Wk  osal_icall_ble.o [8]
+stack_main              0x0000f481    0x64  Code  Wk  osal_icall_ble.o [8]
 startTxFifoEmptyClk     0x00008c57    0x46  Code  Lc  UARTCC26XX.orm3 [17]
-startup_entry           0x0000fc91    0x34  Code  Wk  icall_startup.o [8]
+startup_entry           0x0000fcad    0x34  Code  Wk  icall_startup.o [8]
 stopBits                0x000094c4     0x8  Data  Lc  UARTCC26XX.orm3 [17]
-strlen                  0x0000b735          Code  Gb  strlen.o [23]
+strlen                  0x0000b751          Code  Gb  strlen.o [23]
 supportedMaxRxOctets {Abs}
                         0x20004f4c     0x2  Data  Gb  ble_r2.symbols [2]
 supportedMaxRxTime {Abs}
@@ -4898,8 +4898,8 @@ syncEvent               0x20001708     0x4  Data  Lc  observer.o [1]
 syncEvent               0x20000640     0x4  Data  Lc  simple_observer.o [1]
 taskEndAction {Abs}     0x20004f20     0x4  Data  Gb  ble_r2.symbols [2]
 taskEndStatus {Abs}     0x20004f50     0x2  Data  Gb  ble_r2.symbols [2]
-tasksArr                0x00010588    0x14  Data  Wk  osal_icall_ble.o [8]
-tasksCnt                0x0000ce37     0x1  Data  Wk  osal_icall_ble.o [8]
+tasksArr                0x000105a4    0x14  Data  Wk  osal_icall_ble.o [8]
+tasksCnt                0x0000ce53     0x1  Data  Wk  osal_icall_ble.o [8]
 tasksEvents             0x200021e4     0x4  Data  Wk  osal_icall_ble.o [8]
 threadSafeConstraintRelease
                         0x0000961b    0x30  Code  Lc  SPICC26XXDMA.orm3 [17]
@@ -4921,11 +4921,11 @@ ti_sysbios_BIOS_RtsGateProxy_leave__E {Abs}
 ti_sysbios_BIOS_RtsGateProxy_query__E {Abs}
                         0x1001c0bd          Data  Gb  command line/config [4]
 ti_sysbios_BIOS_atExitFunc__I
-                        0x0000b999    0x18  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b9b5    0x18  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_BIOS_errorRaiseHook__I
-                        0x0000b9c5    0x10  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b9e1    0x10  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_BIOS_exitFunc__I
-                        0x0000b9b1    0x14  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b9cd    0x14  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_BIOS_exit__E {Abs}
                         0x1001be81          Data  Gb  command line/config [4]
 ti_sysbios_BIOS_getCpuFreq__E {Abs}
@@ -4937,11 +4937,11 @@ ti_sysbios_BIOS_linkedWithIncorrectBootLibrary__E {Abs}
 ti_sysbios_BIOS_setThreadType__E {Abs}
                         0x1001bea1          Data  Gb  command line/config [4]
 ti_sysbios_BIOS_startFunc__I
-                        0x0000b969    0x2e  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b985    0x2e  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_BIOS_start__E {Abs}
                         0x1001beb1          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_cc26xx_Boot_trimDevice
-                        0x0000ba71     0x4  Code  Wk  rom_sysbios.obj [22]
+                        0x0000ba8d     0x4  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_Module__id__C
                         0x00001280     0x2  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_cc26xx_Timer_Module__startupDone__S {Abs}
@@ -4953,31 +4953,31 @@ ti_sysbios_family_arm_cc26xx_Timer_Module_startup__E {Abs}
 ti_sysbios_family_arm_cc26xx_Timer_Object__table__V
                         0x20000520    0x48  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_cc26xx_Timer_dynamicStub__E
-                        0x000103dd    0x1c  Code  Wk  rom_sysbios.obj [22]
+                        0x000103f9    0x1c  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_getCount64__E
-                        0x0000fff1     0xc  Code  Wk  rom_sysbios.obj [22]
+                        0x0001000d     0xc  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_getCurrentTick__E
-                        0x0000ffc5    0x2a  Code  Wk  rom_sysbios.obj [22]
+                        0x0000ffe1    0x2a  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_getExpiredTicks__E {Abs}
                         0x1001c099          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_cc26xx_Timer_getMaxTicks__E
-                        0x000103a1    0x1e  Code  Wk  rom_sysbios.obj [22]
+                        0x000103bd    0x1e  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_getPeriod__E {Abs}
                         0x1001c09d          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_cc26xx_Timer_initDevice__I
-                        0x0000fcc9    0x34  Code  Wk  rom_sysbios.obj [22]
+                        0x0000fce5    0x34  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_periodicStub__E {Abs}
                         0x10019f25          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_cc26xx_Timer_postInit__I {Abs}
                         0x1001b4bd          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_cc26xx_Timer_setNextTick__E
-                        0x0000fd31    0x32  Code  Wk  rom_sysbios.obj [22]
+                        0x0000fd4d    0x32  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_setPeriod__E {Abs}
                         0x1001c0a1          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_cc26xx_Timer_setThreshold__I
-                        0x0000f881    0x48  Code  Wk  rom_sysbios.obj [22]
+                        0x0000f89d    0x48  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_start__E
-                        0x0000f111    0x6c  Code  Wk  rom_sysbios.obj [22]
+                        0x0000f12d    0x6c  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_Timer_startupNeeded__C
                         0x000011f8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_cc26xx_Timer_startup__E {Abs}
@@ -4987,7 +4987,7 @@ ti_sysbios_family_arm_cc26xx_TimestampProvider_Module__state__V
 ti_sysbios_family_arm_cc26xx_TimestampProvider_Module_startup__E {Abs}
                         0x1001b919          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_cc26xx_TimestampProvider_get32__E
-                        0x000104fd    0x18  Code  Wk  rom_sysbios.obj [22]
+                        0x00010519    0x18  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_family_arm_cc26xx_TimestampProvider_get64__E {Abs}
                         0x1001b77d          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_cc26xx_TimestampProvider_getFreq__E {Abs}
@@ -5023,7 +5023,7 @@ ti_sysbios_family_arm_m3_Hwi_NUM_INTERRUPTS__C
 ti_sysbios_family_arm_m3_Hwi_Object__DESC__C
                         0x00001070    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Object__PARAMS__C
-                        0x0000fd64    0x30  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x0000fd80    0x30  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Object__count__C
                         0x00001208     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_Object__create__S {Abs}
@@ -5081,7 +5081,7 @@ ti_sysbios_family_arm_m3_Hwi_excHandler__I {Abs}
 ti_sysbios_family_arm_m3_Hwi_getStackInfo__E {Abs}
                         0x1001b099          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_Hwi_initIsrStackSize
-                        0x0000b9f1     0xc  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000ba0d     0xc  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_initNVIC__E {Abs}
                         0x1001a171          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_Hwi_initStacks__E {Abs}
@@ -5113,9 +5113,9 @@ ti_sysbios_family_arm_m3_Hwi_setPriority__E {Abs}
 ti_sysbios_family_arm_m3_Hwi_startup__E {Abs}
                         0x1001c04b          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_Hwi_swiDisable__C
-                        0x00010698     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106b4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_swiRestoreHwi__C
-                        0x0001069c     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106b8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_family_arm_m3_Hwi_switchFromBootStack__E {Abs}
                         0x1001be35          Data  Gb  command line/config [4]
 ti_sysbios_family_arm_m3_TaskSupport_Module__startupDone__S {Abs}
@@ -5147,7 +5147,7 @@ ti_sysbios_gates_GateHwi_Module__root__V
 ti_sysbios_gates_GateHwi_Object__DESC__C
                         0x00001090    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateHwi_Object__PARAMS__C
-                        0x0001046c    0x18  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x00010488    0x18  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateHwi_Object__create__S {Abs}
                         0x1001b869          Data  Gb  command line/config [4]
 ti_sysbios_gates_GateHwi_Object__delete__S {Abs}
@@ -5173,7 +5173,7 @@ ti_sysbios_gates_GateMutex_Module__root__V
 ti_sysbios_gates_GateMutex_Object__DESC__C
                         0x000010b0    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateMutex_Object__PARAMS__C
-                        0x00010484    0x18  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000104a0    0x18  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_gates_GateMutex_Object__create__S {Abs}
                         0x1001b36d          Data  Gb  command line/config [4]
 ti_sysbios_gates_GateMutex_Object__delete__S {Abs}
@@ -5231,7 +5231,7 @@ ti_sysbios_hal_Hwi_Module_startup__E {Abs}
 ti_sysbios_hal_Hwi_Object__DESC__C
                         0x000010d0    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_hal_Hwi_Object__PARAMS__C
-                        0x0000fe60    0x2c  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x0000fe7c    0x2c  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_hal_Hwi_Object__delete__S {Abs}
                         0x1001ba19          Data  Gb  command line/config [4]
 ti_sysbios_hal_Hwi_create {Abs}
@@ -5251,47 +5251,47 @@ ti_sysbios_hal_Hwi_startup__E {Abs}
 ti_sysbios_hal_Hwi_switchFromBootStack__E {Abs}
                         0x1001be35          Data  Gb  command line/config [4]
 ti_sysbios_heaps_HeapCallback_Instance_init__E
-                        0x0000bb6d    0x18  Code  Wk  rom_sysbios.obj [22]
+                        0x0000bb89    0x18  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_heaps_HeapCallback_Module__FXNS__C
-                        0x0000fffc    0x28  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x00010018    0x28  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Module__root__V
                         0x200006e4     0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Module_startup__E
-                        0x0000fb45    0x38  Code  Wk  rom_sysbios.obj [22]
+                        0x0000fb61    0x38  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_heaps_HeapCallback_Object__DESC__C
-                        0x000102b8    0x20  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000102d4    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Object__PARAMS__C
-                        0x000103c0    0x1c  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000103dc    0x1c  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Object__count__C
-                        0x000106a0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106bc     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Object__create__S
-                        0x0000ba1f    0x2a  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000ba3b    0x2a  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Object__get__S
-                        0x0000ba0d    0x12  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000ba29    0x12  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_Object__table__V
                         0x200006ec     0xc  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_allocInstFxn__C
-                        0x000106a4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106c0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_alloc__E
-                        0x000105d5    0x10  Code  Wk  rom_sysbios.obj [22]
+                        0x000105f1    0x10  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_heaps_HeapCallback_createInstFxn__C
-                        0x000106a8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106c4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_defaultCreate
-                        0x000106e5     0x4  Code  Wk  rom_sysbios.obj [22]
+                        0x00010701     0x4  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_heaps_HeapCallback_freeInstFxn__C
-                        0x000106ac     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106c8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_free__E
-                        0x000105e5    0x10  Code  Wk  rom_sysbios.obj [22]
+                        0x00010601    0x10  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_heaps_HeapCallback_getStatsInstFxn__C
-                        0x000106b0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106cc     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_getStats__E
-                        0x0001062d     0xc  Code  Wk  rom_sysbios.obj [22]
+                        0x00010649     0xc  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_heaps_HeapCallback_initInstFxn__C
-                        0x000106b4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106d0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_isBlockingInstFxn__C
-                        0x000106b8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106d4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapCallback_isBlocking__E
-                        0x00010639     0xc  Code  Wk  rom_sysbios.obj [22]
+                        0x00010655     0xc  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_heaps_HeapMem_E_memory__C
                         0x00001228     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapMem_Handle__label__S {Abs}
@@ -5321,7 +5321,7 @@ ti_sysbios_heaps_HeapMem_Module__root__V
 ti_sysbios_heaps_HeapMem_Object__DESC__C
                         0x000010f0    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapMem_Object__PARAMS__C
-                        0x00010110    0x24  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x0001012c    0x24  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapMem_Object__count__C
                         0x00001230     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_heaps_HeapMem_Object__create__S {Abs}
@@ -5363,7 +5363,7 @@ ti_sysbios_knl_Clock_Module_startup__E {Abs}
 ti_sysbios_knl_Clock_Object__DESC__C
                         0x00001110    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_Object__PARAMS__C
-                        0x00010134    0x24  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x00010150    0x24  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_Object__delete__S {Abs}
                         0x1001b8b1          Data  Gb  command line/config [4]
 ti_sysbios_knl_Clock_Object__destruct__S {Abs}
@@ -5399,7 +5399,7 @@ ti_sysbios_knl_Clock_delete {Abs}
 ti_sysbios_knl_Clock_destruct {Abs}
                         0x1001c0dd          Data  Gb  command line/config [4]
 ti_sysbios_knl_Clock_doTick__I
-                        0x0000b9d9    0x18  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b9f5    0x18  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_getTicksUntilInterrupt__E
                         0x0000519d    0x30  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_knl_Clock_getTicks__E {Abs}
@@ -5427,7 +5427,7 @@ ti_sysbios_knl_Clock_stop__E {Abs}
 ti_sysbios_knl_Clock_tickMode__C
                         0x0000128e     0x1  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_tickPeriod__C
-                        0x000106bc     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106d8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_triggerClock__C
                         0x0000123c     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Clock_triggerFunc__I {Abs}
@@ -5435,7 +5435,7 @@ ti_sysbios_knl_Clock_triggerFunc__I {Abs}
 ti_sysbios_knl_Clock_walkQueueDynamic__E {Abs}
                         0x1001a2f1          Data  Gb  command line/config [4]
 ti_sysbios_knl_Clock_workFuncDynamic__E
-                        0x0000ea91    0x9c  Code  Wk  rom_sysbios.obj [22]
+                        0x0000eaad    0x9c  Code  Wk  rom_sysbios.obj [22]
 ti_sysbios_knl_Clock_workFunc__E {Abs}
                         0x1001a369          Data  Gb  command line/config [4]
 ti_sysbios_knl_Event_Instance_init__E {Abs}
@@ -5445,7 +5445,7 @@ ti_sysbios_knl_Event_Module__root__V
 ti_sysbios_knl_Event_Object__DESC__C
                         0x00001130    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Event_Object__PARAMS__C
-                        0x0001049c    0x18  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000104b8    0x18  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Event_Object__delete__S {Abs}
                         0x1001bad9          Data  Gb  command line/config [4]
 ti_sysbios_knl_Event_Object__destruct__S {Abs}
@@ -5471,7 +5471,7 @@ ti_sysbios_knl_Event_post__E {Abs}
 ti_sysbios_knl_Event_sync__E {Abs}
                         0x1001be6f          Data  Gb  command line/config [4]
 ti_sysbios_knl_Idle_funcList__A
-                        0x000106c0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106dc     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Idle_funcList__C
                         0x000011f0     0x8  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Idle_loop__E {Abs}
@@ -5489,7 +5489,7 @@ ti_sysbios_knl_Mailbox_Module_startup__E {Abs}
 ti_sysbios_knl_Mailbox_Object__DESC__C
                         0x00001150    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Mailbox_Object__PARAMS__C
-                        0x0000fc5c    0x34  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x0000fc78    0x34  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Mailbox_Object__count__C
                         0x00001240     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Mailbox_Object__delete__S {Abs}
@@ -5525,7 +5525,7 @@ ti_sysbios_knl_Queue_Module__root__V
 ti_sysbios_knl_Queue_Object__DESC__C
                         0x00001170    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Queue_Object__PARAMS__C
-                        0x000104b4    0x18  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000104d0    0x18  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Queue_Object__count__C
                         0x0000124c     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Queue_Object__delete__S {Abs}
@@ -5571,7 +5571,7 @@ ti_sysbios_knl_Semaphore_Module__root__V
 ti_sysbios_knl_Semaphore_Object__DESC__C
                         0x00001190    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Semaphore_Object__PARAMS__C
-                        0x00010158    0x24  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x00010174    0x24  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Semaphore_Object__delete__S {Abs}
                         0x1001b8d5          Data  Gb  command line/config [4]
 ti_sysbios_knl_Semaphore_Object__destruct__S {Abs}
@@ -5613,7 +5613,7 @@ ti_sysbios_knl_Swi_Module_startup__E {Abs}
 ti_sysbios_knl_Swi_Object__DESC__C
                         0x000011b0    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Swi_Object__PARAMS__C
-                        0x00010024    0x28  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x00010040    0x28  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Swi_Object__count__C
                         0x0000125c     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Swi_Object__delete__S {Abs}
@@ -5685,7 +5685,7 @@ ti_sysbios_knl_Task_Module_startup__E {Abs}
 ti_sysbios_knl_Task_Object__DESC__C
                         0x000011d0    0x20  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Object__PARAMS__C
-                        0x0000fa58    0x3c  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x0000fa74    0x3c  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Object__count__C
                         0x00001268     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_knl_Task_Object__delete__S {Abs}
@@ -5791,24 +5791,24 @@ ti_sysbios_rom_ROM_xdc_runtime_System_SupportProxy_abort__E
 ti_sysbios_rom_ROM_xdc_runtime_System_SupportProxy_exit__E
                         0x0000132c     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_rom_cortexm_cc26xx_r2_CC26xx_badRomLink__E
-                        0x0000b9d7     0x2  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b9f3     0x2  Code  Gb  app_ble_prm3.orm3 [3]
 ti_sysbios_rom_cortexm_cc26xx_r2_CC26xx_badRomRevision__E
-                        0x0000b9d5     0x2  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b9f1     0x2  Code  Gb  app_ble_prm3.orm3 [3]
 timeMSec                0x20002644     0x4  Data  Lc  osal_clock.o [8]
 trngCC26XXObjects       0x2000267c     0x1  Data  Gb  board.o [1]
-trngDriverTable         0x0000f5b0     0xc  Data  Gb  icall_user_config.o [1]
+trngDriverTable         0x0000f5cc     0xc  Data  Gb  icall_user_config.o [1]
 trngDrvTblPtr {Abs}     0x20004efc     0x4  Data  Gb  ble_r2.symbols [2]
 trxTestCmd              0x200025ac    0x1c  Data  Wk  ble.o [7]
 txTestOut {Abs}         0x20004e94     0x4  Data  Gb  ble_r2.symbols [2]
 txTestParam {Abs}       0x20004dc4    0x10  Data  Gb  ble_r2.symbols [2]
 uartAppTaskId           0x200009d5     0x1  Data  Lc  npi.o [8]
-uartCC26XXHWAttrs       0x0000b3a8    0x20  Data  Gb  board.o [1]
+uartCC26XXHWAttrs       0x0000b3c4    0x20  Data  Gb  board.o [1]
 uartCC26XXObjects       0x2000142c   0x12c  Data  Gb  board.o [1]
 uartPostNotify          0x00009491    0x10  Code  Lc  UARTCC26XX.orm3 [17]
 uartRxPowerConstraint   0x2000267f     0x1  Data  Lc  UARTCC26XX.orm3 [17]
 uartStringBuf           0x20000d64    0x80  Data  Lc  board.o [1]
 uartTxPowerConstraint   0x20002680     0x1  Data  Lc  UARTCC26XX.orm3 [17]
-udmaHWAttrs             0x0000b3d8     0x8  Data  Gb  board.o [1]
+udmaHWAttrs             0x0000b3f4     0x8  Data  Gb  board.o [1]
 udmaObjects             0x20001558    0x20  Data  Gb  board.o [1]
 user0Cfg                0x20000628    0x10  Data  Gb  main.o [1]
 verInfo {Abs}           0x20004e60     0x8  Data  Gb  ble_r2.symbols [2]
@@ -5819,7 +5819,7 @@ writeFinishedDoCallback
                         0x00008c9d    0x60  Code  Lc  UARTCC26XX.orm3 [17]
 writeSemCallback        0x00008bc7     0x8  Code  Lc  UARTCC26XX.orm3 [17]
 writeTxFifoFlush        0x00008cfd    0x70  Code  Lc  UARTCC26XX.orm3 [17]
-writeWord               0x0000bef7    0x70  Code  Lc  osal_snv_wrapper.o [8]
+writeWord               0x0000bf13    0x70  Code  Lc  osal_snv_wrapper.o [8]
 xdc_runtime_Assert_E_assertFailed__C
                         0x000012a0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Assert_raise__I {Abs}
@@ -5903,27 +5903,27 @@ xdc_runtime_Startup_execImpl__C
 xdc_runtime_Startup_exec__E {Abs}
                         0x1001c415          Data  Gb  command line/config [4]
 xdc_runtime_Startup_exec__I
-                        0x0000b865    0x10  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b881    0x10  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_firstFxns__A
-                        0x000105c4    0x10  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000105e0    0x10  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_firstFxns__C
                         0x00001290     0x8  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_getState__I
-                        0x0000b7dd    0x88  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b7f9    0x88  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_lastFxns__C
                         0x00001298     0x8  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_maxPasses__C
                         0x000012c4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_reset__I
-                        0x0000b875    0x32  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b891    0x32  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_rtsDone__E {Abs}
                         0x1001c769          Data  Gb  command line/config [4]
 xdc_runtime_Startup_sfxnRts__A
-                        0x00010574    0x14  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x00010590    0x14  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_sfxnRts__C
                         0x000012c8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_sfxnTab__A
-                        0x0001004c    0x28  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x00010068    0x28  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_sfxnTab__C
                         0x000012cc     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Startup_startModsFxn__C
@@ -5935,25 +5935,25 @@ xdc_runtime_SysCallback_abortFxn__C
 xdc_runtime_SysCallback_abort__E {Abs}
                         0x1001c715          Data  Gb  command line/config [4]
 xdc_runtime_SysCallback_defaultAbort
-                        0x0000a5af     0x2  Code  Wk  rom_sysbios.obj [22]
+                        0x0000a5cb     0x2  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_SysCallback_defaultExit
-                        0x0000ad03     0x2  Code  Wk  rom_sysbios.obj [22]
+                        0x0000ad1f     0x2  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_SysCallback_defaultPutch
-                        0x0000b76b     0x2  Code  Wk  rom_sysbios.obj [22]
+                        0x0000b787     0x2  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_SysCallback_defaultReady
-                        0x000106e9     0x4  Code  Wk  rom_sysbios.obj [22]
+                        0x00010705     0x4  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_SysCallback_exitFxn__C
                         0x000012d8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_SysCallback_exit__E {Abs}
                         0x1001c725          Data  Gb  command line/config [4]
 xdc_runtime_SysCallback_putchFxn__C
-                        0x000106c4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106e0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_SysCallback_putch__E
-                        0x0000bb55     0xc  Code  Wk  rom_sysbios.obj [22]
+                        0x0000bb71     0xc  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_SysCallback_readyFxn__C
-                        0x000106c8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106e4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_SysCallback_ready__E
-                        0x0000bb61     0xc  Code  Wk  rom_sysbios.obj [22]
+                        0x0000bb7d     0xc  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_System_Module_GateProxy_Handle__label__S {Abs}
                         0x1001b999          Data  Gb  command line/config [4]
 xdc_runtime_System_Module_GateProxy_Object__delete__S {Abs}
@@ -5969,13 +5969,13 @@ xdc_runtime_System_Module__state__V
 xdc_runtime_System_Module_startup__E {Abs}
                         0x1001c78f          Data  Gb  command line/config [4]
 xdc_runtime_System_SupportProxy_abort__E
-                        0x0000b9fd     0x4  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000ba19     0x4  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_SupportProxy_exit__E
-                        0x0000ba01     0x4  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000ba1d     0x4  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_SupportProxy_putch__E
-                        0x0000ba05     0x4  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000ba21     0x4  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_SupportProxy_ready__E
-                        0x0000ba09     0x4  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000ba25     0x4  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_abortFxn__C
                         0x000012dc     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_abortSpin__E {Abs}
@@ -5985,7 +5985,7 @@ xdc_runtime_System_abort__E {Abs}
 xdc_runtime_System_atexit__E {Abs}
                         0x1001c581          Data  Gb  command line/config [4]
 xdc_runtime_System_doPrint__I
-                        0x0000b3fd   0x2c0  Code  Wk  rom_sysbios.obj [22]
+                        0x0000b419   0x2c0  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_System_exitFxn__C
                         0x000012e0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_exitSpin__E {Abs}
@@ -5993,19 +5993,19 @@ xdc_runtime_System_exitSpin__E {Abs}
 xdc_runtime_System_exit__E {Abs}
                         0x1001c6d5          Data  Gb  command line/config [4]
 xdc_runtime_System_extendFxn__C
-                        0x000106cc     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106e8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_maxAtexitHandlers__C
                         0x000012e4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_printfExtend__I
-                        0x0000b8a7    0xba  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b8c3    0xba  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_System_processAtExit__E {Abs}
                         0x1001c5ed          Data  Gb  command line/config [4]
 xdc_runtime_System_vsnprintf__E
-                        0x0000bd65    0x10  Code  Wk  rom_sysbios.obj [22]
+                        0x0000bd81    0x10  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_Text_charCnt__C
                         0x000012fc     0x2  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Text_charTab__A
-                        0x0000ce36     0x1  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x0000ce52     0x1  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Text_charTab__C
                         0x000012e8     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Text_cordText__E {Abs}
@@ -6019,9 +6019,9 @@ xdc_runtime_Text_nameStatic__C
 xdc_runtime_Text_nameUnknown__C
                         0x000012f4     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Text_putLab__E
-                        0x0000ba75    0x60  Code  Wk  rom_sysbios.obj [22]
+                        0x0000ba91    0x60  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_Text_putSite__E
-                        0x0000bad5    0x80  Code  Wk  rom_sysbios.obj [22]
+                        0x0000baf1    0x80  Code  Wk  rom_sysbios.obj [22]
 xdc_runtime_Text_registryModsLastId__C
                         0x00005132     0x2  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Text_ropeText__E {Abs}
@@ -6029,9 +6029,9 @@ xdc_runtime_Text_ropeText__E {Abs}
 xdc_runtime_Text_unnamedModsLastId__C
                         0x00006002     0x2  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Text_visitRopeFxn__C
-                        0x000106d0     0x4  Data  Gb  app_ble_prm3.orm3 [3]
+                        0x000106ec     0x4  Data  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Text_visitRope__I
-                        0x0000b961     0x8  Code  Gb  app_ble_prm3.orm3 [3]
+                        0x0000b97d     0x8  Code  Gb  app_ble_prm3.orm3 [3]
 xdc_runtime_Timestamp_SupportProxy_get32__E {Abs}
                         0x1001c735          Data  Gb  command line/config [4]
 xdc_runtime_Timestamp_SupportProxy_get64__E {Abs}
@@ -6071,7 +6071,7 @@ xor_128 {Abs}           0x1001284d    0x14  Code  Gb  ble_r2.symbols [2]
 [22] = rom_sysbios.arm3
 [23] = rt7M_tl.a
 
-  52 288 bytes of readonly  code memory
+  52 316 bytes of readonly  code memory
   15 752 bytes of readonly  data memory
    9 845 bytes of readwrite data memory
 
