@@ -218,6 +218,8 @@ extern char *Util_convertBdAddr2Str(uint8_t *pAddr);
  */
 extern uint8_t Util_isBufSet(uint8_t *pBuf, uint8_t pattern, uint16_t len);
 
+extern void reverse(uint8_t s[], uint8_t slen);
+
 
 /*********************************************************************
 *********************************************************************/

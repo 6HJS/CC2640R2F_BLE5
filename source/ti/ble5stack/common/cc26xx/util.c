@@ -421,6 +421,14 @@ uint8_t Util_isBufSet(uint8_t *pBuf, uint8_t pattern, uint16_t len)
   return (result);
 }
 
+void reverse(uint8_t s[], uint8_t slen){
+	int c, i, j;
+	for(i = 0, j = slen-1; i < j; i++, j--){
+		c = s[i];
+		s[i] = s[j];
+		s[j] =  c;
+	}
+}
 
 /*********************************************************************
 *********************************************************************/

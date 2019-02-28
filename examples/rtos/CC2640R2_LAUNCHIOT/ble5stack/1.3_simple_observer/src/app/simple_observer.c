@@ -69,6 +69,8 @@
 
 #include "hw_gpio.h"
 #include "hw_uart.h"
+
+#include <string.h>
 /*********************************************************************
  * MACROS
  */
@@ -290,7 +292,6 @@ void SimpleBLEObserver_init(void)
   HwGPIOSet(Board_RLED,1);
   
   HwUARTInit();
-  HwUARTWrite("Scanner Start\r\n",15);
 }
 
 /*********************************************************************
@@ -353,6 +354,9 @@ static void SimpleBLEObserver_taskFxn(UArg a0, UArg a1)
         }
       }
     }
+    GAPObserverRole_StartDiscovery(DEFAULT_DISCOVERY_MODE, ////////AUTO start SCAN
+                                       DEFAULT_DISCOVERY_ACTIVE_SCAN,
+                                       DEFAULT_DISCOVERY_WHITE_LIST);
   }
 }
 
@@ -501,6 +505,7 @@ static void SimpleBLEObserver_processRoleEvent(gapObserverRoleEvent_t *pEvent)
 
         // Prompt user to begin scanning.
         Display_print0(dispHandle, 5, 0, "Discover ->");
+        
       }
       break;
 
@@ -508,8 +513,22 @@ static void SimpleBLEObserver_processRoleEvent(gapObserverRoleEvent_t *pEvent)
       {
         SimpleBLEObserver_addDeviceInfo(pEvent->deviceInfo.addr,
                                         pEvent->deviceInfo.addrType, pEvent->deviceInfo.pEvtData, pEvent->deviceInfo.dataLen);
-        HwUARTWrite((char *)Util_convertBdAddr2Str(pEvent->deviceInfo.addr),14);
-        HwUARTWrite("\r\n",2);
+        
+        if(strstr(pEvent->deviceInfo.pEvtData,"CPS") != NULL){
+          HwUARTPrintf("%c%c%c",0xEF,0xAA,0xAD); // log device address
+          reverse(pEvent->deviceInfo.addr, 6);
+          HwUARTWrite(pEvent->deviceInfo.addr,6);
+          HwUARTPrintf("%c",0x00);
+          
+          HwUARTPrintf("%c",0xC1);//log RSSI
+          HwUARTPrintf("%c",pEvent->deviceInfo.rssi);
+          HwUARTPrintf("%c",0x00);
+          
+          HwUARTPrintf("%c",0xDA);//log data
+          HwUARTWrite(pEvent->deviceInfo.pEvtData,pEvent->deviceInfo.dataLen);
+          HwUARTPrintf("%c",0x00);
+          HwUARTPrintf("%c%c",0xAA,0xFE);
+        }
       }
       break;
 

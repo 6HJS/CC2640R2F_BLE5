@@ -196,9 +196,10 @@ static uint8 advertData[] =
   // Flags; this sets the device to use limited discoverable
   // mode (advertises for 30 seconds at a time) instead of general
   // discoverable mode (advertises indefinitely)
-  0x02,   // length of this data
-  GAP_ADTYPE_FLAGS,
-  GAP_ADTYPE_FLAGS_BREDR_NOT_SUPPORTED,
+  0x03,   // length of this data
+  'C',  //43
+  'P',  //50
+  'S',  //53
 
 #ifndef BEACON_FEATURE
 
