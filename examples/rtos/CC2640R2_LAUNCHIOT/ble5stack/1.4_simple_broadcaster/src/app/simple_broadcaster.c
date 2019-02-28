@@ -485,6 +485,11 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
 
       if (events & SBB_TIMER_PERIODIC_EVT)
       {
+        if(gled_s){
+          SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
+        }else{
+          SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
+        }
         HwGPIOSet(Board_GLED,gled_s);
         gled_s = ~gled_s;
       }
@@ -587,12 +592,18 @@ static void SimpleBLEBroadcaster_processStateChangeEvt(gaprole_States_t newState
     case GAPROLE_ADVERTISING:
       {
         Display_print0(dispHandle, 2, 0, "Advertising");
+        uint8_t param = TRUE;
+        GAPRole_SetParameter(GAPROLE_ADVERT_ENABLED, sizeof(uint8_t),
+                         &param);
       }
       break;
 
     case GAPROLE_WAITING:
       {
         Display_print0(dispHandle, 2, 0, "Waiting");
+        uint8_t param = FALSE;
+        GAPRole_SetParameter(GAPROLE_ADVERT_ENABLED, sizeof(uint8_t),
+                         &param);
       }
       break;
 
