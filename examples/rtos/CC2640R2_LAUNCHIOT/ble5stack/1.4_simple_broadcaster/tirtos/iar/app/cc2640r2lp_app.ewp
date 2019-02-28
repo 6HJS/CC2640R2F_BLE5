@@ -214,8 +214,8 @@
                     <state>BOARD_DISPLAY_USE_LCD=1</state>
                     <state>BOARD_DISPLAY_USE_UART=1</state>
                     <state>BOARD_DISPLAY_USE_UART_ANSI=1</state>
-                    <state>CC2640R2MOD_RGZ</state>
-                    <state>_CC2640R2MOD_RSM</state>
+                    <state>_CC2640R2MOD_RGZ</state>
+                    <state>CC2640R2MOD_RSM</state>
                     <state>CC26XX</state>
                     <state>CC26XX_R2</state>
                     <state>DeviceFamily_CC26X0R2</state>
@@ -1287,6 +1287,7 @@
                     <state>BOARD_DISPLAY_USE_UART=1</state>
                     <state>BOARD_DISPLAY_USE_UART_ANSI=1</state>
                     <state>CC2640R2MOD_RGZ</state>
+                    <state>CC2640R2MOD_RSM</state>
                     <state>CC26XX</state>
                     <state>CC26XX_R2</state>
                     <state>DeviceFamily_CC26X0R2</state>
@@ -1455,6 +1456,7 @@
                     <state>$EXAMPLE_BLE_ROOT$\..\target\LAUNCHIOT_CC2640R2MOD_RGZ</state>
                     <state>$EXAMPLE_BLE_ROOT$\src\driver\gpio</state>
                     <state>$EXAMPLE_BLE_ROOT$\..\common\display</state>
+                    <state>C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\target\LAUNCHIOT_CC2640R2MOD_RSM</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>

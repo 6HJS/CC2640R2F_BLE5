@@ -104,7 +104,8 @@
 #endif
 
 // How often to perform periodic event (in msec)
-#define SBB_PERIODIC_EVT_PERIOD               60000
+#define SBB_PERIODIC_EVT_PERIOD               10000
+#define SBB_PERIODIC_ADV_PERIOD               200
 
 #define SBB_STATE_CHANGE_EVT                  0x0001
 
@@ -363,7 +364,7 @@ static void SimpleBLEBroadcaster_init(void)
   // Setup the GAP Broadcaster Role Profile
   {
     // For all hardware platforms, device starts advertising upon initialization
-    uint8_t initial_advertising_enable = TRUE; // turn off, advertise every 5min
+    uint8_t initial_advertising_enable = TRUE; 
 
     // By setting this to zero, the device will go into the waiting state after
     // being discoverable for 30.72 second, and will not being advertising again
@@ -381,6 +382,7 @@ static void SimpleBLEBroadcaster_init(void)
                          &initial_advertising_enable);
     GAPRole_SetParameter(GAPROLE_ADVERT_OFF_TIME, sizeof(uint16_t),
                          &gapRole_AdvertOffTime);
+    GAP_SetParamValue (TGAP_LIM_ADV_TIMEOUT, 1);
 
     GAPRole_SetParameter(GAPROLE_SCAN_RSP_DATA, sizeof (scanRspData),
                          scanRspData);
@@ -487,8 +489,10 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
       {
         if(gled_s){
           SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
+          Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
         }else{
           SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
+          Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_EVT_PERIOD);
         }
         HwGPIOSet(Board_GLED,gled_s);
         gled_s = ~gled_s;
