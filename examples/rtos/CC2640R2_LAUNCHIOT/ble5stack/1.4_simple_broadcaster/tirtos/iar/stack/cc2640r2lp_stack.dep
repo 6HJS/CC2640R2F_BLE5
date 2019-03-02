@@ -80,6 +80,7 @@
             <file>$PROJ_DIR$\..\..\..\src\stack\osal_icall_ble.c</file>
             <file>$PROJ_DIR$\FlashROM_Library\Obj\osal_timers.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\devices\cc26x0r2\inc\hw_nvic.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\common\cc26xx\iar\cc26xx_stack.icf</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\common\cc26xx\onboard.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\devices\cc26x0r2\driverlib\cpu.h</file>
             <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
@@ -106,6 +107,7 @@
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\icall\stack\ble_dispatch_JT.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\target\_common\hal_trng_wrapper.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\target\_common\hal_flash_wrapper.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\target\_common\hal_rtc_wrapper.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\icall\inc\ble_dispatch.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\inc\osal_bufmgr.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\inc\osal_clock.h</file>
@@ -118,11 +120,13 @@
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\inc\comdef.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\icall\src\icall_lite_translation.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\inc\osal_pwrmgr.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\inc\osal_task.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\common\osal_timers.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\profiles\roles\gap.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\rom\r2\common_rom_init.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\target\_common\hal_trng_wrapper.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\common\cc26xx\npi\stack\npi.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\rom\r2\rom_flash_jt.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\common\osal_clock.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\icall\stack\ble_dispatch_lite.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\common\osal.c</file>
@@ -209,8 +213,10 @@
             <file>$PROJ_DIR$\FlashROM_Library\Obj\common_rom_init.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\target\_common\hal_types.h</file>
             <file>$PROJ_DIR$\FlashROM_Library\Obj\onboard.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_uart.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\target\_common\hal_mcu.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_defs.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_lcd.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_sleep.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_timer.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_key.h</file>
@@ -218,13 +224,14 @@
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\common\hal_assert.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_assert.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_board.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\inc\hal_led.h</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>IARCHIVE</name>
-                    <file> 193</file>
+                    <file> 197</file>
                 </tool>
             </outputs>
         </file>
@@ -237,13 +244,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 172</file>
+                    <file> 176</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 83 110 202 197 77 71 85 36 66 176 205 188 189 196 33 122 75 157 175 90 156 31 74 168 24 5 164 12 0 27 173 137 45 56 76 65 49 18 140 142 15 2 163 23 165 127 34 13 1 169 11 146 204 22 124 51 129 149 47 123 136 147 143 6 20 211 206 106 50 104 95 112 102 97 144 30 3 131 141 99 185 89 61 180 155 54 182 154 166 177 152 178 7 62 153 134 16 181 184 39 101 17 29 41 135 139 9 132 179 158 125 32 43 130 25 42 26 150 40</file>
+                    <file> 81 190 82 84 112 206 201 78 71 86 36 66 180 210 192 193 200 33 126 76 161 179 91 160 31 74 172 24 5 168 12 0 27 177 141 45 56 77 65 49 18 144 146 15 2 167 23 169 131 34 13 1 173 11 150 209 22 128 51 133 153 47 127 140 151 147 6 20 217 212 108 50 106 96 114 104 98 148 30 3 135 145 100 189 90 61 184 159 54 186 158 170 181 156 182 7 62 157 138 16 185 188 39 103 17 29 41 139 143 9 136 183 162 129 32 43 134 25 42 26 154 40</file>
                 </tool>
             </inputs>
         </file>
@@ -256,13 +263,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 200</file>
+                    <file> 204</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 147 189 77 71 85 36 66 176 143 6 20 211 202 197 205 204 74 90 188 196 22 175 124 56 45 76 65 49 51 34 129 149 47 27 137 123 136 106 50 110 104 95 84 108 3 83 97 125 32 30 144 131 141 154 166 155 177 152 178 7 62 153 134 16 181 184 39 101 82 128 138 132 9 139 158 179 145 174 14 19 135 151 17 29 102 33 122</file>
+                    <file> 81 190 82 151 193 78 71 86 36 66 180 147 6 20 217 206 201 210 209 74 91 192 200 22 179 128 56 45 77 65 49 51 34 133 153 47 27 141 127 140 108 50 112 106 96 85 110 3 84 98 129 32 30 148 135 145 158 170 159 181 156 182 7 62 157 138 16 185 188 39 103 83 132 142 136 9 143 162 183 149 178 14 19 139 155 17 29 104 33 126</file>
                 </tool>
             </inputs>
         </file>
@@ -271,17 +278,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 91</file>
+                    <file> 92</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 167</file>
+                    <file> 171</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 202 197 77 71 85 36 66 176 17 177 189 152 178 6 7 62 153 134 16 181 184 39 155 106 50 110 205 104 95 147 143 20 211 3 83 29 182 154 166 101</file>
+                    <file> 81 190 82 206 201 78 71 86 36 66 180 17 181 193 156 182 6 7 62 157 138 16 185 188 39 159 108 50 112 210 106 96 151 147 20 217 3 84 29 186 158 170 103</file>
                 </tool>
             </inputs>
         </file>
@@ -294,13 +301,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 203</file>
+                    <file> 207</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 83 110 202 197 77 71 85 36 66 176 205 75 157 189 188 196 175 90 156 31 74 168 24 5 164 12 0 27 173 137 45 56 76 65 49 18 140 142 15 2 163 23 165 127 34 13 1 169 11 146 204 22 124 51 129 149 47 123 136 147 143 6 20 211 206 106 50 104 95 96 208 212</file>
+                    <file> 81 190 82 84 112 206 201 78 71 86 36 66 180 210 76 161 193 192 200 179 91 160 31 74 172 24 5 168 12 0 27 177 141 45 56 77 65 49 18 144 146 15 2 167 23 169 131 34 13 1 173 11 150 209 22 128 51 133 153 47 127 140 151 147 6 20 217 212 108 50 106 96 97 214 218</file>
                 </tool>
             </inputs>
         </file>
@@ -313,13 +320,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 183</file>
+                    <file> 187</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 202 197 77 71 85 36 66 176 33 122 147 189 143 6 20 211 205</file>
+                    <file> 81 190 82 206 201 78 71 86 36 66 180 33 126 151 193 147 6 20 217 210</file>
                 </tool>
             </inputs>
         </file>
@@ -338,7 +345,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 106 50 71 85 36 66 176 110 202 197 77 205 104 95 147 189 143 6 20 211 84 204 74 90 188 196 22 175 124 56 45 76 65 49 51 34 129 149 47 27 137 123 136 97 83</file>
+                    <file> 81 190 82 108 50 71 86 36 66 180 112 206 201 78 210 106 96 151 193 147 6 20 217 85 209 74 91 192 200 22 179 128 56 45 77 65 49 51 34 133 153 47 27 141 127 140 98 84</file>
                 </tool>
             </inputs>
         </file>
@@ -351,13 +358,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 126</file>
+                    <file> 130</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 108 202 197 77 71 85 36 66 176 102 99 188 189 196 185 89 175 90 56 45 74 76 65 49 32 83 110 205 106 50 104 95 147 143 6 20 211 30 3 125 132 9 139 158 144 131 141 135 4 179 19 145 174 14 151 17 177 152 178 7 62 153 134 16 181 184 39 155 29 33 122 101 138 128</file>
+                    <file> 81 190 82 110 206 201 78 71 86 36 66 180 104 100 192 193 200 189 90 179 91 56 45 74 77 65 49 32 84 112 210 108 50 106 96 151 147 6 20 217 30 3 129 136 9 143 162 148 135 145 139 4 183 19 149 178 14 155 17 181 156 182 7 62 157 138 16 185 188 39 159 29 33 126 103 142 132</file>
                 </tool>
             </inputs>
         </file>
@@ -370,13 +377,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 133</file>
+                    <file> 137</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 212 96 204 77 71 85 36 66 176 205 202 197 74 90 188 189 196 22 175 124 56 45 76 65 49 51 34 129 149 47 27 137 123 136 147 143 6 20 211</file>
+                    <file> 81 190 82 218 97 209 78 71 86 36 66 180 210 206 201 74 91 192 193 200 22 179 128 56 45 77 65 49 51 34 133 153 47 27 141 127 140 151 147 6 20 217</file>
                 </tool>
             </inputs>
         </file>
@@ -385,7 +392,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 170</file>
+                    <file> 174</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -395,7 +402,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 110 202 197 77 71 85 36 66 176 205 106 50 104 95 147 189 143 6 20 211 82</file>
+                    <file> 81 190 82 112 206 201 78 71 86 36 66 180 210 108 50 106 96 151 193 147 6 20 217 83</file>
                 </tool>
             </inputs>
         </file>
@@ -408,13 +415,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 191</file>
+                    <file> 195</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 110 202 197 77 71 85 36 66 176 205 75 157 189 188 196 175 90 156 31 74 168 24 5 164 12 0 27 173 137 45 56 76 65 49 18 140 142 15 2 163 23 165 127 34 13 1 169 11 146 204 22 124 51 129 149 47 123 136 147 143 6 20 211 206 106 50 104 95 84 112 82</file>
+                    <file> 81 190 82 112 206 201 78 71 86 36 66 180 210 76 161 193 192 200 179 91 160 31 74 172 24 5 168 12 0 27 177 141 45 56 77 65 49 18 144 146 15 2 167 23 169 131 34 13 1 173 11 150 209 22 128 51 133 153 47 127 140 151 147 6 20 217 212 108 50 106 96 85 114 83</file>
                 </tool>
             </inputs>
         </file>
@@ -427,13 +434,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 199</file>
+                    <file> 203</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 108 202 197 77 71 85 36 66 176 159 16 6 181 209 212 96 204 205 74 90 188 189 196 22 175 124 56 45 76 65 49 51 34 129 149 47 27 137 123 136 147 143 20 211 10 162 106 50 110 104 95 11 146 28 86</file>
+                    <file> 81 190 82 110 206 201 78 71 86 36 66 180 163 16 6 185 215 218 97 209 210 74 91 192 193 200 22 179 128 56 45 77 65 49 51 34 133 153 47 27 141 127 140 151 147 20 217 10 166 108 50 112 106 96 11 150 28 87</file>
                 </tool>
             </inputs>
         </file>
@@ -452,7 +459,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 106 50 71 85 36 66 176 110 202 197 77 205 104 95 147 189 143 6 20 211 128</file>
+                    <file> 81 190 82 108 50 71 86 36 66 180 112 206 201 78 210 106 96 151 193 147 6 20 217 132</file>
                 </tool>
             </inputs>
         </file>
@@ -461,7 +468,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 79</file>
+                    <file> 80</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -471,7 +478,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 110 202 197 77 71 85 36 66 176 205 75 157 189 188 196 175 90 156 31 74 168 24 5 164 12 0 27 173 137 45 56 76 65 49 18 140 142 15 2 163 23 165 127 34 13 1 169 11 146 204 22 124 51 129 149 47 123 136 147 143 6 20 211 206 106 50 104 95 207 212 96 103 82</file>
+                    <file> 81 190 82 112 206 201 78 71 86 36 66 180 210 76 161 193 192 200 179 91 160 31 74 172 24 5 168 12 0 27 177 141 45 56 77 65 49 18 144 146 15 2 167 23 169 131 34 13 1 173 11 150 209 22 128 51 133 153 47 127 140 151 147 6 20 217 212 108 50 106 96 213 218 97 105 83</file>
                 </tool>
             </inputs>
         </file>
@@ -490,7 +497,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 83 110 202 197 77 71 85 36 66 176 205 125 106 50 104 95 147 189 143 6 20 211 32 30 3 145</file>
+                    <file> 81 190 82 84 112 206 201 78 71 86 36 66 180 210 129 108 50 106 96 151 193 147 6 20 217 32 30 3 149</file>
                 </tool>
             </inputs>
         </file>
@@ -503,13 +510,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 201</file>
+                    <file> 205</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81</file>
+                    <file> 81 190 82</file>
                 </tool>
             </inputs>
         </file>
@@ -522,13 +529,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 195</file>
+                    <file> 199</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 188 77 71 85 36 66 176 189 196 156 99 202 197 185 89 175 90 56 45 74 76 65 49</file>
+                    <file> 81 190 82 192 78 71 86 36 66 180 193 200 160 100 206 201 189 90 179 91 56 45 74 77 65 49</file>
                 </tool>
             </inputs>
         </file>
@@ -537,17 +544,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 88</file>
+                    <file> 89</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 187</file>
+                    <file> 191</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 202 197 77 71 85 36 66 176 59 106 50 110 205 104 95 147 189 143 6 20 211 4 83</file>
+                    <file> 81 190 82 206 201 78 71 86 36 66 180 59 108 50 112 210 106 96 151 193 147 6 20 217 4 84</file>
                 </tool>
             </inputs>
         </file>
@@ -556,17 +563,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 160</file>
+                    <file> 164</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 198</file>
+                    <file> 202</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 110 202 197 77 71 85 36 66 176 205 212 96 204 74 90 188 189 196 22 175 124 56 45 76 65 49 51 34 129 149 47 27 137 123 136 147 143 6 20 211 75 157 156 31 168 24 5 164 12 0 173 18 140 142 15 2 163 23 165 127 13 1 169 11 146 206 106 50 104 95 103</file>
+                    <file> 81 190 82 112 206 201 78 71 86 36 66 180 210 218 97 209 74 91 192 193 200 22 179 128 56 45 77 65 49 51 34 133 153 47 27 141 127 140 151 147 6 20 217 76 161 160 31 172 24 5 168 12 0 177 18 144 146 15 2 167 23 169 131 13 1 173 11 150 212 108 50 106 96 105</file>
                 </tool>
             </inputs>
         </file>
@@ -579,13 +586,13 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 192</file>
+                    <file> 196</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 108 202 197 77 71 85 36 66 176 102 101 138 32 83 110 205 106 50 104 95 147 189 143 6 20 211 30 3 125 132 9 139 158 179 145 174 14 144 131 141 19 135 151 17 177 152 178 7 62 153 134 16 181 184 39 155 29 33 122 128</file>
+                    <file> 81 190 82 110 206 201 78 71 86 36 66 180 104 103 142 32 84 112 210 108 50 106 96 151 193 147 6 20 217 30 3 129 136 9 143 162 183 149 178 14 148 135 145 19 139 155 17 181 156 182 7 62 157 138 16 185 188 39 159 29 33 126 132</file>
                 </tool>
             </inputs>
         </file>
@@ -594,7 +601,45 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 171</file>
+                    <file> 175</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 198</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 81 190 82 16 71 86 36 66 180 6 185 112 206 201 78 210 218 97 209 74 91 192 193 200 22 179 128 56 45 77 65 49 51 34 133 153 47 27 141 127 140 151 147 20 217 108 50 106 96 85 114 105 76 161 160 31 172 24 5 168 12 0 177 18 144 146 15 2 167 23 169 131 13 1 173 11 150 212 68 83</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\common\osal_bufmgr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 152</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 81 190 82 108 50 71 86 36 66 180 112 206 201 78 210 106 96 151 193 147 6 20 217 76 161 192 200 179 91 160 31 74 172 24 5 168 12 0 27 177 141 45 56 77 65 49 18 144 146 15 2 167 23 169 131 34 13 1 173 11 150 209 22 128 51 133 153 47 127 140 212 104</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\common\hal_assert.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 165</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -604,45 +649,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 80 186 81 16 71 85 36 66 176 6 181 110 202 197 77 205 212 96 204 74 90 188 189 196 22 175 124 56 45 76 65 49 51 34 129 149 47 27 137 123 136 147 143 20 211 106 50 104 95 84 112 103 75 157 156 31 168 24 5 164 12 0 173 18 140 142 15 2 163 23 165 127 13 1 169 11 146 206 68 82</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\osal\src\common\osal_bufmgr.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 92</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 148</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 80 186 81 106 50 71 85 36 66 176 110 202 197 77 205 104 95 147 189 143 6 20 211 75 157 188 196 175 90 156 31 74 168 24 5 164 12 0 27 173 137 45 56 76 65 49 18 140 142 15 2 163 23 165 127 34 13 1 169 11 146 204 22 124 51 129 149 47 123 136 206 102</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\ble5stack\hal\src\common\hal_assert.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 161</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 190</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 80 186 81 211 202 197 77 71 85 36 66 176 205 212 96 204 74 90 188 189 196 22 175 124 56 45 76 65 49 51 34 129 149 47 27 137 123 136 147 143 6 20</file>
+                    <file> 81 190 82 217 206 201 78 71 86 36 66 180 210 218 97 209 74 91 192 193 200 22 179 128 56 45 77 65 49 51 34 133 153 47 27 141 127 140 151 147 6 20</file>
                 </tool>
             </inputs>
         </file>
