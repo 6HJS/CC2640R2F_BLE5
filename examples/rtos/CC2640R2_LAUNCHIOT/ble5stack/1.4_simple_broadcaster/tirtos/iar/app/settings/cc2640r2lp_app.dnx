@@ -14,13 +14,13 @@
     <XdsDriver>
         <xds110serialNo>GY005860</xds110serialNo>
         <xds110foundProbes />
-        <xdsResetStyle>0</xdsResetStyle>
-        <xdsResetStrategy>3</xdsResetStrategy>
         <CStepIntDis>_ 0</CStepIntDis>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <xdsResetStyle>0</xdsResetStyle>
+        <xdsResetStrategy>3</xdsResetStrategy>
     </XdsDriver>
     <DebugChecksum>
-        <Checksum>371960802</Checksum>
+        <Checksum>516851663</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -120,6 +120,12 @@
         <ShowTimeSum>1</ShowTimeSum>
         <SumSortOrder>0</SumSortOrder>
     </EventLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -129,6 +135,11 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
+    <Aliases>
+        <A0>_ "C:\Users\sdtest\simplelink_development\main_packages\MAIN\repo\source\ti\ble5stack\host\sm_pairing.c" ""</A0>
+        <Count>1</Count>
+        <SuppressDialog>1</SuppressDialog>
+    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>3</Mode>
@@ -151,14 +162,4 @@
         <Probe2>Energy</Probe2>
         <ProbeSetup2>4 1 1 10 0 0</ProbeSetup2>
     </PowerProbe>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Count>0</Count>
-    </Breakpoints2>
-    <Aliases>
-        <Count>0</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
 </settings>

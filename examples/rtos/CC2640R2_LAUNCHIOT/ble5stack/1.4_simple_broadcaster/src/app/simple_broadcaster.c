@@ -72,6 +72,7 @@
 #include "simple_broadcaster.h"
 
 #include "hw_gpio.h"
+#include "myiotboard_key.h"
 /*********************************************************************
  * MACROS
  */
@@ -108,6 +109,7 @@
 #define SBB_PERIODIC_ADV_PERIOD               200
 
 #define SBB_STATE_CHANGE_EVT                  0x0001
+#define SBP_KEY_CHANGE_EVT                    0x0004
 
 // Internal Events for RTOS application
 #define SBB_ICALL_EVT                         ICALL_MSG_EVENT_ID // Event_Id_31
@@ -139,6 +141,7 @@ typedef struct
 Display_Handle dispHandle = NULL;
 
 uint8_t gled_s= 0;
+uint8_t load = 0;
 
 /*********************************************************************
  * EXTERNAL VARIABLES
@@ -221,9 +224,9 @@ static uint8 advertData[] =
   // three-byte broadcast of the data "1 2 3"
   0x04,   // length of this data including the data type byte
   GAP_ADTYPE_MANUFACTURER_SPECIFIC, // manufacturer specific adv data type
-  1,
-  2,
-  3
+  0,
+  0,
+  0
 
 #else
 
@@ -281,6 +284,10 @@ static void SimpleBLEBroadcaster_stateChangeCB(gaprole_States_t newState);
 
 static void SimpleBLEPeripheral_clockHandler(UArg arg);
 static void SimpleBLEPeripheral_performPeriodicTask(void);
+
+void SimpleBLEPeripheral_keyChangeHandler(uint8 keys);
+static void SimpleBLEPeripheral_handleKeys(uint8_t keys);
+static void SimpleBLEPeripheral_enqueueMsg(uint8_t event, uint8_t state);
 
 /*********************************************************************
  * PROFILE CALLBACKS
@@ -390,6 +397,9 @@ static void SimpleBLEBroadcaster_init(void)
 
     GAPRole_SetParameter(GAPROLE_ADV_EVENT_TYPE, sizeof(uint8_t), &advType);
   }
+  
+    // Init key debouncer
+  Board_initKeys(SimpleBLEPeripheral_keyChangeHandler);
 
   // Set advertising interval
   {
@@ -408,6 +418,7 @@ static void SimpleBLEBroadcaster_init(void)
   
   HwGPIOInit();
   HwGPIOSet(Board_RLED,1);
+  HwGPIOSet(IOID_1,1); // power up the touch sensor
 }
 
 /*********************************************************************
@@ -426,7 +437,6 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
 
   // Application main loop
   
-  uint8 count = 0;
   for (;;)
   {
     // Get the ticks since startup
@@ -436,10 +446,6 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
 
     events = Event_pend(syncEvent, Event_Id_NONE, SBB_ALL_EVENTS,
                         ICALL_TIMEOUT_FOREVER);
-    scanRspData[6] = count;
-    count++;
-    GAPRole_SetParameter(GAPROLE_SCAN_RSP_DATA, sizeof (scanRspData),     //////////////////////
-                         scanRspData);
     if (events)
     {
       ICall_EntityID dest;
@@ -537,6 +543,10 @@ static void SimpleBLEBroadcaster_processAppMsg(sbbEvt_t *pMsg)
       SimpleBLEBroadcaster_processStateChangeEvt((gaprole_States_t)pMsg->
                                                  hdr.state);
       break;
+      
+    case SBP_KEY_CHANGE_EVT:
+      SimpleBLEPeripheral_handleKeys(pMsg->hdr.state);
+      break;
 
     default:
       // Do nothing.
@@ -586,7 +596,6 @@ static void SimpleBLEBroadcaster_processStateChangeEvt(gaprole_States_t newState
         uint8 ownAddress[B_ADDR_LEN];
 
         GAPRole_GetParameter(GAPROLE_BD_ADDR, ownAddress);
-
         // Display device address
         Display_print0(dispHandle, 1, 0, Util_convertBdAddr2Str(ownAddress));
         Display_print0(dispHandle, 2, 0, "Initialized");
@@ -594,7 +603,10 @@ static void SimpleBLEBroadcaster_processStateChangeEvt(gaprole_States_t newState
       break;
 
     case GAPROLE_ADVERTISING:
-      {
+      { 
+        advertData[7] = load;// put load into adv packet [7]
+        load = 0; //reset load
+        GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);//update broadcast register
         Display_print0(dispHandle, 2, 0, "Advertising");
         uint8_t param = TRUE;
         GAPRole_SetParameter(GAPROLE_ADVERT_ENABLED, sizeof(uint8_t),
@@ -656,6 +668,64 @@ static void SimpleBLEPeripheral_clockHandler(UArg arg)
 static void SimpleBLEPeripheral_performPeriodicTask(void)
 {
 
+}
+
+/*********************************************************************
+ * @fn      SimpleBLEPeripheral_handleKeys
+ *
+ * @brief   Handles all key events for this device.
+ *
+ * @param   keys - bit field for key events. Valid entries:
+ *                 KEY_LEFT
+ *                 KEY_RIGHT
+ *
+ * @return  none
+ */
+static void SimpleBLEPeripheral_handleKeys(uint8_t keys)
+{
+  if (keys & Touch_BTN)
+  {
+    load++;
+  }
+}
+
+/*********************************************************************
+ * @fn      SimpleBLEPeripheral_enqueueMsg
+ *
+ * @brief   Creates a message and puts the message in RTOS queue.
+ *
+ * @param   event - message event.
+ * @param   state - message state.
+ *
+ * @return  None.
+ */
+static void SimpleBLEPeripheral_enqueueMsg(uint8_t event, uint8_t state)
+{
+  sbbEvt_t *pMsg;
+
+  // Create dynamic pointer to message.
+  if ((pMsg = ICall_malloc(sizeof(sbbEvt_t))))
+  {
+    pMsg->hdr.event = event;
+    pMsg->hdr.state = state;
+
+    // Enqueue the message.
+    Util_enqueueMsg(appMsgQueue, syncEvent, (uint8*)pMsg);
+  }
+}
+
+/*********************************************************************
+ * @fn      SimpleBLEPeripheral_keyChangeHandler
+ *
+ * @brief   Key event handler function
+ *
+ * @param   keys - bitmap of pressed keys
+ *
+ * @return  none
+ */
+void SimpleBLEPeripheral_keyChangeHandler(uint8 keys)
+{
+  SimpleBLEPeripheral_enqueueMsg(SBP_KEY_CHANGE_EVT, keys);
 }
 /*********************************************************************
 *********************************************************************/

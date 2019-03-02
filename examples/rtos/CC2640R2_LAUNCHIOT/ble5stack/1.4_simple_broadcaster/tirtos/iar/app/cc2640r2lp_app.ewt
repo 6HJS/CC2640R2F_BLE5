@@ -1158,7 +1158,7 @@
         </settings>
     </configuration>
     <configuration>
-        <name>FlashROM_StackLibrary_RCOSC</name>
+        <name>FlashROM_StackLibrary_ePaper</name>
         <toolchain>
             <name>ARM</name>
         </toolchain>
@@ -1174,7 +1174,7 @@
                     <analyzeTimeoutEnabled>1</analyzeTimeoutEnabled>
                     <analyzeTimeout>600</analyzeTimeout>
                     <enableParallel>0</enableParallel>
-                    <parallelThreads>2</parallelThreads>
+                    <parallelThreads>4</parallelThreads>
                     <enableFalsePositives>0</enableFalsePositives>
                     <messagesLimitEnabled>1</messagesLimitEnabled>
                     <messagesLimit>100</messagesLimit>
@@ -2377,6 +2377,12 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\common\display\lcd_tft_lib_r2.a</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\src\driver\gpio\myiotboard_key.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\src\driver\gpio\myiotboard_key.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\common\display\TFT128.h</name>

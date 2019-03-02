@@ -382,9 +382,9 @@
                     <state>$EXAMPLE_BLE_ROOT$\..\target</state>
                     <state>$EXAMPLE_BLE_ROOT$\..\target\cc2640r2iot</state>
                     <state>$EXAMPLE_BLE_ROOT$\..\target\LAUNCHIOT_CC2640R2MOD_RGZ</state>
-                    <state>$EXAMPLE_BLE_ROOT$\src\driver\gpio</state>
                     <state>$EXAMPLE_BLE_ROOT$\..\common\display</state>
-                    <state>C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\target\LAUNCHIOT_CC2640R2MOD_RSM</state>
+                    <state>$PROJ_DIR$\..\..\..\..\target\LAUNCHIOT_CC2640R2MOD_RSM</state>
+                    <state>$PROJ_DIR$\..\..\..\src\driver\gpio</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2217,6 +2217,12 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\common\display\lcd_tft_lib_r2.a</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\src\driver\gpio\myiotboard_key.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\src\driver\gpio\myiotboard_key.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\common\display\TFT128.h</name>
