@@ -518,15 +518,12 @@ static void SimpleBLEObserver_processRoleEvent(gapObserverRoleEvent_t *pEvent)
           HwUARTPrintf("%c%c%c",0xEF,0xAA,0xAD); // log device address
           reverse(pEvent->deviceInfo.addr, 6);
           HwUARTWrite(pEvent->deviceInfo.addr,6);
-          HwUARTPrintf("%c",0x00);
           
           HwUARTPrintf("%c",0xC1);//log RSSI
           HwUARTPrintf("%c",pEvent->deviceInfo.rssi);
-          HwUARTPrintf("%c",0x00);
           
           HwUARTPrintf("%c",0xDA);//log data
           HwUARTWrite(pEvent->deviceInfo.pEvtData,pEvent->deviceInfo.dataLen);
-          HwUARTPrintf("%c",0x00);
           HwUARTPrintf("%c%c",0xAA,0xFE);
         }
       }

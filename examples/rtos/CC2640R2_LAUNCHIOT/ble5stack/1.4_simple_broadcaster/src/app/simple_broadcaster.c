@@ -83,6 +83,7 @@
  * CONSTANTS
  */
 
+#define SENSOR_TYPE     0xC0
 // What is the advertising interval when device is discoverable (units of 625us, 160=100ms)
 #define DEFAULT_ADVERTISING_INTERVAL          160
 
@@ -107,10 +108,11 @@
 #endif
 
 // How often to perform periodic event (in msec)
-#define SLEEP_BLK_TIME                        10000
+#define SLEEP_BLK_TIME                        60000
 #define SBB_PERIODIC_ADV_PERIOD               200
 
-#define NO_SLEEP_BLK                          5
+#define NO_SLEEP_BLK                          20 // up to 32
+#define HBT_BLK                               9 // report battery level after 9 data report
 
 #define SBB_STATE_CHANGE_EVT                  0x0001
 #define SBP_KEY_CHANGE_EVT                    0x0004
@@ -148,8 +150,11 @@ uint8_t gled_s= 0;
 uint8_t load = 0;
 uint8_t gload = 0;
 uint8_t blknumber = 0;
+uint16_t heartbeat = 0;
 
 uint32_t BATstatus = 0;
+
+uint8_t activity[4] = {0x00,0x00,0x00,0x00};
 
 /*********************************************************************
  * EXTERNAL VARIABLES
@@ -183,7 +188,7 @@ Task_Struct sbbTask;
 Char sbbTaskStack[SBB_TASK_STACK_SIZE];
 
 //Battery level variable
-static uint8 BatadvertData[] = {0x04,'C','P','S',0xC0,0x04,0xBA,0xBA,0x00,0x00};
+static uint8 BatadvertData[] = {'C','P','S',SENSOR_TYPE,0xBA,0xBA,0x00,0x00};
 
 // GAP - SCAN RSP data (max size = 31 bytes)
 static uint8 scanRspData[] =
@@ -225,59 +230,16 @@ static uint8 advertData[] =
   // Flags; this sets the device to use limited discoverable
   // mode (advertises for 30 seconds at a time) instead of general
   // discoverable mode (advertises indefinitely)
-  0x04,   // length of this data                                        [0]
   'C',  //43                                                            [1]
   'P',  //50                                                            [2]
   'S',  //53                                                            [3]
-  0xC0, //sensor type                                                   [4]
-
-#ifndef BEACON_FEATURE
+  SENSOR_TYPE, //sensor type                                                   [4]
 
   // three-byte broadcast of the data "1 2 3"
-  0x04,   // length of this data including the data type byte           [5]
   0,  //                                                                [6]
   0,  //                                                                [7]
   0,   //                                                               [8]
   0     //                                                              [9]
-#else
-
-  // 25 byte beacon advertisement data
-  // Preamble: Company ID - 0x000D for TI, refer to https://www.bluetooth.org/en-us/specification/assigned-numbers/company-identifiers
-  // Data type: Beacon (0x02)
-  // Data length: 0x15
-  // UUID: 00000000-0000-0000-0000-000000000000 (null beacon)
-  // Major: 1 (0x0001)
-  // Minor: 1 (0x0001)
-  // Measured Power: -59 (0xc5)
-  0x1A, // length of this data including the data type byte
-  GAP_ADTYPE_MANUFACTURER_SPECIFIC, // manufacturer specific adv data type
-  0x0D, // Company ID - Fixed
-  0x00, // Company ID - Fixed
-  0x02, // Data Type - Fixed
-  0x15, // Data Length - Fixed
-  0x00, // UUID - Variable based on different use cases/applications
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // UUID
-  0x00, // Major
-  0x01, // Major
-  0x00, // Minor
-  0x01, // Minor
-  0xc5  // Power - The 2's complement of the calibrated Tx Power
-
-#endif // !BEACON_FEATURE
 };
 
 /*********************************************************************
@@ -421,6 +383,10 @@ static void SimpleBLEBroadcaster_init(void)
     GAP_SetParamValue(TGAP_GEN_DISC_ADV_INT_MIN, advInt);
     GAP_SetParamValue(TGAP_GEN_DISC_ADV_INT_MAX, advInt);
   }
+  
+  //set TX power
+  
+  HCI_EXT_SetTxPowerCmd(HCI_EXT_TX_POWER_5_DBM);
 
   // Start the Device
   VOID GAPRole_StartDevice(&simpleBLEBroadcaster_BroadcasterCBs);
@@ -436,12 +402,13 @@ static void SimpleBLEBroadcaster_init(void)
   // convert in Milli volts
   BATstatus = (BATstatus * 125) >> 5;
   
-  BatadvertData[8] = BATstatus>>8;
-  BatadvertData[9] = BATstatus&0xFF;
+  BatadvertData[6] = BATstatus>>8;
+  BatadvertData[7] = BATstatus&0xFF;
   GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(BatadvertData), BatadvertData);//update broadcast register
         Display_print0(dispHandle, 2, 0, "Advertising");
   uint8_t param = TRUE;
   GAPRole_SetParameter(GAPROLE_ADVERT_ENABLED, sizeof(uint8_t),&param);
+  Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
 
 }
 
@@ -523,26 +490,47 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
           SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
           Util_restartClock(&TIMER_periodicClock,SLEEP_BLK_TIME);
         }else{
-          if(blknumber < NO_SLEEP_BLK){
-            if(load > 0){
-              load = 0;
-              gload++;
+          if(heartbeat < HBT_BLK){
+            if(blknumber < NO_SLEEP_BLK){
+              if(load > 0){
+                load = 0;
+                gload++;
+                activity[blknumber/8] |= 1<<(blknumber%8);
+              }
+              blknumber++;
+              gled_s = 0;
+              HwGPIOSet(Board_GLED,gled_s);
+              SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
+              Util_restartClock(&TIMER_periodicClock,SLEEP_BLK_TIME);
+            }else{
+              heartbeat++;
+              blknumber = 0;
+              gled_s = 1;
+              HwGPIOSet(Board_GLED,gled_s);
+              //advertData[6] = NO_SLEEP_BLK+1;
+              //advertData[8] = gload;// put load into adv packet [8]
+              advertData[4] = activity[0];
+              advertData[5] = activity[1];
+              advertData[6] = activity[2];
+              advertData[7] = activity[3];
+              gload = 0; //reset load
+              
+              memset(activity,0,sizeof(activity)); // reset activity
+              GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);//update broadcast register
+              SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
+              Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
             }
-            blknumber++;
-            gled_s = 0;
-            HwGPIOSet(Board_GLED,gled_s);
-            SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
-            Util_restartClock(&TIMER_periodicClock,SLEEP_BLK_TIME);
           }else{
-            blknumber = 0;
-            gled_s = 1;
-            HwGPIOSet(Board_GLED,gled_s);
-            advertData[6] = NO_SLEEP_BLK+1;
-            advertData[8] = gload;// put load into adv packet [8]
-            gload = 0; //reset load
-            GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);//update broadcast register
-            SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
-            Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
+              heartbeat = 0;
+              BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)
+              // convert in Milli volts
+              BATstatus = (BATstatus * 125) >> 5;
+              
+              BatadvertData[8] = BATstatus>>8;
+              BatadvertData[9] = BATstatus&0xFF;
+              GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(BatadvertData), BatadvertData);//update broadcast register
+              SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
+              Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
           }
         }
       }
