@@ -1,0 +1,4 @@
+# view basestation activity history
+sudo journalctl -u parks-basestation -f
+# restart service
+sudo systemctl restart parks-basestation

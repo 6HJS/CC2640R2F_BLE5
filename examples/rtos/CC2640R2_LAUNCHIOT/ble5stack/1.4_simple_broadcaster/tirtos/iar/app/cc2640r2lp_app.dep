@@ -776,7 +776,7 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 26 93</file>
+                    <file> 93 26</file>
                 </tool>
             </outputs>
         </file>
