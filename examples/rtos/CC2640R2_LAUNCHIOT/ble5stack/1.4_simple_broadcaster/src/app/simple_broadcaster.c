@@ -108,7 +108,7 @@
 #endif
 
 // How often to perform periodic event (in msec)
-#define SLEEP_BLK_TIME                        60000
+#define SLEEP_BLK_TIME                        6000//60000
 #define SBB_PERIODIC_ADV_PERIOD               200
 
 #define NO_SLEEP_BLK                          20 // up to 32
@@ -484,6 +484,7 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
 
       if (events & SBB_TIMER_PERIODIC_EVT)
       {
+        HwGPIOSet(IOID_1,1); // make sure the sensor is powered on
         if(gled_s){
           gled_s = 0;
           HwGPIOSet(Board_GLED,gled_s);
@@ -492,7 +493,7 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
         }else{
           if(heartbeat < HBT_BLK){
             if(blknumber < NO_SLEEP_BLK){
-              if(load > 0){
+              if(load > 0){ // activity happened in this interval
                 load = 0;
                 gload++;
                 activity[blknumber/8] |= 1<<(blknumber%8);
@@ -515,6 +516,8 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
               advertData[7] = activity[3];
               gload = 0; //reset load
               
+              HwGPIOSet(IOID_1,0); // power off the sensor to solve touch sensor stuck
+              
               memset(activity,0,sizeof(activity)); // reset activity
               GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);//update broadcast register
               SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
@@ -522,12 +525,13 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
             }
           }else{
               heartbeat = 0;
+              blknumber = 0; // need to reset block number counter as well otherwise not reporting data, only batttery level
               BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)
               // convert in Milli volts
               BATstatus = (BATstatus * 125) >> 5;
               
-              BatadvertData[8] = BATstatus>>8;
-              BatadvertData[9] = BATstatus&0xFF;
+              BatadvertData[8] = (uint8_t)BATstatus>>8;
+              BatadvertData[9] = (uint8_t)BATstatus&0xFF;
               GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(BatadvertData), BatadvertData);//update broadcast register
               SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
               Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
