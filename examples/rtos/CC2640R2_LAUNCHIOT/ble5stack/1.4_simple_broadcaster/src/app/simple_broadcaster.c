@@ -108,11 +108,11 @@
 #endif
 
 // How often to perform periodic event (in msec)
-#define SLEEP_BLK_TIME                        6000//60000
+#define SLEEP_BLK_TIME                        600//60000
 #define SBB_PERIODIC_ADV_PERIOD               200
 
 #define NO_SLEEP_BLK                          20 // up to 32
-#define HBT_BLK                               9 // report battery level after 9 data report
+#define HBT_BLK                               3 // report battery level after 9 data report
 
 #define SBB_STATE_CHANGE_EVT                  0x0001
 #define SBP_KEY_CHANGE_EVT                    0x0004
@@ -156,6 +156,8 @@ uint32_t BATstatus = 0;
 
 uint8_t activity[4] = {0x00,0x00,0x00,0x00};
 
+uint8_t skipBroad = 0;
+
 /*********************************************************************
  * EXTERNAL VARIABLES
  */
@@ -188,7 +190,7 @@ Task_Struct sbbTask;
 Char sbbTaskStack[SBB_TASK_STACK_SIZE];
 
 //Battery level variable
-static uint8 BatadvertData[] = {'C','P','S',SENSOR_TYPE,0xBA,0xBA,0x00,0x00};
+static uint8 BatadvertData[8] = {'C','P','S',SENSOR_TYPE,0xBA,0xBA,0x00,0x00};
 
 // GAP - SCAN RSP data (max size = 31 bytes)
 static uint8 scanRspData[] =
@@ -225,7 +227,7 @@ static uint8 scanRspData[] =
 
 // GAP - Advertisement data (max size = 31 bytes, though this is
 // best kept short to conserve power while advertisting)
-static uint8 advertData[] =
+static uint8 advertData[8] =
 {
   // Flags; this sets the device to use limited discoverable
   // mode (advertises for 30 seconds at a time) instead of general
@@ -484,6 +486,10 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
 
       if (events & SBB_TIMER_PERIODIC_EVT)
       {
+        if(skipBroad == 1){
+          skipBroad = 0;
+          continue;
+        }
         HwGPIOSet(IOID_1,1); // make sure the sensor is powered on
         if(gled_s){
           gled_s = 0;
@@ -529,12 +535,12 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
               BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)
               // convert in Milli volts
               BATstatus = (BATstatus * 125) >> 5;
-              
-              BatadvertData[8] = (uint8_t)BATstatus>>8;
-              BatadvertData[9] = (uint8_t)BATstatus&0xFF;
+              skipBroad = 1;
+              BatadvertData[6] = BATstatus>>8;
+              BatadvertData[7] = BATstatus&0xFF;
               GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(BatadvertData), BatadvertData);//update broadcast register
               SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
-              Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
+              Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD*2);
           }
         }
       }
