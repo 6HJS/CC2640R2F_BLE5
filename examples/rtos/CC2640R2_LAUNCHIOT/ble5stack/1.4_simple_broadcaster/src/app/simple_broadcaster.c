@@ -83,7 +83,8 @@
  * CONSTANTS
  */
 
-#define SENSOR_TYPE     0xC0
+//#define SENSOR_TYPE     0xC0 // PIR SENSOR
+#define SENSOR_TYPE     0xD0 //TOUCH SENSOR
 // What is the advertising interval when device is discoverable (units of 625us, 160=100ms)
 #define DEFAULT_ADVERTISING_INTERVAL          160
 
@@ -108,11 +109,12 @@
 #endif
 
 // How often to perform periodic event (in msec)
-#define SLEEP_BLK_TIME                        600//60000
-#define SBB_PERIODIC_ADV_PERIOD               200
+#define SLEEP_BLK_TIME                        60000
+#define SBB_PERIODIC_ADV_PERIOD               400
+#define SBB_BATT_ADV_PERIOD                   400
 
 #define NO_SLEEP_BLK                          20 // up to 32
-#define HBT_BLK                               3 // report battery level after 9 data report
+#define HBT_BLK                               9 // report battery level after 9 data report
 
 #define SBB_STATE_CHANGE_EVT                  0x0001
 #define SBP_KEY_CHANGE_EVT                    0x0004
@@ -486,9 +488,9 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
 
       if (events & SBB_TIMER_PERIODIC_EVT)
       {
-        if(skipBroad == 1){
-          skipBroad = 0;
-          continue;
+        if(skipBroad > 0){
+          skipBroad--;
+          SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
         }
         HwGPIOSet(IOID_1,1); // make sure the sensor is powered on
         if(gled_s){
@@ -521,8 +523,9 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
               advertData[6] = activity[2];
               advertData[7] = activity[3];
               gload = 0; //reset load
-              
+#if (SENSOR_TYPE == 0xD0)
               HwGPIOSet(IOID_1,0); // power off the sensor to solve touch sensor stuck
+#endif
               
               memset(activity,0,sizeof(activity)); // reset activity
               GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);//update broadcast register
@@ -540,7 +543,7 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
               BatadvertData[7] = BATstatus&0xFF;
               GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(BatadvertData), BatadvertData);//update broadcast register
               SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
-              Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD*2);
+              Util_restartClock(&TIMER_periodicClock,SBB_BATT_ADV_PERIOD);
           }
         }
       }
