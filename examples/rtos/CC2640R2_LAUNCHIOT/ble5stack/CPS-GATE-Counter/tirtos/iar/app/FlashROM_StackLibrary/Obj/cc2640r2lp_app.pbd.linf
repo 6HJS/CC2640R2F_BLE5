@@ -5,6 +5,7 @@ C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5st
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\ccfg_app_ble.pbi
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\ECCROMCC26XX.pbi
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\hw_gpio.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\hw_i2c.pbi
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\icall.pbi
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\icall_api_lite.pbi
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\icall_cc2650.pbi
@@ -14,3 +15,16 @@ C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5st
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\simple_broadcaster.pbi
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\TRNGCC26XX.pbi
 C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\util.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_api.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_api_calibration.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_api_core.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_api_debug.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_api_preset_modes.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_api_strings.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_core.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_core_support.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_error_strings.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_platform.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_register_funcs.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_silicon_core.pbi
+C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\tirtos\iar\app\FlashROM_StackLibrary\Obj\vl53l1_wait.pbi

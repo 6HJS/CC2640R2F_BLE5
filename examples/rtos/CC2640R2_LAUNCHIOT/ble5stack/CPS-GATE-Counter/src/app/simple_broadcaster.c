@@ -73,6 +73,8 @@
 
 #include "hw_gpio.h"
 #include "myiotboard_key.h"
+#include "hw_i2c.h"
+#include "vl53l1_api.h"
 
 #include <driverlib/aon_batmon.h>
 /*********************************************************************
@@ -400,6 +402,8 @@ static void SimpleBLEBroadcaster_init(void)
   HwGPIOInit();
   HwGPIOSet(Board_RLED,1);
   HwGPIOSet(IOID_1,1); // power up the touch sensor
+  
+  HwI2CInit();
   
   AONBatMonEnable();
   BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)

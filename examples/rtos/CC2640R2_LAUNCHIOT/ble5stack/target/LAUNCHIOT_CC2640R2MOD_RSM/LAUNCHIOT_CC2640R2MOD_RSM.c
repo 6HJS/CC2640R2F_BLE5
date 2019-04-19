@@ -247,6 +247,36 @@ const GPTimerCC26XX_Config GPTimerCC26XX_config[CC2640R2DK_4XS_GPTIMERPARTSCOUNT
 };
 
 /*
+ *  =============================== I2C ===============================
+*/
+#include <ti/drivers/I2C.h>
+#include <ti/drivers/i2c/I2CCC26XX.h>
+
+I2CCC26XX_Object i2cCC26xxObjects[CC2640R2_LAUNCHXL_I2CCOUNT];
+
+const I2CCC26XX_HWAttrsV1 i2cCC26xxHWAttrs[CC2640R2_LAUNCHXL_I2CCOUNT] = {
+    {
+        .baseAddr    = I2C0_BASE,
+        .powerMngrId = PowerCC26XX_PERIPH_I2C0,
+        .intNum      = INT_I2C_IRQ,
+        .intPriority = ~0,
+        .swiPriority = 0,
+        .sdaPin      = CC2640R2_LAUNCHXL_I2C0_SDA0,
+        .sclPin      = CC2640R2_LAUNCHXL_I2C0_SCL0,
+    }
+};
+
+const I2C_Config I2C_config[CC2640R2_LAUNCHXL_I2CCOUNT] = {
+    {
+        .fxnTablePtr = &I2CCC26XX_fxnTable,
+        .object      = &i2cCC26xxObjects[CC2640R2_LAUNCHXL_I2C0],
+        .hwAttrs     = &i2cCC26xxHWAttrs[CC2640R2_LAUNCHXL_I2C0]
+    },
+};
+
+const uint_least8_t I2C_count = CC2640R2_LAUNCHXL_I2CCOUNT;
+
+/*
  *  =============================== PIN ===============================
  */
 #include <ti/drivers/PIN.h>

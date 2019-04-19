@@ -2,15 +2,19 @@
 #include <ti/drivers/I2C.h>
 
 #include "hw_i2c.h"
-#include "task_uart.h"
 
 /*********************************************************************
  * LOCAL PARAMETER
  */
-#define Slave_Addr        0x18
+#define Slave_Addr        0x52
 
 I2C_Handle I2CHandle;
 I2C_Params I2Cparams;
+
+/*********************************************************************
+ * LOCAL FUNCTIONS
+ */
+//void I2C_transferCallback(I2C_Handle, I2C_Transaction *, bool);
 
 /*********************************************************************
  * @fn      GY_I2cTask_Init
@@ -25,12 +29,14 @@ void HwI2CInit(void)
 {
   I2C_init();
   I2C_Params_init(&I2Cparams);
-  I2Cparams.bitRate = I2C_400kHz;
+  I2Cparams.bitRate = I2C_100kHz;
   I2Cparams.custom = NULL;
   I2Cparams.transferCallbackFxn = NULL;
   I2Cparams.transferMode = I2C_MODE_BLOCKING;
+  //I2Cparams.transferCallbackFxn = I2C_transferCallback;
+  //I2Cparams.transferMode = I2C_MODE_CALLBACK;
   
-  I2CHandle = I2C_open(CC2650_LAUNCHXL_I2C0,&I2Cparams);
+  I2CHandle = I2C_open(CC2640R2_LAUNCHXL_I2C0,&I2Cparams);
 }
 
 /*********************************************************************
