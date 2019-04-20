@@ -1,6 +1,7 @@
 
 /*
 * Copyright (c) 2017, STMicroelectronics - All Rights Reserved
+* Copyright (c) 2018 SmartCity Echosystems
 *
 * This file is part of VL53L1 Core and is dual licensed,
 * either 'STMicroelectronics
