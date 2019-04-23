@@ -162,6 +162,10 @@ uint8_t activity[4] = {0x00,0x00,0x00,0x00};
 
 uint8_t skipBroad = 0;
 
+VL53L1_Dev_t                   dev;
+VL53L1_DEV                     Dev = &dev;
+VL53L1_RangingMeasurementData_t RangingData;
+
 /*********************************************************************
  * EXTERNAL VARIABLES
  */
@@ -404,6 +408,28 @@ static void SimpleBLEBroadcaster_init(void)
   HwGPIOSet(IOID_1,1); // power up the touch sensor
   
   HwI2CInit();
+  static VL53L1_Error res0 = VL53L1_ERROR_NONE;
+  res0 = VL53L1_WaitDeviceBooted( Dev );
+  res0 = VL53L1_DataInit( Dev );
+  res0 = VL53L1_StaticInit( Dev );
+  res0 = VL53L1_SetDistanceMode( Dev, VL53L1_DISTANCEMODE_LONG );
+  res0 = VL53L1_SetMeasurementTimingBudgetMicroSeconds( Dev, 50000 );
+  res0 = VL53L1_SetInterMeasurementPeriodMilliSeconds( Dev, 500 );
+  res0 = VL53L1_StartMeasurement( Dev );
+  
+  res0 = VL53L1_WaitMeasurementDataReady( Dev );
+
+  res0 = VL53L1_GetRangingMeasurementData( Dev, &RangingData );
+  
+  static char buff[32] = {0};
+
+  sprintf( (char*)buff, "%d, %d \n\r", RangingData.RangeStatus, RangingData.RangeMilliMeter);
+
+  res0 = VL53L1_ClearInterruptAndStartMeasurement( Dev );
+  
+  if(res0 != 0 )
+    res0 = 0;
+
   
   AONBatMonEnable();
   BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)

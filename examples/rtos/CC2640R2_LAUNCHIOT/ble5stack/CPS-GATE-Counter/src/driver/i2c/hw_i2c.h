@@ -9,6 +9,7 @@ extern "C"
 #include <stdint.h>
 #include <stdbool.h>
 
+#define Slave_Addr        0x29 //0b0101001;
 
 /*********************************************************************
  * I2C³õÊ¼»¯º¯Êý

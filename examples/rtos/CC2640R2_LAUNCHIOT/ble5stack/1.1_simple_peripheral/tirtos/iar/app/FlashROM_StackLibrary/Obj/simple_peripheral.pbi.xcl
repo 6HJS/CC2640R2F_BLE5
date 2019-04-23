@@ -450,6 +450,7 @@ C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5st
 -DBLE_VS_FEATURES=SCAN_REQ_RPT_CFG+SCAN_EVT_NOTICE_CFG
 -DHOST_CONFIG=PERIPHERAL_CFG
 -DGAP_BOND_MGR=1
+-DV50_FEATURES=PHY_LR_CFG
 -DHCI_TL_NONE=1
 -Dxdc_target_types__=iar/targets/arm/std.h
 -Dxdc_target_name__=M3

@@ -72,8 +72,10 @@
 // #include <math.h>
 #include <ti/sysbios/knl/Clock.h>
 #include <ti/drivers/I2C.h>
+#include <ti/sysbios/knl/Task.h>
+#include "hw_i2c.h"
+#include <_hal_types.h>
 
-extern const uint8_t Slave_Addr;
 extern I2C_Handle I2CHandle;
 
 
@@ -344,53 +346,53 @@ VL53L1_Error VL53L1_GetTimerFrequency(int32_t *ptimer_freq_hz)
 }
 
 VL53L1_Error VL53L1_WaitMs(VL53L1_Dev_t *pdev, int32_t wait_ms){
-    Task_sleep(wait_ms*1000/10);
+    Task_sleep(wait_ms*(1000 / Clock_tickPeriod));
 	VL53L1_Error status  = VL53L1_ERROR_NONE;
 	return status;
 }
 
-#pragma inline=forced
-#pragma opimization=none
+#pragma optimize=none
 VL53L1_Error VL53L1_WaitUs(VL53L1_Dev_t *pdev, int32_t wait_us){
 	while(wait_us > 0){
-
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
-		asm("NOP");
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
+		ASM_NOP;
 		wait_us--;
 	}
 	VL53L1_Error status  = VL53L1_ERROR_NONE;
 	return status;
 }
+
+#define minD(a,b) (((a)<(b))?(a):(b))
 
 VL53L1_Error VL53L1_WaitValueMaskEx(
 	VL53L1_Dev_t *pdev,
@@ -407,8 +409,8 @@ VL53L1_Error VL53L1_WaitValueMaskEx(
 		status = VL53L1_RdByte(pdev, index, &data);
 		if (status != VL53L1_ERROR_NONE) { return status; }
 		if ((data & mask) == value) { return VL53L1_ERROR_NONE; }
-		delay(poll_delay_ms);
-		timeout_ms -= min(poll_delay_ms, timeout_ms);
+		Task_sleep(poll_delay_ms*(1000 / Clock_tickPeriod));
+		timeout_ms -= minD(poll_delay_ms, timeout_ms);
 	}
   return VL53L1_ERROR_TIME_OUT;
 }

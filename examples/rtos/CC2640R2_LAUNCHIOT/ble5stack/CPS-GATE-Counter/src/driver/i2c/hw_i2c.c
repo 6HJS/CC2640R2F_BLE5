@@ -6,7 +6,6 @@
 /*********************************************************************
  * LOCAL PARAMETER
  */
-#define Slave_Addr        0x52
 
 I2C_Handle I2CHandle;
 I2C_Params I2Cparams;
