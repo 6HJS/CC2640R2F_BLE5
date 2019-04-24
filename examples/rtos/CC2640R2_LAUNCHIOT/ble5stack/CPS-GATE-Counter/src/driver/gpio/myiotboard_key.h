@@ -64,9 +64,9 @@ extern "C" {
  * CONSTANTS
  */
 
-#define KEY_BTN1              0x0001
-#define KEY_BTN2              0x0002
-#define Touch_BTN             0x0003
+#define FrontPIR              0x0001
+#define SidePIR               0x0002
+#define LaserIR               0x0003
 
 // Debounce timeout in milliseconds
 #define KEY_DEBOUNCE_TIMEOUT  100

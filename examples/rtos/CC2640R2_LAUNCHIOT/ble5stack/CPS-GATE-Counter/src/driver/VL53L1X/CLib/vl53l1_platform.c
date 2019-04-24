@@ -77,6 +77,7 @@
 #include <_hal_types.h>
 
 extern I2C_Handle I2CHandle;
+I2C_Transaction i2cTransaction;
 
 
 // #define I2C_TIME_OUT_BASE   10
@@ -118,85 +119,50 @@ extern I2C_Handle I2CHandle;
 //    int status = 0;
 //    return Status;
 // }
-#define BUF_SZ 2+32 // buffer size
+
+#define VL53L1_MAX_I2C_XFER_SIZE 256
+static uint8_t buf1[VL53L1_MAX_I2C_XFER_SIZE] = {0};
 VL53L1_Error VL53L1_WriteMulti(VL53L1_DEV Dev, uint16_t index, uint8_t *pdata, uint32_t count) {
-  while (count > 0){
-    uint8_t buf[BUF_SZ] = {0};
-    uint8_t byte_trans = 0;
-    //Wire.beginTransmission(Dev->I2cDevAddr >> 1);
-    I2C_Transaction i2cTransaction;
+    uint32_t byte_trans = 0;
     i2cTransaction.slaveAddress = Slave_Addr;
-    
-	
-	
-    
-    //Wire.write((index >> 8) & 0xff);
-    //Wire.write(index & 0xff);
-	buf[byte_trans] = (index >> 8) & 0xff;
+	buf1[byte_trans] = (index >> 8) & 0xff;
 	++byte_trans;
-	buf[byte_trans] = index & 0xff;
-
-    uint8_t writing = 0;
-
-    //while (count > 0 && Wire.write(*pdata) != 0){
-	while(count >0 && byte_trans < BUF_SZ){
-	  buf[byte_trans] = *pdata;
+	buf1[byte_trans] = index & 0xff;
+        ++byte_trans;
+  while(count >0 && byte_trans < VL53L1_MAX_I2C_XFER_SIZE){
+	  buf1[byte_trans] = *pdata;
 	  ++byte_trans;
       pdata++;
-      writing++;
       count--;
     }
-
-    //if (writing == 0 || Wire.endTransmission() != 0) { return VL53L1_ERROR_CONTROL_INTERFACE; }
-    //index += writing;
     i2cTransaction.readBuf = NULL;
     i2cTransaction.readCount = 0;
-    i2cTransaction.writeBuf = buf;
+    i2cTransaction.writeBuf = buf1;
     i2cTransaction.writeCount = byte_trans;
     i2cTransaction.arg = NULL;
     bool ret = I2C_transfer(I2CHandle, &i2cTransaction);
-	if(writing == 0 || ret == false){return VL53L1_ERROR_CONTROL_INTERFACE;}
-	index += writing;
-  }
+	if(ret == false){return VL53L1_ERROR_CONTROL_INTERFACE;}
 
   return VL53L1_ERROR_NONE;
 }
 
 // the ranging_sensor_comms.dll will take care of the page selection
 VL53L1_Error VL53L1_ReadMulti(VL53L1_DEV Dev, uint16_t index, uint8_t *pdata, uint32_t count) {
-	uint8_t Wrbuf[2] = {0};
-	//Wire.beginTransmission(Dev->I2cDevAddr >> 1);
-	I2C_Transaction i2cTransaction;
-    i2cTransaction.slaveAddress = Slave_Addr;
-		
-	//Wire.write((index >> 8) & 0xff);
-	//Wire.write(index & 0xff);
-	Wrbuf[0] = (index >> 8) & 0xff;
-	Wrbuf[1] = index & 0xff;
-	
-	//if (Wire.endTransmission() != 0) { return VL53L1_ERROR_CONTROL_INTERFACE; }
-	//put this at the end
-	//while (count > 0){
-		//uint8_t reading = Wire.requestFrom(Dev->I2cDevAddr >> 1, count);
-
-		//if (reading == 0) { return VL53L1_ERROR_CONTROL_INTERFACE; }
-		//count -= reading;
-
-		//while (reading-- > 0){
-		  //*pdata++ = Wire.read();
-		//}
-	//}
-	  bool ret = false;
-	  i2cTransaction.writeBuf = Wrbuf;
-	  i2cTransaction.writeCount = 2;
-	  i2cTransaction.readBuf = pdata;
-	  i2cTransaction.readCount = count;
-	  i2cTransaction.slaveAddress = Slave_Addr;
-	  i2cTransaction.arg = NULL;
-	  ret = I2C_transfer(I2CHandle, &i2cTransaction);
-	  if(ret == false){return VL53L1_ERROR_CONTROL_INTERFACE;}
-	
-
+  uint8_t Wrbuf[2] = {0};
+  i2cTransaction.slaveAddress = Slave_Addr;
+  Wrbuf[0] = (index >> 8) & 0xff;
+  Wrbuf[1] = index & 0xff;
+  bool ret = false;
+  i2cTransaction.writeBuf = Wrbuf;
+  i2cTransaction.writeCount = 2;
+  i2cTransaction.readBuf = pdata;
+  i2cTransaction.readCount = count;
+  i2cTransaction.slaveAddress = Slave_Addr;
+  i2cTransaction.arg = NULL;
+  ret = I2C_transfer(I2CHandle, &i2cTransaction);
+  if(ret == false){return VL53L1_ERROR_CONTROL_INTERFACE;}
+  
+  
   return VL53L1_ERROR_NONE;
 }
 
@@ -206,8 +172,6 @@ VL53L1_Error VL53L1_WrByte(VL53L1_DEV Dev, uint16_t index, uint8_t data) {
 	buf[0] = (index >> 8) & 0xff;
 	buf[1] = index & 0xff;
 	buf[2] = data;
-  
-	I2C_Transaction i2cTransaction;
 	i2cTransaction.writeBuf = buf;
 	i2cTransaction.writeCount = 3;
 	i2cTransaction.readBuf = NULL;
@@ -227,7 +191,6 @@ VL53L1_Error VL53L1_WrWord(VL53L1_DEV Dev, uint16_t index, uint16_t data) {
 	buf[2] = (data >> 8) & 0xff;
 	buf[3] = data & 0xff;;
   
-	I2C_Transaction i2cTransaction;
 	i2cTransaction.writeBuf = buf;
 	i2cTransaction.writeCount = 4;
 	i2cTransaction.readBuf = NULL;
@@ -250,7 +213,6 @@ VL53L1_Error VL53L1_WrDWord(VL53L1_DEV Dev, uint16_t index, uint32_t data) {
 	buf[4] = (data >> 8) & 0xff;
 	buf[5] = data & 0xff;
   
-	I2C_Transaction i2cTransaction;
 	i2cTransaction.writeBuf = buf;
 	i2cTransaction.writeCount = 6;
 	i2cTransaction.readBuf = NULL;
@@ -278,7 +240,6 @@ VL53L1_Error VL53L1_RdByte(VL53L1_DEV Dev, uint16_t index, uint8_t *data) {
 	buf[0] = (index >> 8) & 0xff;
 	buf[1] = index & 0xff;
   
-	I2C_Transaction i2cTransaction;
 	i2cTransaction.writeBuf = buf;
 	i2cTransaction.writeCount = 2;
 	i2cTransaction.readBuf = data;
@@ -296,7 +257,6 @@ VL53L1_Error VL53L1_RdWord(VL53L1_DEV Dev, uint16_t index, uint16_t *data) {
 	buf[0] = (index >> 8) & 0xff;
 	buf[1] = index & 0xff;
   
-	I2C_Transaction i2cTransaction;
 	i2cTransaction.writeBuf = buf;
 	i2cTransaction.writeCount = 2;
 	i2cTransaction.readBuf = data;
@@ -314,7 +274,6 @@ VL53L1_Error VL53L1_RdDWord(VL53L1_DEV Dev, uint16_t index, uint32_t *data) {
 	buf[0] = (index >> 8) & 0xff;
 	buf[1] = index & 0xff;
   
-	I2C_Transaction i2cTransaction;
 	i2cTransaction.writeBuf = buf;
 	i2cTransaction.writeCount = 2;
 	i2cTransaction.readBuf = data;
@@ -352,44 +311,48 @@ VL53L1_Error VL53L1_WaitMs(VL53L1_Dev_t *pdev, int32_t wait_ms){
 }
 
 #pragma optimize=none
+void WaitUsCore(void){
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+    ASM_NOP;
+}
+
+#pragma optimize=none
 VL53L1_Error VL53L1_WaitUs(VL53L1_Dev_t *pdev, int32_t wait_us){
 	while(wait_us > 0){
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		ASM_NOP;
-		wait_us--;
+          WaitUsCore();
+          wait_us--;
 	}
-	VL53L1_Error status  = VL53L1_ERROR_NONE;
-	return status;
+	return VL53L1_ERROR_NONE;
 }
 
 #define minD(a,b) (((a)<(b))?(a):(b))

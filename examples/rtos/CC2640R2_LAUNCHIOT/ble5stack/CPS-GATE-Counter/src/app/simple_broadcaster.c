@@ -85,8 +85,7 @@
  * CONSTANTS
  */
 
-//#define SENSOR_TYPE     0xC0 // PIR SENSOR
-#define SENSOR_TYPE     0xD0 //TOUCH SENSOR
+#define SENSOR_TYPE     0x10 //GATE SENSOR
 // What is the advertising interval when device is discoverable (units of 625us, 160=100ms)
 #define DEFAULT_ADVERTISING_INTERVAL          160
 
@@ -165,6 +164,7 @@ uint8_t skipBroad = 0;
 VL53L1_Dev_t                   dev;
 VL53L1_DEV                     Dev = &dev;
 VL53L1_RangingMeasurementData_t RangingData;
+uint8_t buff[32] = {0};
 
 /*********************************************************************
  * EXTERNAL VARIABLES
@@ -404,8 +404,9 @@ static void SimpleBLEBroadcaster_init(void)
   Display_print0(dispHandle, 0, 0, "BLE Broadcaster");
   
   HwGPIOInit();
-  HwGPIOSet(Board_RLED,1);
-  HwGPIOSet(IOID_1,1); // power up the touch sensor
+  HwGPIOSet(IOID_9,0);
+  VL53L1_WaitMs(NULL,1);
+  HwGPIOSet(IOID_9,1);
   
   HwI2CInit();
   static VL53L1_Error res0 = VL53L1_ERROR_NONE;
@@ -415,13 +416,17 @@ static void SimpleBLEBroadcaster_init(void)
   res0 = VL53L1_SetDistanceMode( Dev, VL53L1_DISTANCEMODE_LONG );
   res0 = VL53L1_SetMeasurementTimingBudgetMicroSeconds( Dev, 50000 );
   res0 = VL53L1_SetInterMeasurementPeriodMilliSeconds( Dev, 500 );
+  if(res0 != VL53L1_ERROR_NONE){
+    goto skip;
+  }
   res0 = VL53L1_StartMeasurement( Dev );
   
   res0 = VL53L1_WaitMeasurementDataReady( Dev );
 
-  res0 = VL53L1_GetRangingMeasurementData( Dev, &RangingData );
-  
-  static char buff[32] = {0};
+//  res0 = VL53L1_GetRangingMeasurementData( Dev, &RangingData );
+  uint16_t result = 0;
+  res0 = VL53L1_RdWord(Dev,VL53L1_SHADOW_RESULT__FINAL_CROSSTALK_CORRECTED_RANGE_MM_SD0,&result);
+skip:
 
   sprintf( (char*)buff, "%d, %d \n\r", RangingData.RangeStatus, RangingData.RangeMilliMeter);
 
@@ -522,7 +527,6 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
           skipBroad--;
           SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
         }
-        HwGPIOSet(IOID_1,1); // make sure the sensor is powered on
         if(gled_s){
           gled_s = 0;
           HwGPIOSet(Board_GLED,gled_s);
@@ -553,9 +557,6 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
               advertData[6] = activity[2];
               advertData[7] = activity[3];
               gload = 0; //reset load
-#if (SENSOR_TYPE == 0xD0)
-              HwGPIOSet(IOID_1,0); // power off the sensor to solve touch sensor stuck
-#endif
               
               memset(activity,0,sizeof(activity)); // reset activity
               GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);//update broadcast register
@@ -754,7 +755,15 @@ static void SimpleBLEPeripheral_performPeriodicTask(void)
  */
 static void SimpleBLEPeripheral_handleKeys(uint8_t keys)
 {
-  if (keys & Touch_BTN)
+  if (keys & FrontPIR)
+  {
+    load++;
+  }
+  if (keys & SidePIR)
+  {
+    load++;
+  }
+  if (keys & LaserIR)
   {
     load++;
   }

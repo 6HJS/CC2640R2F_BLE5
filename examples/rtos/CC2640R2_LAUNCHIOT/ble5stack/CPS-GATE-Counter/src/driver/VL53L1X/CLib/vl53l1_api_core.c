@@ -2133,6 +2133,7 @@ VL53L1_Error VL53L1_init_and_start_range(
 	/* Send I2C Buffer */
 
 	if (status == VL53L1_ERROR_NONE) {
+        uint16_t indddd = i2c_index;
 		status =
 			VL53L1_WriteMulti(
 				Dev,

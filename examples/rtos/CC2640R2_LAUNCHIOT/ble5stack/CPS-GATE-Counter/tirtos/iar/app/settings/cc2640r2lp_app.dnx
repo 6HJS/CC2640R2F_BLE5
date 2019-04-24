@@ -20,7 +20,7 @@
         <xds110foundProbes />
     </XdsDriver>
     <DebugChecksum>
-        <Checksum>1720294201</Checksum>
+        <Checksum>2218528097</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -54,8 +54,12 @@
         <ITMportsLogFile>0</ITMportsLogFile>
         <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
     </SWOTraceHWSettings>
+    <struct_types>
+        <Fmt0>I2C_Transaction-readCount	3	0</Fmt0>
+    </struct_types>
     <watch_formats>
-        <Fmt0>{W}1:res0	3	0</Fmt0>
+        <Fmt0>{W}1:index	4	0</Fmt0>
+        <Fmt1>{W}1:res0	3	0</Fmt1>
     </watch_formats>
     <Trace2>
         <Enabled>0</Enabled>
@@ -127,12 +131,13 @@
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
-        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.412.3" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.418.3" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.428.3" 0 0 1 "" 0 "" 0</Bp2>
-        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.415.3" 0 0 1 "" 0 "" 0</Bp3>
-        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.413.3" 0 0 1 "" 0 "" 0</Bp4>
-        <Count>5</Count>
+        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.c}.382.1" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.431.3" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.431.3" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.428.3" 0 0 1 "" 0 "" 0</Bp3>
+        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.c}.151.11" 0 0 1 "" 0 "" 0</Bp4>
+        <Bp5>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.431.3" 0 0 1 "" 0 "" 0</Bp5>
+        <Count>6</Count>
     </Breakpoints2>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
