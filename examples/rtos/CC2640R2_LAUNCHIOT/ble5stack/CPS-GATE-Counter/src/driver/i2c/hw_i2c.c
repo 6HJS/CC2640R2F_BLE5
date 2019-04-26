@@ -1,14 +1,13 @@
 #include "board.h"
-#include <ti/drivers/I2C.h>
 
 #include "hw_i2c.h"
 
 /*********************************************************************
  * LOCAL PARAMETER
  */
-
 I2C_Handle I2CHandle;
 I2C_Params I2Cparams;
+
 
 /*********************************************************************
  * LOCAL FUNCTIONS

@@ -74,7 +74,8 @@
 #include "hw_gpio.h"
 #include "myiotboard_key.h"
 #include "hw_i2c.h"
-#include "vl53l1_api.h"
+#include "cVL53L1X.h"
+#include <stdbool.h>
 
 #include <driverlib/aon_batmon.h>
 /*********************************************************************
@@ -161,10 +162,9 @@ uint8_t activity[4] = {0x00,0x00,0x00,0x00};
 
 uint8_t skipBroad = 0;
 
-VL53L1_Dev_t                   dev;
-VL53L1_DEV                     Dev = &dev;
-VL53L1_RangingMeasurementData_t RangingData;
-uint8_t buff[32] = {0};
+uint16_t mm[100] = {0};
+   bool tout = 0;
+
 
 /*********************************************************************
  * EXTERNAL VARIABLES
@@ -405,36 +405,28 @@ static void SimpleBLEBroadcaster_init(void)
   
   HwGPIOInit();
   HwGPIOSet(IOID_9,0);
-  VL53L1_WaitMs(NULL,1);
+  Task_sleep(1*(1000 / Clock_tickPeriod));
   HwGPIOSet(IOID_9,1);
   
   HwI2CInit();
-  static VL53L1_Error res0 = VL53L1_ERROR_NONE;
-  res0 = VL53L1_WaitDeviceBooted( Dev );
-  res0 = VL53L1_DataInit( Dev );
-  res0 = VL53L1_StaticInit( Dev );
-  res0 = VL53L1_SetDistanceMode( Dev, VL53L1_DISTANCEMODE_LONG );
-  res0 = VL53L1_SetMeasurementTimingBudgetMicroSeconds( Dev, 50000 );
-  res0 = VL53L1_SetInterMeasurementPeriodMilliSeconds( Dev, 500 );
-  if(res0 != VL53L1_ERROR_NONE){
-    goto skip;
+
+  setTimeout(500);
+  if (!VL_init(true))
+  {
+    // failured to detect the sensor
+    while (1);
   }
-  res0 = VL53L1_StartMeasurement( Dev );
   
-  res0 = VL53L1_WaitMeasurementDataReady( Dev );
-
-//  res0 = VL53L1_GetRangingMeasurementData( Dev, &RangingData );
-  uint16_t result = 0;
-  res0 = VL53L1_RdWord(Dev,VL53L1_SHADOW_RESULT__FINAL_CROSSTALK_CORRECTED_RANGE_MM_SD0,&result);
-skip:
-
-  sprintf( (char*)buff, "%d, %d \n\r", RangingData.RangeStatus, RangingData.RangeMilliMeter);
-
-  res0 = VL53L1_ClearInterruptAndStartMeasurement( Dev );
+  startContinuous(50);
   
-  if(res0 != 0 )
-    res0 = 0;
-
+  int i = 0;
+  for(i=0;i<100;i++){
+    mm[i] = read(true);
+    Task_sleep(2*(1000 / Clock_tickPeriod));
+    if (timeoutOccurred()) {tout = 1;}
+  }
+  stopContinuous();
+  ASM_NOP;
   
   AONBatMonEnable();
   BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)

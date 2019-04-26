@@ -20,7 +20,7 @@
         <xds110foundProbes />
     </XdsDriver>
     <DebugChecksum>
-        <Checksum>2218528097</Checksum>
+        <Checksum>1799294327</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -30,8 +30,8 @@
         <Enabled>_ 0</Enabled>
     </CodeCoverage>
     <Disassembly>
-        <InstrCount>0</InstrCount>
         <MixedMode>1</MixedMode>
+        <InstrCount>0</InstrCount>
     </Disassembly>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -132,12 +132,10 @@
     </DisassembleMode>
     <Breakpoints2>
         <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.c}.382.1" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.431.3" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.431.3" 0 0 1 "" 0 "" 0</Bp2>
-        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.428.3" 0 0 1 "" 0 "" 0</Bp3>
-        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.c}.151.11" 0 0 1 "" 0 "" 0</Bp4>
-        <Bp5>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.431.3" 0 0 1 "" 0 "" 0</Bp5>
-        <Count>6</Count>
+        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.c}.151.11" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.422.7" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.429.3" 0 0 1 "" 0 "" 0</Bp3>
+        <Count>4</Count>
     </Breakpoints2>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>

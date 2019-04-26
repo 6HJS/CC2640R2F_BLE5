@@ -8,6 +8,7 @@ extern "C"
   
 #include <stdint.h>
 #include <stdbool.h>
+  #include <ti/drivers/I2C.h>
 
 #define Slave_Addr        0x29 //0b0101001;
 

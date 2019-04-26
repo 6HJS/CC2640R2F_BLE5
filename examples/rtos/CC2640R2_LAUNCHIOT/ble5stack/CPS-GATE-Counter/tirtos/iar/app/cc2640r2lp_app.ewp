@@ -388,6 +388,7 @@
                     <state>$PROJ_DIR$\..\..\..\src\driver\i2c</state>
                     <state>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\drivers</state>
+                    <state>C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\src\driver\VL53L1X</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2200,130 +2201,10 @@
         <group>
             <name>VL53L1X</name>
             <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api.c</name>
+                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\cVL53L1X.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_calibration.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_calibration.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_core.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_core.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_debug.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_debug.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_preset_modes.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_preset_modes.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_strings.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_api_strings.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_core.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_core.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_core_support.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_core_support.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_def.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_error_codes.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_error_exceptions.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_error_strings.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_error_strings.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_ll_def.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_ll_device.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_nvm_map.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform_log.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform_user_config.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform_user_data.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform_user_defines.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_preset_setup.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_register_funcs.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_register_funcs.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_register_map.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_register_settings.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_register_structs.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_silicon_core.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_silicon_core.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_tuning_parm_defaults.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_types.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_wait.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_wait.h</name>
+                <name>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\cVL53L1X.h</name>
             </file>
         </group>
         <file>

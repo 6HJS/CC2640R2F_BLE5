@@ -2175,8 +2175,7 @@ VL53L1_Error VL53L1_GetRangingMeasurementData(VL53L1_DEV Dev,
 	/* Get Ranging Data */
 	Status = VL53L1_get_device_results(
 			Dev,
-			//VL53L1_DEVICERESULTSLEVEL_FULL,
-                        VL53L1_DEVICERESULTSLEVEL_SYSTEM_RESULTS,
+			VL53L1_DEVICERESULTSLEVEL_FULL,
 			presults);
 
 	if (Status == VL53L1_ERROR_NONE) {
