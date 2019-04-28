@@ -422,7 +422,7 @@ static void SimpleBLEBroadcaster_init(void)
   int i = 0;
   for(i=0;i<100;i++){
     mm[i] = read(true);
-    Task_sleep(2*(1000 / Clock_tickPeriod));
+    Task_sleep(95*(1000 / Clock_tickPeriod));
     if (timeoutOccurred()) {tout = 1;}
   }
   stopContinuous();
