@@ -243,7 +243,7 @@ static uint8 advertData[8] =
   'C',  //43                                                            [1]
   'P',  //50                                                            [2]
   'S',  //53                                                            [3]
-  SENSOR_TYPE, //sensor type                                                   [4]
+  SENSOR_TYPE, //sensor type                                            [4]
 
   // three-byte broadcast of the data "1 2 3"
   0,  //                                                                [6]
@@ -403,30 +403,12 @@ static void SimpleBLEBroadcaster_init(void)
 
   Display_print0(dispHandle, 0, 0, "BLE Broadcaster");
   
+  // Setup the VL53L1X sensor
   HwGPIOInit();
   HwGPIOSet(IOID_9,0);
   Task_sleep(1*(1000 / Clock_tickPeriod));
   HwGPIOSet(IOID_9,1);
-  
   HwI2CInit();
-
-  setTimeout(500);
-  if (!VL_init(true))
-  {
-    // failured to detect the sensor
-    while (1);
-  }
-  
-  startContinuous(50);
-  
-  int i = 0;
-  for(i=0;i<100;i++){
-    mm[i] = read(true);
-    Task_sleep(95*(1000 / Clock_tickPeriod));
-    if (timeoutOccurred()) {tout = 1;}
-  }
-  stopContinuous();
-  ASM_NOP;
   
   AONBatMonEnable();
   BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)
@@ -740,13 +722,15 @@ static void SimpleBLEPeripheral_performPeriodicTask(void)
  * @brief   Handles all key events for this device.
  *
  * @param   keys - bit field for key events. Valid entries:
- *                 KEY_LEFT
- *                 KEY_RIGHT
+ *                 FrontPIR Active H
+ *                 SidePIR Active H
+                   LaserIR interrupt Active H
  *
  * @return  none
  */
 static void SimpleBLEPeripheral_handleKeys(uint8_t keys)
 {
+  ASM_NOP;
   if (keys & FrontPIR)
   {
     load++;
@@ -755,10 +739,7 @@ static void SimpleBLEPeripheral_handleKeys(uint8_t keys)
   {
     load++;
   }
-  if (keys & LaserIR)
-  {
-    load++;
-  }
+
 }
 
 /*********************************************************************
@@ -801,3 +782,38 @@ void SimpleBLEPeripheral_keyChangeHandler(uint8 keys)
 }
 /*********************************************************************
 *********************************************************************/
+Task_Handle Task_Handel_VL53;
+Void VL53_Task_Fxn(UArg arg0, UArg arg1)
+{
+  setTimeout(500);
+  if (!VL_init(true))
+  {
+    // failured to detect the sensor
+    while (1);
+  }
+  
+  startContinuous(50);
+  
+  int i = 0;
+  for(i=0;i<100;i++){
+    mm[i] = read(true);
+    Task_sleep(95*(1000 / Clock_tickPeriod));
+    if (timeoutOccurred()) {tout = 1;}
+  }
+  stopContinuous();
+  
+  HwGPIOSet(IOID_9,0);//shutdown the VL53 sensor power 
+  
+  ASM_NOP;
+  
+  Task_delete(&Task_Handel_VL53);//one-time task free space after execution
+}
+void CreateVL53_Task(void)
+{
+  Task_Params taskParams;
+  Task_Params_init(&taskParams);
+  taskParams.arg0 = 1000000 / Clock_tickPeriod;
+  taskParams.stackSize = TASKSTACKSIZE;
+  taskParams.priority = 1;
+  Task_Handel_VL53 = Task_create((Task_FuncPtr)VL53_Task_Fxn, &taskParams, NULL);
+}

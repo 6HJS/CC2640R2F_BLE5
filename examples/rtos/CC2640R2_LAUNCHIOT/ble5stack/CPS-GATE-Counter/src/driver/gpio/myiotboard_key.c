@@ -106,13 +106,13 @@ PIN_Config keyPinsCfg[] =
 #if defined(CC2640R2MOD_RSM)
     IOID_0          | PIN_GPIO_OUTPUT_DIS  | PIN_INPUT_EN  |  PIN_NOPULL,//Front PIR
     IOID_1          | PIN_GPIO_OUTPUT_DIS  | PIN_INPUT_EN  |  PIN_NOPULL,//Side PIR
-    IOID_2          | PIN_GPIO_OUTPUT_DIS  | PIN_INPUT_EN  |  PIN_NOPULL,//Laser IR
+    //IOID_2          | PIN_GPIO_OUTPUT_DIS  | PIN_INPUT_EN  |  PIN_NOPULL,//Laser IR
 #endif
     PIN_TERMINATE
 };
 
-PIN_State  keyPins;
-PIN_Handle hKeyPins;
+//PIN_State  keyPins;
+//PIN_Handle hKeyPins;
 
 PIN_State  touchPins;
 PIN_Handle hTouchPins;
@@ -146,7 +146,7 @@ void Board_initKeys(keysPressedCB_t appKeyCB)
 #if defined(CC2640R2MOD_RSM)
   PIN_setConfig(hTouchPins, PIN_BM_IRQ, IOID_0        | PIN_IRQ_POSEDGE);//Front PIR
   PIN_setConfig(hTouchPins, PIN_BM_IRQ, IOID_1        | PIN_IRQ_POSEDGE);//Side PIR
-  PIN_setConfig(hTouchPins, PIN_BM_IRQ, IOID_2        | PIN_IRQ_POSEDGE);//Laser Int
+  //PIN_setConfig(hTouchPins, PIN_BM_IRQ, IOID_2        | PIN_IRQ_POSEDGE);//Laser Int
 #endif
 
 #ifdef POWER_SAVING
@@ -159,7 +159,7 @@ void Board_initKeys(keysPressedCB_t appKeyCB)
 #if defined(CC2640R2MOD_RSM)
   PIN_setConfig(hTouchPins, PINCC26XX_BM_WAKEUP, IOID_0        | PINCC26XX_WAKEUP_POSEDGE);
   PIN_setConfig(hTouchPins, PINCC26XX_BM_WAKEUP, IOID_1        | PINCC26XX_WAKEUP_POSEDGE);
-  PIN_setConfig(hTouchPins, PINCC26XX_BM_WAKEUP, IOID_2        | PINCC26XX_WAKEUP_POSEDGE);
+//  PIN_setConfig(hTouchPins, PINCC26XX_BM_WAKEUP, IOID_2        | PINCC26XX_WAKEUP_POSEDGE);
 #endif
   
 #endif //POWER_SAVING
@@ -200,18 +200,6 @@ static void Board_keyChangeHandler(UArg a0)
   if (appKeyChangeHandler != NULL)
   {
     keysPressed = 0;
-
-//    #if defined(CC2640R2MOD_RGZ)
-//      if ( PIN_getInputValue(Board_BTN1) == 0 )
-//      {
-//        keysPressed |= KEY_BTN1;
-//      }
-//
-//      if ( PIN_getInputValue(Board_BTN2) == 0 )
-//      {
-//        keysPressed |= KEY_BTN2;
-//      }
-//    #endif
       
     #if defined(CC2640R2MOD_RSM)
       if ( PIN_getInputValue(IOID_0) == 1 )
@@ -222,11 +210,6 @@ static void Board_keyChangeHandler(UArg a0)
       if ( PIN_getInputValue(IOID_1) == 1 )
       {
         keysPressed |= SidePIR;
-      }
-      
-      if ( PIN_getInputValue(IOID_2) == 1 )
-      {
-        keysPressed |= LaserIR;
       }
     #endif
     

@@ -20,7 +20,7 @@
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </XdsDriver>
     <DebugChecksum>
-        <Checksum>4064030212</Checksum>
+        <Checksum>1659438792</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -165,8 +165,10 @@
         <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.c}.382.1" 0 0 1 "" 0 "" 0</Bp0>
         <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib\vl53l1_platform.c}.151.11" 0 0 1 "" 0 "" 0</Bp1>
         <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.422.7" 0 0 1 "" 0 "" 0</Bp2>
-        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.429.3" 0 0 1 "" 0 "" 0</Bp3>
-        <Count>4</Count>
+        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.432.3" 0 0 1 "" 0 "" 0</Bp3>
+        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.414.3" 0 0 1 "" 0 "" 0</Bp4>
+        <Bp5>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\driver\VL53L1X\cVL53L1X.c}.25.3" 0 0 1 "" 0 "" 0</Bp5>
+        <Count>6</Count>
     </Breakpoints2>
     <Aliases>
         <A0>_ "C:\Users\sdtest\simplelink_development\main_packages\MAIN\repo\source\ti\ble5stack\host\sm_pairing.c" ""</A0>
