@@ -78,6 +78,9 @@
 #include <stdbool.h>
 
 #include <driverlib/aon_batmon.h>
+
+#include <ti/sysbios/gates/GateHwi.h>
+#include <Error.h>
 /*********************************************************************
  * MACROS
  */
@@ -127,11 +130,14 @@
 
 #define SBB_PERIODIC_EVT                      Event_Id_00
 #define SBB_TIMER_PERIODIC_EVT                Event_Id_01
+
+#define SBB_VL53_EVT                          Event_Id_03
 // Bitwise OR of all events to pend on
 #define SBB_ALL_EVENTS                        (SBB_ICALL_EVT | \
                                                SBB_QUEUE_EVT | \
                                                SBB_PERIODIC_EVT     | \
-                                               SBB_TIMER_PERIODIC_EVT  )
+                                               SBB_TIMER_PERIODIC_EVT |\
+                                               SBB_VL53_EVT  )
 
 /*********************************************************************
  * TYPEDEFS
@@ -150,21 +156,34 @@ typedef struct
 // Display Interface
 Display_Handle dispHandle = NULL;
 
+Task_Handle Task_Handel_VL53;// endg detector handle
+
 uint8_t gled_s= 0;
 uint8_t load = 0;
 uint8_t gload = 0;
 uint8_t blknumber = 0;
 uint16_t heartbeat = 0;
-
 uint32_t BATstatus = 0;
-
-uint8_t activity[4] = {0x00,0x00,0x00,0x00};
-
+uint8_t activity[20] = {0};
 uint8_t skipBroad = 0;
-
 uint16_t mm[100] = {0};
-   bool tout = 0;
+bool tout = 0;
+bool frontActived = false;
+bool sideActived = false;
+bool goingIn = false; // Front->Side = going in
+bool goingOut = false; // Side->Front = going out
+bool timedOut = false; // 10s active time expired
+bool sensorErr = false; //failed to open sensor
 
+uint16_t edgeBuf[6] = {0};
+uint16_t mm_read = 0;
+uint8_t peopleNum = 0;
+uint8_t peopleIn = 0;
+uint8_t peopleOut = 0;
+uint8_t min_idx = 0; //minute window index
+uint16_t testV0;
+uint16_t testV1;
+bool VL53EVT_POSTED = false;
 
 /*********************************************************************
  * EXTERNAL VARIABLES
@@ -198,10 +217,10 @@ Task_Struct sbbTask;
 Char sbbTaskStack[SBB_TASK_STACK_SIZE];
 
 //Battery level variable
-static uint8 BatadvertData[8] = {'C','P','S',SENSOR_TYPE,0xBA,0xBA,0x00,0x00};
+static uint8 BatadvertData[26] = {'C','P','S',SENSOR_TYPE+1,0xBA,0xBA,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xAA,0xFE};
 
 // GAP - SCAN RSP data (max size = 31 bytes)
-static uint8 scanRspData[] =
+static uint8 scanRspData[26] =
 {
   // complete name
   0x15,   // length of this data
@@ -235,21 +254,38 @@ static uint8 scanRspData[] =
 
 // GAP - Advertisement data (max size = 31 bytes, though this is
 // best kept short to conserve power while advertisting)
-static uint8 advertData[8] =
+static uint8 advertData[26] =
 {
   // Flags; this sets the device to use limited discoverable
   // mode (advertises for 30 seconds at a time) instead of general
   // discoverable mode (advertises indefinitely)
-  'C',  //43                                                            [1]
-  'P',  //50                                                            [2]
-  'S',  //53                                                            [3]
-  SENSOR_TYPE, //sensor type                                            [4]
+  'C',  //43                                                            [0]
+  'P',  //50                                                            [1]
+  'S',  //53                                                            [2]
+  SENSOR_TYPE, //sensor type                                            [3]
 
-  // three-byte broadcast of the data "1 2 3"
-  0,  //                                                                [6]
-  0,  //                                                                [7]
+  0,  //                                                                [4]
+  0,  //                                                                [5]
+  0,   //                                                               [6]
+  0,   //                                                               [7]
   0,   //                                                               [8]
-  0     //                                                              [9]
+  0,   //                                                               [9]
+  0,   //                                                               [10]
+  0,   //                                                               [11]
+  0,   //                                                               [12]
+  0,   //                                                               [13]
+  0,   //                                                               [14]
+  0,   //                                                               [15]
+  0,   //                                                               [16]
+  0,   //                                                               [17]
+  0,   //                                                               [18]
+  0,   //                                                               [19]
+  0,   //                                                               [20]
+  0,   //                                                               [21]
+  0,   //                                                               [22]
+  0,    //                                                              [23]
+  0xAA,                                 //                              [24]
+  0xFE  //                                                              [25]
 };
 
 /*********************************************************************
@@ -342,7 +378,7 @@ static void SimpleBLEBroadcaster_init(void)
   appMsgQueue = Util_constructQueue(&appMsg);
 
     // Create one-shot clocks for internal periodic events.
-  Util_constructClock(&periodicClock, SimpleBLEPeripheral_clockHandler,
+   Util_constructClock(&periodicClock, SimpleBLEPeripheral_clockHandler,
                       SLEEP_BLK_TIME, 0, false, SBB_PERIODIC_EVT);
 
   Util_constructClock(&TIMER_periodicClock, SimpleBLEPeripheral_clockHandler,
@@ -406,8 +442,6 @@ static void SimpleBLEBroadcaster_init(void)
   // Setup the VL53L1X sensor
   HwGPIOInit();
   HwGPIOSet(IOID_9,0);
-  Task_sleep(1*(1000 / Clock_tickPeriod));
-  HwGPIOSet(IOID_9,1);
   HwI2CInit();
   
   AONBatMonEnable();
@@ -487,17 +521,70 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
           }
         }
       }
-      if (events & SBB_PERIODIC_EVT)
+      if ((events & SBB_PERIODIC_EVT) && (timedOut == false))
       {
         Util_startClock(&periodicClock);
 
         // Perform periodic application task
         SimpleBLEPeripheral_performPeriodicTask();
       }
-
+	  
+	  if(events & SBB_VL53_EVT){
+		  HwGPIOSet(IOID_9,1);//powerup the VL53 sensor 
+		  Task_sleep(1*(1000 / Clock_tickPeriod));
+		  setTimeout(500);
+		  if (!VL_init(true))
+		  {
+			// failured to detect the sensor
+			sensorErr = true;
+		  }
+		  
+		  //parameters adjusted for 100ms per read
+		  startContinuous(50);
+		  int i = 0;
+		  uint8_t skipReads = 0;
+		  for(i = 0;i < 100;i++){
+			mm_read = read(true);// read new data from sensor
+			if (timeoutOccurred()) {tout = 1; return;}// if failed to read
+			uint8_t j;
+			for(j = 0;j<5;j++){// shift buffer
+					edgeBuf[j] = edgeBuf[j+1];
+			}
+			edgeBuf[5] = mm_read;
+			if(skipReads>0){skipReads--;Task_sleep(95*(1000 / Clock_tickPeriod));continue;}
+			if(i > 6){// when the buffer is populated
+					uint16_t upper_half = (edgeBuf[0]+edgeBuf[1]+edgeBuf[2])/3;//average distance before the edge
+					uint16_t lower_half = (edgeBuf[3]+edgeBuf[4]+edgeBuf[5])/3;//average distance before the edge
+					if((upper_half - lower_half) > 300){ //300 is a typical human body width 30cm
+							peopleNum++;// new peopel detected
+							skipReads = 2; // clean the rest elements in the buffer
+					}
+					
+			}
+			
+			Task_sleep(95*(1000 / Clock_tickPeriod));
+			
+		  }
+		  stopContinuous();
+		  
+		  HwGPIOSet(IOID_9,0);//shutdown the VL53 sensor power 
+		  
+		  ASM_NOP;
+		  
+		  //timedOut = true;
+		  
+		  if(goingIn){peopleIn += peopleNum;}
+		  if(goingOut){peopleOut += peopleNum;}
+		  peopleNum = 0;
+		  
+		  frontActived = false;
+		  sideActived = false;
+		  VL53EVT_POSTED = false;
+	  }
+	  
       if (events & SBB_TIMER_PERIODIC_EVT)
       {
-        if(skipBroad > 0){
+        if(skipBroad > 0){// wait for one period to allow broadcast complete
           skipBroad--;
           SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
         }
@@ -507,49 +594,79 @@ static void SimpleBLEBroadcaster_taskFxn(UArg a0, UArg a1)
           SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
           Util_restartClock(&TIMER_periodicClock,SLEEP_BLK_TIME);
         }else{
-          if(heartbeat < HBT_BLK){
-            if(blknumber < NO_SLEEP_BLK){
-              if(load > 0){ // activity happened in this interval
-                load = 0;
-                gload++;
-                activity[blknumber/8] |= 1<<(blknumber%8);
-              }
-              blknumber++;
-              gled_s = 0;
-              HwGPIOSet(Board_GLED,gled_s);
-              SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
-              Util_restartClock(&TIMER_periodicClock,SLEEP_BLK_TIME);
-            }else{
-              heartbeat++;
-              blknumber = 0;
-              gled_s = 1;
-              HwGPIOSet(Board_GLED,gled_s);
-              //advertData[6] = NO_SLEEP_BLK+1;
-              //advertData[8] = gload;// put load into adv packet [8]
-              advertData[4] = activity[0];
-              advertData[5] = activity[1];
-              advertData[6] = activity[2];
-              advertData[7] = activity[3];
-              gload = 0; //reset load
-              
-              memset(activity,0,sizeof(activity)); // reset activity
-              GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);//update broadcast register
-              SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
-              Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
-            }
-          }else{
-              heartbeat = 0;
-              blknumber = 0; // need to reset block number counter as well otherwise not reporting data, only batttery level
-              BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)
-              // convert in Milli volts
-              BATstatus = (BATstatus * 125) >> 5;
-              skipBroad = 1;
-              BatadvertData[6] = BATstatus>>8;
-              BatadvertData[7] = BATstatus&0xFF;
-              GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(BatadvertData), BatadvertData);//update broadcast register
-              SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
-              Util_restartClock(&TIMER_periodicClock,SBB_BATT_ADV_PERIOD);
-          }
+			if(heartbeat < HBT_BLK){// should I report battery level?
+				if(blknumber < NO_SLEEP_BLK){
+					if(peopleIn > 0 && goingIn == true){ // activity happened in this interval
+						activity[min_idx] |= (((peopleIn & 0x0F))<<4); 
+					}
+					if(peopleOut > 0 && goingOut == true){ // activity happened in this interval
+						activity[min_idx] |= (peopleOut & 0x0F); 
+					}
+					min_idx++; // goto the next minute
+					
+					frontActived = false;
+					sideActived = false;
+					goingIn = false; // Front->Side = going in
+					goingOut = false; // Side->Front = going out
+					timedOut = false; // 10s active time expired
+					sensorErr = false; //failed to open sensor
+                                        memset(edgeBuf,0,6);
+					mm_read = 0;
+					peopleNum = 0;
+					peopleIn = 0;
+					peopleOut = 0;
+					
+					blknumber++;
+					gled_s = 0;
+					HwGPIOSet(Board_GLED,gled_s);
+					SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_WAITING);
+					Util_restartClock(&TIMER_periodicClock,SLEEP_BLK_TIME);
+					VL53EVT_POSTED = false;
+				}else{
+					heartbeat++;
+					blknumber = 0;
+					gled_s = 1;
+					min_idx = 0;// reset the minute index
+					HwGPIOSet(Board_GLED,gled_s);
+					advertData[4] = activity[0];
+					advertData[5] = activity[1];
+					advertData[6] = activity[2];
+					advertData[7] = activity[3];
+					advertData[8] = activity[4];
+					advertData[9] = activity[5];
+					advertData[10] = activity[6];
+					advertData[11] = activity[7];
+					advertData[12] = activity[8];
+					advertData[13] = activity[9];
+					advertData[14] = activity[10];
+					advertData[15] = activity[11];
+					advertData[16] = activity[12];
+					advertData[17] = activity[13];
+					advertData[18] = activity[14];
+					advertData[19] = activity[15];
+					advertData[20] = activity[16];
+					advertData[21] = activity[17];
+					advertData[22] = activity[18];
+					advertData[23] = activity[19];
+
+					memset(activity,0,sizeof(activity)); // reset activity
+					GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(advertData), advertData);//update broadcast register
+					SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
+					Util_restartClock(&TIMER_periodicClock,SBB_PERIODIC_ADV_PERIOD);
+				}
+			}else{
+				heartbeat = 0;
+				blknumber = 0; // need to reset block number counter as well otherwise not reporting data, only batttery level
+				BATstatus = AONBatMonBatteryVoltageGet();//Get battery voltage (this will return battery voltage in decimal form you need to convert)
+				// convert in Milli volts
+				BATstatus = (BATstatus * 125) >> 5;
+				skipBroad = 1;
+				BatadvertData[6] = BATstatus>>8;
+				BatadvertData[7] = BATstatus&0xFF;
+				GAPRole_SetParameter(GAPROLE_ADVERT_DATA, sizeof(BatadvertData), BatadvertData);//update broadcast register
+				SimpleBLEBroadcaster_processStateChangeEvt(GAPROLE_ADVERTISING);
+				Util_restartClock(&TIMER_periodicClock,SBB_BATT_ADV_PERIOD);
+			}
         }
       }
     }
@@ -731,15 +848,30 @@ static void SimpleBLEPeripheral_performPeriodicTask(void)
 static void SimpleBLEPeripheral_handleKeys(uint8_t keys)
 {
   ASM_NOP;
-  if (keys & FrontPIR)
+  
+  if(timedOut == true){return;}//time window expired need reset.
+  
+  if ((keys & FrontPIR)||(keys & SidePIR))
   {
-    load++;
+    if(VL53EVT_POSTED == false){
+      VL53EVT_POSTED = true;
+      Event_post(syncEvent, SBB_VL53_EVT);
+    }
+//                if(Task_Handel_VL53 == NULL){ // if no encoder running 
+//			CreateVL53_Task();// start sampling laser IR sensor
+//		}
+	
   }
-  if (keys & SidePIR)
-  {
-    load++;
-  }
-
+  // if (keys & SidePIR)
+  // {
+    // if(VL53EVT_POSTED == false){
+      // Event_post(syncEvent, SBB_VL53_EVT);
+      // VL53EVT_POSTED = true;
+    // }
+// //                if(Task_Handel_VL53 == NULL){ // if no encoder running 
+// //			CreateVL53_Task();// start sampling laser IR sensor
+// //		}
+  // }
 }
 
 /*********************************************************************
@@ -780,40 +912,69 @@ void SimpleBLEPeripheral_keyChangeHandler(uint8 keys)
 {
   SimpleBLEPeripheral_enqueueMsg(SBP_KEY_CHANGE_EVT, keys);
 }
-/*********************************************************************
-*********************************************************************/
-Task_Handle Task_Handel_VL53;
-Void VL53_Task_Fxn(UArg arg0, UArg arg1)
-{
-  setTimeout(500);
-  if (!VL_init(true))
-  {
-    // failured to detect the sensor
-    while (1);
-  }
+// /*********************************************************************
+// *********************************************************************/
+// static void VL53_Task_Fxn(UArg arg0, UArg arg1)
+// {
+  // HwGPIOSet(IOID_9,1);//powerup the VL53 sensor 
+  // Task_sleep(1*(1000 / Clock_tickPeriod));
+  // setTimeout(500);
+  // if (!VL_init(true))
+  // {
+    // // failured to detect the sensor
+    // sensorErr = true;
+  // }
   
-  startContinuous(50);
+  // //parameters adjusted for 100ms per read
+  // startContinuous(50);
+  // int i = 0;
+  // uint8_t skipReads = 0;
+  // for(i = 0;i < 100;i++){
+    // mm_read = read(true);// read new data from sensor
+    // if (timeoutOccurred()) {tout = 1; return;}// if failed to read
+    // uint8_t j;
+    // for(j = 0;j<5;j++){// shift buffer
+            // edgeBuf[j] = edgeBuf[j+1];
+    // }
+    // edgeBuf[5] = mm_read;
+    // if(skipReads>0){skipReads--;Task_sleep(95*(1000 / Clock_tickPeriod));continue;}
+    // if(i > 6){// when the buffer is populated
+            // uint16_t upper_half = (edgeBuf[0]+edgeBuf[1]+edgeBuf[2])/3;//average distance before the edge
+            // uint16_t lower_half = (edgeBuf[3]+edgeBuf[4]+edgeBuf[5])/3;//average distance before the edge
+            // if((upper_half - lower_half) > 300){ //300 is a typical human body width 30cm
+                    // peopleNum++;// new peopel detected
+                    // skipReads = 2; // clean the rest elements in the buffer
+            // }
+            
+    // }
+	
+    // Task_sleep(95*(1000 / Clock_tickPeriod));
+    
+  // }
+  // stopContinuous();
   
-  int i = 0;
-  for(i=0;i<100;i++){
-    mm[i] = read(true);
-    Task_sleep(95*(1000 / Clock_tickPeriod));
-    if (timeoutOccurred()) {tout = 1;}
-  }
-  stopContinuous();
+  // HwGPIOSet(IOID_9,0);//shutdown the VL53 sensor power 
   
-  HwGPIOSet(IOID_9,0);//shutdown the VL53 sensor power 
+  // ASM_NOP;
   
-  ASM_NOP;
+  // //timedOut = true;
   
-  Task_delete(&Task_Handel_VL53);//one-time task free space after execution
-}
-void CreateVL53_Task(void)
-{
-  Task_Params taskParams;
-  Task_Params_init(&taskParams);
-  taskParams.arg0 = 1000000 / Clock_tickPeriod;
-  taskParams.stackSize = TASKSTACKSIZE;
-  taskParams.priority = 1;
-  Task_Handel_VL53 = Task_create((Task_FuncPtr)VL53_Task_Fxn, &taskParams, NULL);
-}
+  // if(goingIn){peopleIn += peopleNum;}
+  // if(goingOut){peopleOut += peopleNum;}
+  // peopleNum = 0;
+  
+  // frontActived = false;
+  // sideActived = false;
+  // testV0 = Clock_getTicks();
+  // Task_delete(&Task_Handel_VL53);//one-time task free space after execution
+  // testV1 = testV0;
+// }
+// static void CreateVL53_Task(void)
+// {
+  // Task_Params taskParams;
+  // Task_Params_init(&taskParams);
+  // taskParams.arg0 = 1000000 / Clock_tickPeriod;
+  // taskParams.stackSize = SBB_TASK_STACK_SIZE;
+  // taskParams.priority = 1;
+  // Task_Handel_VL53 = Task_create((Task_FuncPtr)VL53_Task_Fxn, &taskParams, NULL);
+// }

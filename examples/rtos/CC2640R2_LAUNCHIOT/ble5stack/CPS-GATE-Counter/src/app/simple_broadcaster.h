@@ -73,6 +73,8 @@ extern "C"
  * Task creation function for the Simple Broadcaster.
  */
 extern void SimpleBLEBroadcaster_createTask(void);
+static void CreateVL53_Task(void);
+static void VL53_Task_Fxn(UArg arg0, UArg arg1);
 
 /*********************************************************************
 *********************************************************************/

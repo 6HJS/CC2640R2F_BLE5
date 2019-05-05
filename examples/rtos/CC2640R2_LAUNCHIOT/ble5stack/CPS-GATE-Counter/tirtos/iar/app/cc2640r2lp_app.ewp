@@ -390,6 +390,7 @@
                     <state>$PROJ_DIR$\..\..\..\src\driver\VL53L1X\CLib</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\drivers</state>
                     <state>C:\ti\simplelink_cc2640r2_sdk_1_40_00_45\examples\rtos\CC2640R2_LAUNCHIOT\ble5stack\CPS-GATE-Counter\src\driver\VL53L1X</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\..\..\..\xdctools_3_50_02_20_core\packages\xdc\runtime</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>

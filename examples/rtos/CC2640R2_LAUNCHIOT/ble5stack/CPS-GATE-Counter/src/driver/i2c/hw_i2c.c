@@ -64,6 +64,11 @@ bool HwI2CSet(uint8_t RegAddr, uint8_t WriteBuf)
   return ret;
 }
 
+void HwI2CClose(void)
+{
+  I2C_close(I2CHandle);
+}
+
 /*********************************************************************
  * @fn      GY_I2C_GET
  *

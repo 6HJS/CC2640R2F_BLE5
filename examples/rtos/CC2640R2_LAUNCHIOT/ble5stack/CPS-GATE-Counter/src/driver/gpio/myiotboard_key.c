@@ -195,6 +195,13 @@ static void Board_keyCallback(PIN_Handle hPin, PIN_Id pinId)
  *
  * @return  none
  */
+
+extern bool frontActived;
+extern bool sideActived;
+extern bool goingIn; // Front->Side = going in
+extern bool goingOut; // Side->Front = going out
+extern bool VL53EVT_POSTED;
+
 static void Board_keyChangeHandler(UArg a0)
 {
   if (appKeyChangeHandler != NULL)
@@ -204,17 +211,30 @@ static void Board_keyChangeHandler(UArg a0)
     #if defined(CC2640R2MOD_RSM)
       if ( PIN_getInputValue(IOID_0) == 1 )
       {
-        keysPressed |= FrontPIR;
+        if (frontActived == false){
+		frontActived = true;
+		if(sideActived == true){
+			goingIn = true;
+		}
+                keysPressed |= FrontPIR;
+        }
       }
       
       if ( PIN_getInputValue(IOID_1) == 1 )
       {
-        keysPressed |= SidePIR;
+            if (sideActived == false){
+		sideActived = true;
+		if(frontActived == true){
+			goingOut = true;
+		}
+                keysPressed |= SidePIR;
+        }
       }
     #endif
     
     // Notify the application
-    (*appKeyChangeHandler)(keysPressed);
+      if(VL53EVT_POSTED == false)
+        (*appKeyChangeHandler)(keysPressed);
   }
 }
 /*********************************************************************
