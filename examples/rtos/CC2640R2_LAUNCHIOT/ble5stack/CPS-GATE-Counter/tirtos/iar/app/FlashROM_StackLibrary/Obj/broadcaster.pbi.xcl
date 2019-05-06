@@ -416,7 +416,7 @@ C:\ti\xdctools_3_50_02_20_core\packages\xdc\runtime
 -Dxdc_runtime_Assert_DISABLE_ALL=1
 -Dxdc_runtime_Log_DISABLE_ALL=1
 -DIOTXX_DISPLAY_TFT=1
--D_BOARD5X5=1
+-DBOARD5X5=1
 -DBROADCASTER_CFG=0x01
 -DOBSERVER_CFG=0x02
 -DPERIPHERAL_CFG=0x04

@@ -233,7 +233,7 @@
                     <state>xdc_runtime_Assert_DISABLE_ALL</state>
                     <state>xdc_runtime_Log_DISABLE_ALL</state>
                     <state>IOTXX_DISPLAY_TFT</state>
-                    <state>_BOARD5X5</state>
+                    <state>BOARD5X5</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
