@@ -9,7 +9,7 @@
  Target Device: CC2640R2
 
  ******************************************************************************
- 
+
  Copyright (c) 2011-2017, Texas Instruments Incorporated
  All rights reserved.
 
@@ -287,10 +287,10 @@ void SimpleBLEObserver_init(void)
   VOID GAPObserverRole_StartDevice((gapObserverRoleCB_t *)&simpleBLERoleCB);
 
   Display_print0(dispHandle, 0, 0, "BLE Observer");
-  
+
   HwGPIOInit();
   HwGPIOSet(Board_RLED,1);
-  
+
   HwUARTInit();
 }
 
@@ -505,7 +505,6 @@ static void SimpleBLEObserver_processRoleEvent(gapObserverRoleEvent_t *pEvent)
 
         // Prompt user to begin scanning.
         Display_print0(dispHandle, 5, 0, "Discover ->");
-        
       }
       break;
 
@@ -513,18 +512,38 @@ static void SimpleBLEObserver_processRoleEvent(gapObserverRoleEvent_t *pEvent)
       {
         SimpleBLEObserver_addDeviceInfo(pEvent->deviceInfo.addr,
                                         pEvent->deviceInfo.addrType, pEvent->deviceInfo.pEvtData, pEvent->deviceInfo.dataLen);
-        
+
         if(strstr(pEvent->deviceInfo.pEvtData,"CPS") != NULL){
-          HwUARTPrintf("%c%c%c",0xEF,0xAA,0xAD); // log device address
-          reverse(pEvent->deviceInfo.addr, 6);
-          HwUARTWrite(pEvent->deviceInfo.addr,6);
-          
-          HwUARTPrintf("%c",0xC1);//log RSSI
-          HwUARTPrintf("%c",pEvent->deviceInfo.rssi);
-          
-          HwUARTPrintf("%c",0xDA);//log data
-          HwUARTWrite(pEvent->deviceInfo.pEvtData,pEvent->deviceInfo.dataLen);
-          HwUARTPrintf("%c%c",0xAA,0xFE);
+          uint8_t buffer[200] = {0};
+          buffer[0] = 0xEF;
+          buffer[1] = 0xAA;
+          buffer[2] = 0xAD;
+
+          buffer[3] = pEvent->deviceInfo.addr[5];
+          buffer[4] = pEvent->deviceInfo.addr[4];
+          buffer[5] = pEvent->deviceInfo.addr[3];
+          buffer[6] = pEvent->deviceInfo.addr[2];
+          buffer[7] = pEvent->deviceInfo.addr[1];
+          buffer[8] = pEvent->deviceInfo.addr[0];
+
+          buffer[9] = 0xC1;
+          buffer[10] = pEvent->deviceInfo.rssi;
+
+          buffer[11] = 0xDA;
+          uint8_t i;
+          for (i = 0; i < pEvent->deviceInfo.dataLen; ++i) {
+            buffer[12 + i] = pEvent->deviceInfo.pEvtData[i];
+          }
+          buffer[12 + i] = 0xAA;
+          buffer[12 + i + 1] = 0xFE;
+
+          HwUARTWrite(&buffer,
+            3 +                               // efaaad - header
+            6 +                               // sensor addr
+            2 +                               // rssi
+            1 + pEvent->deviceInfo.dataLen +  // data
+            2                                 // aafe - footer
+          );
         }
       }
       break;
