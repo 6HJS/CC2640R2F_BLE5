@@ -218,7 +218,7 @@ Task_Struct sbbTask;
 Char sbbTaskStack[SBB_TASK_STACK_SIZE];
 
 //Battery level variable
-static uint8 BatadvertData[26] = {'C','P','S',BATT_TYPE,0xBA,0xBA,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xAA,0xFE};
+static uint8 BatadvertData[24] = {'C','P','S',BATT_TYPE,0xBA,0xBA,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
 
 // GAP - SCAN RSP data (max size = 31 bytes)
 static uint8 scanRspData[26] =
@@ -255,7 +255,7 @@ static uint8 scanRspData[26] =
 
 // GAP - Advertisement data (max size = 31 bytes, though this is
 // best kept short to conserve power while advertisting)
-static uint8 advertData[26] =
+static uint8 advertData[24] =
 {
   // Flags; this sets the device to use limited discoverable
   // mode (advertises for 30 seconds at a time) instead of general
@@ -284,9 +284,7 @@ static uint8 advertData[26] =
   0,   //                                                               [20]
   0,   //                                                               [21]
   0,   //                                                               [22]
-  0,    //                                                              [23]
-  0xAA,                                 //                              [24]
-  0xFE  //                                                              [25]
+  0    //                                                              [23]
 };
 
 /*********************************************************************

@@ -514,7 +514,7 @@ static void SimpleBLEObserver_processRoleEvent(gapObserverRoleEvent_t *pEvent)
                                         pEvent->deviceInfo.addrType, pEvent->deviceInfo.pEvtData, pEvent->deviceInfo.dataLen);
 
         if(strstr(pEvent->deviceInfo.pEvtData,"CPS") != NULL){
-          uint8_t buffer[200] = {0};
+          static uint8_t buffer[200];
           buffer[0] = 0xEF;
           buffer[1] = 0xAA;
           buffer[2] = 0xAD;
@@ -537,7 +537,7 @@ static void SimpleBLEObserver_processRoleEvent(gapObserverRoleEvent_t *pEvent)
           buffer[12 + i] = 0xAA;
           buffer[12 + i + 1] = 0xFE;
 
-          HwUARTWrite(&buffer,
+          HwUARTWrite(buffer,
             3 +                               // efaaad - header
             6 +                               // sensor addr
             2 +                               // rssi

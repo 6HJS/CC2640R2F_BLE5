@@ -9,7 +9,7 @@
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </XdsDriver>
     <DebugChecksum>
-        <Checksum>3205881202</Checksum>
+        <Checksum>1387448447</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -155,7 +155,7 @@
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
-        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.455.3" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\src\app\simple_broadcaster.c}.453.3" 0 0 1 "" 0 "" 0</Bp0>
         <Count>1</Count>
     </Breakpoints2>
     <Aliases>
